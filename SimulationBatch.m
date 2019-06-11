@@ -2,7 +2,7 @@ classdef SimulationBatch < handle
 
 	properties(Constant)
 		numValuesPerParam=1;
-		runPar=1;
+		runPar=0;
 	end
 
 	properties
@@ -142,7 +142,7 @@ classdef SimulationBatch < handle
 
 			thisObj.paramSearchAnalysisObj=paramSearchAnalysisObj;
 		
-			%saveAllOpenFigures
+			saveAllOpenFigures
 
 		end
 	end
