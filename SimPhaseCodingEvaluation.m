@@ -11,7 +11,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 		%entryPhaseDataHolder
 		%placeFieldWidthDataHolder
         
-        tempEncodingDistr
+        	tempEncodingDistr
 
 		placeColors
 		axisPosition
@@ -101,7 +101,8 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			%loop across cells
 			count=0;
 			axHs=[];
-			cellCmap=jet(thisObj.simObj.configuration.getNumCells());
+			%cellCmap=jet(thisObj.simObj.configuration.getNumCells());
+			cellCmap=jet(cellsObj.numCellsPerPlace);
 
 			for j=1:cellsObj.numPlaces
 				for i=1:cellsObj.numCellsPerPlace
@@ -115,10 +116,19 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					
 					currCellSpikePositions=thisObj.simObj.externalEnvObj.rodentPositionVsTime(currCellSpikeTimeIdxes);
 
+					%percent traveled within input field (not observable extracellularly)
+					%{
 					currCellPlaceInputStartPosition=thisObj.simObj.externalEnvObj.placeInputStartPositions(j);
 					currCellPlaceInputWidth=thisObj.simObj.externalEnvObj.placeInputWidths(j)
 					percPlaceInputTraveled=100*(currCellSpikePositions-currCellPlaceInputStartPosition)/currCellPlaceInputWidth;
 					plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:),'MarkerFaceColor',cellCmap(count,:))
+					%}
+
+					%percent traveled within spike field (EC observable)
+					currCellPlaceSpikeFieldWidth=currCellSpikePositions(end)-currCellSpikePositions(1);
+					percPlaceFieldTraveled=100*(currCellSpikePositions-currCellSpikePositions(1))/currCellPlaceSpikeFieldWidth;
+					%plot(percPlaceFieldTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:),'MarkerFaceColor',cellCmap(count,:))
+					plot(percPlaceFieldTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(i,:),'MarkerFaceColor',cellCmap(i,:))
 					%plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:))
 					hold on			
 					%axHs=[axHs axH];
@@ -136,7 +146,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			%cmap=cmap([1 count],:); % set your range here
 			colormap(cmap); % apply new colormap
 			cb=colorbar();
-			ylabel(cb,'Cell ordering')
+			ylabel(cb,'Cell excitability rank')
 			xlabel('Percent of field traversed')	
 			ylabel('Spike theta phase')
 			title(removeUnderscores(thisObj.simObj.simParamsIDStr))	

@@ -500,8 +500,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			thisObj.gnapMatrix(thisObj.gnapMatrix<0)=0;
 			thisObj.gksMatrix(thisObj.gksMatrix<0)=0;
 			
+			%sort in order of increasing excitability
 			thisObj.gnapMatrix=sort(thisObj.gnapMatrix,'descend');
-			thisObj.gksMatrix=sort(thisObj.gksMatrix,'descend');
+			thisObj.gksMatrix=sort(thisObj.gksMatrix,'ascend');
 		end	
 		
 		function setSimSpecificProperties(thisObj,simParams)
