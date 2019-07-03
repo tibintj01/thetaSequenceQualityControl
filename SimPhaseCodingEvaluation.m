@@ -41,8 +41,8 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			thisObj.plotSpikeRankVsPosRank(figH); 	
 		end
 		
-		function runPhaseCodeAnalysis(thisObj,figH)
-			thisObj.plotPhaseVsPositionInField(figH);
+		function runPhaseCodeAnalysis(thisObj,figPrecess,figCompress)
+			thisObj.plotPhaseVsPositionInField(figPrecess,figCompress);
 		end
 		
 		function runSpikeTimeDistributionAnalysis(thisObj,figH)
@@ -95,14 +95,15 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			ylabel('Cell No.')	
 		end
 
-		function plotPhaseVsPositionInField(thisObj,figH)
-			figure(figH)
+		function plotPhaseVsPositionInField(thisObj,figPrecess,figCompress)
 			cellsObj=thisObj.simObj.cellsObj;
 			%loop across cells
 			count=0;
 			axHs=[];
 			%cellCmap=jet(thisObj.simObj.configuration.getNumCells());
 			cellCmap=jet(cellsObj.numCellsPerPlace);
+			placeCmap=copper(cellsObj.numPlaces);
+			speedCmap=jet(round(max(thisObj.simObj.externalEnvObj.rodentRunningSpeed))+1);
 
 			for j=1:cellsObj.numPlaces
 				for i=1:cellsObj.numCellsPerPlace
@@ -112,10 +113,23 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					%currCellSpikePhases=thisObj.spikingDataInterface.allSpikePhasesPerCell.(sprintf('c%dp%d',i,j));
 					%currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.allSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/thisObj.simObj.externalEnvObj.idxToTimeFact);
 					currCellSpikePhases=thisObj.spikingDataInterface.firstSpikePhasesPerCell.(sprintf('c%dp%d',i,j));
-					currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.firstSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/thisObj.simObj.externalEnvObj.idxToTimeFact);
+					currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.firstSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/thisObj.simObj.externalEnvObj.idxToTimeFact)+1;
 					
 					currCellSpikePositions=thisObj.simObj.externalEnvObj.rodentPositionVsTime(currCellSpikeTimeIdxes);
 
+					thisCellInputCenterPos=thisObj.simObj.externalEnvObj.placeInputStartPositions(j)+thisObj.simObj.externalEnvObj.placeInputWidths(j)/2;
+			
+					figure(figCompress)
+
+					currCellSpikeInputRelativePositions=currCellSpikePositions-thisCellInputCenterPos;
+					%plot(currCellSpikeInputRelativePositions,currCellSpikePhases,'o','MarkerSize',5,'Color',placeCmap(j,:),'MarkerFaceColor',placeCmap(j,:));
+					for s=1:length(currCellSpikePhases)
+						currSpeed=round(thisObj.simObj.externalEnvObj.rodentRunningSpeed(currCellSpikeTimeIdxes(s)));
+						plot(currCellSpikeInputRelativePositions,currCellSpikePhases,'o','MarkerSize',5,'Color',speedCmap(currSpeed,:),'MarkerFaceColor',speedCmap(currSpeed,:));
+					end
+					xlabel('Distance from place input center (cm)')
+					ylabel('First spike theta phase')
+					hold on
 					%percent traveled within input field (not observable extracellularly)
 					%{
 					currCellPlaceInputStartPosition=thisObj.simObj.externalEnvObj.placeInputStartPositions(j);
@@ -123,14 +137,20 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					percPlaceInputTraveled=100*(currCellSpikePositions-currCellPlaceInputStartPosition)/currCellPlaceInputWidth;
 					plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:),'MarkerFaceColor',cellCmap(count,:))
 					%}
+					figure(figPrecess)
 
 					%percent traveled within spike field (EC observable)
-					currCellPlaceSpikeFieldWidth=currCellSpikePositions(end)-currCellSpikePositions(1);
-					percPlaceFieldTraveled=100*(currCellSpikePositions-currCellSpikePositions(1))/currCellPlaceSpikeFieldWidth;
+					if(~isempty(currCellSpikePositions))
+						currCellPlaceSpikeFieldWidth=currCellSpikePositions(end)-currCellSpikePositions(1);
+						percPlaceFieldTraveled=100*(currCellSpikePositions-currCellSpikePositions(1))/currCellPlaceSpikeFieldWidth;
+						plot(percPlaceFieldTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(i,:),'MarkerFaceColor',cellCmap(i,:))
+						hold on			
+					else
+						currCellPlaceSpikeFieldWidth=NaN;
+						percPlaceFieldTraveled=NaN;
+					end
 					%plot(percPlaceFieldTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:),'MarkerFaceColor',cellCmap(count,:))
-					plot(percPlaceFieldTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(i,:),'MarkerFaceColor',cellCmap(i,:))
 					%plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:))
-					hold on			
 					%axHs=[axHs axH];
 				end
 			end
@@ -144,12 +164,28 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			%set(cb,'Ylim',[1 count])
 			cmap =cellCmap; %get current colormap
 			%cmap=cmap([1 count],:); % set your range here
-			colormap(cmap); % apply new colormap
+			colormap(gca,cmap); % apply new colormap
 			cb=colorbar();
 			ylabel(cb,'Cell excitability rank')
 			xlabel('Percent of field traversed')	
 			ylabel('Spike theta phase')
 			title(removeUnderscores(thisObj.simObj.simParamsIDStr))	
+
+			figure(figCompress)
+			cmap=speedCmap;
+			colormap(gca,cmap)
+
+			cbDist=colorbar('Ticks',[0 0.25 0.5 0.75 1],'TickLabels',{'0',sprintf('%d',(size(speedCmap,1)-1)/4),sprintf('%d',(size(speedCmap,1)-1)/2),sprintf('%d',3*(size(speedCmap,1)-1)/4),sprintf('%d',(size(speedCmap,1)-1))});
+			
+			ylabel(cbDist,'Speed (cm/s)')
+				
+			%yticks(cbDist,[0 0.5 1])
+			%yticklabels(cbDist,{'0',sprintf('%d',(size(speedCmap,1)-1)/2),sprintf('%d',(size(speedCmap,1)-1))})
+			%cmap =placeCmap; %get current colormap
+                        %cmap=cmap([1 count],:); % set your range here
+                        %colormap(cmap); % apply new colormap
+                        %cb=colorbar();
+			%cbDist.Limits=[1 size(speedCmap,1)]
 		end
 
 		function plotSpikeRankVsPosRank(thisObj,figH)
@@ -183,8 +219,13 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 								linIdx=sub2ind([numCellsPerPlace numPlaces],cellSeqFirstSpikes(r,1),cellSeqFirstSpikes(r,2));
 								linearCellIndicesInCycle=[linearCellIndicesInCycle linIdx];
 							end
+							%theta cycle could only know relative ordering of participants
+							linearCellIndicesInCycle=linearCellIndicesInCycle-min(linearCellIndicesInCycle)+1;
+							
 							wellOrderedSequence=sort(linearCellIndicesInCycle);
-		
+							
+	
+							%cellSequencePerCycle(c,wellOrderedSequence)=linearCellIndicesInCycle;
 							cellSequencePerCycle(c,wellOrderedSequence)=linearCellIndicesInCycle;
 					
 							for i=1:length(wellOrderedSequence)
@@ -197,7 +238,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					end 
 					%each place comparison might be divided by the total number of cycles the two cell populations
 					%are co-active
-                    thisObj.tempEncodingDistr=rankMapCount;
+                    			thisObj.tempEncodingDistr=rankMapCount;
 					totalNumMappings=sum(rankMapCount(:));
 					omarPcolor(1:numCellsTotal,1:numCellsTotal,rankMapCount/totalNumMappings,figH)
 					%omarPcolor(1:numCellsTotal,1:numCellsTotal,rankMapCount,figH)
@@ -208,7 +249,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					%ylabel(cb,'Theta cycle no.')
 					%ylabel(cb,'Proportion of mappings within cycle')
 					ylabel(cb,'Probability')
-					caxis([0 prctile(rankMapCount(:)/totalNumMappings,90)])
+					caxis([0 prctile(rankMapCount(:)/totalNumMappings,99)])
                         		title(removeUnderscores(thisObj.simObj.simParamsIDStr))
 					grid on
 					xticks(1:cellsObj.numCellsPerPlace:numCellsTotal)

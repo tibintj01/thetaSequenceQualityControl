@@ -59,7 +59,6 @@ classdef SimulationBatch < handle
 						thisObj.simArray(i,j).save()	
 					end
 				end
-	
 			end
 		end
 
@@ -90,6 +89,7 @@ classdef SimulationBatch < handle
 		function runAnalysis(thisObj)
 			figRankTransform=figure(1112);
 			figPhasePosCoding=figure(1113);
+			figSpaceCompress=figure(1114);
 			count=0;
 
 			paramSearchAnalysisObj(thisObj.numSimsPerVar,thisObj.numSimsPerVar)=SimPhaseCodingEvaluation();
@@ -112,8 +112,8 @@ classdef SimulationBatch < handle
 					phaseCodingEvaluationObj.runRankTransformAnalysis(figRankTransform); 				
 					
 					figure(figPhasePosCoding)	
-					subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
-					phaseCodingEvaluationObj.runPhaseCodeAnalysis(figPhasePosCoding); 				
+					%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
+					phaseCodingEvaluationObj.runPhaseCodeAnalysis(figPhasePosCoding,figSpaceCompress); 				
 				
 					%figPhaseDistr=figure;
 					figure(figRaster)
@@ -136,6 +136,9 @@ classdef SimulationBatch < handle
 			maxFigManual2d(3,1,18)
 
 			figure(figPhasePosCoding)
+			maxFigManual2d(3,1,18)
+			
+			figure(figSpaceCompress)
 			maxFigManual2d(3,1,18)
 			
 			%figure(figPhaseDistr)
@@ -197,8 +200,10 @@ classdef SimulationBatch < handle
 
 			%gksBar=linspace(0,1,SimulationBatch.numValuesPerParam);
 			%gnapBar=linspace(0,0.1,SimulationBatch.numValuesPerParam);
-			gksBar=linspace(0,1,SimulationBatch.numValuesPerParam);
-			gnapBar=linspace(0.05,0.15,SimulationBatch.numValuesPerParam);
+			%gksBar=linspace(0,1,SimulationBatch.numValuesPerParam);
+			%gnapBar=linspace(0.05,0.15,SimulationBatch.numValuesPerParam);
+			gksBar=1.3;
+			gnapBar=0.075
 
 			thisObj.searchParamVectors=struct();
 

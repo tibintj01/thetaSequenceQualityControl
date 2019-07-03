@@ -531,11 +531,13 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			%gnapBar=0.05;
 			%gnapBar=0.07;
 			gnapBar=0.08;
-			gnapSigma=0.01;
+			%gnapSigma=0.01;
+			gnapSigma=0.03;
 
 			%gksBar=0.3;
 			gksBar=0.2;
-			gksSigma=0.05;
+			%gksSigma=0.05;
+			gksSigma=0.1;
 
 			if(numCellsPerPlace*numPlaces==1)
 				gnapSigma=0;

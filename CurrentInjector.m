@@ -19,7 +19,8 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 
 		pulseShapeStr
 
-		asymPeakTimeFrac=0.75
+		%asymPeakTimeFrac=0.75
+		asymPeakTimeFrac=1
 		%injCurrentTrace
 	end
 

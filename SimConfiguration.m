@@ -68,8 +68,9 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 			%numPlaces=8;
 			%numCellsPerPlace=3;
 			%numPlaces=1;
-			numPlaces=4;
-			numCellsPerPlace=10;
+			numPlaces=1;
+			%numCellsPerPlace=10;
+			numCellsPerPlace=100;
 
 			%numCellsPerPlace=18;
 			maxPlaceEndTime=Inf;
@@ -88,10 +89,10 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 					simProps.numCellsPerPlace=numCellsPerPlace;
 
 					extEnvSettings.timeAxis=timeAxis;
-					%extEnvSettings.rodentRunningSpeed=linspace(20,20,length(timeAxis));  %cm/s
+					extEnvSettings.rodentRunningSpeed=linspace(20,20,length(timeAxis));  %cm/s
 					
 					%extEnvSettings.rodentRunningSpeed=[linspace(10,40,floor(length(timeAxis)/2)), linspace(40,10,floor(length(timeAxis)/2))];  %cm/s
-					extEnvSettings.rodentRunningSpeed=[linspace(40,10,floor(length(timeAxis)/2)), linspace(10,40,floor(length(timeAxis)/2))];  %cm/s
+					%extEnvSettings.rodentRunningSpeed=[linspace(40,10,floor(length(timeAxis)/2)), linspace(10,40,floor(length(timeAxis)/2))];  %cm/s
 					extEnvSettings.numPlaces=numPlaces;			
 					externalEnvironmentObj=ExternalEnvironment(extEnvSettings);
 

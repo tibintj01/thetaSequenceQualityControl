@@ -5,6 +5,19 @@ classdef ThetaPopInput < ExternallyControlledConductances
 		baselineDefault=0.1;
 		amplitudeDefault=0.1;
 
+		asymTroughPosDefault=0.75;
+
+		
+		gammaMeanAmp
+		gammaAmpSD_space
+		gammaAmpSD_phase
+
+		gammaMeanPhase
+		gammaPhaseSD
+
+		gammaMeanFreq
+		gammaFreqSD_space
+	
 		esynDefault=-72;
 	end
 
@@ -14,6 +27,9 @@ classdef ThetaPopInput < ExternallyControlledConductances
 		baseline
 		amplitude
 
+		asymTroughPos
+
+		nestedOscillationObj
 		%use methods to get these with index indicated 
 		%troughTimes
 		%phaseOverTime
