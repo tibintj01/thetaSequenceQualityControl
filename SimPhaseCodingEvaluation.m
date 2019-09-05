@@ -83,12 +83,16 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			end		
 
 			%ASSUMES POPULATION WIDE SYNCHRONOUS THETA
+			thisObj.simObj.thetaPopInputObj.addTroughLines(figH)
+
+			%{
 			thetaTroughTimes=thisObj.simObj.thetaPopInputObj.getTroughTimes(1,1);
 			
 			currYlim=ylim;
 			for i=1:length(thetaTroughTimes)
 				plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)			
 			end
+			%}
 			title(removeUnderscores(thisObj.simObj.simParamsIDStr))
 			%maxFigManual2d(3,1,14)
 			xlabel('Time (msec)')	
@@ -96,6 +100,8 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 		end
 
 		function plotPhaseVsPositionInField(thisObj,figPrecess,figCompress)
+			useAllSpikes=1;
+
 			cellsObj=thisObj.simObj.cellsObj;
 			%loop across cells
 			count=0;
@@ -110,13 +116,16 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					count=count+1;
 					%axH=subplot(cellsObj.numCellsPerPlace,cellsObj.numPlaces,count)
 					
-					%currCellSpikePhases=thisObj.spikingDataInterface.allSpikePhasesPerCell.(sprintf('c%dp%d',i,j));
-					%currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.allSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/thisObj.simObj.externalEnvObj.idxToTimeFact);
-					currCellSpikePhases=thisObj.spikingDataInterface.firstSpikePhasesPerCell.(sprintf('c%dp%d',i,j));
-					currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.firstSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/thisObj.simObj.externalEnvObj.idxToTimeFact)+1;
-					
-					currCellSpikePositions=thisObj.simObj.externalEnvObj.rodentPositionVsTime(currCellSpikeTimeIdxes);
+					if(useAllSpikes)
+						currCellSpikePhases=thisObj.spikingDataInterface.allSpikePhasesPerCell.(sprintf('c%dp%d',i,j));
+						currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.allSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/thisObj.simObj.externalEnvObj.idxToTimeFact)+1;
+					else
+						currCellSpikePhases=thisObj.spikingDataInterface.firstSpikePhasesPerCell.(sprintf('c%dp%d',i,j));
+						currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.firstSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/thisObj.simObj.externalEnvObj.idxToTimeFact)+1;
+					end
 
+
+					currCellSpikePositions=thisObj.simObj.externalEnvObj.rodentPositionVsTime(currCellSpikeTimeIdxes);
 					thisCellInputCenterPos=thisObj.simObj.externalEnvObj.placeInputStartPositions(j)+thisObj.simObj.externalEnvObj.placeInputWidths(j)/2;
 			
 					figure(figCompress)
@@ -128,7 +137,11 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 						plot(currCellSpikeInputRelativePositions,currCellSpikePhases,'o','MarkerSize',5,'Color',speedCmap(currSpeed,:),'MarkerFaceColor',speedCmap(currSpeed,:));
 					end
 					xlabel('Distance from place input center (cm)')
-					ylabel('First spike theta phase')
+					if(useAllSpikes)
+						ylabel('spike theta phase')
+					else
+						ylabel('First spike theta phase')
+					end
 					hold on
 					%percent traveled within input field (not observable extracellularly)
 					%{

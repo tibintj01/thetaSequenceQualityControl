@@ -5,6 +5,8 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	properties
 		%voltage and time dependent gating variable matrices
+		justSpikingConductances=1
+
 		v
 		n
 		m
@@ -221,7 +223,8 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			kaH_Gain=cellsObj.kaH_Gain;
 			gh=cellsObj.gh;
 			eh=cellsObj.eh;
-			fh=cellsObj.fh;	
+			fh=cellsObj.fh;
+			justSpikingConductances=Cells.justSpikingConductances;	
 			
 			%make sure these are updated based on gbar and gsigma
 			cellsObj.setIntrinsicsMatrix();
@@ -243,7 +246,6 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			tausyn=cellsObj.internalConnObj.tausyn;
 			connectivityMatrix=cellsObj.internalConnObj.connectivityMatrix;
 			startCouplingTime=cellsObj.internalConnObj.startCouplingTime;
-
 
 			
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -274,8 +276,10 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 								 %get synaptic conductance time course for all cells
 								 %if this cell spikes, add a synaptic weight time course to all of
 								 %its post-synaptic recipients' gsyn
-								 synEndStep=step+1+round(400/dt);
 								 %400 ms covers integrated timecourses without slowing down
+								 %synEndStep=step+1+round(400/dt);
+								 %4000 ms covers integrated timecourses with delay
+								 synEndStep=step+1+round(4000/dt);
 								 if(synEndStep>numSteps)
 								     synEndStep=numSteps;
 								 end
@@ -285,14 +289,15 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 								for postSynCellIdx=1:numCellsPerPlace
 									 for postSynPlaceIdx=1:numPlaces
 									     weight=connectivityMatrix(cellRow,placeIdx,postSynCellIdx,postSynPlaceIdx);
-									   
+										   
+									    %delay=dendriticDelayMatrix(cellRow,placeIdx,postSynCellIdx,postSynPlaceIdx);				   
 									     if(step*dt>=startCouplingTime && weight>0)
 										gsyn(postSynCellIdx,postSynPlaceIdx,synCurrentIdxes)=squeeze(gsyn(postSynCellIdx,postSynPlaceIdx,synCurrentIdxes))...
 										    +weight*exp(-dt*(synCurrentIdxes-(step+1))/tausyn).'; %instantaneous conductance jump with single additive exp decay..
 										%count=count+1;
 									     end
 									end
-								 end
+								end
 							end
 						end
 
@@ -447,7 +452,11 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 
 						%vInc=double(dt*(-il-ina-ik-ika-ih-inap-iks-isyn-isynExt+itonic)/cm);
-						vInc=double(dt*(-il-ina-ik-ika-ih-inap-iks-isynIntE-isynExt+itonic)/cm);
+						if(justSpikingConductances)
+							vInc=double(dt*(-il-ina-ik-isynIntE-isynExt+itonic)/cm);
+						else
+							vInc=double(dt*(-il-ina-ik-ika-ih-inap-iks-isynIntE-isynExt+itonic)/cm);
+						end
 						%vInc=double(dt*(-il-ina-ik-ika-ih-inap-iks+itonic)/cm);
 						%vInc=double(dt*(-il-ina-ik-ika-ih-inap-iks-isynExt+itonic)/cm);
 					    %vInc=double(dt*(-il-ina-ik-inap-ika-iks-isyn-isynExt+itonic)/cm);
@@ -532,12 +541,13 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			%gnapBar=0.07;
 			gnapBar=0.08;
 			%gnapSigma=0.01;
-			gnapSigma=0.03;
+			gnapSigma=0.005;
+			%gnapSigma=0.03;
 
 			%gksBar=0.3;
 			gksBar=0.2;
-			%gksSigma=0.05;
-			gksSigma=0.1;
+			gksSigma=0.05;
+			%gksSigma=0.1;
 
 			if(numCellsPerPlace*numPlaces==1)
 				gnapSigma=0;

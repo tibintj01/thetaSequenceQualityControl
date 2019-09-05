@@ -91,8 +91,10 @@ classdef Simulation < handle & matlab.mixin.Copyable
                         xlabel('g_{KS} (nS/cm^2)')
                         ylabel('g_{NaP} (nS/cm^2)')
 
-                        xlim([0 1.5])
-                        ylim([0 0.15])
+                        %xlim([0 1.5])
+                        %ylim([0 0.15])
+                        xlim([0 Inf])
+                        ylim([0 Inf])
 
                         %daspect([1 1 1])
 

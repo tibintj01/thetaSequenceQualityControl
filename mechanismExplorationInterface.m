@@ -71,6 +71,7 @@ disp('******************************************************')
 disp('***************saving results**********************')
 
 tic
+ displayRegex('Fig*tif')
 %newSim.save()
 %phaseCodingEvaluationObj.save()
 toc

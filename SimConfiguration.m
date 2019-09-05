@@ -68,9 +68,12 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 			%numPlaces=8;
 			%numCellsPerPlace=3;
 			%numPlaces=1;
-			numPlaces=1;
-			%numCellsPerPlace=10;
-			numCellsPerPlace=100;
+			%numPlaces=5;
+			%numCellsPerPlace=30;
+			numPlaces=2;
+			%numCellsPerPlace=3;
+			numCellsPerPlace=10;
+			%numCellsPerPlace=100;
 
 			%numCellsPerPlace=18;
 			maxPlaceEndTime=Inf;
@@ -117,6 +120,7 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			simProps.simCells=copy(simCells);
 			simProps.thetaPopInput=copy(simCells.inhThetaInputArray);
+			simProps.thetaPopInput.displayContent();
 			simProps.externalEnvironmentObj=copy(externalEnvironmentObj);		
 	
 			thisObj.simParams=simProps;

@@ -1,7 +1,11 @@
 classdef CurrentInjectors < handle & matlab.mixin.Copyable
 
 	properties
-		currAmp=6;
+		%currAmp=6;
+		%currAmp=8;
+		currAmp=7;
+		%currAmp=10;
+		%currAmp=15;
 		pulseShapeStr='ramp';
 		
 
@@ -26,10 +30,11 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		function displayContent(thisObj)
 			figure
 			count=1;
+			placeColormap=copper(thisObj.nc);
 			for r=1:thisObj.nr
 				for c=1:thisObj.nc
 					subplot(thisObj.nr,thisObj.nc,count)
-					plot(thisObj.timeAxis,thisObj.currInjectorMatrix(r,c).getTimeTrace())
+					plot(thisObj.timeAxis,thisObj.currInjectorMatrix(r,c).getTimeTrace(),'Color',placeColormap(c,:))
 					count=count+1;
 				
 					xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
@@ -39,6 +44,21 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 				end
 			end
 			maxFigManual2d(2,1,14)
+		end
+		
+		function displayContentSubplot(thisObj,figH)
+			figure(figH)
+			placeColormap=copper(thisObj.nc);
+			for r=1:thisObj.nr
+				for c=1:thisObj.nc
+					plot(thisObj.timeAxis,thisObj.currInjectorMatrix(r,c).getTimeTrace(),'Color',placeColormap(c,:),'LineWidth',5)
+					hold on	
+				end
+			end
+					xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
+					ylim([0 thisObj.currAmp])
+					xlabel('Time (sec)')
+					ylabel('Current (pA)')
 		end
 
 		function floatMatrix=getFloatMatrix(thisObj)

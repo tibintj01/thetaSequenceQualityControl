@@ -102,11 +102,12 @@ classdef SimulationBatch < handle
 					%figure(figRaster)	
 					figRaster=figure;
 					%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
-					axRaster1=subplot(10,10,[1 90]);
+					axRaster1=subplot(10,10,[1 50]);
 					phaseCodingEvaluationObj.runPlotRaster(figRaster);
 					title(removeUnderscores(thisObj.simArray(i,j).simParamsIDStr))
 					%maxFigManual2d(10,3,18)
 					
+
 					figure(figRankTransform)
 					subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
 					phaseCodingEvaluationObj.runRankTransformAnalysis(figRankTransform); 				
@@ -119,13 +120,24 @@ classdef SimulationBatch < handle
 					figure(figRaster)
 					%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
 					%phaseCodingEvaluationObj.runSpikeTimeDistributionAnalysis(figPhaseDistr);
-					axRaster2=subplot(10,10,[91 100]);
+					axRaster2=subplot(10,10,[51 60]);
 					phaseCodingEvaluationObj.runSpikeTimeDistributionAnalysis(figRaster);
 					%title(removeUnderscores(thisObj.simArray(i,j).simParamsIDStr))
-					linkaxes([axRaster1 axRaster2],'x')
-					maxFigManual2d(10,3,28)
+					thisObj.simArray(i,j).thetaPopInputObj.addTroughLines(figRaster);				
+	
+					axRaster3=subplot(10,10,[61 70]);
+					thetaSample=squeeze(thisObj.simArray(i,j).thetaPopInputObj.conductanceTimeSeries(1,1,:));	
+					simTimeAxis=thisObj.simArray(i,j).configuration.simParams.timeAxis;
+					decFactor=1;	
+					plot(simTimeAxis(1:decFactor:end),thetaSample(1:decFactor:end),'LineWidth',5)
 					
-					paramSearchAnalysisObj(i,j)=copy(phaseCodingEvaluationObj);;
+					axRaster4=subplot(10,10,[71 100]);
+					thisObj.simArray(i,j).externalInputObj.displayContentSubplot(figRaster);	
+					
+					linkaxes([axRaster1 axRaster2 axRaster3 axRaster4],'x')
+					maxFigManual2d(10,5,48)
+					
+					paramSearchAnalysisObj(i,j)=copy(phaseCodingEvaluationObj);
 				end
 			end
 
@@ -202,8 +214,23 @@ classdef SimulationBatch < handle
 			%gnapBar=linspace(0,0.1,SimulationBatch.numValuesPerParam);
 			%gksBar=linspace(0,1,SimulationBatch.numValuesPerParam);
 			%gnapBar=linspace(0.05,0.15,SimulationBatch.numValuesPerParam);
+			%gksBar=1.3;
+			%gnapBar=0.075
+			%gksBar=1.0;
+			gksBar=1.2;
 			gksBar=1.3;
-			gnapBar=0.075
+			gksBar=1.6;
+			%gksBar=1.8;
+			gksBar=2.1;
+			%gnapBar=0.15
+			%gnapBar=0.17
+			%gnapBar=0.13
+			%gnapBar=0.15
+			%gnapBar=0.18
+			%gnapBar=0.20
+			%gnapBar=0.24
+			%gnapBar=0.3
+			gnapBar=0.35
 
 			thisObj.searchParamVectors=struct();
 

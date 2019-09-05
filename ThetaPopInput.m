@@ -2,21 +2,37 @@ classdef ThetaPopInput < ExternallyControlledConductances
 	properties(Constant)
 		frequencyDefault=8/1000;		%kHz
 		phaseOffsetDefault=0;			%radians
-		baselineDefault=0.1;
+		%baselineDefault=0.1;
+		baselineDefault=0.15;
 		amplitudeDefault=0.1;
 
 		asymTroughPosDefault=0.75;
 
 		
-		gammaMeanAmp
-		gammaAmpSD_space
-		gammaAmpSD_phase
+		%gammaMeanAmp=0.08;
+		%gammaMeanAmp=0.15;
+		gammaMeanAmp=0.1;
+		%gammaMeanAmp=0.12;
+		%gammaMeanAmp=0.15;
+		%gammaMeanAmp=0.25;
+		gammaAmpSD_acrossSpace=0.02;
+		%gammaAmpSD_acrossSpace=0.05;
+		%gammaAmpPhaseEnvelopeSD=0.01;
+		%gammaAmpPhaseEnvelopeSD=50; %degrees
+		%gammaAmpPhaseEnvelopeSD=20; %degrees
+		gammaAmpPhaseEnvelopeSD=30; %degrees
 
-		gammaMeanPhase
-		gammaPhaseSD
+		%gammaMeanPhase=150;
+		%gammaMeanPhase=80;
+		%gammaMeanPhase=270;
+		gammaMeanPhase=240;
+		gammaPhaseSD=20;
 
-		gammaMeanFreq
-		gammaFreqSD_space
+		gammaMeanFreq=50/1000;
+		%gammaFreqSD_space=30/1000;
+		gammaFreqSD_space=20/1000;
+		%gammaMeanFreq=30/1000;
+		%gammaFreqSD_space=10/1000;
 	
 		esynDefault=-72;
 	end
@@ -30,6 +46,7 @@ classdef ThetaPopInput < ExternallyControlledConductances
 		asymTroughPos
 
 		nestedOscillationObj
+		troughTimes
 		%use methods to get these with index indicated 
 		%troughTimes
 		%phaseOverTime
@@ -53,6 +70,7 @@ classdef ThetaPopInput < ExternallyControlledConductances
 				thisObj=thisObj@ExternallyControlledConductances(extInParams);
 				thisObj.setParameterDefaults();
 				thisObj.setConductanceTimeSeries();
+				thisObj.addGammaAll();
 			%end
 		end
 		
@@ -70,18 +88,91 @@ classdef ThetaPopInput < ExternallyControlledConductances
 			end
 			
 			thisObj.conductanceTimeSeries=mtx;
+				
+			for r=1:nr
+				for c=1:nc
+					thisObj.setTroughTimes(r,c);
+
+				end
+			end
 		end
 
-		function troughTimes=getTroughTimes(thisObj,r,c)
-			[~,troughIdxes]=findpeaks(squeeze(thisObj.conductanceTimeSeries(r,c,:)));
+		function addTroughLines(thisObj,figH)
+			figure(figH)
+			hold on
+			currYlim=ylim;
+                        thetaTroughTimes=getTroughTimes(thisObj,1,1);
+			for i=1:length(thetaTroughTimes)
+                                plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)
+			end
+		end
+
+		function addGammaAll(thisObj)
+			nr=size(thisObj.amplitudeMatrix,1);
+                        nc=size(thisObj.amplitudeMatrix,2);
+                        for r=1:nr
+                                for c=1:nc
+					thisObj.addGamma(r,c);
+				end
+			end
+		end
+
+	
+		function addGamma(thisObj,r,c)
+			troughTimes=getTroughTimes(thisObj,r,c);
+
+			for cycI=1:length(troughTimes)
+				currTroughTime=troughTimes(cycI);
+				[~,currTroughTimeIdx]=min(abs(thisObj.timeAxis-currTroughTime));
+				if(cycI+1<=length(troughTimes))
+					nextTroughTime=troughTimes(cycI+1);
+				else
+					continue
+				end
+				[~,nextTroughTimeIdx]=min(abs(thisObj.timeAxis-nextTroughTime));
+ 	
+				currCellGammaCenterAmp=normrnd(ThetaPopInput.gammaMeanAmp,ThetaPopInput.gammaAmpSD_acrossSpace,1,1);
+				currCycleGammaFreq=normrnd(ThetaPopInput.gammaMeanFreq,ThetaPopInput.gammaFreqSD_space,1,1);
+				currCycleGammaCenterPhase=normrnd(ThetaPopInput.gammaMeanPhase,ThetaPopInput.gammaPhaseSD,1,1);
+
+				currCycleTimeIdxes=(currTroughTimeIdx:nextTroughTimeIdx)';
+				currCycleTimeValues=thisObj.timeAxis(currCycleTimeIdxes);
+
+				
+				%currCycleGammaAmpEnvelop=normpdf(currCycleTimeIdxes,currCellGammaCenterAmp,ThetaPopInput.gammaAmpPhaseEnvelopeSD);
+				%currCycleGammaAmpEnvelop=getGaussianCurve(currCycleTimeValues,currCellGammaCenterAmp,ThetaPopInput.gammaAmpPhaseEnvelopeSD);
+				currCycleGammaAmpEnvelop=getGaussianCurve(currCycleTimeValues,currCycleTimeValues(1)+currCycleGammaCenterPhase*range(currCycleTimeValues)/360,ThetaPopInput.gammaAmpPhaseEnvelopeSD*range(currCycleTimeValues)/360);
+ 				currCycleGammaAmpEnvelop=currCycleGammaAmpEnvelop/max(currCycleGammaAmpEnvelop(:)); %normalize so max is 1
+
+				currCellGamma=currCellGammaCenterAmp*currCycleGammaAmpEnvelop(:).*sin(2*pi*currCycleGammaFreq*currCycleTimeValues+currCycleGammaCenterPhase);
+				
+				cycleWithGamma=thisObj.conductanceTimeSeries(r,c,currCycleTimeIdxes(:))+reshape(currCellGamma,size(thisObj.conductanceTimeSeries(r,c,currCycleTimeIdxes(:))));
+				cycleWithGamma(cycleWithGamma<0)=0; %no negative conductances - fully blocked channel
+				thisObj.conductanceTimeSeries(r,c,currCycleTimeIdxes(:))=cycleWithGamma;
+				%if(cycI==2)
+				%	figure; plot(currCycleTimeValues,squeeze(cycleWithGamma));displayCurrentFigure('gammaTest.tif')
+				%	figure; plot(thisObj.timeAxis,squeeze(thisObj.conductanceTimeSeries(r,c,:)));displayCurrentFigure
+				%end
+			end
+		end
+
+		function thisTroughTimes=getTroughTimes(thisObj,r,c)
+			thisTroughTimes=thisObj.troughTimes{r,c};
+		end
+
+		function setTroughTimes(thisObj,r,c)
+			[~,troughIdxes]=findpeaks(squeeze(-thisObj.conductanceTimeSeries(r,c,:)));
 			troughTimes=thisObj.timeAxis(troughIdxes);
+			thisObj.troughTimes{r,c}=troughTimes;
 		end
 
 		function [phaseOverTime]=getPhaseOverTime(thisObj,r,c) 
 			timeSeries=thisObj.conductanceTimeSeries(r,c,:);
 			phaseSeries=hilbert(-(timeSeries-mean(timeSeries)));
 			timeSeries_Phase=angle(phaseSeries);
-		 	phaseOverTime =((timeSeries_Phase/pi) + 1)/2 * 360;
+		 	%phaseOverTime =((timeSeries_Phase/pi) + 1)/2 * 360;
+		 	phaseOverTime =mod(((timeSeries_Phase/pi) + 2)/2 * 360,360);
+		 	%phaseOverTime =(timeSeries_Phase/(2*pi)) * 360;
 		end
 
 		function setParameterDefaults(thisObj)
