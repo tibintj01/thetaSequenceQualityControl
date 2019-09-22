@@ -20,7 +20,8 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 		pulseShapeStr
 
 		%asymPeakTimeFrac=0.75
-		asymPeakTimeFrac=1
+		asymPeakTimeFrac=0.95
+		%asymPeakTimeFrac=1
 		%injCurrentTrace
 	end
 
@@ -42,8 +43,10 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 		end
 		
 		function injCurrentTrace=getTimeTrace(thisInjector)
-			if(strcmp(thisInjector.pulseShapeStr,'ramp'))
+			if(strcmp(thisInjector.pulseShapeStr,'ramp') || strcmp(thisInjector.pulseShapeStr,'flat'))
 				injCurrentTrace=buildRamp(thisInjector);
+			else
+				error('*********current shape not yet implemented***************')
 			end
 		end
 

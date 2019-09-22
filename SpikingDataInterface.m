@@ -163,14 +163,15 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 			allSpikePhases=subTpeakPhases(subTpeaks>spikeThresh);
 
 			allSpikeCycles=NaN(size(allSpikeTimes));
-			for i=1:length(allSpikeTimes)
-				searchArray=allSpikeTimes(i)-troughTimes;
-				searchArray(searchArray<0)=NaN;
-				
-				[~,precedingTroughIdx]=min(searchArray);
-				allSpikeCycles(i)=precedingTroughIdx; %1=first theta cycle (trough to trough)
-			end
-			
+			if(length(troughTimes)>0)
+				for i=1:length(allSpikeTimes)
+					searchArray=allSpikeTimes(i)-troughTimes;
+					searchArray(searchArray<0)=NaN;
+					
+					[~,precedingTroughIdx]=min(searchArray);
+					allSpikeCycles(i)=precedingTroughIdx; %1=first theta cycle (trough to trough)
+				end
+			end			
 
 			allSpikes_IsDuringPlaceInput=zeros(size(allSpikeTimes));
 			allSpikes_IsDuringPlaceInput(allSpikeTimes>rampStartTime & allSpikeTimes<rampEndTime)=1;

@@ -14,6 +14,7 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 		%placeInputWidth=20 %cm 
 		%placeInputWidth=30 %cm 
 		%placeInputWidth=40 %cm 
+		%placeInputWidth=50 %cm 
 		placeInputWidth=50 %cm 
 		%"Using a 1-Hz threshold as the minimum rate within a place field, field sizes in a cylinder of 76 cm radius ranged from a minimum of 4% of the surface area to a maxi- mum of 62%, with a median size of 18%"
 
@@ -46,7 +47,10 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 		function [placeInputStartTime,placeInputEndTime]=getPlaceInputStartStopTimes(thisObj,placeIdx)
 			%placeInputCenterPos=((placeIdx-1)/thisObj.numPlaces)*(thisObj.rodentPositionVsTime(end))+thisObj.placeInputWidth/2;
 			
-			placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/4)+thisObj.placeInputWidth/2;		
+			%placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/4)+thisObj.placeInputWidth/2;		
+			%placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/6)+thisObj.placeInputWidth/2;		
+			%placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/2)+thisObj.placeInputWidth/2;		
+			placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/8)+thisObj.placeInputWidth/2;		
 
 			placeInputStartPos=placeInputCenterPos-thisObj.placeInputWidth/2;
 			placeInputEndPos=placeInputCenterPos+thisObj.placeInputWidth/2;

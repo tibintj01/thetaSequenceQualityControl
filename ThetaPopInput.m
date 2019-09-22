@@ -1,26 +1,37 @@
 classdef ThetaPopInput < ExternallyControlledConductances
 	properties(Constant)
 		frequencyDefault=8/1000;		%kHz
+		%frequencyDefault=80/1000;		%kHz
 		phaseOffsetDefault=0;			%radians
 		%baselineDefault=0.1;
 		baselineDefault=0.15;
 		amplitudeDefault=0.1;
+	
+
+   		%amplitudeDefault=0;
+
+		INCLUDE_GAMMA=0;
 
 		asymTroughPosDefault=0.75;
 
 		
 		%gammaMeanAmp=0.08;
 		%gammaMeanAmp=0.15;
-		gammaMeanAmp=0.1;
 		%gammaMeanAmp=0.12;
 		%gammaMeanAmp=0.15;
 		%gammaMeanAmp=0.25;
+		
+		gammaMeanAmp=0.1;
 		gammaAmpSD_acrossSpace=0.02;
+		gammaAmpPhaseEnvelopeSD=30; %degrees
+		
+		%gammaMeanAmp=0;
+		%gammaAmpSD_acrossSpace=0;
+		%gammaAmpPhaseEnvelopeSD=0; %degrees
 		%gammaAmpSD_acrossSpace=0.05;
 		%gammaAmpPhaseEnvelopeSD=0.01;
 		%gammaAmpPhaseEnvelopeSD=50; %degrees
 		%gammaAmpPhaseEnvelopeSD=20; %degrees
-		gammaAmpPhaseEnvelopeSD=30; %degrees
 
 		%gammaMeanPhase=150;
 		%gammaMeanPhase=80;
@@ -70,7 +81,9 @@ classdef ThetaPopInput < ExternallyControlledConductances
 				thisObj=thisObj@ExternallyControlledConductances(extInParams);
 				thisObj.setParameterDefaults();
 				thisObj.setConductanceTimeSeries();
-				thisObj.addGammaAll();
+				if(ThetaPopInput.INCLUDE_GAMMA)
+					thisObj.addGammaAll();
+				end
 			%end
 		end
 		
@@ -98,12 +111,15 @@ classdef ThetaPopInput < ExternallyControlledConductances
 		end
 
 		function addTroughLines(thisObj,figH)
-			figure(figH)
-			hold on
-			currYlim=ylim;
-                        thetaTroughTimes=getTroughTimes(thisObj,1,1);
-			for i=1:length(thetaTroughTimes)
-                                plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)
+			if(ThetaPopInput.amplitudeDefault>0)
+				figure(figH)
+				hold on
+				currYlim=ylim;
+				thetaTroughTimes=getTroughTimes(thisObj,1,1);
+				for i=1:length(thetaTroughTimes)
+					%plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)
+					plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'b','LineWidth',4)
+				end
 			end
 		end
 

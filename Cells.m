@@ -3,9 +3,11 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%public cells properties
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	properties(Constant)
+		justSpikingConductances=1
+	end
 	properties
 		%voltage and time dependent gating variable matrices
-		justSpikingConductances=1
 
 		v
 		n
@@ -24,11 +26,12 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		gksBar
 	        gksSigma
 
+		%gl
+
 		gnapMatrix
 		gksMatrix
 
 		injCurrMatrix
-
 		inhThetaInputArray
 
 		numCellsPerPlace
@@ -47,7 +50,7 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		esyn_I
 		esyn_E
 
-		circuitRawOutput
+		%circuitRawOutput
 		%sensoryInput
 		%speedInput
 		%placeInput
@@ -80,7 +83,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 	        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%fast Na;
 		%gna=24.0;       %mS/cm^2
-		gna=60.0;       %mS/cm^2
+		%gna=60.0;       %mS/cm^2 - original, Sept 5, 2019
+		%gna=70.0;       %mS/cm^2
+		gna=80.0;       %mS/cm^2
 		%gna=0;       %mS/cm^2
 		%gna=22.0;       %mS/cm^2
 		%ena=55;
@@ -150,13 +155,17 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			if (nargin == 1)
 				thisObj.setSimSpecificProperties(simProps);
 
-				thisObj.setCellProps(simProps.extEnvObj);
-				
+				%if(isfield(simProps,'bias'))
+				%	thisObj.setCellProps(simProps.extEnvObj,simProps.bias);
+				%else
+					thisObj.setCellProps(simProps.extEnvObj);
+				%end
+
 				thisObj.setIntrinsicsMatrix();
 				
 				%thisObj.injCurrMatrix=thisObj.currInjectorArray.getFloatMatrix();
 				thisObj.injCurrMatrix=thisObj.externalInputObj.getFloatMatrix();
-			
+				
 				thisObj.spikeTimes=[];
 				thisObj.spikeCellCoords=[];
 				thisObj.gsyn=zeros(thisObj.numCellsPerPlace,thisObj.numPlaces,thisObj.numSteps);
@@ -171,8 +180,12 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 
 		%stepping through time
-		function go(cellsObj)
-			cellsObj.letItRip()
+		function go(thisObj)
+			disp('solving cell diff equations....')
+				thisObj.injCurrMatrix=thisObj.externalInputObj.getFloatMatrix();
+			tic
+			thisObj.letItRip()
+			toc
 		end
 		
 		function idStr=getCellIDstr(thisObj,r,placeIdx)
@@ -188,64 +201,64 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 	%private methods
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	methods(Access= protected)
-		function letItRip(cellsObj)
+		function letItRip(thisObj)
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%load variables		
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			numSteps=cellsObj.numSteps;
-			numPlaces=cellsObj.numPlaces;
-			numCellsPerPlace=cellsObj.numCellsPerPlace;
-			v=cellsObj.v;
-			n=cellsObj.n;
-			m=cellsObj.m;
-			h=cellsObj.h;
-			mka=cellsObj.mka;
-			hka=cellsObj.hka;
-			kappaH=cellsObj.kappaH;
-			mnap=cellsObj.mnap;
-			nks=cellsObj.nks;
-			gl=cellsObj.gl;
-			el=cellsObj.el;
-			gna=cellsObj.gna;
-			ena=cellsObj.ena;
-			naM_Vt=cellsObj.naM_Vt;
-			naM_Gain=cellsObj.naM_Gain;
-			naH_Vt=cellsObj.naH_Vt;
-			naH_Gain=cellsObj.naH_Gain;	
-			gk=cellsObj.gk;
-			ek=cellsObj.ek;
-			kdrN_Vt=cellsObj.kdrN_Vt;
-			kdrN_Gain=cellsObj.kdrN_Gain;
-			fka=cellsObj.fka;
-			kaM_Vt=cellsObj.kaM_Vt;
-			kaM_Gain=cellsObj.kaM_Gain;
-			kaH_Vt=cellsObj.kaH_Vt;
-			kaH_Gain=cellsObj.kaH_Gain;
-			gh=cellsObj.gh;
-			eh=cellsObj.eh;
-			fh=cellsObj.fh;
+			numSteps=thisObj.numSteps;
+			numPlaces=thisObj.numPlaces;
+			numCellsPerPlace=thisObj.numCellsPerPlace;
+			v=thisObj.v;
+			n=thisObj.n;
+			m=thisObj.m;
+			h=thisObj.h;
+			mka=thisObj.mka;
+			hka=thisObj.hka;
+			kappaH=thisObj.kappaH;
+			mnap=thisObj.mnap;
+			nks=thisObj.nks;
+			gl=thisObj.gl;
+			el=thisObj.el;
+			gna=thisObj.gna;
+			ena=thisObj.ena;
+			naM_Vt=thisObj.naM_Vt;
+			naM_Gain=thisObj.naM_Gain;
+			naH_Vt=thisObj.naH_Vt;
+			naH_Gain=thisObj.naH_Gain;	
+			gk=thisObj.gk;
+			ek=thisObj.ek;
+			kdrN_Vt=thisObj.kdrN_Vt;
+			kdrN_Gain=thisObj.kdrN_Gain;
+			fka=thisObj.fka;
+			kaM_Vt=thisObj.kaM_Vt;
+			kaM_Gain=thisObj.kaM_Gain;
+			kaH_Vt=thisObj.kaH_Vt;
+			kaH_Gain=thisObj.kaH_Gain;
+			gh=thisObj.gh;
+			eh=thisObj.eh;
+			fh=thisObj.fh;
 			justSpikingConductances=Cells.justSpikingConductances;	
 			
 			%make sure these are updated based on gbar and gsigma
-			cellsObj.setIntrinsicsMatrix();
-			gnapMatrix=cellsObj.gnapMatrix;		
-			gksMatrix=cellsObj.gksMatrix;		
+			thisObj.setIntrinsicsMatrix();
+			gnapMatrix=thisObj.gnapMatrix;		
+			gksMatrix=thisObj.gksMatrix;		
 			
-			injCurrMatrix=cellsObj.injCurrMatrix;
-			dt=cellsObj.dt;
-			cm=cellsObj.cm;
+			injCurrMatrix=thisObj.injCurrMatrix;
+			dt=thisObj.dt;
+			cm=thisObj.cm;
 
-			gInhThetaMatrix=cellsObj.inhThetaInputArray.conductanceTimeSeries;
-			%esynI=cellsObj.inhThetaInputArray.esyn;
-			spikeTimes=cellsObj.spikeTimes;
-			spikeCellCoords=cellsObj.spikeCellCoords;
-			gsyn=cellsObj.gsyn;
-			esyn_I=cellsObj.esyn_I;
-			esyn_E=cellsObj.esyn_E;
+			gInhThetaMatrix=thisObj.inhThetaInputArray.conductanceTimeSeries;
+			%esynI=thisObj.inhThetaInputArray.esyn;
+			spikeTimes=thisObj.spikeTimes;
+			spikeCellCoords=thisObj.spikeCellCoords;
+			gsyn=thisObj.gsyn;
+			esyn_I=thisObj.esyn_I;
+			esyn_E=thisObj.esyn_E;
 
-			tausyn=cellsObj.internalConnObj.tausyn;
-			connectivityMatrix=cellsObj.internalConnObj.connectivityMatrix;
-			startCouplingTime=cellsObj.internalConnObj.startCouplingTime;
+			tausyn=thisObj.internalConnObj.tausyn;
+			connectivityMatrix=thisObj.internalConnObj.connectivityMatrix;
+			startCouplingTime=thisObj.internalConnObj.startCouplingTime;
 
 			
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -258,12 +271,14 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 						nSpecific=n(cellRow,placeIdx,step);
 						mSpecific=m(cellRow,placeIdx,step);
 						hSpecific=h(cellRow,placeIdx,step);
-						mkaSpecific=mka(cellRow,placeIdx,step);
-						hkaSpecific=hka(cellRow,placeIdx,step);
-						kappaHSpecific=kappaH(cellRow,placeIdx,step);
-						mnapSpecific=mnap(cellRow,placeIdx,step);
-						nksSpecific=nks(cellRow,placeIdx,step);
 
+						if(~justSpikingConductances)
+							mkaSpecific=mka(cellRow,placeIdx,step);
+							hkaSpecific=hka(cellRow,placeIdx,step);
+							kappaHSpecific=kappaH(cellRow,placeIdx,step);
+							mnapSpecific=mnap(cellRow,placeIdx,step);
+							nksSpecific=nks(cellRow,placeIdx,step);
+						end
 						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 						%check for spike in  time step
 						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -325,114 +340,118 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 						tauh=1/(alphah+betah);
 						hinf=1/(1+exp((vSpecific+58)/5)); %why not alpha/(alpha+beta) in Leung model??
 
-						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-						%I_Kdr gates voltage and time dependence
-						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-						%taun=kdrTauN_offset+kdrTauN_Range/(1+exp((vSpecific-kdrTauN_Vt)/kdrTauN_Gain));
-						%ninf=1/(1+exp((vSpecific-kdrN_Vt)/kdrN_Gain)); 
-						alphan=0.035*(vSpecific-kdrN_Vt)/(1-exp((vSpecific-kdrN_Vt)/kdrN_Gain));
-						betan=0.035*(vSpecific-kdrN_Vt)/(exp((vSpecific-kdrN_Vt)/(-kdrN_Gain))-1);
+							%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+							%I_Kdr gates voltage and time dependence
+							%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+							%taun=kdrTauN_offset+kdrTauN_Range/(1+exp((vSpecific-kdrTauN_Vt)/kdrTauN_Gain));
+							%ninf=1/(1+exp((vSpecific-kdrN_Vt)/kdrN_Gain)); 
+							alphan=0.035*(vSpecific-kdrN_Vt)/(1-exp((vSpecific-kdrN_Vt)/kdrN_Gain));
+							betan=0.035*(vSpecific-kdrN_Vt)/(exp((vSpecific-kdrN_Vt)/(-kdrN_Gain))-1);
 
-						ninf=alphan/(alphan+betan);
-						taun=1/(alphan+betan);
+							ninf=alphan/(alphan+betan);
+							taun=1/(alphan+betan);
 
 
-						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-						%I_A gate voltage and time dependence
-						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-						gka=24; %mS/cm^2
-						alpha_mka=-0.01*(vSpecific-kaM_Vt)/(exp((vSpecific-kaM_Vt)/kaM_Gain)-1);
-						beta_mka=0.01*(vSpecific-kaM_Vt)/(exp((vSpecific-kaM_Vt)/(-kaM_Gain))-1);
-						tau_mka=0.2; %ms
-						mkaInf=alpha_mka/(alpha_mka+beta_mka);
+						if(~justSpikingConductances)
+							%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+							%I_A gate voltage and time dependence
+							%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+							gka=24; %mS/cm^2
+							alpha_mka=-0.01*(vSpecific-kaM_Vt)/(exp((vSpecific-kaM_Vt)/kaM_Gain)-1);
+							beta_mka=0.01*(vSpecific-kaM_Vt)/(exp((vSpecific-kaM_Vt)/(-kaM_Gain))-1);
+							tau_mka=0.2; %ms
+							mkaInf=alpha_mka/(alpha_mka+beta_mka);
 
-						alpha_hka=-0.01*(vSpecific-kaH_Vt)/(exp((vSpecific-kaH_Vt)/kaH_Gain)-1);
-						beta_hka=0.01*(vSpecific-kaH_Vt)/(exp((vSpecific-kaH_Vt)/(-kaH_Gain))-1);
+							alpha_hka=-0.01*(vSpecific-kaH_Vt)/(exp((vSpecific-kaH_Vt)/kaH_Gain)-1);
+							beta_hka=0.01*(vSpecific-kaH_Vt)/(exp((vSpecific-kaH_Vt)/(-kaH_Gain))-1);
 
-						%RELU-like time constant with voltage
-						if(vSpecific<-20)
-						   tau_hka=0.2; %ms
-						else
-						   tau_hka=(5+0.26*(vSpecific+20));
-						end
-						hkaInf=alpha_hka/(alpha_hka+beta_hka);		
-					
-
-					      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-					      %I_h gate voltage and time dependence
-					      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-					      gh=0.2; %mS/cm^2
-					      alpha_kappaH=exp(0.08316*(vSpecific+75));
-					      beta_kappaH=exp(0.03326*(vSpecific+75));
-					      tau_kappaH=49.8*beta_kappaH/(1+alpha_kappaH);
-					      kappaH_inf=1/(1+exp((vSpecific+81)/8)); %notice low half activation -81
-
-					      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-					      %I_NaP gate voltage and time dependence 
-					      %(no inactivation since beyond timescale of interest)
-					      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-					      %gnap=0.8; %mS/cm^2 (Table 2)
-						%{
-						if(cell==1)
-							gnap=gnap1;
-						elseif(cell==2)
-							gnap=gnap2;
-						end
-						%gnap=1; %mS/cm^2 
-						%}
-					      %mnap_Vt=-50;
+							%RELU-like time constant with voltage
+							if(vSpecific<-20)
+							   tau_hka=0.2; %ms
+							else
+							   tau_hka=(5+0.26*(vSpecific+20));
+							end
+							hkaInf=alpha_hka/(alpha_hka+beta_hka);		
 						
-						gnap=gnapMatrix(cellRow,placeIdx);
-					      mnap_Vt=-50;
-						    %mnap_Vt=-52;
-					      %mnap_Vt=-47;
-					      mnap_Gain=-5;
-					      %mnap_Gain=-4;
-					      mnapInf=1/(1+exp((vSpecific-mnap_Vt)/mnap_Gain));
-					      tau_mnap=1; %ms
 
-					      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-					      %I_KS gate voltage and time dependence
-					      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-					      %gks=8;
-						%{
-						if(cell==1)
-							gks=gks1;
-						elseif(cell==2)
-							gks=gks2;
-						end
-						%}
-						gks=gksMatrix(cellRow,placeIdx);
+						      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						      %I_h gate voltage and time dependence
+						      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						      gh=0.2; %mS/cm^2
+						      alpha_kappaH=exp(0.08316*(vSpecific+75));
+						      beta_kappaH=exp(0.03326*(vSpecific+75));
+						      tau_kappaH=49.8*beta_kappaH/(1+alpha_kappaH);
+						      kappaH_inf=1/(1+exp((vSpecific+81)/8)); %notice low half activation -81
 
-						nks_Vt=-35;
-					      %nks_Vt=-10;
-					      nks_Gain=-10;
-					      nksInf=1/(1+exp((vSpecific-nks_Vt)/nks_Gain));
+						      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						      %I_NaP gate voltage and time dependence 
+						      %(no inactivation since beyond timescale of interest)
+						      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						      %gnap=0.8; %mS/cm^2 (Table 2)
+							%{
+							if(cell==1)
+								gnap=gnap1;
+							elseif(cell==2)
+								gnap=gnap2;
+							end
+							%gnap=1; %mS/cm^2 
+							%}
+						      %mnap_Vt=-50;
+							
+							gnap=gnapMatrix(cellRow,placeIdx);
+						      mnap_Vt=-50;
+							    %mnap_Vt=-52;
+						      %mnap_Vt=-47;
+						      mnap_Gain=-5;
+						      %mnap_Gain=-4;
+						      mnapInf=1/(1+exp((vSpecific-mnap_Vt)/mnap_Gain));
+						      tau_mnap=1; %ms
+
+						      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						      %I_KS gate voltage and time dependence
+						      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						      %gks=8;
+							%{
+							if(cell==1)
+								gks=gks1;
+							elseif(cell==2)
+								gks=gks2;
+							end
+							%}
+							gks=gksMatrix(cellRow,placeIdx);
+
+							nks_Vt=-35;
+						      %nks_Vt=-10;
+						      nks_Gain=-10;
+						      nksInf=1/(1+exp((vSpecific-nks_Vt)/nks_Gain));
 
 
-					       tau_nks=1/((exp((vSpecific-nks_Vt)/40)+exp(-(vSpecific-nks_Vt)/20) )/81);
+						       tau_nks=1/((exp((vSpecific-nks_Vt)/40)+exp(-(vSpecific-nks_Vt)/20) )/81);
 
 
-					      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-					      %currents from driving force and gating variables
-					      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-					      %ina=gna*minf^3*(hSpecific)*(vSpecific-ena);
-					      ina=gna*mSpecific^3*(hSpecific)*(vSpecific-ena);
+						      ika=gka*fka*mkaSpecific^4*hkaSpecific*(vSpecific-ek);
 
-					      %delayed-rectifier potassium current
-					      ik=gk*nSpecific^4*(vSpecific-ek);
+						      ih=gh*fh*kappaHSpecific*(vSpecific-eh);
 
-					      ika=gka*fka*mkaSpecific^4*hkaSpecific*(vSpecific-ek);
+						      %slow, low threshold potassium current
+						      iks=gks*nksSpecific*(vSpecific-ek);
 
-					      ih=gh*fh*kappaHSpecific*(vSpecific-eh);
+						      %persistent sodium current, thresh -50mV
+						      inap=gnap*mnapSpecific*(vSpecific-ena);
+						end %not just spiking conductances if statement
+						      
+						     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						      %currents from driving force and gating variables
+						      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						      %ina=gna*minf^3*(hSpecific)*(vSpecific-ena);
+						      ina=gna*mSpecific^3*(hSpecific)*(vSpecific-ena);
+						      %delayed-rectifier potassium current
+						      ik=gk*nSpecific^4*(vSpecific-ek);
 
-					      %slow, low threshold potassium current
-					      iks=gks*nksSpecific*(vSpecific-ek);
 
-					      %persistent sodium current, thresh -50mV
-					      inap=gnap*mnapSpecific*(vSpecific-ena);
-			
+	
 						itonic=injCurrMatrix(cellRow,placeIdx,step);
+						fds
 						%synaptic current
 						%{
 						if(numCells>1)
@@ -468,37 +487,39 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 						nInc=double(dt*(ninf-nSpecific)/taun);
 						hInc=double(dt*(hinf-hSpecific)/tauh);
 
-						mkaInc=double(dt*(mkaInf-mkaSpecific)/tau_mka);
-						hkaInc=double(dt*(hkaInf-hkaSpecific)/tau_hka);
-
-						kappaH_Inc=double(dt*(kappaH_inf-kappaHSpecific)/tau_kappaH);
-
-						mnapInc=double(dt*(mnapInf-mnapSpecific)/tau_mnap);
-
-						%zInc=double(dt*(zinf-zSpecific)/tauz);
-						nksInc=double(dt*(nksInf-nksSpecific)/tau_nks);
-
 					       %V=V+dV
 					      v(cellRow,placeIdx,step+1)=vSpecific+vInc;
 					      %Gates=Gates+dGates
 					      n(cellRow,placeIdx,step+1)=nSpecific+nInc;
 					      m(cellRow,placeIdx,step+1)=mSpecific+mInc;
 					      h(cellRow,placeIdx,step+1)=hSpecific+hInc;
-					      mka(cellRow,placeIdx,step+1)=mkaSpecific+mkaInc;
-					      hka(cellRow,placeIdx,step+1)=hkaSpecific+hkaInc;
-					      kappaH(cellRow,placeIdx,step+1)=kappaHSpecific+kappaH_Inc;
-					      mnap(cellRow,placeIdx,step+1)=mnapSpecific+mnapInc;
-					      nks(cellRow,placeIdx,step+1)=nksSpecific+nksInc;
 					
+						if(~justSpikingConductances)
+							mkaInc=double(dt*(mkaInf-mkaSpecific)/tau_mka);
+							hkaInc=double(dt*(hkaInf-hkaSpecific)/tau_hka);
+
+							kappaH_Inc=double(dt*(kappaH_inf-kappaHSpecific)/tau_kappaH);
+
+							mnapInc=double(dt*(mnapInf-mnapSpecific)/tau_mnap);
+
+							%zInc=double(dt*(zinf-zSpecific)/tauz);
+							nksInc=double(dt*(nksInf-nksSpecific)/tau_nks);
+						     
+						      mka(cellRow,placeIdx,step+1)=mkaSpecific+mkaInc;
+						      hka(cellRow,placeIdx,step+1)=hkaSpecific+hkaInc;
+						      kappaH(cellRow,placeIdx,step+1)=kappaHSpecific+kappaH_Inc;
+						      mnap(cellRow,placeIdx,step+1)=mnapSpecific+mnapInc;
+						      nks(cellRow,placeIdx,step+1)=nksSpecific+nksInc;
+						end
 					end %loop over cells coding for current place
 				end %loop over places
 			end %loop over time steps
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%store raw output
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		 	cellsObj.v=v;
-			cellsObj.spikeTimes=spikeTimes;
-			cellsObj.spikeCellCoords=spikeCellCoords;
+		 	thisObj.v=v;
+			thisObj.spikeTimes=spikeTimes;
+			thisObj.spikeCellCoords=spikeCellCoords;
 		end %letItRip function
 
 
@@ -522,7 +543,7 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		end
 
 
-		function setCellProps(thisObj,extEnvObj)
+		function setCellProps(thisObj,extEnvObj,bias)
 			numCellsPerPlace=thisObj.numCellsPerPlace;
 			numPlaces=thisObj.numPlaces;
 			numSteps=thisObj.numSteps;
@@ -533,6 +554,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			simSpecificInfo.numCellsPerPlace=numCellsPerPlace;
 			simSpecificInfo.numPlaces=numPlaces;
 			simSpecificInfo.timeAxis=timeAxis;
+			if(exist('bias','var'))
+				simSpecificInfo.bias=bias;
+			end
 
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%cell settings
@@ -558,8 +582,8 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			%gksMatrix=normrnd(gksBar,gksSigma,numCellsPerPlace,numPlaces);
 
 			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
-			currInjectorArray.displayContent();
-			drawnow
+			%currInjectorArray.displayContent();
+			%drawnow
 			%injCurrMatrix=currInjectorArray.getFloatMatrix();
 
 
@@ -628,9 +652,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 			%thisObj.injCurrMatrix=injCurrMatrix;
 
-			thisObj.externalInputObj=currInjectorArray;
-			thisObj.inhThetaInputArray=inhThetaInputArray;
-			thisObj.internalConnObj=internalConnObj;
+			thisObj.externalInputObj=copy(currInjectorArray);
+			thisObj.inhThetaInputArray=copy(inhThetaInputArray);
+			thisObj.internalConnObj=copy(internalConnObj);
 
 			thisObj.dt=dt;
 			thisObj.numSteps=numSteps;

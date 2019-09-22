@@ -1,5 +1,10 @@
 classdef Simulation < handle & matlab.mixin.Copyable 
 	%encapsulate data and actions of simulation to keep my interface and implementation details separate
+	properties(Constant)
+		%SIM_NAME='just spiking conductances, no theta, large time constant output unit';
+		SIM_NAME='timeConstantPhaseCoding';
+		%'just spiking conductances, theta, time constant vs phase locking';
+	end
 
 	properties
 		configuration
@@ -25,13 +30,16 @@ classdef Simulation < handle & matlab.mixin.Copyable
 				thisObj.configuration=copy(simConfig);
 				thisObj.cellsObj=copy(simConfig.simParams.simCells);
 				thisObj.externalEnvObj=copy(simConfig.simParams.extEnvObj);
-
+				
+				thisObj.externalInputObj=copy(thisObj.cellsObj.externalInputObj);
+				thisObj.thetaPopInputObj=copy(thisObj.cellsObj.inhThetaInputArray);
+				thisObj.internalConnectivityObj=copy(thisObj.cellsObj.internalConnObj); 
 				%thisObj.thetaPopInputObj=copy(simConfig.simParams.thetaPopInput); 
 				%by reference; access directly from simulation object
 				%thisObj.thetaPopInputObj=thisObj.cellsObj.thetaPopInput; 
-				thisObj.thetaPopInputObj=thisObj.cellsObj.inhThetaInputArray; 
-				thisObj.internalConnectivityObj=thisObj.cellsObj.internalConnObj;
-				thisObj.externalInputObj=thisObj.cellsObj.externalInputObj;
+				%thisObj.thetaPopInputObj=thisObj.cellsObj.inhThetaInputArray; 
+				%thisObj.internalConnectivityObj=thisObj.cellsObj.internalConnObj;
+				%thisObj.externalInputObj=thisObj.cellsObj.externalInputObj;
 
 				thisObj.currentRunStatus='instantiated_NOT_RUN';
 			end
@@ -39,14 +47,20 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			if(nargin==2)
 				thisObj.currentModifyInfo=currentModifyInfo;
 				thisObj.modifyParams()
+				%thisObj.cellsObj.externalInputObj=thisObj.externalInputObj;
+				%thisObj.cellsObj.inhThetaInputArray=thisObj.thetaPopInputObj;
+				%thisObj.cellsObj.internalConnObj=thisObj.internalConnectivityObj;
 			end
 		end
 		
 		function run(thisObj)
 			disp('running sim with.....')
 			disp(thisObj.currentModifyInfo)
-			disp(thisObj.cellsObj.gksBar)
-			disp(thisObj.cellsObj.gnapBar)
+			%disp(thisObj.cellsObj.gksBar)
+			%disp(thisObj.cellsObj.gnapBar)
+			disp(thisObj.cellsObj.gl)
+			disp(thisObj.externalInputObj.currAmp)
+			%fds
 			%thisObj.configuration.simParams.simCells.go(); %different copy!!
 			thisObj.currentRunStatus='instantiatedAndRunning........';
 			thisObj.cellsObj.go();
@@ -55,16 +69,25 @@ classdef Simulation < handle & matlab.mixin.Copyable
 		
 		function save(thisObj)
 			%thisObj.simParamsIDStr=sprintf('%s_%.5f_%s_%.5f_Connectivity_%s',thisObj.currentModifyInfo.overrideParamNames{1},thisObj.currentModifyInfo.overrideParamValues(1),thisObj.currentModifyInfo.overrideParamNames{2},thisObj.currentModifyInfo.overrideParamValues(2), thisObj.internalConnectivityObj.connectivityTypeStr)
+			%thisObj.simParamsIDStr=sprintf('%s_%.5f_%s_%.5f_Connectivity_%s',thisObj.currentModifyInfo.overrideParamNames{1},thisObj.currentModifyInfo.overrideParamValues(1),thisObj.currentModifyInfo.overrideParamNames{2},thisObj.currentModifyInfo.overrideParamValues(2), thisObj.internalConnectivityObj.connectivityTypeStr)
+			
+			%thisObj.simParamsIDStr=Simulation.SIM_NAME;
 			thisObj.simParamsIDStr=sprintf('%s_%.5f_%s_%.5f_Connectivity_%s',thisObj.currentModifyInfo.overrideParamNames{1},thisObj.currentModifyInfo.overrideParamValues(1),thisObj.currentModifyInfo.overrideParamNames{2},thisObj.currentModifyInfo.overrideParamValues(2), thisObj.internalConnectivityObj.connectivityTypeStr)
+			
 			saveDir=sprintf(thisObj.configuration.saveDirectoryBaseRawData,thisObj.currentModifyInfo.batchCategory);
 
-			disp(sprintf('saving to: %s.....',saveDir))
-			if(~isdir(fullfile(saveDir,thisObj.simParamsIDStr)))
-				mkdir(fullfile(saveDir,thisObj.simParamsIDStr))
+			disp(sprintf('saving to: %s/.....',saveDir))
+			%if(~isdir(fullfile(saveDir,thisObj.simParamsIDStr)))
+			%	mkdir(fullfile(saveDir,thisObj.simParamsIDStr))
+			%end
+			if(~isdir(fullfile(saveDir)))
+				mkdir(fullfile(saveDir))
 			end
 
-			%save(fullfile(saveDir,thisObj.simParamsIDStr,'simData.mat'),'thisObj','-v7.3')
-			%thisObj.currentSaveStatus='saved';
+			saveFileName=sprintf('simData_%s.mat',thisObj.simParamsIDStr);
+			thisObj.currentSaveStatus='saving';
+			save(fullfile(saveDir,saveFileName),'thisObj','-v7.3')
+			thisObj.currentSaveStatus='saved';
 		end
 	
 		function visualizeConfig(thisObj,figH)
@@ -167,8 +190,17 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			
 			paramValue1=currentModifyInfo.overrideParamValues(1);
 			paramValue2=currentModifyInfo.overrideParamValues(2);
-
-			thisObj.(currentModifyInfo.modifiedObjName1).(paramName1)=paramValue1;	
+			
+			if(contains(currentModifyInfo.modifiedObjName1,'.'))
+				parseIdx=strfind(currentModifyInfo.modifiedObjName1,'.');
+				preObjName=currentModifyInfo.modifiedObjName1(1:(parseIdx-1));
+				postObjName=currentModifyInfo.modifiedObjName1((parseIdx+1):end);
+				thisObj.(preObjName).(postObjName).(paramName1)=paramValue1;	
+				
+			else
+				thisObj.(currentModifyInfo.modifiedObjName1).(paramName1)=paramValue1;	
+			end
+				
 			thisObj.(currentModifyInfo.modifiedObjName2).(paramName2)=paramValue2;
 		end
 	end

@@ -25,8 +25,10 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			
 				cmap=copper(simObj.configuration.simParams.numPlaces);
 				thisObj.placeColors=cmap;
-			
-				thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj));					
+		
+				if(ThetaPopInput.amplitudeDefault>0)	
+					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj));					
+				end
 			end
 		end
 		
@@ -38,15 +40,23 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 		end
 
 		function runRankTransformAnalysis(thisObj,figH)
-			thisObj.plotSpikeRankVsPosRank(figH); 	
+			if(ThetaPopInput.amplitudeDefault>0)
+				thisObj.plotSpikeRankVsPosRank(figH);
+			end 	
 		end
 		
 		function runPhaseCodeAnalysis(thisObj,figPrecess,figCompress)
-			thisObj.plotPhaseVsPositionInField(figPrecess,figCompress);
+			if(ThetaPopInput.amplitudeDefault>0)
+				thisObj.plotPhaseVsPositionInField(figPrecess,figCompress);
+			end
 		end
 		
 		function runSpikeTimeDistributionAnalysis(thisObj,figH)
-			thisObj.plotSpikePhaseDistrPerCycle(figH);
+			if(ThetaPopInput.amplitudeDefault>0)
+				thisObj.plotSpikePhaseDistrPerCycle(figH);
+			else
+				thisObj.plotAllSpikePhaseDistr(figH)
+			end
 		end
 
 		%function visualizePhaseCoding(thisObj,figH)
@@ -78,7 +88,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 				currSpikePlaceIdx=spikeCellCoords(i,2);
 				currSpikeCellIdx=spikeCellCoords(i,1);
 				cellRasterRow=(currSpikePlaceIdx-1)*numCellsPerPlace+currSpikeCellIdx;
-				plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',4)
+				plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',1)
 				hold on 
 			end		
 
@@ -262,7 +272,9 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					%ylabel(cb,'Theta cycle no.')
 					%ylabel(cb,'Proportion of mappings within cycle')
 					ylabel(cb,'Probability')
-					caxis([0 prctile(rankMapCount(:)/totalNumMappings,99)])
+                    if(prctile(rankMapCount(:)/totalNumMappings,99)>0)
+                        caxis([0 prctile(rankMapCount(:)/totalNumMappings,99)])
+                    end
                         		title(removeUnderscores(thisObj.simObj.simParamsIDStr))
 					grid on
 					xticks(1:cellsObj.numCellsPerPlace:numCellsTotal)
@@ -280,6 +292,44 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
                           %      end
                        % end
                 end
+		
+		function plotAllSpikePhaseDistr(thisObj,figH)
+
+			figure(figH)
+                        %spike times per cell
+                        spikeTimes=thisObj.simObj.cellsObj.spikeTimes;
+                        spikeCellCoords=thisObj.simObj.cellsObj.spikeCellCoords;
+                        numCellsPerPlace=thisObj.simObj.configuration.simParams.numCellsPerPlace;
+
+			numPlaces=thisObj.simObj.cellsObj.numPlaces;
+
+			%spikeTimesByPlace={};
+			
+                                 for p=1:numPlaces
+					spikeTimesByPlace{p}=NaN;
+				 end
+                        for i=1:length(spikeTimes)
+                                currSpikePlaceIdx=spikeCellCoords(i,2);
+                                currSpikeCellIdx=spikeCellCoords(i,1);
+                                cellRasterRow=(currSpikePlaceIdx-1)*numCellsPerPlace+currSpikeCellIdx;
+                                spikeTimesByPlace{currSpikePlaceIdx}=[spikeTimesByPlace{currSpikePlaceIdx}; spikeTimes(i)];
+	
+				%plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',1)
+                                %hold on
+                        end
+
+			placeCmap=copper(numPlaces);
+
+			binSize=50; %msec
+			edges=0:binSize:thisObj.simObj.configuration.simParams.simTime;
+				for p=1:numPlaces
+					[counts,edges]=histcounts(spikeTimesByPlace{p},edges);
+					plot(edgesToBins(edges),counts,'Color',placeCmap(p,:),'LineWidth',2)
+					hold on
+				end
+			
+
+		end
 
 		function plotSpikePhaseDistrPerCycle(thisObj,figH)
 			figure(figH)

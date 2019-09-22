@@ -1,18 +1,23 @@
 classdef CurrentInjectors < handle & matlab.mixin.Copyable
+	properties(Constant)
+		BASELINE=4;
+		SIG_FRAC=0.05;
+	end
 
 	properties
 		%currAmp=6;
 		%currAmp=8;
-		currAmp=7;
+		%currAmp=7;
 		%currAmp=10;
+		currAmp=8;
 		%currAmp=15;
-		pulseShapeStr='ramp';
-		
+		%pulseShapeStr='ramp';
+		pulseShapeStr='flat';
 
+		bias
 		currInjectorMatrix
 		nr
 		nc
-
 
 		timeAxis
 	end
@@ -22,7 +27,9 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 			thisObj.nr=simSpecificInfo.numCellsPerPlace;
 			thisObj.nc=simSpecificInfo.numPlaces;
 			thisObj.timeAxis=simSpecificInfo.timeAxis;
-			
+			if(isfield(simSpecificInfo,'bias'))
+				thisObj.currAmp=simSpecificInfo.bias;
+			end	
 			thisObj.setInjectorMatrix(extEnvObj);
 		end
 
@@ -33,12 +40,13 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 			placeColormap=copper(thisObj.nc);
 			for r=1:thisObj.nr
 				for c=1:thisObj.nc
+					%cellBaseline=normrnd(CurrentInjectors.BASELINE,cellBaselineSig);
 					subplot(thisObj.nr,thisObj.nc,count)
 					plot(thisObj.timeAxis,thisObj.currInjectorMatrix(r,c).getTimeTrace(),'Color',placeColormap(c,:))
 					count=count+1;
 				
 					xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
-					ylim([0 thisObj.currAmp])
+					ylim([0 thisObj.currAmp]+CurrentInjectors.BASELINE)
 					xlabel('Time (sec)')
 					ylabel('Current (pA)')
 				end
@@ -56,12 +64,18 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 				end
 			end
 					xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
-					ylim([0 thisObj.currAmp])
+					ylim([0 thisObj.currAmp] + CurrentInjectors.BASELINE)
 					xlabel('Time (sec)')
 					ylabel('Current (pA)')
 		end
 
 		function floatMatrix=getFloatMatrix(thisObj)
+			try
+				thisObj.setInjectorMatrix();
+			catch ME
+				disp(ME)
+				error
+			end
 			floatMatrix=NaN(thisObj.nr,thisObj.nc,length(thisObj.timeAxis));
 			for r=1:thisObj.nr
                                 for c=1:thisObj.nc
@@ -73,6 +87,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 
 	methods(Access=private)
 		function setInjectorMatrix(thisObj,extEnvObj)
+			cellBaselineSig=CurrentInjectors.SIG_FRAC*CurrentInjectors.BASELINE;
 			nr=thisObj.nr;
 			nc=thisObj.nc;
 			timeAxis=thisObj.timeAxis;
@@ -83,23 +98,38 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 			
 			for cellNum=1:nr
 				injParams.timeAxis=timeAxis;
-				injParams.pulseShapeStr=pulseShapeStr;;
+				injParams.pulseShapeStr=pulseShapeStr;
 				for place=1:nc
 					%injParams.pulseStartTime=max(0,((place-3)/nc)*(timeAxis(end)));
 					%injParams.pulseEndTime=((place)/nc)*(timeAxis(end));
-					[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(place);
-					injParams.pulseStartTime=placeInputStartTime;
-					injParams.pulseEndTime=placeInputEndTime;
+					if(strcmp(pulseShapeStr,'ramp'))
+
+						[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(place);
+						injParams.pulseStartTime=placeInputStartTime;
+						injParams.pulseEndTime=placeInputEndTime;
+						
+			
+						injParams.amplitude=currAmp;
+						%injParams.baseline=0;
+						injParams.baseline=normrnd(CurrentInjectors.BASELINE,cellBaselineSig);
+						%CurrentInjectors.BASELINE;
 					
-		
-					injParams.amplitude=currAmp;
-					injParams.baseline=0;
-				
-					currInjectorMatrix(cellNum,place)=CurrentInjector(injParams);
+						currInjectorMatrix(cellNum,place)=CurrentInjector(injParams);
+					elseif(strcmp(pulseShapeStr,'flat'))
+						placeInputStartTime=timeAxis(1);
+						placeInputEndTime=timeAxis(end);
+						injParams.pulseStartTime=placeInputStartTime;
+                                                injParams.pulseEndTime=placeInputEndTime;
+						
+						injParams.amplitude=0;
+                                                injParams.baseline=currAmp;
+                                                
+                                                currInjectorMatrix(cellNum,place)=CurrentInjector(injParams);
+					end
 				end
 			end
 
-			thisObj.currInjectorMatrix=currInjectorMatrix;
+			thisObj.currInjectorMatrix=copy(currInjectorMatrix);
 		end
 	end
 end

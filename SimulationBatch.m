@@ -6,8 +6,12 @@ classdef SimulationBatch < handle
 	end
 
 	properties
-		simsCategory='single_cell_precession_tuning';
-		modifiedObjName1='cellsObj';
+		%simsCategory='single_cell_precession_tuning';
+		simsCategory='single_cell_phase_preference';
+
+		%modifiedObjName1='externalInputObj';
+		modifiedObjName1='cellsObj.externalInputObj';
+		%modifiedObjName1='cellsObj';
 		modifiedObjName2='cellsObj';
 		simArray
 		
@@ -86,6 +90,7 @@ classdef SimulationBatch < handle
 			end
 			thisObj.simArray(1,1).configuration.simParams.extEnvObj.displayContent();
 		end
+		
 		function runAnalysis(thisObj)
 			figRankTransform=figure(1112);
 			figPhasePosCoding=figure(1113);
@@ -104,18 +109,23 @@ classdef SimulationBatch < handle
 					%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
 					axRaster1=subplot(10,10,[1 50]);
 					phaseCodingEvaluationObj.runPlotRaster(figRaster);
+					xticklabels({})
+					xlabel('')	
+					
 					title(removeUnderscores(thisObj.simArray(i,j).simParamsIDStr))
 					%maxFigManual2d(10,3,18)
 					
 
-					figure(figRankTransform)
-					subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
-					phaseCodingEvaluationObj.runRankTransformAnalysis(figRankTransform); 				
-					
-					figure(figPhasePosCoding)	
-					%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
-					phaseCodingEvaluationObj.runPhaseCodeAnalysis(figPhasePosCoding,figSpaceCompress); 				
-				
+					if(ThetaPopInput.amplitudeDefault>0)
+						figure(figRankTransform)
+						subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
+						phaseCodingEvaluationObj.runRankTransformAnalysis(figRankTransform); 				
+						
+						figure(figPhasePosCoding)	
+						%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
+						phaseCodingEvaluationObj.runPhaseCodeAnalysis(figPhasePosCoding,figSpaceCompress); 				
+					end
+
 					%figPhaseDistr=figure;
 					figure(figRaster)
 					%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
@@ -124,25 +134,47 @@ classdef SimulationBatch < handle
 					phaseCodingEvaluationObj.runSpikeTimeDistributionAnalysis(figRaster);
 					%title(removeUnderscores(thisObj.simArray(i,j).simParamsIDStr))
 					thisObj.simArray(i,j).thetaPopInputObj.addTroughLines(figRaster);				
+					ylabel('spike count')
+					xticklabels({})
+					xlabel('')	
 	
 					axRaster3=subplot(10,10,[61 70]);
 					thetaSample=squeeze(thisObj.simArray(i,j).thetaPopInputObj.conductanceTimeSeries(1,1,:));	
+					xticklabels({})
+					xlabel('')	
+					ylabel('Theta inh_g')
 					simTimeAxis=thisObj.simArray(i,j).configuration.simParams.timeAxis;
 					decFactor=1;	
-					plot(simTimeAxis(1:decFactor:end),thetaSample(1:decFactor:end),'LineWidth',5)
+					plot(simTimeAxis(1:decFactor:end),thetaSample(1:decFactor:end),'Color','b','LineWidth',3)
+					xticklabels({})
+					xlabel('')	
 					
+					%axRaster4=subplot(10,10,[71 80]);
 					axRaster4=subplot(10,10,[71 100]);
 					thisObj.simArray(i,j).externalInputObj.displayContentSubplot(figRaster);	
+					%xticklabels({})
+					%xlabel('')	
 					
+					%axRaster5=subplot(10,10,[81 100]);
+
+					%ylabel('Output unit V_m')
+					xlabel('Time (msec)')	
+					
+					xlim([0 simTimeAxis(end)]) 
+					%linkaxes([axRaster1 axRaster2 axRaster3 axRaster4 axRaster5],'x')
 					linkaxes([axRaster1 axRaster2 axRaster3 axRaster4],'x')
-					maxFigManual2d(10,5,48)
+					%axes(axRaster3)
+					xlim([0 simTimeAxis(end)]) 
+					linkaxes([axRaster1 axRaster2 axRaster3 axRaster4],'x')
+					%maxFigManual2d(10,5,48)
 					
 					paramSearchAnalysisObj(i,j)=copy(phaseCodingEvaluationObj);
 				end
 			end
 
 			figure(figRaster)
-			maxFigManual2d(10,2,18)
+			%maxFigManual2d(10,2,18)
+			maxFigManual2d(5,3,48)
 
 			figure(figRankTransform)
 			maxFigManual2d(3,1,18)
@@ -185,7 +217,7 @@ classdef SimulationBatch < handle
 						for i=1:thisObj.numSimsPerVar
 							for j=1:thisObj.numSimsPerVar
 								if(~checked(varyParamIdx1,varyParamIdx2) && ~checked(varyParamIdx2,varyParamIdx1))
-
+						
 									overrideParamValues=[paramSearchVector1(i) paramSearchVector2(j)];
 									overrideParamNames={searchParamNames{varyParamIdx1}, searchParamNames{varyParamIdx2}};			
 									searchModifyInfo.overrideParamValues=overrideParamValues;
@@ -210,6 +242,7 @@ classdef SimulationBatch < handle
 
 		function setSearchParamVectors(thisObj)
 
+			%{
 			%gksBar=linspace(0,1,SimulationBatch.numValuesPerParam);
 			%gnapBar=linspace(0,0.1,SimulationBatch.numValuesPerParam);
 			%gksBar=linspace(0,1,SimulationBatch.numValuesPerParam);
@@ -231,12 +264,26 @@ classdef SimulationBatch < handle
 			%gnapBar=0.24
 			%gnapBar=0.3
 			gnapBar=0.35
+			%}
 
+			varName1='currAmp';
+			varName2='gl';
+
+			var1Vals=1:2:15;
+			%var1Vals=1:2:10;
+			%var2Vals=0.1:0.5:2;
+			%var2Vals=linspace(0.1,2,length(var1Vals));		
+			var2Vals=linspace(0.005,0.1,length(var1Vals));		
+
+			%var1Vals=1:10:20;
+			%var2Vals=0.1:0.5:2;
+	
 			thisObj.searchParamVectors=struct();
 
-
-			thisObj.searchParamVectors.gksBar=gksBar;
-			thisObj.searchParamVectors.gnapBar=gnapBar;
+			%thisObj.searchParamVectors.gksBar=gksBar;
+			%thisObj.searchParamVectors.gnapBar=gnapBar;
+			thisObj.searchParamVectors.(varName1)=var1Vals;
+			thisObj.searchParamVectors.(varName2)=var2Vals;
 		end
 	end
 end

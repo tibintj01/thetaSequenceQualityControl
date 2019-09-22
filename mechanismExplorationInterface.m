@@ -52,7 +52,7 @@ toc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 disp('***************analyzing results**********************')
 tic
-newSimBatch.runAnalysis()
+%newSimBatch.runAnalysis()
 toc
 
 %{
@@ -71,7 +71,7 @@ disp('******************************************************')
 disp('***************saving results**********************')
 
 tic
- displayRegex('Fig*tif')
+% displayRegex('Fig*tif')
 %newSim.save()
 %phaseCodingEvaluationObj.save()
 toc
