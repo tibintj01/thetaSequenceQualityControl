@@ -46,16 +46,16 @@ classdef Simulation < handle & matlab.mixin.Copyable
 
 			if(nargin==2)
 				thisObj.currentModifyInfo=currentModifyInfo;
-				thisObj.modifyParams()
-				%thisObj.cellsObj.externalInputObj=thisObj.externalInputObj;
-				%thisObj.cellsObj.inhThetaInputArray=thisObj.thetaPopInputObj;
-				%thisObj.cellsObj.internalConnObj=thisObj.internalConnectivityObj;
+			%	thisObj.modifyParams()
+			%	%thisObj.cellsObj.externalInputObj=thisObj.externalInputObj;
+			%	%thisObj.cellsObj.inhThetaInputArray=thisObj.thetaPopInputObj;
+			%	%thisObj.cellsObj.internalConnObj=thisObj.internalConnectivityObj;
 			end
 		end
 		
 		function run(thisObj)
 			disp('running sim with.....')
-			disp(thisObj.currentModifyInfo)
+			%disp(thisObj.currentModifyInfo)
 			%disp(thisObj.cellsObj.gksBar)
 			%disp(thisObj.cellsObj.gnapBar)
 			disp(thisObj.cellsObj.gl)

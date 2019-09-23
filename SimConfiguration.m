@@ -8,7 +8,7 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 		%simsCategory='single_cell_precession_tuning';
 		
 		saveDirectoryBaseRawData='../results/%s/raw_data';
-		saveDirectoryFigures='../results/%s/figures';
+		%saveDirectoryFigures='../results/%s/figures';
 
 		saveDirectoryRawData
 	end
@@ -40,7 +40,8 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 
 	methods(Access=private)
 		function setSimProps(thisObj)
-
+			directory_names
+			saveDirectoryBaseRawData=[DATA_DIR '%s/raw_data'];
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%global parameters
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,7 +131,7 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			simProps.simCells=copy(simCells);
 			simProps.thetaPopInput=copy(simCells.inhThetaInputArray);
-			simProps.thetaPopInput.displayContent();
+			%simProps.thetaPopInput.displayContent();
 			simProps.externalEnvironmentObj=copy(externalEnvironmentObj);		
 	
 			thisObj.simParams=simProps;
