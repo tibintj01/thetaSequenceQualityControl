@@ -17,6 +17,8 @@ eng=matlab.engine.start_matlab()
 
 #import scanParamNameScript
 exec(open("scanParamNameScript.py").read());
+exec(open("directory_names_Python.py").read());
+
 #scanParamNames=['currAmp','gL']
 #scanDescr='timeConstantAndPhaseCoding'
 #basePath='/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/'
@@ -51,8 +53,17 @@ for k,fileName in enumerate(protoFilePaths):
 		originalFileStrings.append(fileStr)
 
 
+#generate modifed files to loop through in parallel 
+#with own subdirectories to maintain file naming
 for i,scanParam1Value in enumerate(scanParam1Values): 
 	for j,scanParam2Value in enumerate(scanParam2Values): 
+#for i,scanParam1Value in enumerate(scanParam1Values): 
+#	for j,scanParam2Value in enumerate(scanParam2Values): 
+		#make new running directory in no snap shot path
+		runDirPath='%s%s_%d_%d' % (BASE_RUN_DIR,scanDescr,i,j)
+		os.system('mkdir -p %s' % runDirPath)
+		os.chdir(runDirPath)
+	
 		#replace files with current parameters filled in
 		for k,filePath in enumerate(filePaths):	
 			currFileStr=originalFileStrings[k]
@@ -77,13 +88,16 @@ for i,scanParam1Value in enumerate(scanParam1Values):
 
 			#scipy.io.savemat('./%s_%s_%.10f_%s_%.10f.mat' % (scanDescr, scanParamNames[0],float(scanParam1Value), scanParamNames[1],float(scanParam2Value)), mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })
 			#scipy.io.savemat('currSimParams.mat', mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })
+			arglist=[scanParam1Value,scanParam2Value,scanParamNames[0],scanParamNames[1], modifiedObjName1, modifiedObjName2, scanDescr]
 
 		        #run this version of simulation in matlab
-			exitStatus=eng.runSingleSimulation(float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr)
+			#exitStatus=eng.runSingleSimulation(float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr)
 			#subprocess.call([". openMatlabWithCmd.sh", "testMatlabCall('currSimParams.mat')"])
 			#os.system('''. openMatlabWithCmd.sh "testMatlabCall('currSimParams.mat')"''')
 			#pdb.set_trace()
 
+#par loop
+	exitStatus=eng.runSingleSimulation(arglist)
 ###############################
 #postParallelProcessing
 ###############################
