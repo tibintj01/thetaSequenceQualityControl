@@ -1,9 +1,12 @@
+import os
 scanParamNames=['currAmp','gL']
 
 scanDescr='timeConstantAndPhaseCodingWithNoise'
 
+
 #basePath='/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/'
-basePath='./'
+#basePath='./'
+basePath=os.getcwd()+'/'
 
 protoClassName1='CurrentInjectorsProto'
 protoClassName2='CellsProto'

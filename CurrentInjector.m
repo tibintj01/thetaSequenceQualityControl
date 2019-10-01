@@ -62,12 +62,15 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
                         startBinCenter=CurrentInjector.NOISE_SAMPLING_DT/2;
 			endBinCenter=len-CurrentInjector.NOISE_SAMPLING_DT/2;
 			
-			noiseTimeAxis   = linspace(startBinCenter, endBinCenter, round(Fs*len));                 % Time Vector
+			%CAUSES INTERPOLATION PROBLEMS!!!
+			%noiseTimeAxis   = linspace(startBinCenter, endBinCenter, round(Fs*len));                 % Time Vector
+			
+			noiseTimeAxis   = linspace(0,len, round(Fs*len)+1);                 % Time Vector
 
                         noiseTrace = CurrentInjector.NOISE_SIGMA*randn(size(noiseTimeAxis));
 			interpNoiseTrace= interp1(noiseTimeAxis,noiseTrace,thisObj.timeAxis);
 
-                        thisObj.noiseTrace=interpNoiseTrace(:);
+                        thisObj.noiseTrace=interpNoiseTrace(:)
                 end
 
 		%currently not used - 9/30/19, TJ

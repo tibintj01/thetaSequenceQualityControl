@@ -1,14 +1,15 @@
 function [done] = runSingleSimulation(arglist)
 %function [done] = runSingleSimulation(val1,val2,paramName1,paramName2,objName1,objName2,scanDescr)
-
-	val1=arglist{1};
-	val2=arglist{2};
-	paramName1=arglist{3};
-	paramName2=arglist{4};
+	disp('running simulation for....')
+	paramName1=arglist{3}
+	paramName2=arglist{4}
+	val1=arglist{1}
+	val2=arglist{2}
 	objName1=arglist{5};
 	objName2=arglist{6};
 	scanDescr=arglist{7};
 		
+	%disp(sprintf('running simulation for %s = %s, %s = %s.......',))
 	%clear classes
 	addMatlabCodeBasePaths	
 	%startup

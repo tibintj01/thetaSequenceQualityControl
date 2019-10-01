@@ -8,9 +8,12 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 		%simsCategory='single_cell_precession_tuning';
 		
 		%saveDirectoryBaseRawData='../results/%s/raw_data';
-		saveDirectoryBaseRawData='/scratch/ojahmed_fluxm/tibintj/results/%s/raw_data'
-		saveDirectoryBaseProcessedData='/scratch/ojahmed_fluxm/tibintj/results/%s/processed_data'
-		saveDirectoryBaseFigures='/scratch/ojahmed_fluxm/tibintj/results/%s/figures'
+		%saveDirectoryBaseRawData='/scratch/ojahmed_fluxm/tibintj/results/%s/raw_data'
+		%saveDirectoryBaseProcessedData='/scratch/ojahmed_fluxm/tibintj/results/%s/processed_data'
+		%saveDirectoryBaseFigures='/scratch/ojahmed_fluxm/tibintj/results/%s/figures'
+		saveDirectoryBaseRawData
+		saveDirectoryBaseProcessedData
+		saveDirectoryBaseFigures
 		%saveDirectoryFigures='../results/%s/figures';
 
 		saveDirectoryRawData
@@ -44,7 +47,11 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 	methods(Access=private)
 		function setSimProps(thisObj)
 			directory_names
-			saveDirectoryBaseRawData=[DATA_DIR '%s/raw_data'];
+			%saveDirectoryBaseRawData=[DATA_DIR '%s/raw_data'];
+
+			thisObj.saveDirectoryBaseRawData=DATA_DIR;
+			thisObj.saveDirectoryBaseProcessedData=PROCESSED_DATA_DIR;
+			thisObj.saveDirectoryBaseFigures=FIGURE_DIR;
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%global parameters
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
