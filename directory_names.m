@@ -18,3 +18,10 @@ else
 	FIGURE_DIR=sprintf('/scratch/ojahmed_fluxm/tibintj/results/%s/figures/',simName);
 	BASE_RUN_DIR=sprintf('/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin')
 end
+
+DATA_DIR
+
+PROCESSED_DATA_DIR
+FIGURE_DIR
+
+pwd
