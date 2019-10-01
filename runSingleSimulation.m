@@ -1,7 +1,7 @@
 function [done] = runSingleSimulation(val1,val2,paramName1,paramName2,objName1,objName2,scanDescr)
 	%clear classes
-	
-	startup
+	addMatlabCodeBasePaths	
+	%startup
 	done=0;
 
 	newSimConfig=SimConfiguration('default');

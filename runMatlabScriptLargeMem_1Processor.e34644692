@@ -1,0 +1,10 @@
+{Error using saveas (line 125)
+Invalid filename:
+/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/.tif
+
+Error in saveAllOpenFiguresWithIDs (line 12)
+  saveas(FigHandle, fullfile(FolderName, FigName));
+
+Error in plotRastersPhaseLocking (line 74)
+saveAllOpenFiguresWithIDs(FIGURE_DIR,figNameList)
+} 

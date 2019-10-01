@@ -23,7 +23,8 @@
 #cd /nfs/turbo/lsa-ojahmed/tibin/segmentedCycleSVDandSpikesProject/scratch
 #cd /nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin
 #cd /nfs/turbo/lsa-ojahmed/tibin/parForCyclePhaseRateStatsAlpha
-cd /nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin/checkSeizureSortingQuality
+#cd /nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin/checkSeizureSortingQuality
+cd /nfs/turbo/lsa-ojahmed/tibin/thetaSequenceQualityControl
 #. openMatlabWithCmd.sh runGetDurationNormCycleMatrixPar
 #. openMatlabWithCmd.sh parForCellAllChsPhaseInSpace
 #. openMatlabWithCmd.sh saveSgramGrid
@@ -35,7 +36,7 @@ cd /nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin/checkSeizureSortingQu
 #. openMatlabWithCmd.sh runWaveformAnalysisMG29
 #. openMatlabWithCmd.sh checkSzSort_00a_CheckAllCluster1NamedUnsorted
 #. openMatlabWithCmd.sh checkSzSort_kb_createFigure3_AllUnits
-. openMatlabWithCmd.sh remakeFigure2_AndSupp
-
+#. openMatlabWithCmd.sh remakeFigure2_AndSupp
+. openMatlabWithCmd.sh plotRastersPhaseLocking
 
 

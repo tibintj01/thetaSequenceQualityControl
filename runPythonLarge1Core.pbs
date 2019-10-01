@@ -1,0 +1,43 @@
+###########################################
+#PBS settings for job submissions
+#name of job
+#PBS -N runMatlabScriptLargeMem_1Processor
+
+#email to be notified at
+#PBS -M tibintj@umich.edu
+
+#b for beginning, e for end, a for aborts; change for large # of jobs
+#PBS -m abe
+
+#copies local environment to batch environment
+#PBS -V
+
+#resource information (-l), actual time not comp time, quality of service (qos)
+#PBS -l walltime=25:00:00 -l nodes=1:ppn=1,pmem=125gb -l qos=flux
+
+#PBS -q fluxm
+#PBS -A ojahmed_fluxm
+###########################################
+
+#cd /nfs/turbo/lsa-ojahmed
+#cd /nfs/turbo/lsa-ojahmed/tibin/segmentedCycleSVDandSpikesProject/scratch
+#cd /nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin
+#cd /nfs/turbo/lsa-ojahmed/tibin/parForCyclePhaseRateStatsAlpha
+#cd /nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin/checkSeizureSortingQuality
+cd /nfs/turbo/lsa-ojahmed/tibin/thetaSequenceQualityControl
+#. openMatlabWithCmd.sh runGetDurationNormCycleMatrixPar
+#. openMatlabWithCmd.sh parForCellAllChsPhaseInSpace
+#. openMatlabWithCmd.sh saveSgramGrid
+#. openMatlabWithCmd.sh runSingleCycleTimesMat_MG49
+#. openMatlabWithCmd.sh segmentedCycleSVD_RunAllChParFor
+#. openMatlabWithCmd.sh segmentedCycleSVD_RunAllChParFor_FromLFP
+#. openMatlabWithCmd.sh grandHumanPreProcessingScriptTibin
+#. openMatlabWithCmd.sh saveMG63LFPs
+#. openMatlabWithCmd.sh runWaveformAnalysisMG29
+#. openMatlabWithCmd.sh checkSzSort_00a_CheckAllCluster1NamedUnsorted
+#. openMatlabWithCmd.sh checkSzSort_kb_createFigure3_AllUnits
+#. openMatlabWithCmd.sh remakeFigure2_AndSupp
+#python runSimParameterScan.py
+python runSimParameterScanPar.py
+
+

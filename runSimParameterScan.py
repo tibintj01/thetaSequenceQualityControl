@@ -9,6 +9,11 @@ Then runs simulation m-scripts
 '''
 import numpy as np
 import pdb; 
+#import scipy.io
+#import subprocess
+#import os
+
+
 import matlab.engine
 eng=matlab.engine.start_matlab()		
 
@@ -73,8 +78,17 @@ for i,scanParam1Value in enumerate(scanParam1Values):
 				f.truncate(0)
 				f.write(newFileStr)
 
-		#run this version of simulation in matlab
-		exitStatus=eng.runSingleSimulation(float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr)
+
+
+			#scipy.io.savemat('./%s_%s_%.10f_%s_%.10f.mat' % (scanDescr, scanParamNames[0],float(scanParam1Value), scanParamNames[1],float(scanParam2Value)), mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })
+			#scipy.io.savemat('currSimParams.mat', mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })
+
+		        #run this version of simulation in matlab
+			exitStatus=eng.runSingleSimulation(float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr)
+			#subprocess.call([". openMatlabWithCmd.sh", "testMatlabCall('currSimParams.mat')"])
+			#os.system('''. openMatlabWithCmd.sh "testMatlabCall('currSimParams.mat')"''')
+			#pdb.set_trace()
+
 
 exitStatus=eng.plotRastersPhaseLocking([float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values])		
 

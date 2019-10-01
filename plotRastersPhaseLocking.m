@@ -1,10 +1,12 @@
 function [exitStatus]=plotRastersPhaseLocking(bias_values,gLeak_values)
 
 directory_names
+addMatlabCodeBasePaths
+close all
 
 if(~exist('bias_values'))
     bias_values=linspace(2,10,50)
-    gLeak_values=logspace(log10(0.005),log10(0.2),50)
+    gLeak_values=logspace(log10(0.005),log10(0.2),5)
     %bias_values=linspace(3,11,50)
     %gLeak_values=linspace(0.006,0.0125,20)
     %linspace(3,11,50)
@@ -13,8 +15,6 @@ if(~exist('bias_values'))
     %gLeak_values=linspace(0.005,0.05,5);
 end
 
-startup
-close all
 
 dataDir=DATA_DIR 
 
@@ -42,13 +42,18 @@ for fileNum=1:length(filePaths)
     currData=currData.thisObj;
     
     
-    
+	simTime=currData.configuration.simParams.simTime;    
     currInjBias=currData.currentModifyInfo.overrideParamValues(1);
     currGleak=currData.currentModifyInfo.overrideParamValues(2);
      [~,biasIdx]=min(abs(bias_values-currInjBias));
     [~,gLeakIdx]=min(abs(gLeak_values-currGleak));
+      
+	currR=1/currGleak;
+      currCm=1.0; %uF/cm^2
+       tau_mem=currR*currCm;
     
     fH=figure(gLeakIdx)
+    figNameList{gLeakIdx}=sprintf('BiasVsSpikePhases_TauM_%.2fmsec',tau_mem);  
    
     currSpikeTimes=currData.cellsObj.spikeTimes;
     plot(currSpikeTimes,currInjBias*ones(size(currSpikeTimes)),'k.','MarkerSize',7)
@@ -56,19 +61,16 @@ for fileNum=1:length(filePaths)
     
     currData.thetaPopInputObj.addTroughLines(fH)
     
-      currR=1/currGleak;
-      currCm=1.0; %uF/cm^2
-      
-       tau_mem=currR*currCm;
     title(sprintf('Membrane time constant: %.2f msec',tau_mem))
     ylabel('Inj curr bias')
     xlabel('Time (msec)')
     
+
     ylim([bias_values(1) bias_values(end)])
-    xlim([0 1000])
+    xlim([0 simTime])
     %fds
 end
 
-
+saveAllOpenFiguresWithIDs(FIGURE_DIR,figNameList)
 
 exitStatus=1;

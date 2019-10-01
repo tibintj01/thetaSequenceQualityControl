@@ -7,7 +7,10 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 		simParamsIDStr
 		%simsCategory='single_cell_precession_tuning';
 		
-		saveDirectoryBaseRawData='../results/%s/raw_data';
+		%saveDirectoryBaseRawData='../results/%s/raw_data';
+		saveDirectoryBaseRawData='/scratch/ojahmed_fluxm/tibintj/results/%s/raw_data'
+		saveDirectoryBaseProcessedData='/scratch/ojahmed_fluxm/tibintj/results/%s/processed_data'
+		saveDirectoryBaseFigures='/scratch/ojahmed_fluxm/tibintj/results/%s/figures'
 		%saveDirectoryFigures='../results/%s/figures';
 
 		saveDirectoryRawData

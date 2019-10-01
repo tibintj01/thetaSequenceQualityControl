@@ -1,11 +1,15 @@
 classdef CurrentInjector < handle & matlab.mixin.Copyable
+	properties(Constant)
+		NOISE_SIGMA=0.2; %nA
+                NOISE_SAMPLING_DT=0.5; %msec
+	end
 	
 	properties
 		timeAxis
 		pulseStartTime
 		pulseEndTime
 
-		noiseAmplitude=0;
+		noiseAmplitude=0.2;
 		
 		noiseTrace	
 		speedTrace
@@ -37,7 +41,8 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 				
 				thisInjector.amplitude=injParams.amplitude;
 				thisInjector.baseline=injParams.baseline;
-				thisInjector.setNoiseTrace();
+				%thisInjector.setNoiseTrace();
+				thisInjector.setGaussianNoiseTrace();
 				%fds
 			end
 		end
@@ -50,6 +55,22 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 			end
 		end
 
+		function setGaussianNoiseTrace(thisObj)
+                        len = thisObj.timeAxis(end);                    % Length (sec)
+                        Fs  = 1/(CurrentInjector.NOISE_SAMPLING_DT);
+                                                                       % Sampling Frequency (Hz)
+                        startBinCenter=CurrentInjector.NOISE_SAMPLING_DT/2;
+			endBinCenter=len-CurrentInjector.NOISE_SAMPLING_DT/2;
+			
+			noiseTimeAxis   = linspace(startBinCenter, endBinCenter, round(Fs*len));                 % Time Vector
+
+                        noiseTrace = CurrentInjector.NOISE_SIGMA*randn(size(noiseTimeAxis));
+			interpNoiseTrace= interp1(noiseTimeAxis,noiseTrace,thisObj.timeAxis);
+
+                        thisObj.noiseTrace=interpNoiseTrace(:);
+                end
+
+		%currently not used - 9/30/19, TJ
 		function setNoiseTrace(thisObj)
 			len = thisObj.timeAxis(end);                    % Length (sec)
 			f   = 100;                                      % Frequency (Hz)

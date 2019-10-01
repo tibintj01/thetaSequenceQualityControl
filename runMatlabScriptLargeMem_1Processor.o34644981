@@ -1,0 +1,3380 @@
+dbstop if error; addpath(genpath('/nfs/turbo/lsa-ojahmed/tibin/ANALYSIS_CODE')); addpath('/nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin/'); plotRastersPhaseLocking
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016a (9.0.0.341360) 64-bit (glnxa64)
+                             February 11, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Name is nonexistent or not a directory:
+/Users/tibinjohn/humanarraychannelmap] 
+[> In path (line 109)
+  In addpath (line 88)
+  In startup (line 5)
+  In matlabrc (line 209)] 
+[Warning: Executing startup failed in matlabrc.
+This indicates a potentially serious problem in your MATLAB setup, which should
+be resolved as soon as possible.  Error detected was:
+MATLAB:UndefinedFunction
+Undefined function 'setFigurePosition' for input arguments of type 'double'.] 
+[> In matlabrc (line 212)] 
+
+	Academic License
+
+[Warning: Function isrow has the same name as a MATLAB builtin. We suggest you
+rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+[Warning: Function isequaln has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+[Warning: Function isstring has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+
+simName =
+
+timeConstantAndPhaseCodingWithNoise
+
+[Warning: Function isrow has the same name as a MATLAB builtin. We suggest you
+rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)
+  In addMatlabCodeBasePaths (line 1)
+  In plotRastersPhaseLocking (line 4)] 
+[Warning: Function isequaln has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)
+  In addMatlabCodeBasePaths (line 1)
+  In plotRastersPhaseLocking (line 4)] 
+[Warning: Function isstring has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)
+  In addMatlabCodeBasePaths (line 1)
+  In plotRastersPhaseLocking (line 4)] 
+[Warning: Function isrow has the same name as a MATLAB builtin. We suggest you
+rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)
+  In addMatlabCodeBasePaths (line 1)
+  In plotRastersPhaseLocking (line 4)] 
+[Warning: Function isequaln has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)
+  In addMatlabCodeBasePaths (line 1)
+  In plotRastersPhaseLocking (line 4)] 
+[Warning: Function isstring has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)
+  In addMatlabCodeBasePaths (line 1)
+  In plotRastersPhaseLocking (line 4)] 
+
+bias_values =
+
+  Columns 1 through 7
+
+    2.0000    2.1633    2.3265    2.4898    2.6531    2.8163    2.9796
+
+  Columns 8 through 14
+
+    3.1429    3.3061    3.4694    3.6327    3.7959    3.9592    4.1224
+
+  Columns 15 through 21
+
+    4.2857    4.4490    4.6122    4.7755    4.9388    5.1020    5.2653
+
+  Columns 22 through 28
+
+    5.4286    5.5918    5.7551    5.9184    6.0816    6.2449    6.4082
+
+  Columns 29 through 35
+
+    6.5714    6.7347    6.8980    7.0612    7.2245    7.3878    7.5510
+
+  Columns 36 through 42
+
+    7.7143    7.8776    8.0408    8.2041    8.3673    8.5306    8.6939
+
+  Columns 43 through 49
+
+    8.8571    9.0204    9.1837    9.3469    9.5102    9.6735    9.8367
+
+  Column 50
+
+   10.0000
+
+
+gLeak_values =
+
+    0.0050    0.0126    0.0316    0.0795    0.2000
+
+
+dataDir =
+
+/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (2) with properties:
+
+      Number: 2
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (3) with properties:
+
+      Number: 3
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (4) with properties:
+
+      Number: 4
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+fH = 
+
+  Figure (5) with properties:
+
+      Number: 5
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans =
+
+     1
+
+>> 

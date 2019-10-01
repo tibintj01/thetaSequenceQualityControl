@@ -1,0 +1,9 @@
+{Error using sprintf
+Function is not defined for 'cell' inputs.
+
+Error in saveAllOpenFiguresWithIDs (line 11)
+   FigName=sprintf(sprintf('%s.tif',figNameList(iFig)));
+
+Error in plotRastersPhaseLocking (line 74)
+saveAllOpenFiguresWithIDs(FIGURE_DIR,figNameList)
+} 

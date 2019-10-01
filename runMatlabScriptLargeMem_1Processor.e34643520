@@ -1,0 +1,9 @@
+Error using fullfile (line 103)
+All inputs must be strings, character vectors, or cell arrays of character vectors.
+
+Error in getRegexFilePaths (line 4)
+                matFilePaths=fullfile(dirName,fileNames);
+
+Error in plotRastersPhaseLocking (line 30)
+filePaths=getRegexFilePaths(dataDir,'*mat');
+

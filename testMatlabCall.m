@@ -1,0 +1,2 @@
+function [] = testMatlabCall(filePath)
+	filePath

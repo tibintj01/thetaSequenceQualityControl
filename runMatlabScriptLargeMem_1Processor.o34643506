@@ -1,0 +1,4450 @@
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.2000
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.321449 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00500_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.237505 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00500_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101855 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00539_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0054
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.237286 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00539_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0054
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.098783 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00581_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0058
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.233766 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00581_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0058
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.099893 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00627_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0063
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.222972 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00627_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0063
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.097554 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00676_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0068
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.226949 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00676_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0068
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101693 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00729_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0073
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.215229 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00729_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0073
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.102585 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00785_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0079
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.234229 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00785_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0079
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.099894 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00847_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0085
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.227771 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00847_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0085
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.102310 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00913_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0091
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.238658 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00913_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0091
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101604 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00985_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0098
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.223025 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.00985_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0098
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101418 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01062_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0106
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.233828 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01062_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0106
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101373 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01145_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0114
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.217951 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01145_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0114
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.099446 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01234_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0123
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.230888 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01234_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0123
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.103843 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01330_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0133
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.221428 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01330_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0133
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.100910 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01435_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0143
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.229799 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01435_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0143
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.102977 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01547_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0155
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.214037 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01547_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0155
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.098983 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01668_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0167
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.223111 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01668_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0167
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.102472 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01798_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0180
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.223095 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01798_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0180
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.099242 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01939_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0194
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.232168 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.01939_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0194
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101919 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02090_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0209
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.222589 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02090_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0209
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.102192 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02254_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0225
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.234021 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02254_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0225
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.103309 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02430_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0243
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.236706 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02430_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0243
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.104277 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02620_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0262
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.236738 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02620_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0262
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.102879 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02825_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0282
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.235078 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.02825_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0282
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.097648 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.03045_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0305
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.232142 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.03045_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0305
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101357 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.03284_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0328
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.230315 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.03284_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0328
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.100632 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.03540_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0354
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.234860 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.03540_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0354
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.100920 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.03817_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0382
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.214336 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.03817_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0382
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101881 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.04116_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0412
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.230150 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.04116_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0412
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.096343 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.04437_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0444
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.223091 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.04437_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0444
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.100739 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.04784_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0478
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.234255 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.04784_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0478
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.102596 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.05158_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0516
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.223484 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.05158_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0516
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.099942 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.05562_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0556
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.225074 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.05562_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0556
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101252 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.05997_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0600
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.232608 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.05997_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0600
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.100929 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.06466_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0647
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.228772 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.06466_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0647
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.102525 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.06971_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0697
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.235228 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.06971_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0697
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.101135 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.07516_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 1)
+  In runSingleSimulation (line 3)
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+running sim with.....
+    0.0752
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.226112 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.07516_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCoding/raw_data/.....
