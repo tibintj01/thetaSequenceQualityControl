@@ -2,12 +2,7 @@
 %DATA_DIR='../results/timeConstantAndPhaseCoding/raw_data';
 simName='timeConstantAndPhaseCodingWithNoise'
 
-onLocalComputer=0;
-if(contains(pwd,'/Users/tibinjohn') 
-	onLocalComputer=1;
-end
-
-if(onLocalComputer)
+if(onLocalComputer())
 	DATA_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/raw_data/',simName);
 	PROCESSED_DATA_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/processed_data',simName);
 	FIGURE_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/figures/',simName);
@@ -20,8 +15,6 @@ else
 end
 
 DATA_DIR
-
 PROCESSED_DATA_DIR
 FIGURE_DIR
 
-pwd

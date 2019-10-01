@@ -268,6 +268,7 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			%step through time
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			for step=1:numSteps-1
+				%disp(sprintf('INTEGRATING!!!!! v=%.5f',v(1,1,step)))
 				for placeIdx=1:numPlaces
 					for cellRow=1:numCellsPerPlace
 						vSpecific=v(cellRow,placeIdx,step);
@@ -454,6 +455,7 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 	
 						itonic=injCurrMatrix(cellRow,placeIdx,step);
+						%fds
 						%synaptic current
 						%{
 						if(numCells>1)
@@ -491,11 +493,11 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 					       %V=V+dV
 					      v(cellRow,placeIdx,step+1)=vSpecific+vInc;
+
 					      %Gates=Gates+dGates
 					      n(cellRow,placeIdx,step+1)=nSpecific+nInc;
 					      m(cellRow,placeIdx,step+1)=mSpecific+mInc;
 					      h(cellRow,placeIdx,step+1)=hSpecific+hInc;
-					
 						if(~justSpikingConductances)
 							mkaInc=double(dt*(mkaInf-mkaSpecific)/tau_mka);
 							hkaInc=double(dt*(hkaInf-hkaSpecific)/tau_hka);

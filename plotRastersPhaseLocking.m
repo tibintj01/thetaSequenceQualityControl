@@ -5,8 +5,8 @@ addMatlabCodeBasePaths
 close all
 
 if(~exist('bias_values'))
-    bias_values=linspace(2,10,50)
-    gLeak_values=logspace(log10(0.005),log10(0.2),5)
+    bias_values=linspace(2,10,10)
+    gLeak_values=logspace(log10(0.005),log10(0.2),1)
     %bias_values=linspace(3,11,50)
     %gLeak_values=linspace(0.006,0.0125,20)
     %linspace(3,11,50)
@@ -40,17 +40,20 @@ for fileNum=1:length(filePaths)
     currFilePath=filePaths{fileNum};
     currData=load(currFilePath);
     currData=currData.thisObj;
-    
+
     
 	simTime=currData.configuration.simParams.simTime;    
     currInjBias=currData.currentModifyInfo.overrideParamValues(1);
     currGleak=currData.currentModifyInfo.overrideParamValues(2);
-     [~,biasIdx]=min(abs(bias_values-currInjBias));
+	  [~,biasIdx]=min(abs(bias_values-currInjBias));
     [~,gLeakIdx]=min(abs(gLeak_values-currGleak));
       
 	currR=1/currGleak;
       currCm=1.0; %uF/cm^2
        tau_mem=currR*currCm;
+   if(currInjBias>5)
+		fds
+	end
     
     fH=figure(gLeakIdx)
     figNameList{gLeakIdx}=sprintf('BiasVsSpikePhases_TauM_%.2fmsec',tau_mem);  
