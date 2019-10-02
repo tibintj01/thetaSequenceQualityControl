@@ -3,13 +3,15 @@ classdef Simulation < handle & matlab.mixin.Copyable
 	properties(Constant)
 		%SIM_NAME='just spiking conductances, no theta, large time constant output unit';
 		SIM_NAME='timeConstantPhaseCoding';
+		%OVERWRITE=1;
 		%'just spiking conductances, theta, time constant vs phase locking';
 	end
 
 	properties
 		configuration
 		currentModifyInfo
-		
+		saveDir	
+	
 		cellsObj
 		internalConnectivityObj
 		externalInputObj
@@ -41,6 +43,8 @@ classdef Simulation < handle & matlab.mixin.Copyable
 				%thisObj.internalConnectivityObj=thisObj.cellsObj.internalConnObj;
 				%thisObj.externalInputObj=thisObj.cellsObj.externalInputObj;
 
+
+
 				thisObj.currentRunStatus='instantiated_NOT_RUN';
 			end
 
@@ -51,6 +55,13 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%	%thisObj.cellsObj.inhThetaInputArray=thisObj.thetaPopInputObj;
 			%	%thisObj.cellsObj.internalConnObj=thisObj.internalConnectivityObj;
 			end
+			saveDir=sprintf(thisObj.configuration.saveDirectoryBaseRawData,thisObj.currentModifyInfo.batchCategory);
+                        if(~isdir(fullfile(saveDir)))
+                                mkdir(fullfile(saveDir))
+                        %elseif(Simulation.OVERWRITE==1)
+                        %        delete(fullfile(saveDir,'*.mat'))
+                        end
+			thisObj.saveDir=saveDir;
 		end
 		
 		function run(thisObj)
@@ -74,15 +85,12 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%thisObj.simParamsIDStr=Simulation.SIM_NAME;
 			thisObj.simParamsIDStr=sprintf('%s_%.5f_%s_%.5f_Connectivity_%s',thisObj.currentModifyInfo.overrideParamNames{1},thisObj.currentModifyInfo.overrideParamValues(1),thisObj.currentModifyInfo.overrideParamNames{2},thisObj.currentModifyInfo.overrideParamValues(2), thisObj.internalConnectivityObj.connectivityTypeStr)
 			
-			saveDir=sprintf(thisObj.configuration.saveDirectoryBaseRawData,thisObj.currentModifyInfo.batchCategory);
+			saveDir=thisObj.saveDir;
 
 			disp(sprintf('saving to: %s/.....',saveDir))
 			%if(~isdir(fullfile(saveDir,thisObj.simParamsIDStr)))
 			%	mkdir(fullfile(saveDir,thisObj.simParamsIDStr))
 			%end
-			if(~isdir(fullfile(saveDir)))
-				mkdir(fullfile(saveDir))
-			end
 
 			saveFileName=sprintf('simData_%s.mat',thisObj.simParamsIDStr);
 			thisObj.currentSaveStatus='saving';
