@@ -5,8 +5,9 @@ addMatlabCodeBasePaths
 close all
 
 if(~exist('bias_values'))
-    bias_values=linspace(2,10,10)
-    gLeak_values=logspace(log10(0.005),log10(0.2),1)
+    bias_values=linspace(2,7,120)
+    %gLeak_values=logspace(log10(0.005),log10(0.2),1)
+    gLeak_values=logspace(log10(0.05),log10(0.2),1)
     %bias_values=linspace(3,11,50)
     %gLeak_values=linspace(0.006,0.0125,20)
     %linspace(3,11,50)

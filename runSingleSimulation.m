@@ -10,6 +10,9 @@ function [done] = runSingleSimulation(arglist)
 	scanDescr=arglist{7};
 	runDir=arglist{8};
 	originalDir=arglist{9};
+	rngSeed=arglist{10};
+
+	rng(rngSeed)
 
 	cd(runDir)		
 	%disp(sprintf('running simulation for %s = %s, %s = %s.......',))
