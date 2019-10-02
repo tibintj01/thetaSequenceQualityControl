@@ -2,7 +2,7 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 	properties(Constant)
 		%NOISE_SIGMA=0.2; %nA
 		%NOISE_SIGMA=2; %nA
-		NOISE_SIGMA=3.5; %nA
+		NOISE_SIGMA=3.5/5; %nA
                 NOISE_SAMPLING_DT=0.5; %msec
 	end
 	
@@ -23,6 +23,8 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 		amplitude
 		baseline
 
+		rngSeed=1
+
 		pulseShapeStr
 
 		%asymPeakTimeFrac=0.75
@@ -40,11 +42,13 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 				thisInjector.pulseEndTime=injParams.pulseEndTime;
 			
 				thisInjector.pulseShapeStr=injParams.pulseShapeStr;
+				thisInjector.rngSeed=injParams.rngSeed;
 				
 				thisInjector.amplitude=injParams.amplitude;
 				thisInjector.baseline=injParams.baseline;
 				%thisInjector.setNoiseTrace();
 				thisInjector.setGaussianNoiseTrace();
+				
 				%fds
 			end
 		end
@@ -68,6 +72,12 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 			%noiseTimeAxis   = linspace(startBinCenter, endBinCenter, round(Fs*len));                 % Time Vector
 			
 			noiseTimeAxis   = linspace(0,len, round(Fs*len)+1);                 % Time Vector
+
+			%if(isempty(thisObj.rngSeed))
+			%	thisObj.rngSeed=1;
+			%end
+
+			rng(thisObj.rngSeed)
 
                         noiseTrace = CurrentInjector.NOISE_SIGMA*randn(size(noiseTimeAxis));
 			interpNoiseTrace= interp1(noiseTimeAxis,noiseTrace,thisObj.timeAxis);

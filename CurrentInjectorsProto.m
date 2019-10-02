@@ -104,7 +104,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 						%injParams.baseline=0;
 						injParams.baseline=normrnd(CurrentInjectors.BASELINE,cellBaselineSig);
 						%CurrentInjectors.BASELINE;
-					
+						injParams.rngSeed=extEnvObj.rngSeed;					
 						currInjectorMatrix(cellNum,place)=CurrentInjector(injParams);
 					elseif(strcmp(pulseShapeStr,'flat'))
 						placeInputStartTime=timeAxis(1);
@@ -114,7 +114,8 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 						
 						injParams.amplitude=0;
                                                 injParams.baseline=currAmp;
-                                                
+			
+						injParams.rngSeed=extEnvObj.rngSeed;
                                                 currInjectorMatrix(cellNum,place)=CurrentInjector(injParams);
 					end
 				end

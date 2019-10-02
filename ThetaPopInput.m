@@ -4,8 +4,17 @@ classdef ThetaPopInput < ExternallyControlledConductances
 		%frequencyDefault=80/1000;		%kHz
 		phaseOffsetDefault=0;			%radians
 		%baselineDefault=0.1;
-		baselineDefault=0.15;
-		amplitudeDefault=0.1;
+		%baselineDefault=0.15;
+		%amplitudeDefault=0.1;
+		%baselineDefault=0.03;
+		%amplitudeDefault=0.02;
+		%baselineDefault=0.015;
+		%amplitudeDefault=0.01;
+		%baselineDefault=0.01;
+		%amplitudeDefault=0.005;
+		baselineDefault=0.075;
+		%amplitudeDefault=0.05;
+		amplitudeDefault=0.015;
 	
 
    		%amplitudeDefault=0;

@@ -1,7 +1,7 @@
 import os
 scanParamNames=['currAmp','gL']
 
-scanDescr='timeConstantAndPhaseCodingWithNoise'
+scanDescr='timeConstantAndPhaseCodingWithNoiseWeakerTheta'
 
 
 #basePath='/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/'
