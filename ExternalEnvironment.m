@@ -8,6 +8,7 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 		placeInputStartPositions
 		placeInputWidths
 
+		rngSeed
 
 		maxPlaceEndTime
 

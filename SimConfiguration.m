@@ -17,13 +17,16 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 		%saveDirectoryFigures='../results/%s/figures';
 
 		saveDirectoryRawData
+		rngSeed
 	end
 
 	methods
-		function thisConfig=SimConfiguration(settingsStr)
-			if(nargin==1 && strcmp(settingsStr,'default'))
-				thisConfig.setSimProps();
-			end
+		function thisConfig=SimConfiguration(settingsStr,rngSeed)
+			%if(nargin==1 && strcmp(settingsStr,'default'))
+				%thisConfig.setSimProps();
+				thisConfig.setSimProps(rngSeed);
+			%end
+			%thisConfig.rngSeed=rngSeed;
 		end
 	
 		function printConfig(configObj)
@@ -45,9 +48,11 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 	end
 
 	methods(Access=private)
-		function setSimProps(thisObj)
+		function setSimProps(thisObj,rngSeed)
 			directory_names
 			%saveDirectoryBaseRawData=[DATA_DIR '%s/raw_data'];
+
+			thisObj.rngSeed=rngSeed;
 
 			thisObj.saveDirectoryBaseRawData=DATA_DIR;
 			thisObj.saveDirectoryBaseProcessedData=PROCESSED_DATA_DIR;
@@ -129,9 +134,9 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 				end
 		%fds
 
+			externalEnvironmentObj.rngSeed=thisObj.rngSeed;
 			simProps.extEnvObj=copy(externalEnvironmentObj);
-		
-
+	
 			simCells=copy(Cells(simProps));
 			%simProps.simParamsIDStr=sprintf('gnapMu_%.5f_gnapSigma_%.5f_gksMu_%.5f_gksSigma_%.5f_Connectivity_%s',cellProps.gnapBar,cellProps.gnapSigma,cellProps.gksBar,cellProps.gksSigma,cellProps.internalConnObj.connectivityTypeStr)
 			%simCells=Cells(cellProps);

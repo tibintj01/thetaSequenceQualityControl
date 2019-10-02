@@ -10,7 +10,9 @@ function [done] = runSingleSimulation(arglist)
 	scanDescr=arglist{7};
 	runDir=arglist{8};
 	originalDir=arglist{9};
+	rngSeed=arglist{10}
 
+	rng(rngSeed)
 	cd(runDir)		
 	%disp(sprintf('running simulation for %s = %s, %s = %s.......',))
 	%clear classes
@@ -18,7 +20,8 @@ function [done] = runSingleSimulation(arglist)
 	%startup
 	done=0;
 
-	newSimConfig=SimConfiguration('default');
+	%newSimConfig=SimConfiguration('default');
+	newSimConfig=SimConfiguration('default',rngSeed);
 	%newSimConfig.printConfig()
 
 
@@ -38,6 +41,9 @@ function [done] = runSingleSimulation(arglist)
 
 
 	newSim.run()
+	newSim.dispV_traces()
+	saveas(gcf,sprintf('/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/simV%d.tif',rngSeed))
+	
 	newSim.save()
 
 	cd(originalDir)
