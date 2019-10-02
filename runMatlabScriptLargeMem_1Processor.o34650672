@@ -1,0 +1,4160 @@
+running simulation for....
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+running simulation for....
+
+paramName2 =
+
+    'gL'
+
+
+paramName2 =
+
+    'gL'
+
+running simulation for....
+
+val1 =
+
+    4.4828
+
+
+val1 =
+
+    3.9310
+
+
+paramName1 =
+
+    'currAmp'
+
+
+val1 =
+
+    5.3103
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+val2 =
+
+    0.0500
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+val2 =
+
+    0.0500
+
+
+paramName2 =
+
+    'gL'
+
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    4.2069
+
+
+paramName2 =
+
+    'gL'
+
+
+val2 =
+
+    0.0500
+
+
+val1 =
+
+    2.8276
+
+
+val1 =
+
+    6.6897
+
+
+val1 =
+
+     2
+
+
+val2 =
+
+    0.0500
+
+
+val2 =
+
+    0.0500
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    3.1034
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName1 =
+
+    'currAmp'
+
+running simulation for....
+
+paramName2 =
+
+    'gL'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    6.9655
+
+
+paramName1 =
+
+    'currAmp'
+
+
+val1 =
+
+    3.6552
+
+
+val2 =
+
+    0.0500
+
+
+paramName2 =
+
+    'gL'
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+val1 =
+
+    5.8621
+
+running simulation for....
+
+val2 =
+
+    0.0500
+
+running simulation for....
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+paramName2 =
+
+    'gL'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    5.0345
+
+
+paramName1 =
+
+    'currAmp'
+
+running simulation for....
+
+val1 =
+
+    3.3793
+
+running simulation for....
+
+paramName2 =
+
+    'gL'
+
+
+val2 =
+
+    0.0500
+
+
+val2 =
+
+    0.0500
+
+
+val1 =
+
+    6.4138
+
+
+paramName1 =
+
+    'currAmp'
+
+
+val1 =
+
+    6.1379
+
+running simulation for....
+
+val2 =
+
+    0.0500
+
+
+paramName2 =
+
+    'gL'
+
+
+val2 =
+
+    0.0500
+
+
+val1 =
+
+    2.2759
+
+
+paramName1 =
+
+    'currAmp'
+
+
+val2 =
+
+    0.0500
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    2.5517
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    5.5862
+
+
+val1 =
+
+    4.7586
+
+
+val2 =
+
+    0.0500
+
+
+val2 =
+
+    0.0500
+
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addMatlabCodeBasePaths (line 4)
+  In addpath (line 86)
+  In runSingleSimulation (line 14)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In addpath (line 86)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addMatlabCodeBasePaths (line 4)
+  In addpath (line 86)
+  In runSingleSimulation (line 14)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addMatlabCodeBasePaths (line 4)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+simTime =
+
+        1000
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+dt =
+
+    0.0020
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+simTime =
+
+        1000
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+dt =
+
+    0.0020
+
+
+simTime =
+
+        1000
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+dt =
+
+    0.0020
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+dt =
+
+    0.0020
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simTime =
+
+        1000
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+dt =
+
+    0.0020
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+simTime =
+
+        1000
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+dt =
+
+    0.0020
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+     2
+
+    0.0050
+
+     2
+
+solving cell diff equations....
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+    0.0050
+
+    0.0050
+
+     2
+
+     2
+
+solving cell diff equations....
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+     2
+
+    0.0050
+
+solving cell diff equations....
+     2
+
+solving cell diff equations....
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+    0.0050
+
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+     2
+
+    0.0050
+
+    0.0050
+
+solving cell diff equations....
+     2
+
+     2
+
+solving cell diff equations....
+solving cell diff equations....
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.457194 seconds.
+Elapsed time is 0.440787 seconds.
+Elapsed time is 0.486116 seconds.
+Elapsed time is 0.505965 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_6.13793_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_3.65517_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_6.96552_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_5.58621_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.477396 seconds.
+Elapsed time is 0.515925 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_4.20690_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_6.68966_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.552630 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_6.41379_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.434461 seconds.
+Elapsed time is 0.437180 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_3.37931_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_4.75862_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.541853 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_5.31034_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.560277 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.82759_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.458797 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.27586_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.628486 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.55172_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.657659 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_3.10345_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.627838 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_2.00000_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.652688 seconds.
+Elapsed time is 0.651208 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_5.03448_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_3.93103_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.653013 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_5.86207_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.746099 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_4.48276_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+running simulation for....
+
+paramName2 =
+
+    'gL'
+
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    7.2414
+
+
+val1 =
+
+    10
+
+
+val2 =
+
+    0.0500
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+running simulation for....
+
+paramName2 =
+
+    'gL'
+
+
+paramName1 =
+
+    'currAmp'
+
+
+val1 =
+
+    8.0690
+
+
+paramName2 =
+
+    'gL'
+
+
+val2 =
+
+    0.0500
+
+
+val1 =
+
+    9.7241
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    8.3448
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    8.8966
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    9.1724
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    9.4483
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    7.5172
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    8.6207
+
+
+val2 =
+
+    0.0500
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    7.7931
+
+
+val2 =
+
+    0.0500
+
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addMatlabCodeBasePaths (line 4)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In runSingleSimulation (line 14)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In runSingleSimulation (line 14)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In runSingleSimulation (line 14)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In addpath (line 86)
+  In runSingleSimulation (line 14)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 14)
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simTime =
+
+        1000
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+dt =
+
+    0.0020
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+     2
+
+    0.0050
+
+     2
+
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+solving cell diff equations....
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.2000
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+     2
+
+solving cell diff equations....
+Elapsed time is 0.436252 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_10.00000_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.513509 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_7.79310_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.554882 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_9.44828_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.594357 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_7.24138_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.466441 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_8.89655_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.354789 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_8.34483_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.369693 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_9.72414_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.577806 seconds.
+Elapsed time is 0.479217 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_9.17241_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_7.51724_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.608579 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_8.62069_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+Elapsed time is 0.503320 seconds.
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_8.06897_gL_0.05000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In plotRastersPhaseLocking (line 4)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In plotRastersPhaseLocking (line 4)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In plotRastersPhaseLocking (line 4)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In plotRastersPhaseLocking (line 4)
+
+dataDir =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+

@@ -51,9 +51,9 @@ for fileNum=1:length(filePaths)
 	currR=1/currGleak;
       currCm=1.0; %uF/cm^2
        tau_mem=currR*currCm;
-   if(currInjBias>5)
-		fds
-	end
+   %if(currInjBias>5)
+	%	fds
+	%end
     
     fH=figure(gLeakIdx)
     figNameList{gLeakIdx}=sprintf('BiasVsSpikePhases_TauM_%.2fmsec',tau_mem);  
