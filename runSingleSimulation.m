@@ -8,7 +8,10 @@ function [done] = runSingleSimulation(arglist)
 	objName1=arglist{5};
 	objName2=arglist{6};
 	scanDescr=arglist{7};
-		
+	runDir=arglist{8};
+	originalDir=arglist{9};
+
+	cd(runDir)		
 	%disp(sprintf('running simulation for %s = %s, %s = %s.......',))
 	%clear classes
 	addMatlabCodeBasePaths	
@@ -37,4 +40,5 @@ function [done] = runSingleSimulation(arglist)
 	newSim.run()
 	newSim.save()
 
+	cd(originalDir)
 	done=1;

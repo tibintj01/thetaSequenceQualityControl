@@ -6,6 +6,7 @@ Then runs simulation m-scripts
 '''
 import time
 
+
 start=time.perf_counter()
 
 import numpy as np
@@ -45,7 +46,7 @@ numParams=len(scanParamNames)
 #scanParam1Values=np.linspace(3,11,50)
 #scanParam1Values=np.linspace(2,10,50)
 #scanParam1Values=np.linspace(2,10,10)
-scanParam1Values=np.linspace(2,10,30)
+scanParam1Values=np.linspace(2,7,32)
 #scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.2),50)
 #scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.2),5)
 #scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.2),1)
@@ -53,6 +54,8 @@ scanParam2Values=np.logspace(np.log10(0.05),np.log10(0.2),1)
 #scanParam2Values=np.linspace(0.005,0.1,20)
 #scanParam2Values=np.linspace(0.006,0.0125,20)
 #scanParam2Values=[0.005,0.1]
+
+CODE_BASE_DIR=os.getcwd()
 
 originalFileStrings=[]
 
@@ -71,8 +74,7 @@ for i,scanParam1Value in enumerate(scanParam1Values):
 		#make new running directory in no snap shot path
 		runDirPath='%s%s_%d_%d' % (BASE_RUN_DIR,scanDescr,i,j)
 		os.system('mkdir -p %s' % runDirPath)
-		os.system('cp *.m %s' % runDirPath)	
-		os.chdir(runDirPath)
+		#os.chdir(runDirPath)
 	
 		#replace files with current parameters filled in
 		for k,filePath in enumerate(filePaths):	
@@ -87,17 +89,18 @@ for i,scanParam1Value in enumerate(scanParam1Values):
 			if(newFileStr == currFileStr):
 				raise ValueError('Scripts were not modified!')
 
-		        #clear old file
+		        #clear old
 			with open(filePath,'r+') as f:
 				f.truncate(0)
 				f.write(newFileStr)
-
-
+		#copy to this parameter settings' run directory
+		os.system('cp *.m %s' % runDirPath)	
+		#pdb.set_trace()
 
 		#scipy.io.savemat('./%s_%s_%.10f_%s_%.10f.mat' % (scanDescr, scanParamNames[0],float(scanParam1Value), scanParamNames[1],float(scanParam2Value)), mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })
 		#scipy.io.savemat('currSimParams.mat', mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })
 		#arglists.append([scanParam1Value,scanParam2Value,scanParamNames[0],scanParamNames[1], modifiedObjName1, modifiedObjName2, scanDescr])
-		arglists.append([float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr])
+		arglists.append([float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr, runDirPath,CODE_BASE_DIR])
 
 		#run this version of simulation in matlab
 		#exitStatus=eng.runSingleSimulation(float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr)
@@ -134,7 +137,7 @@ for i,scanParam1Value in enumerate(scanParam1Values):
         for j,scanParam2Value in enumerate(scanParam2Values):
                 #make new running directory in no snap shot path
                 runDirPath='%s%s_%d_%d' % (BASE_RUN_DIR,scanDescr,i,j)
-                os.system('rm -r %s' % runDirPath)
+                #os.system('rm -r %s' % runDirPath)
 
 os.chdir(basePath)
 #exitStatus=eng.runSingleSimulation(arglist)
@@ -143,5 +146,7 @@ os.chdir(basePath)
 ###############################
 eng=matlab.engine.start_matlab()
 exitStatus=eng.plotRastersPhaseLocking([float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values])		
-
-
+if 'Users/tibinjohn' in os.getcwd():
+	os.system("open %s*tif" % FIGURE_DIR)
+else:
+	os.system(". disp.sh %s*tif&" % FIGURE_DIR)
