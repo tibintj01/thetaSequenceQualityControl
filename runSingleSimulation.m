@@ -42,8 +42,8 @@ function [done] = runSingleSimulation(arglist)
 
 
 	newSim.run()
-	newSim.dispV_traces()
-	saveas(gcf,sprintf('/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/simV%d.tif',rngSeed))
+	%newSim.dispV_traces()
+	%saveas(gcf,fullfile(originalDir,sprintf('simV%d.tif',rngSeed)))
 	
 	newSim.save()
 

@@ -19,8 +19,11 @@ from multiprocessing import Pool
 
 import matlab.engine
 	
-scanParam1Values=np.linspace(2,7,120)
-scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.2),1)
+#scanParam1Values=np.linspace(2.6,3.6,120)
+scanParam1Values=np.linspace(2.6,3.6,500)
+#scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.1),2)
+scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.02),3)
+#scanParam2Values=np.logspace(np.log10(0.01),np.log10(0.2),1)
 
 REDEPLOY=1;
 #import scanParamNameScript
@@ -57,8 +60,6 @@ if REDEPLOY==1:
 	#scanParam1Values=np.linspace(1,1.7,32)
 	#scanParam1Values=np.linspace(1.7,2.5,32)
 	#scanParam1Values=np.linspace(2.5,3.5,32)
-	scanParam1Values=np.linspace(2.5,3.1,32)
-	scanParam2Values=np.logspace(np.log10(0.01),np.log10(0.2),1)
 	#scanParam2Values=np.linspace(0.005,0.1,20)
 	#scanParam2Values=np.linspace(0.006,0.0125,20)
 	#scanParam2Values=[0.005,0.1]
