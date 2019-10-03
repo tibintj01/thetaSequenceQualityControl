@@ -13,8 +13,11 @@ classdef ThetaPopInput < ExternallyControlledConductances
 		%baselineDefault=0.01;
 		%amplitudeDefault=0.005;
 		baselineDefault=0.075;
+		amplitudeDefault=0.05;
 		%amplitudeDefault=0.05;
-		amplitudeDefault=0.015;
+		%amplitudeDefault=0.015;
+		%amplitudeDefault=0.0125;
+		%amplitudeDefault=0.01;
 	
 
    		%amplitudeDefault=0;
@@ -127,7 +130,7 @@ classdef ThetaPopInput < ExternallyControlledConductances
 				thetaTroughTimes=getTroughTimes(thisObj,1,1);
 				for i=1:length(thetaTroughTimes)
 					%plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)
-					plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'b','LineWidth',4)
+					plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'m--','LineWidth',6)
 				end
 			end
 		end

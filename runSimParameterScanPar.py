@@ -151,6 +151,7 @@ if REDEPLOY==1:
 ###############################
 #postParallelProcessing
 ###############################
+'''
 eng=matlab.engine.start_matlab()
 
 exitStatus=eng.plotRastersPhaseLocking([float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values])		
@@ -158,3 +159,5 @@ if 'Users/tibinjohn' in os.getcwd():
 	os.system("open %s*tif" % FIGURE_DIR)
 else:
 	os.system(". disp.sh %s*tif&" % FIGURE_DIR)
+
+'''
