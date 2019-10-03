@@ -53,8 +53,17 @@ numParams=len(scanParamNames)
 #scanParam1Values=np.linspace(1,1.7,32)
 #scanParam1Values=np.linspace(1.7,2.5,32)
 #scanParam1Values=np.linspace(2.5,3.5,32)
-scanParam1Values=np.linspace(2.5,3.1,32)
-scanParam2Values=np.logspace(np.log10(0.01),np.log10(0.2),1)
+#scanParam1Values=np.linspace(2.5,3.1,32)
+#scanParam1Values=np.linspace(3,10,24)
+#scanParam1Values=np.linspace(1.7,3.1,16)
+#scanParam1Values=np.linspace(2.0,3.0,16)
+#scanParam1Values=np.linspace(5,7,16)
+#scanParam1Values=np.linspace(6,9,16)
+#scanParam1Values=np.linspace(7,11,16)
+scanParam1Values=np.linspace(15,25,20)
+#scanParam1Values=np.linspace(3.1,4.1,16)
+scanParam2Values=np.logspace(np.log10(0.03),np.log10(0.03),1)
+#scanParam2Values=np.logspace(np.log10(0.01),np.log10(0.2),1)
 #scanParam2Values=np.linspace(0.005,0.1,20)
 #scanParam2Values=np.linspace(0.006,0.0125,20)
 #scanParam2Values=[0.005,0.1]
@@ -149,9 +158,12 @@ os.chdir(basePath)
 ###############################
 #postParallelProcessing
 ###############################
+'''
 eng=matlab.engine.start_matlab()
 exitStatus=eng.plotRastersPhaseLocking([float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values])		
 if 'Users/tibinjohn' in os.getcwd():
 	os.system("open %s*tif" % FIGURE_DIR)
 else:
 	os.system(". disp.sh %s*tif&" % FIGURE_DIR)
+
+'''

@@ -10,7 +10,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		%currAmp=7;
 		%currAmp=10;
 		%currAmp=8;
-		currAmp=3.1;
+		currAmp=28.0;
 		%currAmp=15;
 		%pulseShapeStr='ramp';
 		pulseShapeStr='flat';

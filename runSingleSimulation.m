@@ -1,5 +1,7 @@
 function [done] = runSingleSimulation(arglist)
 %function [done] = runSingleSimulation(val1,val2,paramName1,paramName2,objName1,objName2,scanDescr)
+	saveResults=1;
+
 	disp('running simulation for....')
 	paramName1=arglist{3}
 	paramName2=arglist{4}
@@ -42,9 +44,19 @@ function [done] = runSingleSimulation(arglist)
 
 	newSim.run()
 	newSim.dispV_traces()
-	saveas(gcf,sprintf('/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/simV%d.tif',rngSeed))
-	
-	newSim.save()
 
+	if(saveResults)	
+		if(rngSeed<10)
+			saveas(gcf,sprintf('/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/simV00%d.tif',rngSeed))
+		elseif(rngSeed<100)
+			saveas(gcf,sprintf('/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/simV0%d.tif',rngSeed))
+		elseif(rngSeed<1000)
+			saveas(gcf,sprintf('/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/simV%d.tif',rngSeed))
+		end
+
+		newSim.save()
+	else
+		pause(3)
+	end
 	cd(originalDir)
 	done=1;

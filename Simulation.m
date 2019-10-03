@@ -149,7 +149,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			if(exist('figH'))
 				figure(figH)
 			else
-				figure
+				figH=figure
 			end
 			nr=thisObj.configuration.simParams.numCellsPerPlace;
 			nc=thisObj.configuration.simParams.numPlaces;
@@ -158,6 +158,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 
 			count=0;
 			axHs=[];
+			rescaleSec=1;
 
 			%cmap=jet(nc);
 			cmap=copper(nc);
@@ -166,11 +167,20 @@ classdef Simulation < handle & matlab.mixin.Copyable
 					count=count+1;
 					
 					%axH=subplot(nr,nc,count);
-					plot(timeAxis/1000,squeeze(thisObj.cellsObj.v(r,c,:)),'Color',cmap(c,:))
+					yyaxis left
+					plot(timeAxis/rescaleSec,squeeze(thisObj.cellsObj.v(r,c,:)),'Color',cmap(c,:))
 					%title(thisObj.configuration.simParams.simCells.getCellIDstr(r,c))
 					xlabel('Time (sec)')
 					ylabel('V_m (mV)')
-				
+
+					yyaxis right
+					%plot(timeAxis/rescaleSec,squeeze(thisObj.cellsObj.inaRecord(r,c,:)),'r-','LineWidth',3)	
+					%hold on
+					%plot(timeAxis/rescaleSec,squeeze(thisObj.cellsObj.ikRecord(r,c,:)),'b-','LineWidth',3)
+					%plot(timeAxis/rescaleSec,squeeze(thisObj.cellsObj.iksRecord(r,c,:)),'k-','LineWidth',3)
+					%ylim([-20 20])
+					plot(timeAxis/rescaleSec,squeeze(thisObj.cellsObj.nks(r,c,:)),'k-','LineWidth',3)
+					ylim([0 1])
 					hold on	
 					%axHs=[axHs axH];
 					if(r==1)
@@ -178,14 +188,20 @@ classdef Simulation < handle & matlab.mixin.Copyable
 					end
 				end
 			end
-
+			
+			
+			
 			%linkaxes(axHs,'xy')
-			xlim([timeAxis(1) timeAxis(end)]/1000)
+			xlim([timeAxis(1) timeAxis(end)]/rescaleSec)
+			yyaxis left
 			ylim([-80 10])
+		            hold on
+			thisObj.thetaPopInputObj.addTroughLines(figH)
 			title(removeUnderscores(thisObj.simParamsIDStr))
 			uberTitle('Place cell networks')
 			%maxFigManual2d(1,1,10)	
 			maxFigManual2d(3,1,14)
+			
 		end
 	end
 
