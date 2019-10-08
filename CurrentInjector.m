@@ -4,7 +4,8 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 		%NOISE_SIGMA=2; %nA
 		%NOISE_SIGMA=3.5/4; %nA
 		%NOISE_SIGMA=3.5/5; %nA
-		NOISE_SIGMA=3.5/4; %nA
+		%NOISE_SIGMA=3.5/4; %nA
+		NOISE_SIGMA=3.5/10; %nA
                 NOISE_SAMPLING_DT=0.5; %msec
 	end
 	

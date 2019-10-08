@@ -1,6 +1,7 @@
 %DATA_DIR='/Users/tibinjohn/thetaSeq/results/timeConstantAndPhaseCoding/raw_data';
 %DATA_DIR='../results/timeConstantAndPhaseCoding/raw_data';
-simName='timeConstantAndPhaseCodingWithNoise'
+%simName='timeConstantAndPhaseCodingWithNoise'
+simName='testLayer2TimingDecoder'
 
 if(onLocalComputer())
 	DATA_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/raw_data/',simName);

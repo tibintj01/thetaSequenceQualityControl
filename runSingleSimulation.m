@@ -45,6 +45,7 @@ function [done] = runSingleSimulation(arglist)
 	newSim.run()
 	newSim.dispV_traces()
 
+	newSim.visualizeSpikeTimings()
 	if(saveResults)	
 		if(rngSeed<10)
 			saveas(gcf,sprintf('/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/simV00%d.tif',rngSeed))

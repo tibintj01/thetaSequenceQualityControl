@@ -2,7 +2,7 @@ import os
 
 OVERWRITE=1
 
-simName='timeConstantAndPhaseCodingWithNoise'
+#simName='timeConstantAndPhaseCodingWithNoise'
 
 onLocalComputer=0
 if '/Users/tibinjohn' in os.getcwd():

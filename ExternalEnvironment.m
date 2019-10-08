@@ -13,10 +13,11 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 		maxPlaceEndTime
 
 		%placeInputWidth=20 %cm 
-		%placeInputWidth=30 %cm 
+		placeInputWidth=30 %cm 
 		%placeInputWidth=40 %cm 
 		%placeInputWidth=50 %cm 
-		placeInputWidth=50 %cm 
+		%placeInputWidth=50 %cm 
+		%placeInputWidth=20 %cm 
 		%"Using a 1-Hz threshold as the minimum rate within a place field, field sizes in a cylinder of 76 cm radius ranged from a minimum of 4% of the surface area to a maxi- mum of 62%, with a median size of 18%"
 
 		rodentPositionVsTime

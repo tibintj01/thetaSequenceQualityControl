@@ -60,13 +60,17 @@ numParams=len(scanParamNames)
 #scanParam1Values=np.linspace(5,7,16)
 #scanParam1Values=np.linspace(6,9,16)
 #scanParam1Values=np.linspace(7,11,16)
-scanParam1Values=np.linspace(15,25,20)
+#scanParam1Values=np.linspace(15,25,20)
 #scanParam1Values=np.linspace(3.1,4.1,16)
-scanParam2Values=np.logspace(np.log10(0.03),np.log10(0.03),1)
+#scanParam2Values=np.logspace(np.log10(0.03),np.log10(0.03),1)
 #scanParam2Values=np.logspace(np.log10(0.01),np.log10(0.2),1)
 #scanParam2Values=np.linspace(0.005,0.1,20)
 #scanParam2Values=np.linspace(0.006,0.0125,20)
 #scanParam2Values=[0.005,0.1]
+
+
+scanParam1Values=[0];
+scanParam2Values=[0];
 
 CODE_BASE_DIR=os.getcwd()
 
@@ -99,9 +103,11 @@ for i,scanParam1Value in enumerate(scanParam1Values):
 
 			newFileStr=currFileStr.replace(placeHolderStr1,str(scanParam1Value))
 			newFileStr=newFileStr.replace(placeHolderStr2,str(scanParam2Value))
-		
+			
+
+			#raise ValueError('Scripts were not modified!')
 			if(newFileStr == currFileStr):
-				raise ValueError('Scripts were not modified!')
+				print('Note: Scripts were not modified!')
 
 		        #clear old
 			with open(filePath,'r+') as f:
@@ -135,6 +141,7 @@ def runMatlabScript(arglist):
 #print('running simulation for....')
 #print(scanParam1Value,scanParam2Value)
 #print(arglists)
+
 
 p=Pool(NUM_CORES)
 print(p.map(runMatlabScript,arglists))
