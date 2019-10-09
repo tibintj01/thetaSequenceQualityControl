@@ -1,7 +1,8 @@
 %DATA_DIR='/Users/tibinjohn/thetaSeq/results/timeConstantAndPhaseCoding/raw_data';
 %DATA_DIR='../results/timeConstantAndPhaseCoding/raw_data';
 %simName='timeConstantAndPhaseCodingWithNoise'
-simName='testLayer2TimingDecoder'
+%simName='testLayer2TimingDecoder'
+simName='testControlledFlexibility'
 
 if(onLocalComputer())
 	DATA_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/raw_data/',simName);
@@ -15,7 +16,7 @@ else
 	BASE_RUN_DIR=sprintf('/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin')
 end
 
-DATA_DIR
-PROCESSED_DATA_DIR
-FIGURE_DIR
+touchDir(DATA_DIR)
+touchDir(PROCESSED_DATA_DIR)
+touchDir(FIGURE_DIR)
 

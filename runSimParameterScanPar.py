@@ -22,8 +22,9 @@ import matlab.engine
 	
 #scanParam1Values=np.linspace(2.6,3.6,120)
 #scanParam1Values=np.linspace(2.6,3.6,500)
-scanParam1Values=np.linspace(15,25,500)
-scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),3)
+scanParam1Values=np.linspace(3,7.5,30)
+scanParam2Values=np.linspace(1,31,30)
+#scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),30)
 #scanParam1Values=np.linspace(15,25,1)
 #scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),3)
 #scanParam2Values=np.logspace(np.log10(0.01),np.log10(0.2),1)

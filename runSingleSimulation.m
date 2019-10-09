@@ -49,19 +49,20 @@ function [done] = runSingleSimulation(arglist)
 
 	if(plotV)	
 		newSim.dispV_traces()
-		newSim.visualizeSpikeTimings()
 	end
 
 	if(saveResults)	
+		fH=newSim.visualizeSpikeTimings()
 		if(rngSeed<10)
-			saveas(gcf,sprintf('%ssimV000%d.tif',FIGURE_DIR,rngSeed))
+			saveas(fH,sprintf('%ssimV000%d.tif',FIGURE_DIR,rngSeed))
 		elseif(rngSeed<100)
-			saveas(gcf,sprintf('%ssimV00%d.tif',FIGURE_DIR,rngSeed))
+			saveas(fH,sprintf('%ssimV00%d.tif',FIGURE_DIR,rngSeed))
 		elseif(rngSeed<1000)
-			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+			saveas(fH,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
 		elseif(rngSeed<10000)
-			saveas(gcf,sprintf('%ssimV%d.tif',FIGURE_DIR,rngSeed))
+			saveas(fH,sprintf('%ssimV%d.tif',FIGURE_DIR,rngSeed))
 		end
+		close(fH)
 	end
 
 	if(saveResults)	

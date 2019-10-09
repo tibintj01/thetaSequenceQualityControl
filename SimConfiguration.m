@@ -116,7 +116,9 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 						simProps.numCellsPerPlace=numCellsPerPlace;
 
 						extEnvSettings.timeAxis=timeAxis;
-						extEnvSettings.rodentRunningSpeed=linspace(20,20,length(timeAxis));  %cm/s
+						%extEnvSettings.rodentRunningSpeed=linspace(20,20,length(timeAxis));  %cm/s
+						runSpeed=ExternalEnvironment.CONSTANT_RUN_SPEED;
+						extEnvSettings.rodentRunningSpeed=linspace(runSpeed,runSpeed,length(timeAxis));  %cm/s
 						
 						%extEnvSettings.rodentRunningSpeed=[linspace(10,40,floor(length(timeAxis)/2)), linspace(40,10,floor(length(timeAxis)/2))];  %cm/s
 						%extEnvSettings.rodentRunningSpeed=[linspace(40,10,floor(length(timeAxis)/2)), linspace(10,40,floor(length(timeAxis)/2))];  %cm/s

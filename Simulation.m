@@ -98,11 +98,11 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			thisObj.currentSaveStatus='saved';
 		end
 	
-		function visualizeConfig(thisObj,figH)
+		function [figH]=visualizeConfig(thisObj,figH)
                         if(exist('figH'))
                                 figure(figH)
                         else
-                                figure
+                                figH=figure
                         end
 
                         gnapMatrix=thisObj.cellsObj.gnapMatrix;
@@ -144,11 +144,11 @@ classdef Simulation < handle & matlab.mixin.Copyable
                 end
 
 
-		function visualizeSpikeTimings(thisObj)
+		function [figRaster]=visualizeSpikeTimings(thisObj)
 
-			figRankTransform=figure(1112);
-                        figPhasePosCoding=figure(1113);
-                        figSpaceCompress=figure(1114);
+			%figRankTransform=figure(1112);
+                        %figPhasePosCoding=figure(1113);
+                        %figSpaceCompress=figure(1114);
 
 			phaseCodingEvaluationObj=SimPhaseCodingEvaluation(thisObj);
 

@@ -4,7 +4,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		BASELINE=18;
 		%SIG_FRAC=0.05;
 		SIG_FRAC=0;
-		RUN_BACKWARDS=1;
+		RUN_BACKWARDS=0;
 	end
 
 	properties
@@ -13,8 +13,11 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		%currAmp=7;
 		%currAmp=10;
 		%currAmp=8;
-		%currAmp=0;
-		currAmp=7.5;
+		currAmp=31.0;
+		%%%%%%%%%%%%%%%%%%%%%%%
+		%current span (18-25.5)
+		%%%%%%%%%%%%%%%%%%%%%%%
+		%currAmp=7.5;
 		%currAmp=15;
 		pulseShapeStr='ramp';
 		%pulseShapeStr='flat';

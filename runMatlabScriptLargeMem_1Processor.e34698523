@@ -1,0 +1,134 @@
+rm: cannot remove ‘/scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/raw_data/*mat’: No such file or directory
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0008.tif
+
+Error in runSingleSimulation (line 57)
+			saveas(gcf,sprintf('%ssimV000%d.tif',FIGURE_DIR,rngSeed))
+
+Error using alternatePrintPath
+Not enough bytes in P-file "/sw/arcts/centos7/matlab/R2018b/toolbox/matlab/graphics/+matlab/+graphics/+internal/printUtility.p".
+
+Error in alternatePrintPath
+
+Error in print (line 82)
+pj = alternatePrintPath(pj);
+
+Error in saveas (line 181)
+        print( h, name, ['-d' dev{i}] )
+
+Error in ExternallyControlledConductances/displayContent (line 50)
+			saveas(gcf,'currentThetaInputArray.tif')
+
+Error in Cells/setCellProps (line 1012)
+			inhThetaInputArray.displayContent();
+
+Error in Cells (line 215)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 146)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 27)
+				thisConfig.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 29)
+	newSimConfig=SimConfiguration('default',rngSeed);
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0040.tif
+
+Error in runSingleSimulation (line 59)
+			saveas(gcf,sprintf('%ssimV00%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0065.tif
+
+Error in runSingleSimulation (line 59)
+			saveas(gcf,sprintf('%ssimV00%d.tif',FIGURE_DIR,rngSeed))
+
+Caught "std::exception" Exception message is:
+Message Catalog MATLAB:imagesci:tiffmexutils was not loaded from the file. Please check file location, format or contents
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0060.tif
+
+Error in runSingleSimulation (line 59)
+			saveas(gcf,sprintf('%ssimV00%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0092.tif
+
+Error in runSingleSimulation (line 59)
+			saveas(gcf,sprintf('%ssimV00%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0130.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0027.tif
+
+Error in runSingleSimulation (line 59)
+			saveas(gcf,sprintf('%ssimV00%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0060.tif
+
+Error in runSingleSimulation (line 59)
+			saveas(gcf,sprintf('%ssimV00%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0174.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0280.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0729.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0378.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0644.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0840.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0551.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0450.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+
+Error using saveas (line 138)
+Invalid or missing path: /scratch/ojahmed_fluxm/tibintj/results/testControlledFlexibility/figures/simV0468.tif
+
+Error in runSingleSimulation (line 61)
+			saveas(gcf,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
+

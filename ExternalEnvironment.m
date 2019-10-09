@@ -1,5 +1,9 @@
 classdef ExternalEnvironment < handle & matlab.mixin.Copyable
-	%	
+	%
+	properties(Constant)
+		CONSTANT_RUN_SPEED=7.5
+	end
+	
 	properties
 		rodentRunningSpeed
 		timeAxis
