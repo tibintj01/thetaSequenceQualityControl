@@ -46,7 +46,7 @@ classdef ExternallyControlledConductances < handle  & matlab.mixin.Copyable
 			linkaxes(axHs,'xy')
 
 			xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
-			maxFigManual2d(3,1)
+			maxFigManual2d(3,1,28)
 			saveas(gcf,'currentThetaInputArray.tif')
 		end
 

@@ -1,5 +1,10 @@
 classdef ThetaPopInput < ExternallyControlledConductances
 	properties(Constant)
+		L2_MULT_FACTOR=1.25;
+		%L2_MULT_FACTOR=0.5;
+		%L2_THETA_PHASE_OFFSET=90;		%degrees
+		L2_THETA_PHASE_OFFSET=0;		%degrees
+
 		frequencyDefault=8/1000;		%kHz
 		%frequencyDefault=80/1000;		%kHz
 		phaseOffsetDefault=0;			%radians
@@ -130,7 +135,8 @@ classdef ThetaPopInput < ExternallyControlledConductances
 				thetaTroughTimes=getTroughTimes(thisObj,1,1);
 				for i=1:length(thetaTroughTimes)
 					%plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)
-					plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'m--','LineWidth',6)
+					%plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'m--','LineWidth',6)
+					plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'b--','LineWidth',3)
 				end
 			end
 		end

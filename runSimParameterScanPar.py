@@ -140,6 +140,7 @@ if REDEPLOY==1:
 
 	finish=time.perf_counter()
 
+
 	print(f'Finished in {round(finish-start,2)} seconds')
 
 	print('removing run directory copies....')
@@ -154,10 +155,10 @@ if REDEPLOY==1:
 ###############################
 #postParallelProcessing
 ###############################
-eng=matlab.engine.start_matlab()
 
-exitStatus=eng.plotRastersPhaseLocking([float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values])		
 '''
+eng=matlab.engine.start_matlab()
+exitStatus=eng.plotRastersPhaseLocking([float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values])		
 if 'Users/tibinjohn' in os.getcwd():
 	os.system("open %s*tif" % FIGURE_DIR)
 else:

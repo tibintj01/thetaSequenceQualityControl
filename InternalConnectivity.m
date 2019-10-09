@@ -3,7 +3,8 @@ classdef InternalConnectivity < handle & matlab.mixin.Copyable
 	properties
 		connectivityMatrix
 		startCouplingTime=0;
-		tausyn=5				%AMPA
+		%tausyn=5				%AMPA
+		tausyn=2				%AMPA
 		synapseTypeStr='E'
 		%connectivityTypeStr='directed'
 		connectivityTypeStr='none'

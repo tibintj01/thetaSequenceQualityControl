@@ -1,7 +1,10 @@
 classdef CurrentInjectors < handle & matlab.mixin.Copyable
 	properties(Constant)
-		BASELINE=4;
-		SIG_FRAC=0.05;
+		%BASELINE=4;
+		BASELINE=18;
+		%SIG_FRAC=0.05;
+		SIG_FRAC=0;
+		RUN_BACKWARDS=1;
 	end
 
 	properties
@@ -10,10 +13,11 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		%currAmp=7;
 		%currAmp=10;
 		%currAmp=8;
-		currAmp=SCAN_PARAM1;
+		%currAmp=SCAN_PARAM1;
+		currAmp=7.5;
 		%currAmp=15;
-		%pulseShapeStr='ramp';
-		pulseShapeStr='flat';
+		pulseShapeStr='ramp';
+		%pulseShapeStr='flat';
 
 		currInjectorMatrix
 		nr
@@ -56,7 +60,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 			placeColormap=copper(thisObj.nc);
 			for r=1:thisObj.nr
 				for c=1:thisObj.nc
-					plot(thisObj.timeAxis,thisObj.currInjectorMatrix(r,c).getTimeTrace(),'Color',placeColormap(c,:),'LineWidth',5)
+					plot(thisObj.timeAxis,thisObj.currInjectorMatrix(r,c).getTimeTrace(),'Color',placeColormap(c,:),'LineWidth',2)
 					hold on	
 				end
 			end
@@ -94,8 +98,11 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 					%injParams.pulseStartTime=max(0,((place-3)/nc)*(timeAxis(end)));
 					%injParams.pulseEndTime=((place)/nc)*(timeAxis(end));
 					if(strcmp(pulseShapeStr,'ramp'))
-
-						[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(place);
+						if(CurrentInjectors.RUN_BACKWARDS==1)
+							[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(nc-place+1);
+						else
+							[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(place);
+						end
 						injParams.pulseStartTime=placeInputStartTime;
 						injParams.pulseEndTime=placeInputEndTime;
 						

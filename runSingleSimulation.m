@@ -49,7 +49,10 @@ function [done] = runSingleSimulation(arglist)
 
 	if(plotV)	
 		newSim.dispV_traces()
+		newSim.visualizeSpikeTimings()
+	end
 
+	if(saveResults)	
 		if(rngSeed<10)
 			saveas(gcf,sprintf('%ssimV000%d.tif',FIGURE_DIR,rngSeed))
 		elseif(rngSeed<100)
