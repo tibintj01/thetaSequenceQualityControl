@@ -6,9 +6,12 @@ classdef DelayObject < handle & matlab.mixin.Copyable %create object by referenc
 		IMAX=25.5; %based on phase selection of single units to range of bias currents
 		%IMAX=28; %based on phase selection of single units to range of bias currents
 		BASELINE_DELAY=60;%get out of current cycle
+		%BASELINE_DELAY=0;%get out of current cycle
 
-		NORM_FACTOR=13
-		CONV_FACTOR=13
+		NORM_FACTOR=17
+		%NORM_FACTOR=50
+		CONV_FACTOR=17
+		%CONV_FACTOR=50
 	end
 
 	properties
@@ -43,7 +46,7 @@ classdef DelayObject < handle & matlab.mixin.Copyable %create object by referenc
 			setFigFontTo(28)
 			saveas(gcf,'CA3_CodingTonicInputAsDelay.tif')
 
-			
+			figure	
 			plot(thisObj.itonics(1:dispRes:end),thisObj.tonicToExpectedNextThetaPhase(1:dispRes:end),'LineWidth',5);
 			%ylim([DelayObject.BASELINE_DELAY Inf])
 			ylim([-Inf Inf])
@@ -101,7 +104,11 @@ classdef DelayObject < handle & matlab.mixin.Copyable %create object by referenc
 			defaultPhaseSlope=DelayObject.BASELINE_DELAY/(imax-imin);
 			thisObj.defaultPhaseSlope=defaultPhaseSlope;
 
-			delay=normFactor*log(convFactor*(DelayObject.IMAX-itonic))+DelayObject.BASELINE_DELAY+(defaultPhaseSlope*(itonic-imin));
+			%delay=normFactor*log(convFactor*(DelayObject.IMAX-itonic))+DelayObject.BASELINE_DELAY+(defaultPhaseSlope*(itonic-imin));
+			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+DelayObject.BASELINE_DELAY+(defaultPhaseSlope*(itonic-imin));
+			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+(defaultPhaseSlope*(itonic-imin));
+			delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+(defaultPhaseSlope*(itonic-imin));
+			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN));
 
 		end
 	end	

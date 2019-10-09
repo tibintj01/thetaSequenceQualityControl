@@ -2,7 +2,9 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 	properties(Constant)
 		%BASELINE=4;
 		BASELINE=18;
-		SIG_FRAC=0.05;
+		%SIG_FRAC=0.05;
+		SIG_FRAC=0;
+		RUN_BACKWARDS=1;
 	end
 
 	properties
@@ -96,8 +98,11 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 					%injParams.pulseStartTime=max(0,((place-3)/nc)*(timeAxis(end)));
 					%injParams.pulseEndTime=((place)/nc)*(timeAxis(end));
 					if(strcmp(pulseShapeStr,'ramp'))
-
-						[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(place);
+						if(CurrentInjectors.RUN_BACKWARDS==1)
+							[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(nc-place+1);
+						else
+							[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(place);
+						end
 						injParams.pulseStartTime=placeInputStartTime;
 						injParams.pulseEndTime=placeInputEndTime;
 						

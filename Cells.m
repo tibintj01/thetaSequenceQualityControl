@@ -7,8 +7,7 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		justSpikingConductances=1
 		includeKS=1;
 		NUM_CELLS_L2=1;
-		SYN_DEP_WINDOW=30;
-		SYN_DEP_FACT=0.2
+		INTEGRATOR_gL=0.005;
 	end
 	properties
 		%voltage and time dependent gating variable matrices
@@ -27,6 +26,12 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                 mL2
                 hL2
 
+		vInt
+                nInt
+                mInt
+                hInt
+		spikeTimesInt
+		
 		kappaH
 		mnap
 		nks
@@ -55,13 +60,20 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		dt
 
 		spikeTimes
+		delayedSpikeTimes
+		doubleDelayedSpikeTimes
 		spikeCellCoords
 		gsyn
 		
 		spikeTimesL2
 		spikeCellCoordsL2
 		gsynL2
+		gsynL2_I
 		
+		
+		l2IsynRecord
+		l2EsynRecord
+
 		esyn_I
 		esyn_E
 
@@ -91,8 +103,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		%gl=0;        %mS/cm^2
 		gl=0.0333333333333;        %mS/cm^2
 
-		gl_L2=0.05; %CA1 20msec time constant
-		%gl_L2=0.1; %CA1 20msec time constant
+		%gl_L2=0.05; %CA1 20msec time constant
+		gl_L2=0.1; %CA1 20msec time constant
+		%gl_L2=0.2; %CA1 20msec time constant
 
 		%gl=0.033*10;        %mS/cm^2
 		%gl=0.033*6;        %mS/cm^2
@@ -118,7 +131,10 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 		%naM_Vt=-34; %normal spiking, corresponds to VNaD in Leung, 2011, pg 12285
 		naM_Vt=-35; %push thresh down a bit - 12/3/18
-		naM_Vt_L2=-35.5; %push thresh down a bit - 12/3/18
+		%naM_Vt_L2=-35; %push thresh down a bit - 12/3/18
+		%naM_Vt_L2=-34.5; %push thresh down a bit - 12/3/18
+		%naM_Vt_L2=-35; %push thresh down a bit - 12/3/18
+		naM_Vt_L2=-35; %push thresh down a bit - 12/3/18
 		%naM_Vt=-32; %without spiking, corresponds to VNaD in Leung, 2011, pg 12285
 		%naM_Vt=-30; %without spiking, corresponds to VNaD in Leung, 2011, pg 12285
 		%naM_Vt=100; %without spiking, corresponds to VNaD in Leung, 2011, pg 12285
@@ -205,12 +221,18 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 				thisObj.injCurrMatrix=thisObj.externalInputObj.getFloatMatrix();
 				
 				thisObj.spikeTimes=[];
+				thisObj.delayedSpikeTimes=[];
+				thisObj.doubleDelayedSpikeTimes=[];
 				thisObj.spikeCellCoords=[];
 				
 				thisObj.spikeTimesL2=[];
 				thisObj.spikeCellCoordsL2=[];
+				
+				thisObj.spikeTimesInt=[];
+				
 				thisObj.gsyn=zeros(thisObj.numCellsPerPlace,thisObj.numPlaces,thisObj.numSteps);
 				thisObj.gsynL2=zeros(thisObj.numCellsL2,thisObj.numSteps);
+				thisObj.gsynL2_I=zeros(thisObj.numCellsL2,thisObj.numSteps);
 				
 				thisObj.esyn_E=thisObj.internalConnObj.esyn_E;
 				thisObj.esyn_I=thisObj.internalConnObj.esyn_I;
@@ -261,6 +283,11 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                         nL2=thisObj.nL2;
                         mL2=thisObj.mL2;
                         hL2=thisObj.hL2;
+			
+			vInt=thisObj.vInt;
+                        nInt=thisObj.nInt;
+                        mInt=thisObj.mInt;
+                        hInt=thisObj.hInt;
 
 			numCellsL2=thisObj.numCellsL2;
 
@@ -306,13 +333,18 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			gInhThetaMatrix=thisObj.inhThetaInputArray.conductanceTimeSeries;
 			%esynI=thisObj.inhThetaInputArray.esyn;
 			spikeTimes=thisObj.spikeTimes;
+			delayedSpikeTimes=thisObj.delayedSpikeTimes;
+			doubleDelayedSpikeTimes=thisObj.doubleDelayedSpikeTimes;
 			spikeCellCoords=thisObj.spikeCellCoords;
 
 			spikeTimesL2=thisObj.spikeTimesL2;
                         spikeCellCoordsL2=thisObj.spikeCellCoordsL2;
 			gsyn=thisObj.gsyn;
 			
+			spikeTimesInt=thisObj.spikeTimesInt;
+			
 			gsynL2=thisObj.gsynL2;
+			gsynL2_I=thisObj.gsynL2_I;
 			esyn_I=thisObj.esyn_I;
 			esyn_E=thisObj.esyn_E;
 
@@ -327,12 +359,17 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			inaRecord=NaN(size(v));
 			ikRecord=NaN(size(v));
 			iksRecord=NaN(size(v));
+
+			l2IsynRecord=NaN(size(vL2));
+			l2EsynRecord=NaN(size(vL2));
 		
 			normFactor=DelayObject.NORM_FACTOR;
 			convFactor=DelayObject.CONV_FACTOR;
 			baselineDelay=DelayObject.BASELINE_DELAY;	
 			imax=DelayObject.IMAX;
 			imin=DelayObject.IMIN;
+
+			numCellsInt=1;
 
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%step through time
@@ -373,8 +410,8 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 								spikeCellCoords=[spikeCellCoords; cellCoord];
 								
 								depConstant=1;
-								numRecentSpikes=getNumSpikesInLastWind(spikeTimes,spikeCellCoords,Cells.SYN_DEP_WINDOW);
-								 depConstant=(Cells.SYN_DEP_FACT)^(numRecentSpikes);
+								numRecentSpikes=getNumSpikesInLastWind(spikeTimes,spikeCellCoords,FeedForwardConnectivity.SYN_DEP_WINDOW);
+								 depConstant=(FeedForwardConnectivity.SYN_DEP_FACT)^(numRecentSpikes);
 
 								%get synaptic conductance time course for all cells
 								 %if this cell spikes, add a synaptic weight time course to all of
@@ -403,6 +440,20 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                                                              end
                                                                         end
                                                                 end
+								     
+                                                                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                                %inhibitory delay
+								%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+								     defaultPhaseSlope=baselineDelay/(imax-imin);
+                                                                     %phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic)))+(baselineDelay+(defaultPhaseSlope*(itonic-imin))); %see DelayObject for values
+                                                                     %phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic)))+(baselineDelay+(defaultPhaseSlope*(itonic-imin))); %see DelayObject for values
+                                                                     phasePrecessionDelay=-(normFactor*log(convFactor*(itonic-imin)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
+							             %phasePrecessionDelay=normFactor*log(convFactor*(imax-itonic))+baselineDelay; %see DelayObject for values
+									%edge cases
+                                                               		if(~isreal(phasePrecessionDelay) || phasePrecessionDelay<0)
+										phasePrecessionDelay=0;
+									end 
+                                                        	    delayedSpikeTimes=[delayedSpikeTimes ;(step*dt + phasePrecessionDelay)];
 
                                                                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                                 %L2 post-synaptic conductance changes
@@ -411,14 +462,6 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                                                      %weight=feedfwdGmatrix(cellRow,placeIdx,postSynL2CellIdx);
 
                                                                      %phasePrecessionDelay=feedfwdDelay(itonic);
-								     defaultPhaseSlope=baselineDelay/(imax-imin);
-								
-                                                                     phasePrecessionDelay=normFactor*log(convFactor*(imax-itonic))+baselineDelay+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
-                                                                     %phasePrecessionDelay=normFactor*log(convFactor*(imax-itonic))+baselineDelay; %see DelayObject for values
-									%edge cases
-                                                               		if(~isreal(phasePrecessionDelay) || phasePrecessionDelay<0)
-										phasePrecessionDelay=0;
-									end 
 
 									weights=feedfwdGmatrix(placeIdx,:,postSynL2CellIdx);
 
@@ -427,16 +470,18 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 									dendriticDelays=dendriticDelayTemplateMatrix(placeIdx,compartmentNumsInnervated,postSynL2CellIdx);
                                                                       
 									collateralTotalDelays=phasePrecessionDelay+dendriticDelays;
-
                                                                          %4000 ms covers integrated timecourses with delay
                                                                          synEndStep=step+1+round(max(collateralTotalDelays)/dt)+round(4000/dt);
                                                                          %synEndStep=step+1+round(delay/dt)+round(4000/dt);
                                                                          if(synEndStep>numSteps)
                                                                              synEndStep=numSteps;
                                                                          end
-
 									for collateralIdx=1:length(collateralTotalDelays)
+											
 										currDelay=collateralTotalDelays(collateralIdx);
+										if(collateralIdx==1)
+											doubleDelayedSpikeTimes=[doubleDelayedSpikeTimes; (step*dt + currDelay)];
+										end 
 										 synCurrentIdxes=(step+1+round(currDelay/dt)):synEndStep;
 										%{
 										if(~isscalar(currDelay))
@@ -452,13 +497,19 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 											fds
 										end
 										%}
+									synTimeAxis=dt*(synCurrentIdxes-(step+1+round(currDelay/dt)));
 									     if(step*dt>=startCouplingTime)
 										gsynL2(postSynL2CellIdx,synCurrentIdxes)=squeeze(gsynL2(postSynL2CellIdx,synCurrentIdxes))...
-										    +depConstant*weights(collateralIdx)*exp(-dt*(synCurrentIdxes-(step+1+round(currDelay/dt)))/tausyn); %instantaneous conductance jump with single additive exp decay..
+										    +depConstant*weights(collateralIdx)*exp(-(synTimeAxis)/tausyn); %instantaneous conductance jump with single additive exp decay..
 										    %+weights(collateralIdx)*exp(-dt*(synCurrentIdxes-(step+1+round(currDelay/dt)))/tausyn); %instantaneous conductance jump with single additive exp decay..
 										    %+weight*exp(-dt*(synCurrentIdxes-(step+1+round(currDelay/dt)))/tausyn).'; %instantaneous conductance jump with single additive exp decay..
 										%count=count+1;
 										%add total current normalized inhibitory alpha function 6ms time constant representing disynaptic inhibition (enhances synchrony selectivity?)
+									
+										gsynL2_I(postSynL2CellIdx,synCurrentIdxes)=squeeze(gsynL2_I(postSynL2CellIdx,synCurrentIdxes))...
+										    +depConstant*weights(collateralIdx)*FeedForwardConnectivity.E_TO_I_NORM*(synTimeAxis/FeedForwardConnectivity.tausyn_I).*exp(1-(synTimeAxis/FeedForwardConnectivity.tausyn_I));
+%exp(-dt*(synCurrentIdxes-(step+1+round(currDelay/dt)))/tausyn); %alpha function inhibitory conductnace representing feedfoward inhibition and selecting for high timing precision
+									
 									     end
 									end
                                                                 end
@@ -735,10 +786,23 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                         ik=gk*nSpecific^4*(vSpecific-ek);
 					itonic_L2=3;
 					isynIntE_L2=gsynL2(cellNumL2,step)*(vSpecific-esyn_E);
+					isynIntI_L2=gsynL2_I(cellNumL2,step)*(vSpecific-esyn_I);
 
-					isynExt_L2=gInhThetaMatrix(1,1,step)*(vSpecific-esyn_I); %same theta everywehre
-			
-                                        vInc=double(dt*(-il-ina-ik-isynIntE_L2-isynExt_L2+itonic_L2)/cm);
+					L2_THETA_PHASE_OFFSET=90; %degrees
+					l2ThetaTimeOffset=ThetaPopInput.L2_THETA_PHASE_OFFSET/360*(1/ThetaPopInput.frequencyDefault);
+
+					l2ThetaStepOffset=round(l2ThetaTimeOffset/dt);
+					if(step+l2ThetaStepOffset<=numSteps)
+						thetaSampleStep=step+l2ThetaStepOffset;
+						isynExt_L2=ThetaPopInput.L2_MULT_FACTOR*gInhThetaMatrix(1,1,thetaSampleStep)*(vSpecific-esyn_I); %same theta everywehre
+					else
+						isynExt_L2=ThetaPopInput.baselineDefault;
+					end
+
+					l2IsynRecord(cellNumL2,step)=isynIntI_L2;
+					l2EsynRecord(cellNumL2,step)=isynIntE_L2;	
+                                        
+					vInc=double(dt*(-il-ina-ik-isynIntE_L2-isynExt_L2-isynIntI_L2+itonic_L2)/cm);
                                         %vInc=double(dt*(-il-ina-ik+itonic_L2)/cm);
                                         mInc=double(dt*(minf-mSpecific)/taum);
                                         nInc=double(dt*(ninf-nSpecific)/taun);
@@ -753,24 +817,121 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 					%if(isnan(vL2(cellNumL2,step+1)))
 					%	fds
 					%end
-                                 end
+                                 end%loop over layer 2 cells
+
+				%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                %update integrator cell based on last time step
+                                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				%vInt
+				%nInt
+				%mInt
+				%hInt
+				%spikeTimesInt
+                                for cellNumInt=1:numCellsInt     
+                                        
+					vSpecific=vInt(cellNumInt,step);
+                                        nSpecific=nInt(cellNumInt,step);
+                                        mSpecific=mInt(cellNumInt,step);
+                                        hSpecific=hInt(cellNumInt,step);
+
+                                        if(step>1 && vInt(cellNumInt,step)>-30 && vInt(cellNumInt,step-1) <-30)
+                                                spikeTimesInt=[spikeTimesInt; step*dt];
+                                        end %spike detected if statement
+
+                                        %%%%%%%%%%%%%%%%%%
+                                        %Il, leak current
+                                        %%%%%%%%%%%%%%%%%%
+                                        il=Cells.INTEGRATOR_gL*(vSpecific-el);
+
+                                        %minf=xinf(vSpecific,naM_Vt,naM_Gain);
+
+                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                        %I_Na gates voltage and time dependence
+                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                        %minf=1/(1+exp((vSpecific-naM_Vt)/naM_Gain));
+                                        alpham=0.364*(vSpecific-naM_Vt_L2)/(1-exp((-vSpecific+naM_Vt_L2)/naM_Gain));
+                                        betam=-0.248*(vSpecific-naM_Vt_L2)/(1-exp((vSpecific-naM_Vt_L2)/naM_Gain));
+                                        taum=0.8/(alpham+betam);
+                                        minf=alpham/(alpham+betam);
+
+                                        alphah=0.08*(vSpecific-naH_Vt)/(1-exp((-vSpecific+naH_Vt)/naH_Gain));
+                                        betah=-0.005*(vSpecific+10)/(1-exp((vSpecific+10)/5.0));
+
+                                        %tauh=naTauH_offset+naTauH_Range/(1+exp((vSpecific-naTauH_Vt)/naTauH_Gain));
+                                        tauh=1/(alphah+betah);
+                                        hinf=1/(1+exp((vSpecific+58)/5)); %why not alpha/(alpha+beta) in Leung model??
+
+                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                        %I_Kdr gates voltage and time dependence
+                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                        %taun=kdrTauN_offset+kdrTauN_Range/(1+exp((vSpecific-kdrTauN_Vt)/kdrTauN_Gain));
+                                        %ninf=1/(1+exp((vSpecific-kdrN_Vt)/kdrN_Gain)); 
+                                        alphan=0.035*(vSpecific-kdrN_Vt)/(1-exp((vSpecific-kdrN_Vt)/kdrN_Gain));
+                                        betan=0.035*(vSpecific-kdrN_Vt)/(exp((vSpecific-kdrN_Vt)/(-kdrN_Gain))-1);
+
+                                        ninf=alphan/(alphan+betan);
+                                        taun=1/(alphan+betan);
+
+
+                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                        %currents from driving force and gating variables
+                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                        %ina=gna*minf^3*(hSpecific)*(vSpecific-ena);
+                                        ina=gna*mSpecific^3*(hSpecific)*(vSpecific-ena);
+                                        %delayed-rectifier potassium current
+                                        ik=gk*nSpecific^4*(vSpecific-ek);
+					itonic_L2=3;
+					isynL2E_L2=gsynL2(cellNumL2,step)*(vSpecific-esyn_E);
+					isynL2I_L2=gsynL2_I(cellNumL2,step)*(vSpecific-esyn_I);
+
+
+						isynExt_L2=ThetaPopInput.L2_MULT_FACTOR*gInhThetaMatrix(1,1,step)*(vSpecific-esyn_I); %same theta everywehre
+
+					%l2IsynRecord(cellNumL2,step)=isynL2I_L2;
+					%l2EsynRecord(cellNumL2,step)=isynL2E_L2;	
+                                        
+					vInc=double(dt*(-il-ina-ik-isynL2E_L2-isynExt_L2-isynL2I_L2+itonic_L2)/cm);
+                                        %vInc=double(dt*(-il-ina-ik+itonic_Int)/cm);
+                                        mInc=double(dt*(minf-mSpecific)/taum);
+                                        nInc=double(dt*(ninf-nSpecific)/taun);
+                                        hInc=double(dt*(hinf-hSpecific)/tauh);
+
+                                        %V=V+dV
+                                        vInt(cellNumInt,step+1)=vSpecific+vInc;
+                                        %Gates=Gates+dGates
+                                        nInt(cellNumInt,step+1)=nSpecific+nInc;
+                                        mInt(cellNumInt,step+1)=mSpecific+mInc;	
+ 					hInt(cellNumInt,step+1)=hSpecific+hInc;
+					%if(isnan(vInt(cellNumInt,step+1)))
+					%	fds
+					%end
+                                 end%loop over integrator cells
+
 			end %loop over time steps
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%store raw output
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		 	thisObj.v=v;
 		 	thisObj.vL2=vL2;
+		 	thisObj.vInt=vInt;
 		 	thisObj.gsynL2=gsynL2;
+		 	thisObj.gsynL2_I=gsynL2_I;
+		 	thisObj.l2EsynRecord=l2EsynRecord;
+		 	thisObj.l2IsynRecord=l2IsynRecord;
 
 			thisObj.nks=nks;
 			%thisObj.inaRecord=inaRecord;
 			%thisObj.ikRecord=ikRecord;
 			thisObj.iksRecord=iksRecord;
 			thisObj.spikeTimes=spikeTimes;
+			thisObj.delayedSpikeTimes=delayedSpikeTimes;
+			thisObj.doubleDelayedSpikeTimes=doubleDelayedSpikeTimes;
 			thisObj.spikeCellCoords=spikeCellCoords;
 
 			thisObj.spikeTimesL2=spikeTimesL2;
-                        thisObj.spikeCellCoordsL2=spikeCellCoordsL2;
+			thisObj.spikeTimesInt=spikeTimesInt;
+                        
+			thisObj.spikeCellCoordsL2=spikeCellCoordsL2;
 		end %letItRip function
 
 		function setIntrinsicsMatrix(thisObj)
@@ -910,16 +1071,31 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                         initNL2=NaN(thisObj.numCellsL2,numSteps);
                         initML2=NaN(thisObj.numCellsL2,numSteps);
                         initHL2=NaN(thisObj.numCellsL2,numSteps);
+			
+			initVInt=NaN(1,numSteps);
+                        initNInt=NaN(1,numSteps);
+                        initMInt=NaN(1,numSteps);
+                        initHInt=NaN(1,numSteps);
 
 			initVL2(:,1)=normrnd(-60,3,thisObj.numCellsL2,1);
                         initNL2(:,1)=normrnd(0.1,0.01,thisObj.numCellsL2,1);
                         initML2(:,1)=normrnd(0.1,0.01,thisObj.numCellsL2,1);
                         initHL2(:,1)=normrnd(0.1,0.1,thisObj.numCellsL2,1);
 			
+			initVInt(:,1)=normrnd(-60,3,1,1);
+                        initNInt(:,1)=normrnd(0.1,0.01,1,1);
+                        initMInt(:,1)=normrnd(0.1,0.01,1,1);
+                        initHInt(:,1)=normrnd(0.1,0.1,1,1);
+			
 			thisObj.vL2=initVL2;
 			thisObj.nL2=initNL2;
 			thisObj.mL2=initML2;
 			thisObj.hL2=initHL2;
+			
+			thisObj.vInt=initVInt;
+			thisObj.nInt=initNInt;
+			thisObj.mInt=initMInt;
+			thisObj.hInt=initHInt;
 
 			thisObj.mka=initMka;
 			thisObj.hka=initHka;

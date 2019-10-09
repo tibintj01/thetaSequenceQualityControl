@@ -1,7 +1,18 @@
 classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 	%encapsulate data and actions of connectivity to keep my interface and implementation details separate
 	properties(Constant)
-		NUM_COLLATERALS=7;
+		%NUM_COLLATERALS=7;
+		%NUM_COLLATERALS=3;
+		NUM_COLLATERALS=1;
+		%E_TO_I_NORM=1/(3.5781);
+		%E_TO_I_NORM=1/(4.8794);
+		E_TO_I_NORM=1/(4.8794*2);
+		SYN_DEP_WINDOW=30;
+                SYN_DEP_FACT=1 %no synaptic depression
+                %SYN_DEP_FACT=0.3
+                %SYN_DEP_FACT=0.3
+                %SYN_DEP_FACT=0 %%%%%%%only first spike in 30 msec window???
+		tausyn_I=6;
 	end
 
 	properties
@@ -16,11 +27,18 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 		numPlaces
 		dendriticDelayTemplateMatrix
 
-		%weight_mu=0.02
+		%weight_mu=0.05
+		%weight_mu=0.01
+		%weight_mu=0.0125
+		
 		%weight_mu=0.002
 		%weight_mu=0.07
 		%weight_mu=0.09
-		weight_mu=0.15
+		%weight_mu=0.15
+		%weight_mu=0.30
+		%weight_mu=0.50
+		weight_mu=0.60
+		%weight_mu=0.75
 		%weight_mu=0.75
 		weight_sigma=0.0025
 		esyn_E=0;
@@ -123,27 +141,31 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 			%normFactor*log(convFactor*(imax-tonicValueSequence(i)))+baselineDelay
 			%targetDelaySequence=NaN(size(tonicValueSequence));
 
-			syncTime=5;
+			%syncTime=5;
 			%maxDendriticDelay=59.5;
 			%targetDelaySequence=maxDendriticDelay+syncTime-linspace(syncTime,maxDendriticDelay,numDendriticCompartments);
 
 			%tonicValueSequence=linspace(imin,imax,numDendriticCompartments);	
-			x=logspace(log10(imin),log10(imax),100000);
-			defaultPhaseSlope=baselineDelay/(imax-imin);	
-			targetTime=syncTime+(normFactor*log(convFactor*(imax-imin))+baselineDelay+defaultPhaseSlope*(imax-imin)); %all arrive at soma 5msec after latest possible delay
-			v=targetTime-(normFactor*log(convFactor*(imax-x))+baselineDelay+defaultPhaseSlope*(x-imin));
+			%x=logspace(log10(imin),log10(imax),100000);
+			%defaultPhaseSlope=baselineDelay/(imax-imin);	
+			%targetTime=syncTime+(normFactor*log(convFactor*(imax-imin))+baselineDelay+defaultPhaseSlope*(imax-imin)); %all arrive at soma 5msec after latest possible delay
+			%v=targetTime-(normFactor*log(convFactor*(imax-x))+baselineDelay+defaultPhaseSlope*(x-imin));
+			%v=normFactor*log(convFactor*(imax-x));
 			%figure; plot(x,v,'bo')
 
-			targetDelaySequence=linspace(syncTime,targetTime,numDendriticCompartments);
-			for i=1:numDendriticCompartments
-				[~,j]=min(abs(v-targetDelaySequence(i)));
-				tonicValueSequence(i)=x(j);	
-			end
-			
-			%targetDelaySequence=-(normFactor*log(convFactor*(imax-tonicValueSequence))-baselineDelay);
+			%targetDelaySequence=linspace(0,1/(ThetaPopInput.frequencyDefault),numDendriticCompartments);
+			%for i=1:numDendriticCompartments
+			%	[~,j]=min(abs(v-targetDelaySequence(i)));
+			%	tonicValueSequence(i)=x(j);	
+			%end
+		
+			stepSize=(imax-imin)/numDendriticCompartments;
+			%tonicValueSequence=linspace(imin,imax,numDendriticCompartments);	
+			tonicValueSequence=(imin+stepSize/2):stepSize:(imax-stepSize/2);
+			%targetDelaySequence=normFactor*log(convFactor*(imax-tonicValueSequence)); %what to add to reach fiduciary T
+			targetDelaySequence=normFactor*log(convFactor*(tonicValueSequence-imin)); %what to add to reach fiduciary T
 			%tonicValueSequence=-(exp((targetDelaySequence-baselineDelay)/normFactor)/convFactor-imax);
 			%tonicValueSequence=imin+(exp((targetDelaySequence)/normFactor)/convFactor);
-		
 			%hold on
 			%plot([imin imax],[targetTime targetTime],'k-')
 			%fds
@@ -154,17 +176,20 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 			%end
 			thisObj.connectivityMatrix=zeros(numPlaces,numDendriticCompartments,numCellsL2);
 
-	
+			%it got reversed- highest place num should be closest to soma; first should be farthest (most dendritic delay)
+			%targetDelaySequence=fliplr(targetDelaySequence);
+
 			for postSynL2CellNum=1:numCellsL2			
 				%connectionCount=1;
+				startCompartNum=numPlaces*numCollaterals;
 				for preSynPlaceNum=1:numPlaces
-					startCompartNum=numCollaterals*(preSynPlaceNum-1)+1;
-					endCompartNum=startCompartNum+numCollaterals-1;
-					for compartmentNum=startCompartNum:endCompartNum
+					endCompartNum=startCompartNum-numCollaterals+1;;
+					for compartmentNum=startCompartNum:-1:endCompartNum
 						thisObj.dendriticDelayTemplateMatrix(preSynPlaceNum,compartmentNum,postSynL2CellNum)=targetDelaySequence(compartmentNum);
 						 thisObj.connectivityMatrix(preSynPlaceNum,compartmentNum,postSynL2CellNum)=thisObj.weight_mu/(numPlaces*numCellsPerPlace);
 						%connectionCount=connectionCount+1;	
 					end
+					startCompartNum=endCompartNum-1;
 				end 
 			end
 		

@@ -13,8 +13,8 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 		maxPlaceEndTime
 
 		%placeInputWidth=20 %cm 
-		placeInputWidth=30 %cm 
-		%placeInputWidth=40 %cm 
+		%placeInputWidth=30 %cm 
+		placeInputWidth=40 %cm 
 		%placeInputWidth=50 %cm 
 		%placeInputWidth=50 %cm 
 		%placeInputWidth=20 %cm 

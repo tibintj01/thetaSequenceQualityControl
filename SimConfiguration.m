@@ -93,7 +93,10 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 			numPlaces=5;
 			%numCellsPerPlace=3;
 			%numCellsPerPlace=2;
-			numCellsPerPlace=10;
+			%numCellsPerPlace=20;
+			%numCellsPerPlace=5;
+			numCellsPerPlace=8;
+			%numCellsPerPlace=1;
 			%numCellsPerPlace=100;
 
 			%numCellsPerPlace=18;

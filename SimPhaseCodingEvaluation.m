@@ -1,5 +1,10 @@
 classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 	%encapsulate data and actions of analysis to keep my interface and implementation details separate
+	properties(Constant)
+		%useDelayedSpikeTimes=1;
+		useDelayedSpikeTimes=0;
+	end
+
 	properties
 		simObj
 		spikingDataInterface
@@ -37,6 +42,14 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 		%end
 		function runPlotRaster(thisObj,figH)
 			thisObj.plotRaster(figH);
+		end
+		
+		function runPlotRasterSingleDelayed(thisObj,figH)
+			thisObj.plotRasterSingleDelayed(figH);
+		end
+		
+		function runPlotRasterDoubleDelayed(thisObj,figH)
+			thisObj.plotRasterDoubleDelayed(figH);
 		end
 
 		function runRankTransformAnalysis(thisObj,figH)
@@ -80,7 +93,11 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 		function plotRaster(thisObj,figH)
 			figure(figH)
 			%spike times per cell
-			spikeTimes=thisObj.simObj.cellsObj.spikeTimes;
+			if(SimPhaseCodingEvaluation.useDelayedSpikeTimes==1)
+				spikeTimes=thisObj.simObj.cellsObj.delayedSpikeTimes;
+			else
+				spikeTimes=thisObj.simObj.cellsObj.spikeTimes;
+			end
 			spikeCellCoords=thisObj.simObj.cellsObj.spikeCellCoords;
 			numCellsPerPlace=thisObj.simObj.configuration.simParams.numCellsPerPlace;
 	
@@ -109,6 +126,74 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			ylabel('Cell No.')	
 		end
 
+		function plotRasterDoubleDelayed(thisObj,figH)
+			figure(figH)
+                        %spike times per cell
+                        spikeTimes=thisObj.simObj.cellsObj.doubleDelayedSpikeTimes;
+                        
+			spikeCellCoords=thisObj.simObj.cellsObj.spikeCellCoords;
+                        numCellsPerPlace=thisObj.simObj.configuration.simParams.numCellsPerPlace;
+
+                        for i=1:length(spikeTimes)
+                                currSpikePlaceIdx=spikeCellCoords(i,2);
+                                currSpikeCellIdx=spikeCellCoords(i,1);
+                                cellRasterRow=(currSpikePlaceIdx-1)*numCellsPerPlace+currSpikeCellIdx;
+                                plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',1)
+                                hold on
+                        end
+
+                        %ASSUMES POPULATION WIDE SYNCHRONOUS THETA
+                        thisObj.simObj.thetaPopInputObj.addTroughLines(figH)
+
+                        %{
+                        thetaTroughTimes=thisObj.simObj.thetaPopInputObj.getTroughTimes(1,1);
+
+                        currYlim=ylim;
+                        for i=1:length(thetaTroughTimes)
+                                plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)
+                        end
+                        %}
+                        %title(removeUnderscores(thisObj.simObj.simParamsIDStr))
+                       title('Spikes times seen by CA1 soma')
+			 %maxFigManual2d(3,1,14)
+                        xlabel('Time (msec)')
+                        ylabel('Cell No.')
+
+		end
+		function plotRasterSingleDelayed(thisObj,figH)
+			figure(figH)
+                        %spike times per cell
+                        spikeTimes=thisObj.simObj.cellsObj.delayedSpikeTimes;
+                        
+			spikeCellCoords=thisObj.simObj.cellsObj.spikeCellCoords;
+                        numCellsPerPlace=thisObj.simObj.configuration.simParams.numCellsPerPlace;
+
+                        for i=1:length(spikeTimes)
+                                currSpikePlaceIdx=spikeCellCoords(i,2);
+                                currSpikeCellIdx=spikeCellCoords(i,1);
+                                cellRasterRow=(currSpikePlaceIdx-1)*numCellsPerPlace+currSpikeCellIdx;
+                                plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',1)
+                                hold on
+                        end
+
+                        %ASSUMES POPULATION WIDE SYNCHRONOUS THETA
+                        thisObj.simObj.thetaPopInputObj.addTroughLines(figH)
+
+                        %{
+                        thetaTroughTimes=thisObj.simObj.thetaPopInputObj.getTroughTimes(1,1);
+
+                        currYlim=ylim;
+                        for i=1:length(thetaTroughTimes)
+                                plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)
+                        end
+                        %}
+                        %title(removeUnderscores(thisObj.simObj.simParamsIDStr))
+                       title('Spikes times seen by CA1 soma')
+			 %maxFigManual2d(3,1,14)
+                        xlabel('Time (msec)')
+			 ylabel('Cell No.')
+		end
+	
 		function plotPhaseVsPositionInField(thisObj,figPrecess,figCompress)
 			useAllSpikes=1;
 

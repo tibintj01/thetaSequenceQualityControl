@@ -154,12 +154,19 @@ classdef Simulation < handle & matlab.mixin.Copyable
 
 			figRaster=figure;
 			%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
-			axRaster1=subplot(10,10,[1 50]);
-			phaseCodingEvaluationObj.runPlotRaster(figRaster);
+			%axRaster1=subplot(10,10,[1 50]);
+			axRaster1=subplot(10,10,[1 30]);
+			%phaseCodingEvaluationObj.runPlotRaster(figRaster);
+			phaseCodingEvaluationObj.runPlotRasterSingleDelayed(figRaster);
+			xticklabels({})
+			xlabel('')
+			%title(removeUnderscores(thisObj.simParamsIDStr))
+			title('Logarithmically precessing CA3 place cells')
+			axRaster2=subplot(10,10,[31 60]);
+			phaseCodingEvaluationObj.runPlotRasterDoubleDelayed(figRaster);
 			xticklabels({})
 			xlabel('')
 
-			title(removeUnderscores(thisObj.simParamsIDStr))
 			%maxFigManual2d(10,3,18)
 
 			analyzePhasePrecession=0;
@@ -178,6 +185,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			figure(figRaster)
 			%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
 			%phaseCodingEvaluationObj.runSpikeTimeDistributionAnalysis(figPhaseDistr);
+			%{
 			axRaster2=subplot(10,10,[51 60]);
 			phaseCodingEvaluationObj.runSpikeTimeDistributionAnalysis(figRaster);
 			%title(removeUnderscores(thisObj.simArray(i,j).simParamsIDStr))
@@ -185,6 +193,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			ylabel('spike count')
 			xticklabels({})
 			xlabel('')
+			%}
 
 			axRaster3=subplot(10,10,[61 70]);
 			thetaSample=squeeze(thisObj.thetaPopInputObj.conductanceTimeSeries(1,1,:));
@@ -203,10 +212,13 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%xticklabels({})
 			%xlabel('')
 
-			axRaster5=subplot(10,10,[81 100]);
-			
+			axRaster5=subplot(10,10,[81 90]);
 			outputVmTrace=squeeze(thisObj.cellsObj.vL2);
-			feedfwdGsyn=squeeze(thisObj.cellsObj.gsynL2);
+			
+			%feedfwdGsyn=squeeze(thisObj.cellsObj.gsynL2-thisObj.cellsObj.gsynL2_I);
+			feedfwdGsyn_I=squeeze(-thisObj.cellsObj.gsynL2_I);
+			feedfwdGsyn_E=squeeze(thisObj.cellsObj.gsynL2);
+			feedfwdIsyn=squeeze(thisObj.cellsObj.l2IsynRecord+thisObj.cellsObj.l2EsynRecord);
 			yyaxis left
 			plot(simTimeAxis,outputVmTrace,'k-','LineWidth',2)
 			ylabel('Output unit V_m (mV)')
@@ -214,16 +226,33 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			ylim([-Inf Inf])
 
 			yyaxis right
-			pH=plot(simTimeAxis,feedfwdGsyn,'-','Color',getGrayRGB(),'LineWidth',2)
-			ylabel('Feedforward total synaptic conductance (mS/cm^2)')
+			pH=plot(simTimeAxis,feedfwdGsyn_I,'-','Color','b','LineWidth',2)
+			hold on
+			pH2=plot(simTimeAxis,feedfwdGsyn_E,'-','Color','g','LineWidth',2)
+			%pH2=plot(simTimeAxis,feedfwdGsyn_E,'-','Color',getGrayRGB(),'LineWidth',2)
+			ylabel('Feedforward synaptic conductance (mS/cm^2)')
+			
+			%ylabel('Feedforward synaptic current (pA)')
+			
 			pH.Color(4)=0.2; %make transparent
+			pH2.Color(4)=0.2; %make transparent
+			
+			axRaster6=subplot(10,10,[91 100]);
+			outputVmTrace=squeeze(thisObj.cellsObj.vInt);
+			plot(simTimeAxis,outputVmTrace,'k-','LineWidth',2)
+                        ylabel('Integrator V_m (mV)')
+                        xlabel('Time (msec)')
+                        ylim([-Inf Inf])
 
-			xlim([0 simTimeAxis(end)])
-			linkaxes([axRaster1 axRaster2 axRaster3 axRaster4 axRaster5],'x')
+			xlim([0 simTimeAxis(end)+150])
+			linkaxes([axRaster1 axRaster2 axRaster3 axRaster4 axRaster5 axRaster6],'x')
+			%linkaxes([axRaster1 axRaster2 axRaster3 axRaster4 axRaster5],'x')
 			%linkaxes([axRaster1 axRaster2 axRaster3 axRaster4],'x')
 			%axes(axRaster3)
-			xlim([0 simTimeAxis(end)])
+			xlim([0 simTimeAxis(end)+150])
 			%linkaxes([axRaster1 axRaster2 axRaster3 axRaster4],'x')
+			setFigFontTo(48)
+			
 		end	
 	
 		function dispV_traces(thisObj,figH)
