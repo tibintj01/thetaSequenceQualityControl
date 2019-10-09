@@ -1,7 +1,7 @@
 function [done] = runSingleSimulation(arglist)
 %function [done] = runSingleSimulation(val1,val2,paramName1,paramName2,objName1,objName2,scanDescr)
 	saveResults=1;
-	plotV=1;
+	plotV=0;
 
 	directory_names
 	disp('running simulation for....')
@@ -63,8 +63,6 @@ function [done] = runSingleSimulation(arglist)
 
 	if(saveResults)	
 		newSim.save()
-	else
-		pause(3)
 	end
 	cd(originalDir)
 	done=1;

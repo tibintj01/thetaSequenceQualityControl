@@ -74,7 +74,7 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		%gl=0.033*8;        %mS/cm^2
 		%gl=0.033*5;        %mS/cm^2
 		%gl=0.033*6;        %mS/cm^2
-		gl=0.03;        %mS/cm^2
+		gl=0.029999999999999995;        %mS/cm^2
 
 
 		%gl=0.033*10;        %mS/cm^2

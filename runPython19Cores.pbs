@@ -13,7 +13,7 @@
 #PBS -V
 
 #resource information (-l), actual time not comp time, quality of service (qos)
-#PBS -l walltime=25:00:00 -l nodes=1:ppn=19,pmem=25gb -l qos=flux
+#PBS -l walltime=25:00:00 -l nodes=1:ppn=18,pmem=25gb -l qos=flux
 
 #PBS -q fluxm
 #PBS -A ojahmed_fluxm

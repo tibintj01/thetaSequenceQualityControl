@@ -6,6 +6,7 @@ Then runs simulation m-scripts
 '''
 import time
 
+print('started')
 
 start=time.perf_counter()
 
@@ -20,9 +21,11 @@ from multiprocessing import Pool
 import matlab.engine
 	
 #scanParam1Values=np.linspace(2.6,3.6,120)
-scanParam1Values=np.linspace(2.6,3.6,500)
-#scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.1),2)
-scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.02),3)
+#scanParam1Values=np.linspace(2.6,3.6,500)
+scanParam1Values=np.linspace(15,25,500)
+scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),3)
+#scanParam1Values=np.linspace(15,25,1)
+#scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),3)
 #scanParam2Values=np.logspace(np.log10(0.01),np.log10(0.2),1)
 
 REDEPLOY=1;
@@ -151,13 +154,12 @@ if REDEPLOY==1:
 ###############################
 #postParallelProcessing
 ###############################
-'''
 eng=matlab.engine.start_matlab()
 
 exitStatus=eng.plotRastersPhaseLocking([float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values])		
+'''
 if 'Users/tibinjohn' in os.getcwd():
 	os.system("open %s*tif" % FIGURE_DIR)
 else:
 	os.system(". disp.sh %s*tif&" % FIGURE_DIR)
-
 '''

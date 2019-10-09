@@ -1,0 +1,630 @@
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    15
+
+
+val2 =
+
+    0.0050
+
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.8750
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 15
+              rngSeed: 1
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0050
+
+    15
+
+solving cell diff equations....
+Elapsed time is 0.618060 seconds.
+
+figH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+Warning: MATLAB has disabled some advanced graphics rendering features by switching to software OpenGL. For more information, click <a href="matlab:opengl('problems')">here</a>.
+
+ax = 
+
+  Axes with properties:
+
+             XLim: [0 1]
+             YLim: [0 1]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [0 0.9500 1 0.0500]
+            Units: 'normalized'
+
+  Use GET to show all properties
+
+
+ax = 
+
+  Axes with properties:
+
+             XLim: [0 1]
+             YLim: [0 1]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [0 0.9500 1 0.0500]
+            Units: 'normalized'
+
+  Use GET to show all properties
+
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                    saveDir: '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_15.00000_gL_0.00500_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    15
+
+
+val2 =
+
+    0.0122
+
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.8750
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 15
+              rngSeed: 2
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0122
+
+    15
+
+solving cell diff equations....
+Elapsed time is 0.540236 seconds.
+
+figH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+Warning: MATLAB has disabled some advanced graphics rendering features by switching to software OpenGL. For more information, click <a href="matlab:opengl('problems')">here</a>.
+
+ax = 
+
+  Axes with properties:
+
+             XLim: [0 1]
+             YLim: [0 1]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [0 0.9500 1 0.0500]
+            Units: 'normalized'
+
+  Use GET to show all properties
+
+
+ax = 
+
+  Axes with properties:
+
+             XLim: [0 1]
+             YLim: [0 1]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [0 0.9500 1 0.0500]
+            Units: 'normalized'
+
+  Use GET to show all properties
+
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                    saveDir: '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_15.00000_gL_0.01225_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+running simulation for....
+
+paramName1 =
+
+    'currAmp'
+
+
+paramName2 =
+
+    'gL'
+
+
+val1 =
+
+    15
+
+
+val2 =
+
+    0.0300
+
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 24)
+
+simName =
+
+    'timeConstantAndPhaseCodingWithNoise'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+
+
+PROCESSED_DATA_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/processed_data'
+
+
+FIGURE_DIR =
+
+    '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/figures/'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+simTime =
+
+        1000
+
+
+maxPlaceEndTime =
+
+        1725
+
+
+thisObj = 
+
+  CurrentInjector with properties:
+
+          NOISE_SIGMA: 0.8750
+    NOISE_SAMPLING_DT: 0.5000
+             timeAxis: [500000x1 double]
+       pulseStartTime: 0.0020
+         pulseEndTime: 1000
+       noiseAmplitude: 0.2000
+           noiseTrace: [500000x1 double]
+           speedTrace: []
+         positionAxis: []
+        positionStart: []
+          positionEnd: []
+            amplitude: 0
+             baseline: 15
+              rngSeed: 3
+        pulseShapeStr: 'flat'
+     asymPeakTimeFrac: 0.9500
+
+running sim with.....
+    0.0300
+
+    15
+
+solving cell diff equations....
+Elapsed time is 0.924104 seconds.
+
+figH = 
+
+  Figure (1) with properties:
+
+      Number: 1
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [232 246 560 420]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+Warning: MATLAB has disabled some advanced graphics rendering features by switching to software OpenGL. For more information, click <a href="matlab:opengl('problems')">here</a>.
+
+ax = 
+
+  Axes with properties:
+
+             XLim: [0 1]
+             YLim: [0 1]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [0 0.9500 1 0.0500]
+            Units: 'normalized'
+
+  Use GET to show all properties
+
+
+ax = 
+
+  Axes with properties:
+
+             XLim: [0 1]
+             YLim: [0 1]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [0 0.9500 1 0.0500]
+            Units: 'normalized'
+
+  Use GET to show all properties
+
+
+thisObj = 
+
+  Simulation with properties:
+
+                   SIM_NAME: 'timeConstantPhaseCoding'
+              configuration: [1x1 SimConfiguration]
+          currentModifyInfo: [1x1 struct]
+                    saveDir: '/scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data/'
+                   cellsObj: [1x1 Cells]
+    internalConnectivityObj: [1x1 InternalConnectivity]
+           externalInputObj: [1x1 CurrentInjectors]
+           thetaPopInputObj: [1x1 ThetaPopInput]
+             externalEnvObj: [1x1 ExternalEnvironment]
+             simParamsIDStr: 'currAmp_15.00000_gL_0.03000_Connectivity_none'
+           currentRunStatus: 'instantiatedAndRan'
+          currentSaveStatus: 'NOT_SAVED'
+
+saving to: /scratch/ojahmed_fluxm/tibintj/results/timeConstantAndPhaseCodingWithNoise/raw_data//.....
+[None, None, None]
+Finished in 174.68 seconds
+removing run directory copies....
+starting matlab....
+starting matlab....
+starting matlab....
