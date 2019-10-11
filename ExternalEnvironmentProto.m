@@ -1,7 +1,7 @@
 classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 	%
 	properties(Constant)
-		CONSTANT_RUN_SPEED=SCAN_PARAM1
+		CONSTANT_RUN_SPEED=SCAN_PARAM2
 	end
 	
 	properties

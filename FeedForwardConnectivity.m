@@ -8,8 +8,8 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 		%E_TO_I_NORM=1/(4.8794);
 		E_TO_I_NORM=1/(4.8794*2);
 		SYN_DEP_WINDOW=30;
-                SYN_DEP_FACT=1 %no synaptic depression
-                %SYN_DEP_FACT=0.3
+                %SYN_DEP_FACT=1 %no synaptic depression
+                SYN_DEP_FACT=0.1
                 %SYN_DEP_FACT=0.3
                 %SYN_DEP_FACT=0 %%%%%%%only first spike in 30 msec window???
 		tausyn_I=6;
@@ -37,9 +37,11 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 		%weight_mu=0.15
 		%weight_mu=0.30
 		%weight_mu=0.50
-		weight_mu=0.60
+		weight_mu=0.60 %works well
+		%weight_mu=0.70 
 		%weight_mu=0.75
 		%weight_mu=0.75
+		%weight_mu=0.9
 		weight_sigma=0.0025
 		esyn_E=0;
 		esyn_I=-72;
@@ -62,7 +64,7 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 
 			%omarPcolor(placeMetaConnMatrix
 			figH=figure
-			subplot(2,1,1)
+			%subplot(2,1,1)
 			%omarPcolor(1:numPlaces,1:numDendriticCompartments,squeeze(thisObj.connectivityMatrix))
 			omarPcolor(1:numDendriticCompartments,1:numPlaces,squeeze(thisObj.connectivityMatrix),figH)
 			ylabel('CA3 Place No.')
@@ -74,8 +76,9 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 			caxis([0 0.05])
 			ylabel(cb1,'Synaptic weight (mS/cm^2)')
 			
-			subplot(2,1,2)
-			omarPcolor(1:numDendriticCompartments,1:numPlaces,squeeze(thisObj.dendriticDelayTemplateMatrix),figH)
+			figH2=figure;
+			%subplot(2,1,2)
+			omarPcolor(1:numDendriticCompartments,1:numPlaces,squeeze(thisObj.dendriticDelayTemplateMatrix),figH2)
 			ylabel('CA3 Place No.')
 			xlabel('CA1 Dendritic Compartment No.')
 			%title('Delay to soma (msec)')
@@ -84,8 +87,11 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 			cb2=colorbar
 			ylabel(cb2,'Delay to soma (msec)')
 
-			uberTitle(sprintf('CA1 dendritic decoder of theta sequences (%d collaterals per CA3 place cell)', FeedForwardConnectivity.NUM_COLLATERALS))
-			setFigFontTo(28)
+			%uberTitle(sprintf('CA1 dendritic decoder of theta sequences (%d collaterals per CA3 place cell)', FeedForwardConnectivity.NUM_COLLATERALS))
+			%uberTitle(sprintf('CA1 dendritic decoder of theta sequences'))
+			title(sprintf('CA1 dendritic decoder of theta sequences'))
+			%setFigFontTo(16)
+			maxFigManual2d(1,1,16)
 		end
 	end
 

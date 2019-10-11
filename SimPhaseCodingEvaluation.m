@@ -105,7 +105,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 				currSpikePlaceIdx=spikeCellCoords(i,2);
 				currSpikeCellIdx=spikeCellCoords(i,1);
 				cellRasterRow=(currSpikePlaceIdx-1)*numCellsPerPlace+currSpikeCellIdx;
-				plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',1)
+				plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',3)
 				hold on 
 			end		
 
@@ -138,7 +138,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
                                 currSpikePlaceIdx=spikeCellCoords(i,2);
                                 currSpikeCellIdx=spikeCellCoords(i,1);
                                 cellRasterRow=(currSpikePlaceIdx-1)*numCellsPerPlace+currSpikeCellIdx;
-                                plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',1)
+                                plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',3)
                                 hold on
                         end
 
@@ -172,7 +172,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
                                 currSpikePlaceIdx=spikeCellCoords(i,2);
                                 currSpikeCellIdx=spikeCellCoords(i,1);
                                 cellRasterRow=(currSpikePlaceIdx-1)*numCellsPerPlace+currSpikeCellIdx;
-                                plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',1)
+                                plot([spikeTimes(i) spikeTimes(i)],[cellRasterRow-1 cellRasterRow],'-','Color',thisObj.placeColors(currSpikePlaceIdx,:),'LineWidth',3)
                                 hold on
                         end
 

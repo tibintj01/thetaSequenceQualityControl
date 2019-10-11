@@ -5,9 +5,13 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	properties(Constant)
 		justSpikingConductances=1
+		BLOCK_OUTPUT_SPIKING=1
+
 		includeKS=1;
 		NUM_CELLS_L2=1;
-		INTEGRATOR_gL=0.005;
+		%INTEGRATOR_gL=0.005;
+		INTEGRATOR_gL=0.1;
+		SEQ_DET_gL=0.1; %CA1 10msec time constant
 	end
 	properties
 		%voltage and time dependent gating variable matrices
@@ -70,6 +74,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		gsynL2
 		gsynL2_I
 		
+		gsynInt
+		gsynInt_I
+		
 		
 		l2IsynRecord
 		l2EsynRecord
@@ -104,8 +111,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		gl=0.0333333333333;        %mS/cm^2
 
 		%gl_L2=0.05; %CA1 20msec time constant
-		gl_L2=0.1; %CA1 20msec time constant
-		%gl_L2=0.2; %CA1 20msec time constant
+		%gl_L2=0.1; %CA1 10msec time constant
+		gl_L2=Cells.SEQ_DET_gL;; %CA1 10msec time constant
+		%gl_L2=0.2; %CA1 5msec time constant
 
 		%gl=0.033*10;        %mS/cm^2
 		%gl=0.033*6;        %mS/cm^2
@@ -234,6 +242,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 				thisObj.gsynL2=zeros(thisObj.numCellsL2,thisObj.numSteps);
 				thisObj.gsynL2_I=zeros(thisObj.numCellsL2,thisObj.numSteps);
 				
+				thisObj.gsynInt=zeros(1,thisObj.numSteps);
+				thisObj.gsynInt_I=zeros(1,thisObj.numSteps);
+				
 				thisObj.esyn_E=thisObj.internalConnObj.esyn_E;
 				thisObj.esyn_I=thisObj.internalConnObj.esyn_I;
 
@@ -345,6 +356,10 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			
 			gsynL2=thisObj.gsynL2;
 			gsynL2_I=thisObj.gsynL2_I;
+			
+			gsynInt=thisObj.gsynInt;
+			gsynInt_I=thisObj.gsynInt_I;
+		
 			esyn_I=thisObj.esyn_I;
 			esyn_E=thisObj.esyn_E;
 
@@ -454,6 +469,30 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 										phasePrecessionDelay=0;
 									end 
                                                         	    delayedSpikeTimes=[delayedSpikeTimes ;(step*dt + phasePrecessionDelay)];
+                                                                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                                %Integrator post-synaptic conductance changes (spikes without temporal template delays, just integrate over window)
+								%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+								weight=max(feedfwdGmatrix(placeIdx,:,1)); % uses synaptic weight from most prominent L2 dendritic compartment
+									
+								
+								synEndStep=step+1+round((phasePrecessionDelay)/dt)+round(4000/dt);
+                                                                         %synEndStep=step+1+round(delay/dt)+round(4000/dt);
+                                                                         if(synEndStep>numSteps)
+                                                                             synEndStep=numSteps;
+                                                                         end	
+								synCurrentIdxes=(step+1+round(phasePrecessionDelay/dt)):synEndStep;
+
+								synTimeAxis=dt*(synCurrentIdxes-(step+1+round(phasePrecessionDelay/dt)));
+							    	%not depressing (integrative neuron) 
+								if(step*dt>=startCouplingTime)
+									gsynInt(1,synCurrentIdxes)=squeeze(gsynInt(1,synCurrentIdxes))...
+									    +depConstant*weight*exp(-(synTimeAxis)/tausyn); %instantaneous conductance jump with single additive exp decay..
+									    %+weight*exp(-(synTimeAxis)/tausyn); %instantaneous conductance jump with single additive exp decay..
+									%add total current normalized inhibitory alpha function 6ms time constant representing disynaptic inhibition (enhances synchrony selectivity?)
+									gsynInt_I(1,synCurrentIdxes)=squeeze(gsynInt_I(1,synCurrentIdxes))...
+									    +depConstant*weight*FeedForwardConnectivity.E_TO_I_NORM*(synTimeAxis/FeedForwardConnectivity.tausyn_I).*exp(1-(synTimeAxis/FeedForwardConnectivity.tausyn_I));
+
+							     	end
 
                                                                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                                 %L2 post-synaptic conductance changes
@@ -733,9 +772,12 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                 for cellNumL2=1:numCellsL2     
                                         
 					vSpecific=vL2(cellNumL2,step);
-                                        nSpecific=nL2(cellNumL2,step);
-                                        mSpecific=mL2(cellNumL2,step);
-                                        hSpecific=hL2(cellNumL2,step);
+                                        
+                                        if(~Cells.BLOCK_OUTPUT_SPIKING)
+						nSpecific=nL2(cellNumL2,step);
+						mSpecific=mL2(cellNumL2,step);
+						hSpecific=hL2(cellNumL2,step);
+					end
 
                                         if(step>1 && vL2(cellNumL2,step)>-30 && vL2(cellNumL2,step-1) <-30)
                                                 spikeTimesL2=[spikeTimesL2; step*dt];
@@ -749,46 +791,50 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
                                         %minf=xinf(vSpecific,naM_Vt,naM_Gain);
 
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %I_Na gates voltage and time dependence
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %minf=1/(1+exp((vSpecific-naM_Vt)/naM_Gain));
-                                        alpham=0.364*(vSpecific-naM_Vt_L2)/(1-exp((-vSpecific+naM_Vt_L2)/naM_Gain));
-                                        betam=-0.248*(vSpecific-naM_Vt_L2)/(1-exp((vSpecific-naM_Vt_L2)/naM_Gain));
-                                        taum=0.8/(alpham+betam);
-                                        minf=alpham/(alpham+betam);
+                                        if(~Cells.BLOCK_OUTPUT_SPIKING)
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%I_Na gates voltage and time dependence
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%minf=1/(1+exp((vSpecific-naM_Vt)/naM_Gain));
+						alpham=0.364*(vSpecific-naM_Vt_L2)/(1-exp((-vSpecific+naM_Vt_L2)/naM_Gain));
+						betam=-0.248*(vSpecific-naM_Vt_L2)/(1-exp((vSpecific-naM_Vt_L2)/naM_Gain));
+						taum=0.8/(alpham+betam);
+						minf=alpham/(alpham+betam);
 
-                                        alphah=0.08*(vSpecific-naH_Vt)/(1-exp((-vSpecific+naH_Vt)/naH_Gain));
-                                        betah=-0.005*(vSpecific+10)/(1-exp((vSpecific+10)/5.0));
+						alphah=0.08*(vSpecific-naH_Vt)/(1-exp((-vSpecific+naH_Vt)/naH_Gain));
+						betah=-0.005*(vSpecific+10)/(1-exp((vSpecific+10)/5.0));
 
-                                        %tauh=naTauH_offset+naTauH_Range/(1+exp((vSpecific-naTauH_Vt)/naTauH_Gain));
-                                        tauh=1/(alphah+betah);
-                                        hinf=1/(1+exp((vSpecific+58)/5)); %why not alpha/(alpha+beta) in Leung model??
+						%tauh=naTauH_offset+naTauH_Range/(1+exp((vSpecific-naTauH_Vt)/naTauH_Gain));
+						tauh=1/(alphah+betah);
+						hinf=1/(1+exp((vSpecific+58)/5)); %why not alpha/(alpha+beta) in Leung model??
 
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %I_Kdr gates voltage and time dependence
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %taun=kdrTauN_offset+kdrTauN_Range/(1+exp((vSpecific-kdrTauN_Vt)/kdrTauN_Gain));
-                                        %ninf=1/(1+exp((vSpecific-kdrN_Vt)/kdrN_Gain)); 
-                                        alphan=0.035*(vSpecific-kdrN_Vt)/(1-exp((vSpecific-kdrN_Vt)/kdrN_Gain));
-                                        betan=0.035*(vSpecific-kdrN_Vt)/(exp((vSpecific-kdrN_Vt)/(-kdrN_Gain))-1);
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%I_Kdr gates voltage and time dependence
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%taun=kdrTauN_offset+kdrTauN_Range/(1+exp((vSpecific-kdrTauN_Vt)/kdrTauN_Gain));
+						%ninf=1/(1+exp((vSpecific-kdrN_Vt)/kdrN_Gain)); 
+						alphan=0.035*(vSpecific-kdrN_Vt)/(1-exp((vSpecific-kdrN_Vt)/kdrN_Gain));
+						betan=0.035*(vSpecific-kdrN_Vt)/(exp((vSpecific-kdrN_Vt)/(-kdrN_Gain))-1);
 
-                                        ninf=alphan/(alphan+betan);
-                                        taun=1/(alphan+betan);
+						ninf=alphan/(alphan+betan);
+						taun=1/(alphan+betan);
 
 
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %currents from driving force and gating variables
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %ina=gna*minf^3*(hSpecific)*(vSpecific-ena);
-                                        ina=gna*mSpecific^3*(hSpecific)*(vSpecific-ena);
-                                        %delayed-rectifier potassium current
-                                        ik=gk*nSpecific^4*(vSpecific-ek);
-					itonic_L2=3;
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%currents from driving force and gating variables
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%ina=gna*minf^3*(hSpecific)*(vSpecific-ena);
+						ina=gna*mSpecific^3*(hSpecific)*(vSpecific-ena);
+						%delayed-rectifier potassium current
+						ik=gk*nSpecific^4*(vSpecific-ek);
+						%itonic_L2=3;
+					end
+
+					itonic_L2=1;
 					isynIntE_L2=gsynL2(cellNumL2,step)*(vSpecific-esyn_E);
 					isynIntI_L2=gsynL2_I(cellNumL2,step)*(vSpecific-esyn_I);
 
-					L2_THETA_PHASE_OFFSET=90; %degrees
+					%L2_THETA_PHASE_OFFSET=90; %degrees
 					l2ThetaTimeOffset=ThetaPopInput.L2_THETA_PHASE_OFFSET/360*(1/ThetaPopInput.frequencyDefault);
 
 					l2ThetaStepOffset=round(l2ThetaTimeOffset/dt);
@@ -802,21 +848,24 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 					l2IsynRecord(cellNumL2,step)=isynIntI_L2;
 					l2EsynRecord(cellNumL2,step)=isynIntE_L2;	
                                         
-					vInc=double(dt*(-il-ina-ik-isynIntE_L2-isynExt_L2-isynIntI_L2+itonic_L2)/cm);
-                                        %vInc=double(dt*(-il-ina-ik+itonic_L2)/cm);
-                                        mInc=double(dt*(minf-mSpecific)/taum);
-                                        nInc=double(dt*(ninf-nSpecific)/taun);
-                                        hInc=double(dt*(hinf-hSpecific)/tauh);
+                                        if(~Cells.BLOCK_OUTPUT_SPIKING)
+						vInc=double(dt*(-il-ina-ik-isynIntE_L2-isynExt_L2-isynIntI_L2+itonic_L2)/cm);
+						%vInc=double(dt*(-il-ina-ik+itonic_L2)/cm);
+						mInc=double(dt*(minf-mSpecific)/taum);
+						nInc=double(dt*(ninf-nSpecific)/taun);
+						hInc=double(dt*(hinf-hSpecific)/tauh);
+						%V=V+dV
+						vL2(cellNumL2,step+1)=vSpecific+vInc;
+						%Gates=Gates+dGates
+						nL2(cellNumL2,step+1)=nSpecific+nInc;
+						mL2(cellNumL2,step+1)=mSpecific+mInc;	
+						hL2(cellNumL2,step+1)=hSpecific+hInc;
 
-                                        %V=V+dV
-                                        vL2(cellNumL2,step+1)=vSpecific+vInc;
-                                        %Gates=Gates+dGates
-                                        nL2(cellNumL2,step+1)=nSpecific+nInc;
-                                        mL2(cellNumL2,step+1)=mSpecific+mInc;	
- 					hL2(cellNumL2,step+1)=hSpecific+hInc;
-					%if(isnan(vL2(cellNumL2,step+1)))
-					%	fds
-					%end
+					else
+						vInc=double(dt*(-il-isynIntE_L2-isynExt_L2-isynIntI_L2+itonic_L2)/cm);
+                                        	%V=V+dV
+                                        	vL2(cellNumL2,step+1)=vSpecific+vInc;
+					end
                                  end%loop over layer 2 cells
 
 				%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -830,9 +879,11 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                 for cellNumInt=1:numCellsInt     
                                         
 					vSpecific=vInt(cellNumInt,step);
-                                        nSpecific=nInt(cellNumInt,step);
-                                        mSpecific=mInt(cellNumInt,step);
-                                        hSpecific=hInt(cellNumInt,step);
+                                        if(~Cells.BLOCK_OUTPUT_SPIKING)
+						nSpecific=nInt(cellNumInt,step);
+						mSpecific=mInt(cellNumInt,step);
+						hSpecific=hInt(cellNumInt,step);
+					end
 
                                         if(step>1 && vInt(cellNumInt,step)>-30 && vInt(cellNumInt,step-1) <-30)
                                                 spikeTimesInt=[spikeTimesInt; step*dt];
@@ -845,63 +896,78 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
                                         %minf=xinf(vSpecific,naM_Vt,naM_Gain);
 
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %I_Na gates voltage and time dependence
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %minf=1/(1+exp((vSpecific-naM_Vt)/naM_Gain));
-                                        alpham=0.364*(vSpecific-naM_Vt_L2)/(1-exp((-vSpecific+naM_Vt_L2)/naM_Gain));
-                                        betam=-0.248*(vSpecific-naM_Vt_L2)/(1-exp((vSpecific-naM_Vt_L2)/naM_Gain));
-                                        taum=0.8/(alpham+betam);
-                                        minf=alpham/(alpham+betam);
+                                        if(~Cells.BLOCK_OUTPUT_SPIKING)
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%I_Na gates voltage and time dependence
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%minf=1/(1+exp((vSpecific-naM_Vt)/naM_Gain));
+						alpham=0.364*(vSpecific-naM_Vt_L2)/(1-exp((-vSpecific+naM_Vt_L2)/naM_Gain));
+						betam=-0.248*(vSpecific-naM_Vt_L2)/(1-exp((vSpecific-naM_Vt_L2)/naM_Gain));
+						taum=0.8/(alpham+betam);
+						minf=alpham/(alpham+betam);
 
-                                        alphah=0.08*(vSpecific-naH_Vt)/(1-exp((-vSpecific+naH_Vt)/naH_Gain));
-                                        betah=-0.005*(vSpecific+10)/(1-exp((vSpecific+10)/5.0));
+						alphah=0.08*(vSpecific-naH_Vt)/(1-exp((-vSpecific+naH_Vt)/naH_Gain));
+						betah=-0.005*(vSpecific+10)/(1-exp((vSpecific+10)/5.0));
 
-                                        %tauh=naTauH_offset+naTauH_Range/(1+exp((vSpecific-naTauH_Vt)/naTauH_Gain));
-                                        tauh=1/(alphah+betah);
-                                        hinf=1/(1+exp((vSpecific+58)/5)); %why not alpha/(alpha+beta) in Leung model??
+						%tauh=naTauH_offset+naTauH_Range/(1+exp((vSpecific-naTauH_Vt)/naTauH_Gain));
+						tauh=1/(alphah+betah);
+						hinf=1/(1+exp((vSpecific+58)/5)); %why not alpha/(alpha+beta) in Leung model??
 
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %I_Kdr gates voltage and time dependence
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %taun=kdrTauN_offset+kdrTauN_Range/(1+exp((vSpecific-kdrTauN_Vt)/kdrTauN_Gain));
-                                        %ninf=1/(1+exp((vSpecific-kdrN_Vt)/kdrN_Gain)); 
-                                        alphan=0.035*(vSpecific-kdrN_Vt)/(1-exp((vSpecific-kdrN_Vt)/kdrN_Gain));
-                                        betan=0.035*(vSpecific-kdrN_Vt)/(exp((vSpecific-kdrN_Vt)/(-kdrN_Gain))-1);
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%I_Kdr gates voltage and time dependence
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%taun=kdrTauN_offset+kdrTauN_Range/(1+exp((vSpecific-kdrTauN_Vt)/kdrTauN_Gain));
+						%ninf=1/(1+exp((vSpecific-kdrN_Vt)/kdrN_Gain)); 
+						alphan=0.035*(vSpecific-kdrN_Vt)/(1-exp((vSpecific-kdrN_Vt)/kdrN_Gain));
+						betan=0.035*(vSpecific-kdrN_Vt)/(exp((vSpecific-kdrN_Vt)/(-kdrN_Gain))-1);
 
-                                        ninf=alphan/(alphan+betan);
-                                        taun=1/(alphan+betan);
-
-
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %currents from driving force and gating variables
-                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                        %ina=gna*minf^3*(hSpecific)*(vSpecific-ena);
-                                        ina=gna*mSpecific^3*(hSpecific)*(vSpecific-ena);
-                                        %delayed-rectifier potassium current
-                                        ik=gk*nSpecific^4*(vSpecific-ek);
-					itonic_L2=3;
-					isynL2E_L2=gsynL2(cellNumL2,step)*(vSpecific-esyn_E);
-					isynL2I_L2=gsynL2_I(cellNumL2,step)*(vSpecific-esyn_I);
+						ninf=alphan/(alphan+betan);
+						taun=1/(alphan+betan);
 
 
-						isynExt_L2=ThetaPopInput.L2_MULT_FACTOR*gInhThetaMatrix(1,1,step)*(vSpecific-esyn_I); %same theta everywehre
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%currents from driving force and gating variables
+						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%ina=gna*minf^3*(hSpecific)*(vSpecific-ena);
+						ina=gna*mSpecific^3*(hSpecific)*(vSpecific-ena);
+						%delayed-rectifier potassium current
+						ik=gk*nSpecific^4*(vSpecific-ek);
+					end
+
+					%itonic_L2=3;
+					itonic_L2=1;
+					isynIntE_Int=gsynInt(cellNumInt,step)*(vSpecific-esyn_E);
+					isynIntI_Int=gsynInt_I(cellNumInt,step)*(vSpecific-esyn_I);
+
+
+					isynExt_L2=ThetaPopInput.L2_MULT_FACTOR*gInhThetaMatrix(1,1,step)*(vSpecific-esyn_I); %same theta everywehre
 
 					%l2IsynRecord(cellNumL2,step)=isynL2I_L2;
 					%l2EsynRecord(cellNumL2,step)=isynL2E_L2;	
                                         
-					vInc=double(dt*(-il-ina-ik-isynL2E_L2-isynExt_L2-isynL2I_L2+itonic_L2)/cm);
+                                        if(~Cells.BLOCK_OUTPUT_SPIKING)
+						vInc=double(dt*(-il-ina-ik-isynExt_L2-isynIntE_Int-isynIntI_Int+itonic_L2)/cm);
+					else
+						vInc=double(dt*(-il-isynExt_L2-isynIntE_Int-isynIntI_Int+itonic_L2)/cm);
+					end
+					%vInc=double(dt*(-il-ina-ik-isynL2E_L2-isynExt_L2-isynL2I_L2+itonic_L2)/cm);
                                         %vInc=double(dt*(-il-ina-ik+itonic_Int)/cm);
-                                        mInc=double(dt*(minf-mSpecific)/taum);
-                                        nInc=double(dt*(ninf-nSpecific)/taun);
-                                        hInc=double(dt*(hinf-hSpecific)/tauh);
+                                       
+                                        if(~Cells.BLOCK_OUTPUT_SPIKING)
+						mInc=double(dt*(minf-mSpecific)/taum);
+						nInc=double(dt*(ninf-nSpecific)/taun);
+						hInc=double(dt*(hinf-hSpecific)/tauh);
+					end
 
                                         %V=V+dV
                                         vInt(cellNumInt,step+1)=vSpecific+vInc;
-                                        %Gates=Gates+dGates
-                                        nInt(cellNumInt,step+1)=nSpecific+nInc;
-                                        mInt(cellNumInt,step+1)=mSpecific+mInc;	
- 					hInt(cellNumInt,step+1)=hSpecific+hInc;
+
+                                        if(~Cells.BLOCK_OUTPUT_SPIKING)
+						%Gates=Gates+dGates
+						nInt(cellNumInt,step+1)=nSpecific+nInc;
+						mInt(cellNumInt,step+1)=mSpecific+mInc;	
+						hInt(cellNumInt,step+1)=hSpecific+hInc;
+					end
 					%if(isnan(vInt(cellNumInt,step+1)))
 					%	fds
 					%end
@@ -916,7 +982,11 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		 	thisObj.vInt=vInt;
 		 	thisObj.gsynL2=gsynL2;
 		 	thisObj.gsynL2_I=gsynL2_I;
-		 	thisObj.l2EsynRecord=l2EsynRecord;
+		 	
+			thisObj.gsynInt=gsynInt;
+		 	thisObj.gsynInt_I=gsynInt_I;
+		 	
+			thisObj.l2EsynRecord=l2EsynRecord;
 		 	thisObj.l2IsynRecord=l2IsynRecord;
 
 			thisObj.nks=nks;

@@ -22,8 +22,25 @@ import matlab.engine
 	
 #scanParam1Values=np.linspace(2.6,3.6,120)
 #scanParam1Values=np.linspace(2.6,3.6,500)
-scanParam1Values=np.linspace(3,7.5,30)
-scanParam2Values=np.linspace(1,31,30)
+#scanParam1Values=np.linspace(3,7.5,1)
+#scanParam2Values=np.linspace(1,31,1)
+#scanParam1Values=np.linspace(5,7.5,1)
+#scanParam1Values=np.linspace(3,5,1)
+#scanParam1Values=np.linspace(5,5,1)
+#scanParam1Values=np.linspace(7.5,7.5,1) #amp
+#scanParam2Values=np.linspace(10,31,1)
+#scanParam2Values=np.linspace(20,20,1)
+#scanParam2Values=np.linspace(30,30,1)
+
+scanParam1Values=np.linspace(1,1,1)
+
+#scanParam1Values=list(range(5,40,5))
+#scanParam2Values=np.linspace(20,20,1)
+#scanParam2Values=np.linspace(20,20,1)
+scanParam2Values=[10,20,40]
+#scanParam2Values=np.linspace(50,50,1)
+#scanParam2Values=np.linspace(10,10,1)
+#scanParam2Values=np.linspace(30,30,1)
 #scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),30)
 #scanParam1Values=np.linspace(15,25,1)
 #scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),3)
@@ -76,7 +93,8 @@ if REDEPLOY==1:
 		with open(fileName,'r+') as f:
 			fileStr=f.read();
 			originalFileStrings.append(fileStr)
-
+	
+	os.system('cp CellsTwoLayerProto.m Cells.m')
 
 	#generate modifed files to loop through in parallel 
 	#with own subdirectories to maintain file naming
@@ -109,6 +127,7 @@ if REDEPLOY==1:
 					f.write(newFileStr)
 			#copy to this parameter settings' run directory
 			os.system('cp *.m %s' % runDirPath)	
+			os.system('cp *.mat %s' % runDirPath)	
 			#pdb.set_trace()
 
 			#scipy.io.savemat('./%s_%s_%.10f_%s_%.10f.mat' % (scanDescr, scanParamNames[0],float(scanParam1Value), scanParamNames[1],float(scanParam2Value)), mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })

@@ -52,7 +52,9 @@ function [done] = runSingleSimulation(arglist)
 	end
 
 	if(saveResults)	
+
 		fH=newSim.visualizeSpikeTimings()
+		maxFigManual2d(1.5,1.1,16)
 		if(rngSeed<10)
 			saveas(fH,sprintf('%ssimV000%d.tif',FIGURE_DIR,rngSeed))
 		elseif(rngSeed<100)

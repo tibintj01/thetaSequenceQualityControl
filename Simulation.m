@@ -3,6 +3,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 	properties(Constant)
 		%SIM_NAME='just spiking conductances, no theta, large time constant output unit';
 		SIM_NAME='timeConstantPhaseCoding';
+		CONSTANT_TIME_MAX=3200
 		%OVERWRITE=1;
 		%'just spiking conductances, theta, time constant vs phase locking';
 	end
@@ -155,14 +156,16 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			figRaster=figure;
 			%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
 			%axRaster1=subplot(10,10,[1 50]);
-			axRaster1=subplot(10,10,[1 30]);
+			%axRaster1=subplot(10,10,[1 30]);
+			axRaster1=subplot(10,10,[1 20]);
 			%phaseCodingEvaluationObj.runPlotRaster(figRaster);
 			phaseCodingEvaluationObj.runPlotRasterSingleDelayed(figRaster);
 			xticklabels({})
 			xlabel('')
 			%title(removeUnderscores(thisObj.simParamsIDStr))
 			title('Logarithmically precessing CA3 place cells')
-			axRaster2=subplot(10,10,[31 60]);
+			%axRaster2=subplot(10,10,[31 60]);
+			axRaster2=subplot(10,10,[21 40]);
 			phaseCodingEvaluationObj.runPlotRasterDoubleDelayed(figRaster);
 			xticklabels({})
 			xlabel('')
@@ -195,24 +198,28 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			xlabel('')
 			%}
 
-			axRaster3=subplot(10,10,[61 70]);
+			%axRaster3=subplot(10,10,[61 70]);
+			axRaster3=subplot(10,10,[41 50]);
 			thetaSample=squeeze(thisObj.thetaPopInputObj.conductanceTimeSeries(1,1,:));
-			xticklabels({})
-			xlabel('')
-			ylabel('Theta inh_g')
 			simTimeAxis=thisObj.configuration.simParams.timeAxis;
 			decFactor=1;
 			plot(simTimeAxis(1:decFactor:end),thetaSample(1:decFactor:end),'Color','b','LineWidth',3)
+			ylim([-Inf Inf])	
+			ylabel('Theta g_{inh}')
 			xticklabels({})
 			xlabel('')
 
-			axRaster4=subplot(10,10,[71 80]);
+			%axRaster4=subplot(10,10,[71 80]);
+			axRaster4=subplot(10,10,[51 60]);
 			%axRaster4=subplot(10,10,[71 100]);
 			thisObj.externalInputObj.displayContentSubplot(figRaster);
 			%xticklabels({})
 			%xlabel('')
+			xticklabels({})
+			xlabel('')
 
-			axRaster5=subplot(10,10,[81 90]);
+			%axRaster5=subplot(10,10,[81 90]);
+			axRaster5=subplot(10,10,[61 80]);
 			outputVmTrace=squeeze(thisObj.cellsObj.vL2);
 			
 			%feedfwdGsyn=squeeze(thisObj.cellsObj.gsynL2-thisObj.cellsObj.gsynL2_I);
@@ -221,37 +228,64 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			feedfwdIsyn=squeeze(thisObj.cellsObj.l2IsynRecord+thisObj.cellsObj.l2EsynRecord);
 			yyaxis left
 			plot(simTimeAxis,outputVmTrace,'k-','LineWidth',2)
-			ylabel('Output unit V_m (mV)')
+			ylabel('Seq. decoder (mV)')
 			xlabel('Time (msec)')
-			ylim([-Inf Inf])
+			%ylim([-Inf Inf])
+			ylim([-60 10])
 
 			yyaxis right
 			pH=plot(simTimeAxis,feedfwdGsyn_I,'-','Color','b','LineWidth',2)
 			hold on
 			pH2=plot(simTimeAxis,feedfwdGsyn_E,'-','Color','g','LineWidth',2)
 			%pH2=plot(simTimeAxis,feedfwdGsyn_E,'-','Color',getGrayRGB(),'LineWidth',2)
-			ylabel('Feedforward synaptic conductance (mS/cm^2)')
-			
+			%ylabel('Feedfwd synaptic conductance (mS/cm^2)')
+                        ylabel('g_{syn} (mS/cm^2)')
+                        %ylabel('g_{syn}')
+			ylim([-0.1 0.2])	
 			%ylabel('Feedforward synaptic current (pA)')
 			
 			pH.Color(4)=0.2; %make transparent
 			pH2.Color(4)=0.2; %make transparent
+			xticklabels({})
+			xlabel('')
 			
-			axRaster6=subplot(10,10,[91 100]);
+			%axRaster6=subplot(10,10,[91 100]);
+			axRaster6=subplot(10,10,[81 100]);
 			outputVmTrace=squeeze(thisObj.cellsObj.vInt);
-			plot(simTimeAxis,outputVmTrace,'k-','LineWidth',2)
-                        ylabel('Integrator V_m (mV)')
-                        xlabel('Time (msec)')
-                        ylim([-Inf Inf])
 
-			xlim([0 simTimeAxis(end)+150])
+			feedfwdGsyn_I=squeeze(-thisObj.cellsObj.gsynInt_I);
+                        feedfwdGsyn_E=squeeze(thisObj.cellsObj.gsynInt);
+                        %feedfwdIsyn=squeeze(thisObj.cellsObj.l2IsynRecord+thisObj.cellsObj.l2EsynRecord);
+
+                        yyaxis left
+			plot(simTimeAxis,outputVmTrace,'k-','LineWidth',2)
+                        %ylabel('Integrator (mV)')
+                        ylabel('Control (mV)')
+                        xlabel('Time (msec)')
+                        %ylim([-Inf Inf])
+			ylim([-60 10])
+
+			yyaxis right
+                        pH=plot(simTimeAxis,feedfwdGsyn_I,'-','Color','b','LineWidth',2)
+                        hold on
+                        pH2=plot(simTimeAxis,feedfwdGsyn_E,'-','Color','g','LineWidth',2)
+                        %pH2=plot(simTimeAxis,feedfwdGsyn_E,'-','Color',getGrayRGB(),'LineWidth',2)
+                        ylabel('g_{syn} (mS/cm^2)')
+			ylim([-0.1 0.2])	
+                        %ylabel('g_{syn}')
+			
+			pH.Color(4)=0.2; %make transparent
+			pH2.Color(4)=0.2; %make transparent
+			%xlim([0 simTimeAxis(end)+150])
+			xlim([0 Simulation.CONSTANT_TIME_MAX])
 			linkaxes([axRaster1 axRaster2 axRaster3 axRaster4 axRaster5 axRaster6],'x')
 			%linkaxes([axRaster1 axRaster2 axRaster3 axRaster4 axRaster5],'x')
 			%linkaxes([axRaster1 axRaster2 axRaster3 axRaster4],'x')
 			%axes(axRaster3)
-			xlim([0 simTimeAxis(end)+150])
+			xlim([0 Simulation.CONSTANT_TIME_MAX])
+			
 			%linkaxes([axRaster1 axRaster2 axRaster3 axRaster4],'x')
-			setFigFontTo(48)
+			%setFigFontTo(24)
 			
 		end	
 	

@@ -1,6 +1,8 @@
 import os
 #scanParamNames=['currAmp','gL']
-scanParamNames=['currAmp','CONSTANT_RUN_SPEED']
+#Order should match name in file, e.g. SCAN_PARAM1 vs2
+#scanParamNames=['currAmp','CONSTANT_RUN_SPEED']
+scanParamNames=['DI_SORTED_PERM_RANK','CONSTANT_RUN_SPEED']
 
 #scanDescr='timeConstantAndPhaseCodingWithNoiseWeakerTheta'
 scanDescr='testControlledFlexibility'

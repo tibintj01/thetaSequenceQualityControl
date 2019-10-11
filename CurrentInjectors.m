@@ -2,9 +2,10 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 	properties(Constant)
 		%BASELINE=4;
 		BASELINE=18;
+		%BASELINE=20;
 		%SIG_FRAC=0.05;
 		SIG_FRAC=0;
-		RUN_BACKWARDS=0;
+		DI_SORTED_PERM_RANK=1.0
 	end
 
 	properties
@@ -13,11 +14,11 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		%currAmp=7;
 		%currAmp=10;
 		%currAmp=8;
-		currAmp=31.0;
+		%currAmp=1.0;
 		%%%%%%%%%%%%%%%%%%%%%%%
 		%current span (18-25.5)
 		%%%%%%%%%%%%%%%%%%%%%%%
-		%currAmp=7.5;
+		currAmp=7.5;
 		%currAmp=15;
 		pulseShapeStr='ramp';
 		%pulseShapeStr='flat';
@@ -52,7 +53,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 					xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
 					ylim([0 thisObj.currAmp]+CurrentInjectors.BASELINE)
 					xlabel('Time (sec)')
-					ylabel('Current (pA)')
+					ylabel('I_s (pA)')
 				end
 			end
 			maxFigManual2d(2,1,14)
@@ -70,7 +71,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 					xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
 					ylim([0 thisObj.currAmp] + CurrentInjectors.BASELINE)
 					xlabel('Time (sec)')
-					ylabel('Current (pA)')
+					ylabel('I_s (pA)')
 		end
 
 		function floatMatrix=getFloatMatrix(thisObj)
@@ -94,6 +95,10 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 			
 			currInjectorMatrix(nr,nc)=CurrentInjector();
 			
+			data=load('DI_SORTED_5_PERMUTATIONS.mat');
+			sortedPerms=data.sortedPerms;
+			currentPlaceSequence=sortedPerms(CurrentInjectors.DI_SORTED_PERM_RANK,:);
+			currentPlaceSequenceDI=data.DIs(CurrentInjectors.DI_SORTED_PERM_RANK);
 			for cellNum=1:nr
 				injParams.timeAxis=timeAxis;
 				injParams.pulseShapeStr=pulseShapeStr;
@@ -101,11 +106,15 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 					%injParams.pulseStartTime=max(0,((place-3)/nc)*(timeAxis(end)));
 					%injParams.pulseEndTime=((place)/nc)*(timeAxis(end));
 					if(strcmp(pulseShapeStr,'ramp'))
-						if(CurrentInjectors.RUN_BACKWARDS==1)
-							[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(nc-place+1);
-						else
-							[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(place);
-						end
+						%if(CurrentInjectors.RUN_BACKWARDS==1)
+						%	[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(nc-place+1);
+						%else
+						%	[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(place);
+						%end
+						%[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(currentPlaceSequence(place));
+						[placeInputStartTime,placeInputEndTime]=extEnvObj.getPlaceInputStartStopTimes(place);
+
+						
 						injParams.pulseStartTime=placeInputStartTime;
 						injParams.pulseEndTime=placeInputEndTime;
 						
@@ -115,7 +124,8 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 						injParams.baseline=normrnd(CurrentInjectors.BASELINE,cellBaselineSig);
 						%CurrentInjectors.BASELINE;
 						injParams.rngSeed=extEnvObj.rngSeed;					
-						currInjectorMatrix(cellNum,place)=CurrentInjector(injParams);
+						%currInjectorMatrix(cellNum,place)=CurrentInjector(injParams);
+						currInjectorMatrix(cellNum,currentPlaceSequence(place))=CurrentInjector(injParams);
 					elseif(strcmp(pulseShapeStr,'flat'))
 						placeInputStartTime=timeAxis(1);
 						placeInputEndTime=timeAxis(end);

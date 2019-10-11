@@ -1,7 +1,7 @@
 classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 	%
 	properties(Constant)
-		CONSTANT_RUN_SPEED=7.5
+		CONSTANT_RUN_SPEED=40
 	end
 	
 	properties
