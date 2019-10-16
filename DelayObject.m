@@ -3,14 +3,20 @@ classdef DelayObject < handle & matlab.mixin.Copyable %create object by referenc
 		TONIC_RESOLUTION=1e-4;
 		%TONIC_RESOLUTION=1e-6;
 		IMIN=18;%based on phase selection of single units to range of bias currents
+		%IMIN=20;%based on phase selection of single units to range of bias currents
 		IMAX=25.5; %based on phase selection of single units to range of bias currents
 		%IMAX=28; %based on phase selection of single units to range of bias currents
 		BASELINE_DELAY=60;%get out of current cycle
 		%BASELINE_DELAY=0;%get out of current cycle
 
+		%NORM_FACTOR=17
+		%NORM_FACTOR=17*1.7
+		%NORM_FACTOR=17
 		NORM_FACTOR=17
-		%NORM_FACTOR=50
 		CONV_FACTOR=17
+		%CONV_FACTOR=100
+		%NORM_FACTOR=50
+		%CONV_FACTOR=17
 		%CONV_FACTOR=50
 	end
 
@@ -108,6 +114,7 @@ classdef DelayObject < handle & matlab.mixin.Copyable %create object by referenc
 			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+DelayObject.BASELINE_DELAY+(defaultPhaseSlope*(itonic-imin));
 			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+(defaultPhaseSlope*(itonic-imin));
 			delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+(defaultPhaseSlope*(itonic-imin));
+			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN));
 			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN));
 
 		end

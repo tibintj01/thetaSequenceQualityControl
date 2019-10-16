@@ -5,17 +5,22 @@ function [done] = runSingleSimulation(arglist)
 
 	directory_names
 	disp('running simulation for....')
-	paramName1=arglist{3}
-	paramName2=arglist{4}
+	paramName1=arglist{4}
+	paramName2=arglist{5}
+	paramName3=arglist{6}
 	val1=arglist{1}
 	val2=arglist{2}
-	objName1=arglist{5};
-	objName2=arglist{6};
-	scanDescr=arglist{7};
-	runDir=arglist{8};
-	originalDir=arglist{9};
-	rngSeed=arglist{10};
+	val3=arglist{3}
+	objName1=arglist{7};
+	objName2=arglist{8};
+	objName3=arglist{9};
 
+	scanDescr=arglist{10};
+	runDir=arglist{11};
+	originalDir=arglist{12};
+	rngSeed=arglist{13};
+
+	batchName=arglist{14};
 
 	rng(rngSeed)
 	cd(runDir)		
@@ -26,20 +31,20 @@ function [done] = runSingleSimulation(arglist)
 	done=0;
 
 	%newSimConfig=SimConfiguration('default');
-	newSimConfig=SimConfiguration('default',rngSeed);
+	newSimConfig=SimConfiguration(batchName,rngSeed);
 	%newSimConfig.printConfig()
 
+	overrideParamValues=[val1,val2,val3];
 
-
-	overrideParamValues=[val1,val2];
-
-	overrideParamNames={paramName1,paramName2};
+	overrideParamNames={paramName1,paramName2,paramName3};
 
 	searchModifyInfo.overrideParamValues=overrideParamValues;
 	searchModifyInfo.overrideParamNames=overrideParamNames;
 	
 	searchModifyInfo.modifiedObjName1=objName1;
 	searchModifyInfo.modifiedObjName2=objName2;
+	searchModifyInfo.modifiedObjName3=objName3;
+
 	searchModifyInfo.batchCategory=scanDescr;
 	
 	newSim=Simulation(newSimConfig,searchModifyInfo);
@@ -52,17 +57,12 @@ function [done] = runSingleSimulation(arglist)
 	end
 
 	if(saveResults)	
-		fH=newSim.visualizeSpikeTimings()
-		if(rngSeed<10)
-			saveas(fH,sprintf('%ssimV000%d.tif',FIGURE_DIR,rngSeed))
-		elseif(rngSeed<100)
-			saveas(fH,sprintf('%ssimV00%d.tif',FIGURE_DIR,rngSeed))
-		elseif(rngSeed<1000)
-			saveas(fH,sprintf('%ssimV0%d.tif',FIGURE_DIR,rngSeed))
-		elseif(rngSeed<10000)
-			saveas(fH,sprintf('%ssimV%d.tif',FIGURE_DIR,rngSeed))
-		end
-		close(fH)
+		[fH,fpH,fsH]=newSim.visualizeSpikeTimings()
+		%maxFigManual2d(1.5,1.1,16)
+		saveSimFig(fH,'rasters',rngSeed,newSim)
+		saveSimFig(fpH,'phasePosition',rngSeed,newSim)
+		saveSimFig(fsH,'spaceCompression',rngSeed,newSim)
+		
 	end
 
 	if(saveResults)	

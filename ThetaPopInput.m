@@ -1,7 +1,9 @@
 classdef ThetaPopInput < ExternallyControlledConductances
 	properties(Constant)
-		L2_MULT_FACTOR=1.25;
+		%L2_MULT_FACTOR=1.25;
 		%L2_MULT_FACTOR=0.5;
+		%L2_MULT_FACTOR=0.5;
+		L2_MULT_FACTOR=0.3;
 		%L2_THETA_PHASE_OFFSET=90;		%degrees
 		L2_THETA_PHASE_OFFSET=0;		%degrees
 

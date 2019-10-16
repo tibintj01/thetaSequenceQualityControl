@@ -21,10 +21,11 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 	end
 
 	methods
-		function thisConfig=SimConfiguration(settingsStr,rngSeed)
+		function thisObj=SimConfiguration(settingsStr,rngSeed)
 			%if(nargin==1 && strcmp(settingsStr,'default'))
-				%thisConfig.setSimProps();
-				thisConfig.setSimProps(rngSeed);
+				%thisObj.setSimProps();
+				thisObj.simsCategory=settingsStr;
+				thisObj.setSimProps(rngSeed);
 			%end
 			%thisConfig.rngSeed=rngSeed;
 		end
@@ -90,12 +91,16 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 			%numCellsPerPlace=30;
 			%numPlaces=4;
 			%numPlaces=1;
-			numPlaces=5;
+			%numPlaces=5;
+			numPlaces=7;
 			%numCellsPerPlace=3;
+			numCellsPerPlace=5;
 			%numCellsPerPlace=2;
 			%numCellsPerPlace=20;
 			%numCellsPerPlace=5;
-			numCellsPerPlace=8;
+			%numCellsPerPlace=6;
+			%numCellsPerPlace=3;
+			%numCellsPerPlace=3;
 			%numCellsPerPlace=1;
 			%numCellsPerPlace=100;
 

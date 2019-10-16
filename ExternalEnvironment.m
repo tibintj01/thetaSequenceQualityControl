@@ -1,7 +1,11 @@
 classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 	%
 	properties(Constant)
-		CONSTANT_RUN_SPEED=7.5
+		CONSTANT_RUN_SPEED=40
+		%CONSTANT_RUN_SPEED=40
+		USE_BOUNDARY_START=0;
+		END_BUFFER=500;
+		%END_BUFFER=240;
 	end
 	
 	properties
@@ -20,6 +24,7 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 		%placeInputWidth=30 %cm 
 		placeInputWidth=40 %cm 
 		%placeInputWidth=50 %cm 
+		%placeInputWidth=100 %cm 
 		%placeInputWidth=50 %cm 
 		%placeInputWidth=20 %cm 
 		%"Using a 1-Hz threshold as the minimum rate within a place field, field sizes in a cylinder of 76 cm radius ranged from a minimum of 4% of the surface area to a maxi- mum of 62%, with a median size of 18%"
@@ -45,7 +50,7 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 					thisObj.setPositionVsTime();
 					
 					[~,maxEndTime]=thisObj.getPlaceInputStartStopTimes(thisObj.numPlaces);
-					thisObj.maxPlaceEndTime=maxEndTime;
+					thisObj.maxPlaceEndTime=maxEndTime+ExternalEnvironment.END_BUFFER;
 				end
 			end
 		end
@@ -57,6 +62,9 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 			%placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/6)+thisObj.placeInputWidth/2;		
 			%placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/2)+thisObj.placeInputWidth/2;		
 			placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/8)+thisObj.placeInputWidth/2;		
+			%placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/12)+thisObj.placeInputWidth/2;		
+			%placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/20)+thisObj.placeInputWidth/2;		
+			%placeInputCenterPos=placeIdx*(thisObj.placeInputWidth/25)+thisObj.placeInputWidth/2;		
 
 			placeInputStartPos=placeInputCenterPos-thisObj.placeInputWidth/2;
 			placeInputEndPos=placeInputCenterPos+thisObj.placeInputWidth/2;
@@ -79,7 +87,12 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 			%if(placeInputEndIdx==length(thisObj.rodentPositionVsTime))
 			%	placeInputStartTime=0;
 			%	placeInputEndTime=0;
-			%end	
+			%end
+			if(ExternalEnvironment.USE_BOUNDARY_START)
+				placeInputStartTime=0;
+				evenlyDistributedEndTimes=linspace(1000,3000,7);
+				placeInputEndTime=evenlyDistributedEndTimes(placeIdx);
+			end	
 		end
 
 		function displayContent(thisObj)

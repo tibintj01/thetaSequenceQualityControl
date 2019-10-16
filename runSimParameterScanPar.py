@@ -22,8 +22,32 @@ import matlab.engine
 	
 #scanParam1Values=np.linspace(2.6,3.6,120)
 #scanParam1Values=np.linspace(2.6,3.6,500)
-scanParam1Values=np.linspace(3,7.5,30)
-scanParam2Values=np.linspace(1,31,30)
+#scanParam1Values=np.linspace(3,7.5,1)
+#scanParam2Values=np.linspace(1,31,1)
+#scanParam1Values=np.linspace(5,7.5,1)
+#scanParam1Values=np.linspace(3,5,1)
+#scanParam1Values=np.linspace(5,5,1)
+#scanParam1Values=np.linspace(7.5,7.5,1) #amp
+#scanParam2Values=np.linspace(10,31,1)
+#scanParam2Values=np.linspace(20,20,1)
+#scanParam2Values=np.linspace(30,30,1)
+
+#scanParam1Values=np.linspace(1,5040,10)
+scanParam1Values=np.linspace(1,1,1)
+#scanParam1Values=np.linspace(5040,5040,1)
+
+#scanParam1Values=list(range(5,40,5))
+#scanParam2Values=np.linspace(20,20,1)
+#scanParam2Values=np.linspace(20,40,2)
+#scanParam2Values=[10,20,40,60]
+scanParam2Values=[40]
+
+#scanParam3Values=[0,1]
+scanParam3Values=[0,1]
+
+#scanParam2Values=np.linspace(50,50,1)
+#scanParam2Values=np.linspace(10,10,1)
+#scanParam2Values=np.linspace(30,30,1)
 #scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),30)
 #scanParam1Values=np.linspace(15,25,1)
 #scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),3)
@@ -76,7 +100,10 @@ if REDEPLOY==1:
 		with open(fileName,'r+') as f:
 			fileStr=f.read();
 			originalFileStrings.append(fileStr)
-
+	
+	os.system('cp CellsTwoLayerProto.m Cells.m')
+	os.system('cp ExternalEnvironmentProto.m ExternalEnvironment.m')
+	os.system('cp FeedForwardConnectivityProto.m FeedForwardConnectivity.m')
 
 	#generate modifed files to loop through in parallel 
 	#with own subdirectories to maintain file naming
@@ -84,37 +111,43 @@ if REDEPLOY==1:
 
 	for i,scanParam1Value in enumerate(scanParam1Values): 
 		for j,scanParam2Value in enumerate(scanParam2Values): 
-			#make new running directory in no snap shot path
-			runDirPath='%s%s_%d_%d' % (BASE_RUN_DIR,scanDescr,i,j)
-			os.system('mkdir -p %s' % runDirPath)
-			#os.chdir(runDirPath)
-			rngSeed=(i+1)*(j+1)
-		
-			#replace files with current parameters filled in
-			for k,filePath in enumerate(filePaths):	
-				currFileStr=originalFileStrings[k]
-
-				placeHolderStr1='SCAN_PARAM1'
-				placeHolderStr2='SCAN_PARAM2'
-
-				newFileStr=currFileStr.replace(placeHolderStr1,str(scanParam1Value))
-				newFileStr=newFileStr.replace(placeHolderStr2,str(scanParam2Value))
+			for k,scanParam3Value in enumerate(scanParam3Values): 
+				#make new running directory in no snap shot path
+				runDirPath='%s%s_%d_%d_%d' % (BASE_RUN_DIR,scanDescr,i,j,k)
+				os.system('mkdir -p %s' % runDirPath)
+				#os.chdir(runDirPath)
+				#rngSeed=(i+1)*(j+1)*(k+1)
+				rngSeed=int(str(i+1)+str(j+1)+str(k+1))
 			
-				if(newFileStr == currFileStr):
-					raise ValueError('Scripts were not modified!')
+				#replace files with current parameters filled in
+				for l,filePath in enumerate(filePaths):	
+					currFileStr=originalFileStrings[l]
 
-				#clear old
-				with open(filePath,'r+') as f:
-					f.truncate(0)
-					f.write(newFileStr)
-			#copy to this parameter settings' run directory
-			os.system('cp *.m %s' % runDirPath)	
-			#pdb.set_trace()
+					placeHolderStr1='SCAN_PARAM1'
+					placeHolderStr2='SCAN_PARAM2'
+					placeHolderStr3='SCAN_PARAM3'
+
+					newFileStr=currFileStr.replace(placeHolderStr1,str(scanParam1Value))
+					newFileStr=newFileStr.replace(placeHolderStr2,str(scanParam2Value))
+					newFileStr=newFileStr.replace(placeHolderStr3,str(scanParam3Value))
+				
+					if(newFileStr == currFileStr):
+						raise ValueError('Scripts were not modified!')
+
+					#clear old
+					with open(filePath,'r+') as f:
+						f.truncate(0)
+						f.write(newFileStr)
+				#copy to this parameter settings' run directory
+				os.system('cp *.m %s' % runDirPath)	
+				os.system('cp *.mat %s' % runDirPath)	
+				#pdb.set_trace()
 
 			#scipy.io.savemat('./%s_%s_%.10f_%s_%.10f.mat' % (scanDescr, scanParamNames[0],float(scanParam1Value), scanParamNames[1],float(scanParam2Value)), mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })
 			#scipy.io.savemat('currSimParams.mat', mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })
 			#arglists.append([scanParam1Value,scanParam2Value,scanParamNames[0],scanParamNames[1], modifiedObjName1, modifiedObjName2, scanDescr])
-			arglists.append([float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr, runDirPath,CODE_BASE_DIR,int(rngSeed)])
+			#arglists.append([float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr, runDirPath,CODE_BASE_DIR,int(rngSeed)])
+				arglists.append([float(scanParam1Value),float(scanParam2Value),float(scanParam3Value),scanParamNames[0],scanParamNames[1],scanParamNames[2],modifiedObjName1,modifiedObjName2,modifiedObjName3,scanDescr, runDirPath,CODE_BASE_DIR,int(rngSeed),simName])
 
 			#run this version of simulation in matlab
 			#exitStatus=eng.runSingleSimulation(float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr)
@@ -147,9 +180,10 @@ if REDEPLOY==1:
 	print('removing run directory copies....')
 	for i,scanParam1Value in enumerate(scanParam1Values):
 		for j,scanParam2Value in enumerate(scanParam2Values):
-			#make new running directory in no snap shot path
-			runDirPath='%s%s_%d_%d' % (BASE_RUN_DIR,scanDescr,i,j)
-			os.system('rm -r %s' % runDirPath)
+			for k,scanParam3Value in enumerate(scanParam3Values):
+				#make new running directory in no snap shot path
+				runDirPath='%s%s_%d_%d_%d' % (BASE_RUN_DIR,scanDescr,i,j,k)
+				os.system('rm -r %s' % runDirPath)
 
 	os.chdir(basePath)
 
