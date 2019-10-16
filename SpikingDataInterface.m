@@ -3,10 +3,17 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 	%could be readout as polychronous group - readout neuron expects certain axonal delays that can be modified
 	%perhaps by myelination
 	%neuron in readout layer for each particular sequence? also across place assembly?
+	properties(Constant)
+		%MIN_FIRST_PHASE=120;	
+		%MIN_FIRST_PHASE=100;	
+		MIN_FIRST_PHASE=150;	
+	end
 
 	properties
 		spikeThresh=-30;
 		
+		delayStageNum
+
 		allSpikePhasesPerCell
 		firstSpikePhasesPerCell
 		firstSpikeTimesPerCell
@@ -28,7 +35,9 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 	end
 
 	methods
-		function thisObj=SpikingDataInterface(simObj)
+		function thisObj=SpikingDataInterface(simObj,delayStageNum)
+			thisObj.delayStageNum=delayStageNum;
+			
 			thisObj.populateCellInfoStructs(simObj);
 			thisObj.setFirstSpikePhasesPerCell(simObj);
 		end	
@@ -104,10 +113,16 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 					for cycleIdx=1:(thisObj.numCycles)
 						currCycleCellSpikePhases=thisObj.allSpikePhasesPerCellPerCycle.(sprintf('c%dp%dcy%d',cellIdx,placeIdx,cycleIdx));
 						currCycleCellSpikeTimes=thisObj.allSpikeTimesPerCellPerCycle.(sprintf('c%dp%dcy%d',cellIdx,placeIdx,cycleIdx));
-						
+						validFirstSpikePhaseIdxes=find(currCycleCellSpikePhases>SpikingDataInterface.MIN_FIRST_PHASE);
+
+						if(isempty(validFirstSpikePhaseIdxes))
+							continue
+						end	
 						if(length(currCycleCellSpikePhases)>0)
-							phaseCollector=[phaseCollector currCycleCellSpikePhases(1)];
-							timeCollector=[timeCollector currCycleCellSpikeTimes(1)];
+							%phaseCollector=[phaseCollector currCycleCellSpikePhases(1)];
+							%timeCollector=[timeCollector currCycleCellSpikeTimes(1)];
+							phaseCollector=[phaseCollector currCycleCellSpikePhases(validFirstSpikePhaseIdxes(1))];
+							timeCollector=[timeCollector currCycleCellSpikeTimes(validFirstSpikePhaseIdxes(1))];
 						end
 					end
 					firstSpikePhasesPerCell.(sprintf('c%dp%d',cellIdx,placeIdx))=phaseCollector;
@@ -159,8 +174,27 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 				subTpeakPhases=subTpeakPhases(subTpeakISI>thetaPeriod/2);
 			end
 
-			allSpikeTimes=subTpeakTimes(subTpeaks>spikeThresh);
-			allSpikePhases=subTpeakPhases(subTpeaks>spikeThresh);
+			delayStageNum=thisObj.delayStageNum;
+
+			currCellSpikeIDs=[];
+			for c=1:length(cellsObj.delayedSpikeTimes)
+				if(cellsObj.spikeCellCoords(c,1)==cellIdx && cellsObj.spikeCellCoords(c,2)==placeIdx)
+					currCellSpikeIDs=[currCellSpikeIDs;c];
+				end
+			end
+
+			if(delayStageNum==0)
+				allSpikeTimes=subTpeakTimes(subTpeaks>spikeThresh);
+				allSpikePhases=subTpeakPhases(subTpeaks>spikeThresh);
+			elseif(delayStageNum==1)
+				allSpikeTimes=cellsObj.delayedSpikeTimes(currCellSpikeIDs);
+				allSpikeIdxes=round(allSpikeTimes/cellsObj.dt);
+				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
+			elseif(delayStageNum==2)
+				allSpikeTimes=cellsObj.doubleDelayedSpikeTimes(currCellSpikeIDs);
+				allSpikeIdxes=round(allSpikeTimes/cellsObj.dt);
+				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
+			end
 
 			allSpikeCycles=NaN(size(allSpikeTimes));
 			if(length(troughTimes)>0)
@@ -217,6 +251,8 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 
 			cellInfo.placeFieldWidth=placeFieldWidth;
 			cellInfo.cellCoordStr=sprintf('c%dp%d',cellIdx,placeIdx)
+		
+			
 		end
 	end
 

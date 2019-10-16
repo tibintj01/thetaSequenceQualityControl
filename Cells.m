@@ -80,6 +80,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		
 		l2IsynRecord
 		l2EsynRecord
+		
+		intIsynRecord
+		intEsynRecord
 
 		esyn_I
 		esyn_E
@@ -377,6 +380,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 			l2IsynRecord=NaN(size(vL2));
 			l2EsynRecord=NaN(size(vL2));
+			
+			intIsynRecord=NaN(size(vL2));
+			intEsynRecord=NaN(size(vL2));
 		
 			normFactor=DelayObject.NORM_FACTOR;
 			convFactor=DelayObject.CONV_FACTOR;
@@ -386,6 +392,11 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 			numCellsInt=1;
 
+			if(FeedForwardConnectivity.USE_LINEAR_DELAYS)
+				maxPrecession=thisObj.feedforwardConnObj.maxDelay;	
+				minPrecession=thisObj.feedforwardConnObj.minDelay;
+				linearPrecessionSlope=(maxPrecession-minPrecession)/(imax-imin);
+			end
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%step through time
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -462,10 +473,18 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 								     defaultPhaseSlope=baselineDelay/(imax-imin);
                                                                      %phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic)))+(baselineDelay+(defaultPhaseSlope*(itonic-imin))); %see DelayObject for values
                                                                      %phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic)))+(baselineDelay+(defaultPhaseSlope*(itonic-imin))); %see DelayObject for values
-                                                                     phasePrecessionDelay=-(normFactor*log(convFactor*(itonic-imin)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
-							             %phasePrecessionDelay=normFactor*log(convFactor*(imax-itonic))+baselineDelay; %see DelayObject for values
+                                                                     %phasePrecessionDelay=-(normFactor*log(convFactor*(itonic-imin)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
+                                                                     %phasePrecessionDelay=-(normFactor*log(convFactor*(imax-itonic)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
+                                                                     phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
+							             if(FeedForwardConnectivity.USE_LINEAR_DELAYS)
+									%phasePrecessionDelay=-(linearPrecessionSlope*(itonic-imin)+minPrecession);	
+									%phasePrecessionDelay=-(linearPrecessionSlope*(itonic-imin)+minPrecession)+(defaultPhaseSlope*(itonic-imin));	
+									phasePrecessionDelay=(linearPrecessionSlope*(imax-itonic)+minPrecession)+(defaultPhaseSlope*(itonic-imin));	
+								     end
+									%phasePrecessionDelay=normFactor*log(convFactor*(imax-itonic))+baselineDelay; %see DelayObject for values
 									%edge cases
-                                                               		if(~isreal(phasePrecessionDelay) || phasePrecessionDelay<0)
+                                                               		%if(~isreal(phasePrecessionDelay) || phasePrecessionDelay<0)
+                                                               		if(~isreal(phasePrecessionDelay)) %often negative!!
 										phasePrecessionDelay=0;
 									end 
                                                         	    delayedSpikeTimes=[delayedSpikeTimes ;(step*dt + phasePrecessionDelay)];
@@ -473,16 +492,20 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                                                 %Integrator post-synaptic conductance changes (spikes without temporal template delays, just integrate over window)
 								%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 								weight=max(feedfwdGmatrix(placeIdx,:,1)); % uses synaptic weight from most prominent L2 dendritic compartment
-									
 								
-								synEndStep=step+1+round((phasePrecessionDelay)/dt)+round(4000/dt);
+								phasePrecessionDelayIntegrator=phasePrecessionDelay;
+
+								if(ExternalEnvironment.USE_BOUNDARY_START==1)
+									phasePrecessionDelayIntegrator=0;
+								end	
+								synEndStep=step+1+round((phasePrecessionDelayIntegrator)/dt)+round(4000/dt);
                                                                          %synEndStep=step+1+round(delay/dt)+round(4000/dt);
                                                                          if(synEndStep>numSteps)
                                                                              synEndStep=numSteps;
                                                                          end	
-								synCurrentIdxes=(step+1+round(phasePrecessionDelay/dt)):synEndStep;
+								synCurrentIdxes=(step+1+round(phasePrecessionDelayIntegrator/dt)):synEndStep;
 
-								synTimeAxis=dt*(synCurrentIdxes-(step+1+round(phasePrecessionDelay/dt)));
+								synTimeAxis=dt*(synCurrentIdxes-(step+1+round(phasePrecessionDelayIntegrator/dt)));
 							    	%not depressing (integrative neuron) 
 								if(step*dt>=startCouplingTime)
 									gsynInt(1,synCurrentIdxes)=squeeze(gsynInt(1,synCurrentIdxes))...
@@ -493,7 +516,12 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 									    +depConstant*weight*FeedForwardConnectivity.E_TO_I_NORM*(synTimeAxis/FeedForwardConnectivity.tausyn_I).*exp(1-(synTimeAxis/FeedForwardConnectivity.tausyn_I));
 
 							     	end
-
+								%if(gsynInt(1,step) > 0.01 && FeedForwardConnectivity.USE_LINEAR_DELAYS)
+								%	STOP
+								%end
+								%if(FeedForwardConnectivity.USE_LINEAR_DELAYS)
+								%	STOP	
+								%end
                                                                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                                 %L2 post-synaptic conductance changes
                                                                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -944,12 +972,19 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 					%l2IsynRecord(cellNumL2,step)=isynL2I_L2;
 					%l2EsynRecord(cellNumL2,step)=isynL2E_L2;	
+					intIsynRecord(cellNumInt,step)=isynIntI_Int;
+					intEsynRecord(cellNumInt,step)=isynIntE_Int;	
                                         
                                         if(~Cells.BLOCK_OUTPUT_SPIKING)
 						vInc=double(dt*(-il-ina-ik-isynExt_L2-isynIntE_Int-isynIntI_Int+itonic_L2)/cm);
 					else
 						vInc=double(dt*(-il-isynExt_L2-isynIntE_Int-isynIntI_Int+itonic_L2)/cm);
 					end
+						
+					%if(abs(isynIntE_Int) > 0 && FeedForwardConnectivity.USE_LINEAR_DELAYS)
+						%STOP	
+					%end
+					
 					%vInc=double(dt*(-il-ina-ik-isynL2E_L2-isynExt_L2-isynL2I_L2+itonic_L2)/cm);
                                         %vInc=double(dt*(-il-ina-ik+itonic_Int)/cm);
                                        
@@ -988,6 +1023,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		 	
 			thisObj.l2EsynRecord=l2EsynRecord;
 		 	thisObj.l2IsynRecord=l2IsynRecord;
+			
+			thisObj.intEsynRecord=intEsynRecord;
+		 	thisObj.intIsynRecord=intIsynRecord;
 
 			thisObj.nks=nks;
 			%thisObj.inaRecord=inaRecord;
@@ -1073,13 +1111,13 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			%gksMatrix=normrnd(gksBar,gksSigma,numCellsPerPlace,numPlaces);
 
 			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
-			currInjectorArray.displayContent();
+			%currInjectorArray.displayContent();
 			%drawnow
 			%injCurrMatrix=currInjectorArray.getFloatMatrix();
 
 
 			inhThetaInputArray=ThetaPopInput(simSpecificInfo);
-			inhThetaInputArray.displayContent();
+			%inhThetaInputArray.displayContent();
 
 
 			internalConnObj=InternalConnectivity(simSpecificInfo);

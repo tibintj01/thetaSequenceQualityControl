@@ -2,7 +2,9 @@
 %DATA_DIR='../results/timeConstantAndPhaseCoding/raw_data';
 %simName='timeConstantAndPhaseCodingWithNoise'
 %simName='testLayer2TimingDecoder'
-simName='testControlledFlexibility'
+%simName='testControlledFlexibility'
+
+simName='stabilityVsFlexibilityHeatMap'
 
 if(onLocalComputer())
 	DATA_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/raw_data/',simName);

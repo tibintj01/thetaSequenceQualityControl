@@ -6,8 +6,14 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 		%NOISE_SIGMA=3.5/5; %nA
 		%NOISE_SIGMA=3.5/4; %nA
 		%NOISE_SIGMA=3.5/10; %nA
-		NOISE_SIGMA=3.5/10/10; %nA
+		%NOISE_SIGMA=3.5/10/10; %nA
+		%NOISE_SIGMA=3.5/10/3; %nA
+		%NOISE_SIGMA=3.5/10/2; %nA
+		NOISE_SIGMA=3.5/10/1.5; %nA
                 NOISE_SAMPLING_DT=0.5; %msec
+		
+		USE_EXP_RAMP=1;
+		startExpX=-2.7
 	end
 	
 	properties
@@ -30,6 +36,8 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 		rngSeed=1
 
 		pulseShapeStr
+		
+		sensoryChannelNum
 
 		%asymPeakTimeFrac=0.75
 		asymPeakTimeFrac=0.95
@@ -50,6 +58,7 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 				
 				thisInjector.amplitude=injParams.amplitude;
 				thisInjector.baseline=injParams.baseline;
+				thisInjector.sensoryChannelNum=injParams.sensoryChannelNum;
 				%thisInjector.setNoiseTrace();
 				thisInjector.setGaussianNoiseTrace();
 				
@@ -81,11 +90,11 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 			%	thisObj.rngSeed=1;
 			%end
 
-			rng(thisObj.rngSeed)
+			rng(thisObj.rngSeed*thisObj.sensoryChannelNum)
 
                         noiseTrace = CurrentInjector.NOISE_SIGMA*randn(size(noiseTimeAxis));
 			interpNoiseTrace= interp1(noiseTimeAxis,noiseTrace,thisObj.timeAxis);
-
+			%unique noise profile per sensory channel (cell in each place assembly)
                         thisObj.noiseTrace=interpNoiseTrace(:)
                 end
 
@@ -122,18 +131,30 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 			[~,endIdx]=min(abs(timeAxis-pulseEndTime));     
 
 			pulse=zeros(size(timeAxis));
-			pulse(startIdx:peakIdx)=linspace(0,thisInjector.amplitude,(peakIdx-startIdx+1))';
+			if(CurrentInjector.USE_EXP_RAMP)
+				%startExpX=-2.5;
+				%startExpX=-3;
+				%startExpX=-5;
+				pulse(startIdx:peakIdx)=thisInjector.amplitude*exp((linspace(0,peakIdx,(peakIdx-startIdx+1))-peakIdx)*(-CurrentInjector.startExpX/peakIdx))';
+			else
+				pulse(startIdx:peakIdx)=linspace(0,thisInjector.amplitude,(peakIdx-startIdx+1))';
+			end
 			if(endIdx==length(timeAxis))
 				slope=(thisInjector.amplitude)/(peakTime-pulseEndTime);
 				if(abs(peakTime-pulseEndTime)<0.01) %case when ends on peak... slope hard to get
 					slope=0;
 				end
 				endVal=thisInjector.amplitude+slope*(timeAxis(end)-peakTime);
-				pulse(peakIdx:endIdx)=linspace(thisInjector.amplitude,endVal,(endIdx-peakIdx+1))';
+				%pulse(peakIdx:endIdx)=linspace(thisInjector.amplitude,endVal,(endIdx-peakIdx+1))';
 			else
-				pulse(peakIdx:endIdx)=linspace(thisInjector.amplitude,0,(endIdx-peakIdx+1))';
+				endVal=0;
+				%pulse(peakIdx:endIdx)=linspace(thisInjector.amplitude,0,(endIdx-peakIdx+1))';
 			end
-
+			if(CurrentInjector.USE_EXP_RAMP)
+				pulse(peakIdx:endIdx)=thisInjector.amplitude*(1-exp((linspace(0,endIdx,(endIdx-peakIdx+1))-endIdx)*(-CurrentInjector.startExpX/endIdx)));
+			else
+				pulse(peakIdx:endIdx)=linspace(thisInjector.amplitude,endVal,(endIdx-peakIdx+1))';
+			end
 			injCurrentTrace=injCurrentTrace+pulse;
 
 			injCurrentTrace=injCurrentTrace+thisInjector.noiseTrace;

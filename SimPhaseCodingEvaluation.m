@@ -23,16 +23,16 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 	end
 
 	methods
-		function thisObj=SimPhaseCodingEvaluation(simObj)
+		function thisObj=SimPhaseCodingEvaluation(simObj,delayStageNum)
 			%thisObj.figureNum=codingEvalParams.figureNum;
-		       	if(nargin==1)	
+		       	if(nargin==1 || nargin==2)	
 				thisObj.simObj=simObj;
 			
 				cmap=copper(simObj.configuration.simParams.numPlaces);
 				thisObj.placeColors=cmap;
 		
 				if(ThetaPopInput.amplitudeDefault>0)	
-					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj));					
+					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj,delayStageNum));					
 				end
 			end
 		end
@@ -154,7 +154,6 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
                         end
                         %}
                         %title(removeUnderscores(thisObj.simObj.simParamsIDStr))
-                       title('Spikes times seen by CA1 soma')
 			 %maxFigManual2d(3,1,14)
                         xlabel('Time (msec)')
                         ylabel('Cell No.')
@@ -195,7 +194,8 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 		end
 	
 		function plotPhaseVsPositionInField(thisObj,figPrecess,figCompress)
-			useAllSpikes=1;
+			%useAllSpikes=1;
+			useAllSpikes=0;
 
 			cellsObj=thisObj.simObj.cellsObj;
 			%loop across cells
@@ -227,10 +227,20 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 
 					currCellSpikeInputRelativePositions=currCellSpikePositions-thisCellInputCenterPos;
 					%plot(currCellSpikeInputRelativePositions,currCellSpikePhases,'o','MarkerSize',5,'Color',placeCmap(j,:),'MarkerFaceColor',placeCmap(j,:));
-					for s=1:length(currCellSpikePhases)
-						currSpeed=round(thisObj.simObj.externalEnvObj.rodentRunningSpeed(currCellSpikeTimeIdxes(s)));
-						plot(currCellSpikeInputRelativePositions,currCellSpikePhases,'o','MarkerSize',5,'Color',speedCmap(currSpeed,:),'MarkerFaceColor',speedCmap(currSpeed,:));
-					end
+					%linearEstPt=13;
+					[~,linearEstPt]=min(currCellSpikePhases);
+					%for s=1:length(currCellSpikePhases)
+					%for s=1:linearEstPt
+						%currSpeed=round(thisObj.simObj.externalEnvObj.rodentRunningSpeed(currCellSpikeTimeIdxes(s)));
+						%plot(currCellSpikeInputRelativePositions,currCellSpikePhases,'o','MarkerSize',5,'Color',speedCmap(currSpeed,:),'MarkerFaceColor',speedCmap(currSpeed,:));
+						plot(currCellSpikeInputRelativePositions(1:linearEstPt),currCellSpikePhases(1:linearEstPt),'o','MarkerSize',7,'Color',placeCmap(j,:),'MarkerFaceColor',placeCmap(j,:));
+						hold on
+						plot(currCellSpikeInputRelativePositions(1:linearEstPt),currCellSpikePhases(1:linearEstPt),'-','LineWidth',2,'Color',placeCmap(j,:))
+						%psH(s).Color(4)=(1-s/length(currCellSpikePhases));
+					%end
+					%plot(xlim,[currCellSpikePhases(1) currCellSpikePhases(end-5)],'r--') 
+					plot([currCellSpikeInputRelativePositions(1) currCellSpikeInputRelativePositions(linearEstPt)],[currCellSpikePhases(1) currCellSpikePhases(linearEstPt)],'r--') 
+				
 					xlabel('Distance from place input center (cm)')
 					if(useAllSpikes)
 						ylabel('spike theta phase')
@@ -243,7 +253,8 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					currCellPlaceInputStartPosition=thisObj.simObj.externalEnvObj.placeInputStartPositions(j);
 					currCellPlaceInputWidth=thisObj.simObj.externalEnvObj.placeInputWidths(j)
 					percPlaceInputTraveled=100*(currCellSpikePositions-currCellPlaceInputStartPosition)/currCellPlaceInputWidth;
-					plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:),'MarkerFaceColor',cellCmap(count,:))
+					%plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:),'MarkerFaceColor',cellCmap(count,:))
+					plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',placeCmap(count,:),'MarkerFaceColor',placeCmap(count,:))
 					%}
 					figure(figPrecess)
 
@@ -251,7 +262,8 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					if(~isempty(currCellSpikePositions))
 						currCellPlaceSpikeFieldWidth=currCellSpikePositions(end)-currCellSpikePositions(1);
 						percPlaceFieldTraveled=100*(currCellSpikePositions-currCellSpikePositions(1))/currCellPlaceSpikeFieldWidth;
-						plot(percPlaceFieldTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(i,:),'MarkerFaceColor',cellCmap(i,:))
+						%plot(percPlaceFieldTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(i,:),'MarkerFaceColor',cellCmap(i,:))
+						plot(percPlaceFieldTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',placeCmap(j,:),'MarkerFaceColor',placeCmap(j,:))
 						hold on			
 					else
 						currCellPlaceSpikeFieldWidth=NaN;
@@ -265,27 +277,28 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 	
 			%maxFigManual2d(3,1,18)
 			%linkaxes(axHs,'xy')
-			xlim([0 100])
+			figure(figCompress)
+			%xlim([0 100])
 			%ylim([0 360])
-			ylim([0 260])
+			%ylim([0 260])
 			cb=colorbar()
 			%set(cb,'Ylim',[1 count])
-			cmap =cellCmap; %get current colormap
+			%cmap =cellCmap; %get current colormap
+			cmap =placeCmap; %get current colormap
 			%cmap=cmap([1 count],:); % set your range here
 			colormap(gca,cmap); % apply new colormap
 			cb=colorbar();
-			ylabel(cb,'Cell excitability rank')
-			xlabel('Percent of field traversed')	
-			ylabel('Spike theta phase')
+			ylabel(cb,'Cell input place rank')
+			%xlabel('Percent of field traversed')	
+			%ylabel('Spike theta phase')
 			title(removeUnderscores(thisObj.simObj.simParamsIDStr))	
 
 			figure(figCompress)
-			cmap=speedCmap;
-			colormap(gca,cmap)
-
-			cbDist=colorbar('Ticks',[0 0.25 0.5 0.75 1],'TickLabels',{'0',sprintf('%d',(size(speedCmap,1)-1)/4),sprintf('%d',(size(speedCmap,1)-1)/2),sprintf('%d',3*(size(speedCmap,1)-1)/4),sprintf('%d',(size(speedCmap,1)-1))});
+			%cmap=speedCmap;
+			%colormap(gca,cmap)
+			%cbDist=colorbar('Ticks',[0 0.25 0.5 0.75 1],'TickLabels',{'0',sprintf('%d',(size(speedCmap,1)-1)/4),sprintf('%d',(size(speedCmap,1)-1)/2),sprintf('%d',3*(size(speedCmap,1)-1)/4),sprintf('%d',(size(speedCmap,1)-1))});
 			
-			ylabel(cbDist,'Speed (cm/s)')
+			%ylabel(cbDist,'Speed (cm/s)')
 				
 			%yticks(cbDist,[0 0.5 1])
 			%yticklabels(cbDist,{'0',sprintf('%d',(size(speedCmap,1)-1)/2),sprintf('%d',(size(speedCmap,1)-1))})

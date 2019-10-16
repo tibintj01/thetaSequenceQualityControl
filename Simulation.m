@@ -2,8 +2,10 @@ classdef Simulation < handle & matlab.mixin.Copyable
 	%encapsulate data and actions of simulation to keep my interface and implementation details separate
 	properties(Constant)
 		%SIM_NAME='just spiking conductances, no theta, large time constant output unit';
-		SIM_NAME='timeConstantPhaseCoding';
-		CONSTANT_TIME_MAX=3200
+		%SIM_NAME='timeConstantPhaseCoding';
+		%CONSTANT_TIME_MAX=3200
+		CONSTANT_TIME_MAX=3600
+		%CONSTANT_TIME_MAX=7000
 		%OVERWRITE=1;
 		%'just spiking conductances, theta, time constant vs phase locking';
 	end
@@ -84,7 +86,8 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%thisObj.simParamsIDStr=sprintf('%s_%.5f_%s_%.5f_Connectivity_%s',thisObj.currentModifyInfo.overrideParamNames{1},thisObj.currentModifyInfo.overrideParamValues(1),thisObj.currentModifyInfo.overrideParamNames{2},thisObj.currentModifyInfo.overrideParamValues(2), thisObj.internalConnectivityObj.connectivityTypeStr)
 			
 			%thisObj.simParamsIDStr=Simulation.SIM_NAME;
-			thisObj.simParamsIDStr=sprintf('%s_%.5f_%s_%.5f_Connectivity_%s',thisObj.currentModifyInfo.overrideParamNames{1},thisObj.currentModifyInfo.overrideParamValues(1),thisObj.currentModifyInfo.overrideParamNames{2},thisObj.currentModifyInfo.overrideParamValues(2), thisObj.internalConnectivityObj.connectivityTypeStr)
+			%thisObj.simParamsIDStr=sprintf('%s_%.5f_%s_%.5f_Connectivity_%s',thisObj.currentModifyInfo.overrideParamNames{1},thisObj.currentModifyInfo.overrideParamValues(1),thisObj.currentModifyInfo.overrideParamNames{2},thisObj.currentModifyInfo.overrideParamValues(2), thisObj.internalConnectivityObj.connectivityTypeStr)
+			thisObj.simParamsIDStr=sprintf('%s_%.5f_%s_%.5f_%s_%.5f',thisObj.currentModifyInfo.overrideParamNames{1},thisObj.currentModifyInfo.overrideParamValues(1),thisObj.currentModifyInfo.overrideParamNames{2},thisObj.currentModifyInfo.overrideParamValues(2),thisObj.currentModifyInfo.overrideParamNames{3},thisObj.currentModifyInfo.overrideParamValues(3));
 			
 			saveDir=thisObj.saveDir;
 
@@ -145,13 +148,17 @@ classdef Simulation < handle & matlab.mixin.Copyable
                 end
 
 
-		function [figRaster]=visualizeSpikeTimings(thisObj)
+		function [figRaster,figPhasePosCoding,figSpaceCompress]=visualizeSpikeTimings(thisObj)
 
 			%figRankTransform=figure(1112);
                         %figPhasePosCoding=figure(1113);
                         %figSpaceCompress=figure(1114);
+                        figPhasePosCoding=figure;
+                        figSpaceCompress=figure;
 
-			phaseCodingEvaluationObj=SimPhaseCodingEvaluation(thisObj);
+			%phaseCodingEvaluationObj=SimPhaseCodingEvaluation(thisObj);
+			phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
+			%phaseCodingEvaluationObjStage2=SimPhaseCodingEvaluation(thisObj,2);
 
 			figRaster=figure;
 			%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
@@ -159,29 +166,39 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%axRaster1=subplot(10,10,[1 30]);
 			axRaster1=subplot(10,10,[1 20]);
 			%phaseCodingEvaluationObj.runPlotRaster(figRaster);
-			phaseCodingEvaluationObj.runPlotRasterSingleDelayed(figRaster);
+			phaseCodingEvaluationObjStage1.runPlotRasterSingleDelayed(figRaster);
+			%phaseCodingEvaluationObj.runPlotRasterSingleDelayed(figRaster);
 			xticklabels({})
 			xlabel('')
 			%title(removeUnderscores(thisObj.simParamsIDStr))
-			title('Logarithmically precessing CA3 place cells')
+			if(FeedForwardConnectivity.USE_LINEAR_DELAYS)
+				title('Linearly precessing CA3 spike times')
+			else
+				title('Logarithmically precessing CA3 spike times')
+			end
 			%axRaster2=subplot(10,10,[31 60]);
 			axRaster2=subplot(10,10,[21 40]);
-			phaseCodingEvaluationObj.runPlotRasterDoubleDelayed(figRaster);
+			%phaseCodingEvaluationObj.runPlotRasterDoubleDelayed(figRaster);
+			phaseCodingEvaluationObjStage1.runPlotRasterDoubleDelayed(figRaster);
+			%phaseCodingEvaluationObjStage2.runPlotRasterDoubleDelayed(figRaster);
+			%title('Logarithmically precessed and delayed spikes times seen by CA1 soma')
+			title('Precessed and delayed spikes times seen by CA1 soma')
 			xticklabels({})
 			xlabel('')
 
 			%maxFigManual2d(10,3,18)
 
-			analyzePhasePrecession=0;
+			%analyzePhasePrecession=0;
+			analyzePhasePrecession=1;
 
 			if(analyzePhasePrecession && ThetaPopInput.amplitudeDefault>0)
-				figure(figRankTransform)
+				%figure(figRankTransform)
 				%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
-				phaseCodingEvaluationObj.runRankTransformAnalysis(figRankTransform);
+				%phaseCodingEvaluationObj.runRankTransformAnalysis(figRankTransform);
 
 				figure(figPhasePosCoding)
 				%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
-				phaseCodingEvaluationObj.runPhaseCodeAnalysis(figPhasePosCoding,figSpaceCompress);
+				phaseCodingEvaluationObjStage1.runPhaseCodeAnalysis(figPhasePosCoding,figSpaceCompress);
 			end
 
 			%figPhaseDistr=figure;
@@ -219,7 +236,8 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			xlabel('')
 
 			%axRaster5=subplot(10,10,[81 90]);
-			axRaster5=subplot(10,10,[61 80]);
+			%axRaster5=subplot(10,10,[81 100]);
+			axRaster5=subplot(10,10,[81 100]);
 			outputVmTrace=squeeze(thisObj.cellsObj.vL2);
 			
 			%feedfwdGsyn=squeeze(thisObj.cellsObj.gsynL2-thisObj.cellsObj.gsynL2_I);
@@ -231,7 +249,9 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			ylabel('Seq. decoder (mV)')
 			xlabel('Time (msec)')
 			%ylim([-Inf Inf])
-			ylim([-60 10])
+			%ylim([-60 10])
+			%ylim([-60 -40])
+			ylim([-60 -35])
 
 			yyaxis right
 			pH=plot(simTimeAxis,feedfwdGsyn_I,'-','Color','b','LineWidth',2)
@@ -242,15 +262,15 @@ classdef Simulation < handle & matlab.mixin.Copyable
                         ylabel('g_{syn} (mS/cm^2)')
                         %ylabel('g_{syn}')
 			ylim([-0.1 0.2])	
+			%ylim([-0.1 0.1])	
 			%ylabel('Feedforward synaptic current (pA)')
 			
 			pH.Color(4)=0.2; %make transparent
 			pH2.Color(4)=0.2; %make transparent
-			xticklabels({})
-			xlabel('')
 			
 			%axRaster6=subplot(10,10,[91 100]);
-			axRaster6=subplot(10,10,[81 100]);
+			%axRaster6=subplot(10,10,[81 100]);
+			axRaster6=subplot(10,10,[61 80]);
 			outputVmTrace=squeeze(thisObj.cellsObj.vInt);
 
 			feedfwdGsyn_I=squeeze(-thisObj.cellsObj.gsynInt_I);
@@ -263,7 +283,9 @@ classdef Simulation < handle & matlab.mixin.Copyable
                         ylabel('Control (mV)')
                         xlabel('Time (msec)')
                         %ylim([-Inf Inf])
-			ylim([-60 10])
+			%ylim([-60 10])
+			%ylim([-60 -40])
+			ylim([-60 -35])
 
 			yyaxis right
                         pH=plot(simTimeAxis,feedfwdGsyn_I,'-','Color','b','LineWidth',2)
@@ -272,7 +294,10 @@ classdef Simulation < handle & matlab.mixin.Copyable
                         %pH2=plot(simTimeAxis,feedfwdGsyn_E,'-','Color',getGrayRGB(),'LineWidth',2)
                         ylabel('g_{syn} (mS/cm^2)')
 			ylim([-0.1 0.2])	
+			%ylim([-0.1 0.1])	
                         %ylabel('g_{syn}')
+			xticklabels({})
+			xlabel('')
 			
 			pH.Color(4)=0.2; %make transparent
 			pH2.Color(4)=0.2; %make transparent
@@ -286,7 +311,11 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			
 			%linkaxes([axRaster1 axRaster2 axRaster3 axRaster4],'x')
 			%setFigFontTo(24)
-			
+			figure(figSpaceCompress)
+			%xlim([-Inf Inf])	
+			%xlim([-50 50])	
+			%xlim([-50 50])	
+			xlim([-10 20])	
 		end	
 	
 		function dispV_traces(thisObj,figH)
@@ -355,21 +384,27 @@ classdef Simulation < handle & matlab.mixin.Copyable
 
 			paramName1=currentModifyInfo.overrideParamNames{1};
 			paramName2=currentModifyInfo.overrideParamNames{2};
+			paramName3=currentModifyInfo.overrideParamNames{3};
 			
 			paramValue1=currentModifyInfo.overrideParamValues(1);
 			paramValue2=currentModifyInfo.overrideParamValues(2);
+			paramValue3=currentModifyInfo.overrideParamValues(3);
 			
 			if(contains(currentModifyInfo.modifiedObjName1,'.'))
 				parseIdx=strfind(currentModifyInfo.modifiedObjName1,'.');
 				preObjName=currentModifyInfo.modifiedObjName1(1:(parseIdx-1));
 				postObjName=currentModifyInfo.modifiedObjName1((parseIdx+1):end);
 				thisObj.(preObjName).(postObjName).(paramName1)=paramValue1;	
-				
 			else
 				thisObj.(currentModifyInfo.modifiedObjName1).(paramName1)=paramValue1;	
 			end
 				
 			thisObj.(currentModifyInfo.modifiedObjName2).(paramName2)=paramValue2;
+			try
+				thisObj.(currentModifyInfo.modifiedObjName3).(paramName3)=paramValue3;
+			catch ME
+				disp('Note: 3rd parameter not encapsulated in object!')
+			end
 		end
 	end
 

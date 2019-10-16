@@ -2,6 +2,8 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 	properties(Constant)
 		%BASELINE=4;
 		BASELINE=18;
+		%EXTRA_BASELINE=1.5
+		EXTRA_BASELINE=2
 		%BASELINE=20;
 		%SIG_FRAC=0.05;
 		SIG_FRAC=0;
@@ -51,7 +53,9 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 					count=count+1;
 				
 					xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
-					ylim([0 thisObj.currAmp]+CurrentInjectors.BASELINE)
+					%ylim([0 thisObj.currAmp]+CurrentInjectors.BASELINE)
+					apparentBaseline=CurrentInjectors.BASELINE+ CurrentInjectors.EXTRA_BASELINE;
+					ylim([0 thisObj.currAmp]+apparentBaseline)
 					xlabel('Time (sec)')
 					ylabel('I_s (pA)')
 				end
@@ -69,7 +73,9 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 				end
 			end
 					xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
-					ylim([0 thisObj.currAmp] + CurrentInjectors.BASELINE)
+					%ylim([0 thisObj.currAmp] + CurrentInjectors.BASELINE)
+					apparentBaseline=CurrentInjectors.BASELINE+ CurrentInjectors.EXTRA_BASELINE;
+					ylim([0 thisObj.currAmp]+apparentBaseline)
 					xlabel('Time (sec)')
 					ylabel('I_s (pA)')
 		end
@@ -90,12 +96,15 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 			nr=thisObj.nr;
 			nc=thisObj.nc;
 			timeAxis=thisObj.timeAxis;
+			
+			thisObj.currAmp=thisObj.currAmp-CurrentInjectors.EXTRA_BASELINE;
+
 			currAmp=thisObj.currAmp;;
 			pulseShapeStr=thisObj.pulseShapeStr;
 			
 			currInjectorMatrix(nr,nc)=CurrentInjector();
 			
-			data=load('DI_SORTED_5_PERMUTATIONS.mat');
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
 			sortedPerms=data.sortedPerms;
 			currentPlaceSequence=sortedPerms(CurrentInjectors.DI_SORTED_PERM_RANK,:);
 			currentPlaceSequenceDI=data.DIs(CurrentInjectors.DI_SORTED_PERM_RANK);
@@ -118,10 +127,11 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 						injParams.pulseStartTime=placeInputStartTime;
 						injParams.pulseEndTime=placeInputEndTime;
 						
-			
+						injParams.sensoryChannelNum=cellNum;
+	
 						injParams.amplitude=currAmp;
 						%injParams.baseline=0;
-						injParams.baseline=normrnd(CurrentInjectors.BASELINE,cellBaselineSig);
+						injParams.baseline=normrnd(CurrentInjectors.BASELINE,cellBaselineSig)+CurrentInjectors.EXTRA_BASELINE;
 						%CurrentInjectors.BASELINE;
 						injParams.rngSeed=extEnvObj.rngSeed;					
 						%currInjectorMatrix(cellNum,place)=CurrentInjector(injParams);
