@@ -20,7 +20,7 @@ else:
 	FIGURE_DIR='/scratch/ojahmed_fluxm/tibintj/results/%s/figures/' % simName
 	BASE_RUN_DIR='/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
 	#NUM_CORES=1
-	NUM_CORES=18
+	NUM_CORES=19
 
 if OVERWRITE==1:
 	os.system('rm %s*mat' % DATA_DIR)
