@@ -16,7 +16,6 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		%currAmp=7;
 		%currAmp=10;
 		%currAmp=8;
-		%currAmp=5040;
 		%%%%%%%%%%%%%%%%%%%%%%%
 		%current span (18-25.5)
 		%%%%%%%%%%%%%%%%%%%%%%%

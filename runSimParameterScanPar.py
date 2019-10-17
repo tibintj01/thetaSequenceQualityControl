@@ -53,7 +53,8 @@ scanParam3Values=[0,1]
 #scanParam2Values=np.logspace(np.log10(0.005),np.log10(0.03),3)
 #scanParam2Values=np.logspace(np.log10(0.01),np.log10(0.2),1)
 
-REDEPLOY=1;
+#REDEPLOY=1;
+#REDEPLOY=0;
 #import scanParamNameScript
 exec(open("scanParamNameScript.py").read());
 exec(open("directory_names_Python.py").read());
