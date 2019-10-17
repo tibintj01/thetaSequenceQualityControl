@@ -14,7 +14,7 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
                 %SYN_DEP_FACT=0 %%%%%%%only first spike in 30 msec window???
 		tausyn_I=6;
 		
-		USE_LINEAR_DELAYS=0
+		USE_LINEAR_DELAYS=1
 	end
 
 	properties

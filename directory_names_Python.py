@@ -1,6 +1,8 @@
 import os
 
-OVERWRITE=1
+REDEPLOY=1
+#REDEPLOY=1
+OVERWRITE=0
 
 #simName='timeConstantAndPhaseCodingWithNoise'
 
@@ -22,5 +24,5 @@ else:
 	#NUM_CORES=1
 	NUM_CORES=18
 
-if OVERWRITE==1:
+if REDEPLOY==1 and OVERWRITE==1:
 	os.system('rm %s*mat' % DATA_DIR)
