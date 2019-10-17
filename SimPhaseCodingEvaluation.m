@@ -6,7 +6,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 	end
 
 	properties
-		simObj
+		%simObj
 		spikingDataInterface
 
 		%multiple data points per cell objects 
@@ -15,64 +15,183 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 		%single data point per cell objects
 		%entryPhaseDataHolder
 		%placeFieldWidthDataHolder
+
+		cycleSeqTimeSlopes
+		cycleSeqTimeOffsets
+		cycleRunningSpeeds
+		cycleDIs
+		cycleCodingStrategy
+
+		cycleL2PeakResponses
+		cycleL2UndelayedPeakResponses
+		cyclePositions
+		
+		cyclePeakResponsePhases
+
+		%l2MaxResponseObj		
         
         	tempEncodingDistr
 
 		placeColors
 		axisPosition
+
+		cycleStartTimes
 	end
 
 	methods
 		function thisObj=SimPhaseCodingEvaluation(simObj,delayStageNum)
 			%thisObj.figureNum=codingEvalParams.figureNum;
 		       	if(nargin==1 || nargin==2)	
-				thisObj.simObj=simObj;
+				%simObj=simObj;
 			
 				cmap=copper(simObj.configuration.simParams.numPlaces);
 				thisObj.placeColors=cmap;
 		
 				if(ThetaPopInput.amplitudeDefault>0)	
-					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj,delayStageNum));					
+					thisObj.spikingDataInterface=copy(SpikingDataInterface(simObj,delayStageNum));					
+					thisObj.cycleStartTimes=simObj.thetaPopInputObj.getTroughTimes(1,1);
 				end
+
+				thisObj.setThetaSeqTimeSlopes(simObj);
+				thisObj.setL2responseAnalysis(simObj);
 			end
 		end
+
+		function setL2responseAnalysis(thisObj,simObj)
+			%store association between speed/DI/encoding style and L2 cell response properties
+			numCycles=length(thisObj.cycleStartTimes);
+
+			l2Delayed_V=simObj.cellsObj.vL2(1,:);
+			l2Undelayed_V=simObj.cellsObj.vInt(1,:);
+			
+			dt=simObj.configuration.simParams.dt;
+			
+			cycleL2PeakResponses=NaN(numCycles,1);
+			cycleL2UndelayedPeakResponses=NaN(numCycles,1);
+			cyclePositions=NaN(numCycles,1);
+			cycleL2PeakResponsePhases=NaN(numCycles,1);
+			cycleL2UndelayedPeakResponsePhases=NaN(numCycles,1);
 		
+			for c=1:(numCycles-1)
+				currCycleStartTime=thisObj.cycleStartTimes(c);
+				currCycleEndTime=thisObj.cycleStartTimes(c+1);
+				
+				currCycleStartIdx=round(currCycleStartTime/dt);
+				currCycleEndIdx=round(currCycleEndTime/dt);
+
+				currL2Delayed_Snippet=l2Delayed_V(currCycleStartIdx:currCycleEndIdx);	
+				currL2Undelayed_Snippet=l2Undelayed_V(currCycleStartIdx:currCycleEndIdx);	
+			
+				%[snippetPeaks,locs]=findpeaks(currL2Delayed_Snippet);
+				%[maxL2,delayIdx]=max(snippetPeaks);
+				[maxL2,delayIdx]=max(currL2Delayed_Snippet);
+				cycleL2PeakResponses(c)=maxL2;
+
+				%cycleL2PeakResponsePhases(c)=(locs(delayIdx)/length(snippetPeaks))*360;
+				cycleL2PeakResponsePhases(c)=((delayIdx)/length(currL2Delayed_Snippet))*360;
+
+				%[snippetPeaks,locs]=findpeaks(currL2Undelayed_Snippet);
+				%[maxL2,undelayIdx]=max(snippetPeaks);
+				[maxL2u,undelayIdx]=max(currL2Undelayed_Snippet);
+				cycleL2UndelayedPeakResponses(c)=maxL2u;
+				
+				%cycleL2UndelayedPeakResponsePhases(c)=(locs(undelayIdx)/length(snippetPeaks))*360;
+				cycleL2UndelayedPeakResponsePhases(c)=((undelayIdx)/length(currL2Undelayed_Snippet))*360;
+
+				
+				
+				midCycleIdx=round((currCycleStartIdx+currCycleEndIdx)/2);
+				cyclePositions(c)=simObj.externalEnvObj.rodentPositionVsTime(midCycleIdx);
+			end	
+
+			%get theta cycle time windows to extract L2 response properties
+			thisObj.cycleL2PeakResponses=cycleL2PeakResponses;
+			thisObj.cycleL2UndelayedPeakResponses=cycleL2UndelayedPeakResponses;
+
+
+			thisObj.cyclePositions=cyclePositions;
+		end
+
+		function setThetaSeqTimeSlopes(thisObj,simObj)
+			spikingData=thisObj.spikingDataInterface;
+
+			cycleFirstPhasesMatrix=spikingData.firstSpikePhasePerCellPerCycle;
+			numCycles=spikingData.numCycles(1,1);
+			thetaSeqTimeSlopes=NaN(numCycles,1);		
+			thetaSeqTimeOffsets=NaN(numCycles,1);
+	
+			for c=1:numCycles	
+				%currCycleFirstSpikeTimes=cycleSpikeSequences.(sprintf('cycle%d',c));
+				currCycleFirstSpikePhases=cycleFirstPhasesMatrix(:,:,c);
+				currCycleFirstSpikePhasesPerPlace=nanmean(currCycleFirstSpikePhases,1);
+				placeSequence=double(~isnan(currCycleFirstSpikePhasesPerPlace));
+				currCycleFirstSpikePhasesPerPlace=currCycleFirstSpikePhasesPerPlace(~isnan(currCycleFirstSpikePhasesPerPlace));
+				 for currCol=1:size(placeSequence,2)
+                                         placeSequence(:,currCol)=placeSequence(:,currCol)*currCol;
+                                 end
+					%placeSequence=double(~isnan(currCycleFirstSpikePhases));
+					%for currCol=1:size(placeSequence,2)
+					%	placeSequence(:,currCol)=placeSequence(:,currCol)*currCol;
+					%end
+					%currCycleFirstSpikePhases=currCycleFirstSpikePhases(~isnan(currCycleFirstSpikePhases));
+					placeSequence=placeSequence(placeSequence~=0);
+				%currCycleFirstSpikePhases=currCycleFirstSpikePhases(~isnan(currCycleFirstSpikePhases))
+				%currCycleFirstSpikePhases=sort(currCycleFirstSpikePhases);
+				%if(length(currCycleFirstSpikePhases)>3)
+				if(length(currCycleFirstSpikePhasesPerPlace)>1)
+					%[m,b,R]=getLinearFit(1:length(currCycleFirstSpikePhases),currCycleFirstSpikePhases);
+					%[m,b,R]=getLinearFit(placeSequence,currCycleFirstSpikePhases);
+					[m,b,R]=getLinearFit(placeSequence,currCycleFirstSpikePhasesPerPlace);
+					%figure; plot(placeSequence,currCycleFirstSpikePhases,'b*')
+					%figure; plot(placeSequence,currCycleFirstSpikePhasesPerPlace,'b*')
+					thetaSeqTimeSlopes(c)=m;%per seconds
+					thetaSeqTimeOffsets(c)=b;%per seconds
+				end
+			end
+			%STOP
+			thisObj.cycleSeqTimeSlopes=thetaSeqTimeSlopes;
+			thisObj.cycleSeqTimeOffsets=thetaSeqTimeOffsets;
+			thisObj.cycleRunningSpeeds=ExternalEnvironment.CONSTANT_RUN_SPEED*ones(size(thetaSeqTimeSlopes));
+			thisObj.cycleDIs=CurrentInjectors.DI_SORTED_PERM_RANK*ones(size(thetaSeqTimeSlopes));
+			thisObj.cycleCodingStrategy=FeedForwardConnectivity.USE_LINEAR_DELAYS*ones(size(thetaSeqTimeSlopes));
+		end	
+	
 		%function run(thisObj,figH)
 		%	thisObj.visualizePhaseCoding(figH);
 		%end
-		function runPlotRaster(thisObj,figH)
-			thisObj.plotRaster(figH);
+		function runPlotRaster(thisObj,simObj,figH)
+			thisObj.plotRaster(simObj,figH);
 		end
 		
-		function runPlotRasterSingleDelayed(thisObj,figH)
-			thisObj.plotRasterSingleDelayed(figH);
+		function runPlotRasterSingleDelayed(thisObj,simObj,figH)
+			thisObj.plotRasterSingleDelayed(simObj,figH);
 		end
 		
-		function runPlotRasterDoubleDelayed(thisObj,figH)
-			thisObj.plotRasterDoubleDelayed(figH);
+		function runPlotRasterDoubleDelayed(thisObj,simObj,figH)
+			thisObj.plotRasterDoubleDelayed(simObj,figH);
 		end
 
-		function runRankTransformAnalysis(thisObj,figH)
+		function runRankTransformAnalysis(thisObj,simObj,figH)
 			if(ThetaPopInput.amplitudeDefault>0)
-				thisObj.plotSpikeRankVsPosRank(figH);
+				thisObj.plotSpikeRankVsPosRank(simObj,figH);
 			end 	
 		end
 		
-		function runPhaseCodeAnalysis(thisObj,figPrecess,figCompress)
+		function runPhaseCodeAnalysis(thisObj,simObj,figPrecess,figCompress)
 			if(ThetaPopInput.amplitudeDefault>0)
-				thisObj.plotPhaseVsPositionInField(figPrecess,figCompress);
+				thisObj.plotPhaseVsPositionInField(simObj,figPrecess,figCompress);
 			end
 		end
 		
-		function runSpikeTimeDistributionAnalysis(thisObj,figH)
+		function runSpikeTimeDistributionAnalysis(thisObj,simObj,figH)
 			if(ThetaPopInput.amplitudeDefault>0)
-				thisObj.plotSpikePhaseDistrPerCycle(figH);
+				thisObj.plotSpikePhaseDistrPerCycle(simObj,figH);
 			else
-				thisObj.plotAllSpikePhaseDistr(figH)
+				thisObj.plotAllSpikePhaseDistr(simObj,figH)
 			end
 		end
 
-		%function visualizePhaseCoding(thisObj,figH)
+		%function visualizePhaseCoding(thisObj,simObj,figH)
 		%	thisObj.plotRaster(figH)
 			%thisObj.plotPhaseVsPositionInField();
 		%	thisObj.plotSpikeRankVsPosRank();	
@@ -90,16 +209,17 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 		end
 		%}
 
-		function plotRaster(thisObj,figH)
+		function plotRaster(thisObj,simObj,figH)
 			figure(figH)
 			%spike times per cell
-			if(SimPhaseCodingEvaluation.useDelayedSpikeTimes==1)
-				spikeTimes=thisObj.simObj.cellsObj.delayedSpikeTimes;
-			else
-				spikeTimes=thisObj.simObj.cellsObj.spikeTimes;
-			end
-			spikeCellCoords=thisObj.simObj.cellsObj.spikeCellCoords;
-			numCellsPerPlace=thisObj.simObj.configuration.simParams.numCellsPerPlace;
+			%if(SimPhaseCodingEvaluation.useDelayedSpikeTimes==1)
+			%	spikeTimes=simObj.cellsObj.delayedSpikeTimes;
+			%else
+				%spikeTimes=simObj.cellsObj.spikeTimes;
+				spikeTimes=thisObj.spikingDataInterface.spikeTimes;
+			%end
+			spikeCellCoords=simObj.cellsObj.spikeCellCoords;
+			numCellsPerPlace=simObj.configuration.simParams.numCellsPerPlace;
 	
 			for i=1:length(spikeTimes)
 				currSpikePlaceIdx=spikeCellCoords(i,2);
@@ -110,29 +230,29 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			end		
 
 			%ASSUMES POPULATION WIDE SYNCHRONOUS THETA
-			thisObj.simObj.thetaPopInputObj.addTroughLines(figH)
+			simObj.thetaPopInputObj.addTroughLines(figH)
 
 			%{
-			thetaTroughTimes=thisObj.simObj.thetaPopInputObj.getTroughTimes(1,1);
+			thetaTroughTimes=simObj.thetaPopInputObj.getTroughTimes(1,1);
 			
 			currYlim=ylim;
 			for i=1:length(thetaTroughTimes)
 				plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)			
 			end
 			%}
-			title(removeUnderscores(thisObj.simObj.simParamsIDStr))
+			title(removeUnderscores(simObj.simParamsIDStr))
 			%maxFigManual2d(3,1,14)
 			xlabel('Time (msec)')	
 			ylabel('Cell No.')	
 		end
 
-		function plotRasterDoubleDelayed(thisObj,figH)
+		function plotRasterDoubleDelayed(thisObj,simObj,figH)
 			figure(figH)
                         %spike times per cell
-                        spikeTimes=thisObj.simObj.cellsObj.doubleDelayedSpikeTimes;
+                        spikeTimes=simObj.cellsObj.doubleDelayedSpikeTimes;
                         
-			spikeCellCoords=thisObj.simObj.cellsObj.spikeCellCoords;
-                        numCellsPerPlace=thisObj.simObj.configuration.simParams.numCellsPerPlace;
+			spikeCellCoords=simObj.cellsObj.spikeCellCoords;
+                        numCellsPerPlace=simObj.configuration.simParams.numCellsPerPlace;
 
                         for i=1:length(spikeTimes)
                                 currSpikePlaceIdx=spikeCellCoords(i,2);
@@ -143,29 +263,29 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
                         end
 
                         %ASSUMES POPULATION WIDE SYNCHRONOUS THETA
-                        thisObj.simObj.thetaPopInputObj.addTroughLines(figH)
+                        simObj.thetaPopInputObj.addTroughLines(figH)
 
                         %{
-                        thetaTroughTimes=thisObj.simObj.thetaPopInputObj.getTroughTimes(1,1);
+                        thetaTroughTimes=simObj.thetaPopInputObj.getTroughTimes(1,1);
 
                         currYlim=ylim;
                         for i=1:length(thetaTroughTimes)
                                 plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)
                         end
                         %}
-                        %title(removeUnderscores(thisObj.simObj.simParamsIDStr))
+                        %title(removeUnderscores(simObj.simParamsIDStr))
 			 %maxFigManual2d(3,1,14)
                         xlabel('Time (msec)')
                         ylabel('Cell No.')
 
 		end
-		function plotRasterSingleDelayed(thisObj,figH)
+		function plotRasterSingleDelayed(thisObj,simObj,figH)
 			figure(figH)
                         %spike times per cell
-                        spikeTimes=thisObj.simObj.cellsObj.delayedSpikeTimes;
+                        spikeTimes=simObj.cellsObj.delayedSpikeTimes;
                         
-			spikeCellCoords=thisObj.simObj.cellsObj.spikeCellCoords;
-                        numCellsPerPlace=thisObj.simObj.configuration.simParams.numCellsPerPlace;
+			spikeCellCoords=simObj.cellsObj.spikeCellCoords;
+                        numCellsPerPlace=simObj.configuration.simParams.numCellsPerPlace;
 
                         for i=1:length(spikeTimes)
                                 currSpikePlaceIdx=spikeCellCoords(i,2);
@@ -176,35 +296,35 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
                         end
 
                         %ASSUMES POPULATION WIDE SYNCHRONOUS THETA
-                        thisObj.simObj.thetaPopInputObj.addTroughLines(figH)
+                        simObj.thetaPopInputObj.addTroughLines(figH)
 
                         %{
-                        thetaTroughTimes=thisObj.simObj.thetaPopInputObj.getTroughTimes(1,1);
+                        thetaTroughTimes=simObj.thetaPopInputObj.getTroughTimes(1,1);
 
                         currYlim=ylim;
                         for i=1:length(thetaTroughTimes)
                                 plot([thetaTroughTimes(i) thetaTroughTimes(i)], currYlim,'Color','b','LineWidth',6)
                         end
                         %}
-                        %title(removeUnderscores(thisObj.simObj.simParamsIDStr))
+                        %title(removeUnderscores(simObj.simParamsIDStr))
                        title('Spikes times seen by CA1 soma')
 			 %maxFigManual2d(3,1,14)
                         xlabel('Time (msec)')
 			 ylabel('Cell No.')
 		end
 	
-		function plotPhaseVsPositionInField(thisObj,figPrecess,figCompress)
+		function plotPhaseVsPositionInField(thisObj,simObj,figPrecess,figCompress)
 			%useAllSpikes=1;
 			useAllSpikes=0;
 
-			cellsObj=thisObj.simObj.cellsObj;
+			cellsObj=simObj.cellsObj;
 			%loop across cells
 			count=0;
 			axHs=[];
-			%cellCmap=jet(thisObj.simObj.configuration.getNumCells());
+			%cellCmap=jet(simObj.configuration.getNumCells());
 			cellCmap=jet(cellsObj.numCellsPerPlace);
 			placeCmap=copper(cellsObj.numPlaces);
-			speedCmap=jet(round(max(thisObj.simObj.externalEnvObj.rodentRunningSpeed))+1);
+			speedCmap=jet(round(max(simObj.externalEnvObj.rodentRunningSpeed))+1);
 
 			for j=1:cellsObj.numPlaces
 				for i=1:cellsObj.numCellsPerPlace
@@ -213,15 +333,15 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					
 					if(useAllSpikes)
 						currCellSpikePhases=thisObj.spikingDataInterface.allSpikePhasesPerCell.(sprintf('c%dp%d',i,j));
-						currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.allSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/thisObj.simObj.externalEnvObj.idxToTimeFact)+1;
+						currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.allSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/simObj.externalEnvObj.idxToTimeFact)+1;
 					else
 						currCellSpikePhases=thisObj.spikingDataInterface.firstSpikePhasesPerCell.(sprintf('c%dp%d',i,j));
-						currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.firstSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/thisObj.simObj.externalEnvObj.idxToTimeFact)+1;
+						currCellSpikeTimeIdxes=round((thisObj.spikingDataInterface.firstSpikeTimesPerCell.(sprintf('c%dp%d',i,j)))/simObj.externalEnvObj.idxToTimeFact)+1;
 					end
 
 
-					currCellSpikePositions=thisObj.simObj.externalEnvObj.rodentPositionVsTime(currCellSpikeTimeIdxes);
-					thisCellInputCenterPos=thisObj.simObj.externalEnvObj.placeInputStartPositions(j)+thisObj.simObj.externalEnvObj.placeInputWidths(j)/2;
+					currCellSpikePositions=simObj.externalEnvObj.rodentPositionVsTime(currCellSpikeTimeIdxes);
+					thisCellInputCenterPos=simObj.externalEnvObj.placeInputStartPositions(j)+simObj.externalEnvObj.placeInputWidths(j)/2;
 			
 					figure(figCompress)
 
@@ -231,15 +351,15 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					[~,linearEstPt]=min(currCellSpikePhases);
 					%for s=1:length(currCellSpikePhases)
 					%for s=1:linearEstPt
-						%currSpeed=round(thisObj.simObj.externalEnvObj.rodentRunningSpeed(currCellSpikeTimeIdxes(s)));
+						%currSpeed=round(simObj.externalEnvObj.rodentRunningSpeed(currCellSpikeTimeIdxes(s)));
 						%plot(currCellSpikeInputRelativePositions,currCellSpikePhases,'o','MarkerSize',5,'Color',speedCmap(currSpeed,:),'MarkerFaceColor',speedCmap(currSpeed,:));
 						plot(currCellSpikeInputRelativePositions(1:linearEstPt),currCellSpikePhases(1:linearEstPt),'o','MarkerSize',7,'Color',placeCmap(j,:),'MarkerFaceColor',placeCmap(j,:));
-						hold on
-						plot(currCellSpikeInputRelativePositions(1:linearEstPt),currCellSpikePhases(1:linearEstPt),'-','LineWidth',2,'Color',placeCmap(j,:))
+						%hold on
+						%plot(currCellSpikeInputRelativePositions(1:linearEstPt),currCellSpikePhases(1:linearEstPt),'-','LineWidth',2,'Color',placeCmap(j,:))
 						%psH(s).Color(4)=(1-s/length(currCellSpikePhases));
 					%end
 					%plot(xlim,[currCellSpikePhases(1) currCellSpikePhases(end-5)],'r--') 
-					plot([currCellSpikeInputRelativePositions(1) currCellSpikeInputRelativePositions(linearEstPt)],[currCellSpikePhases(1) currCellSpikePhases(linearEstPt)],'r--') 
+					%plot([currCellSpikeInputRelativePositions(1) currCellSpikeInputRelativePositions(linearEstPt)],[currCellSpikePhases(1) currCellSpikePhases(linearEstPt)],'r--') 
 				
 					xlabel('Distance from place input center (cm)')
 					if(useAllSpikes)
@@ -250,8 +370,8 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					hold on
 					%percent traveled within input field (not observable extracellularly)
 					%{
-					currCellPlaceInputStartPosition=thisObj.simObj.externalEnvObj.placeInputStartPositions(j);
-					currCellPlaceInputWidth=thisObj.simObj.externalEnvObj.placeInputWidths(j)
+					currCellPlaceInputStartPosition=simObj.externalEnvObj.placeInputStartPositions(j);
+					currCellPlaceInputWidth=simObj.externalEnvObj.placeInputWidths(j)
 					percPlaceInputTraveled=100*(currCellSpikePositions-currCellPlaceInputStartPosition)/currCellPlaceInputWidth;
 					%plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:),'MarkerFaceColor',cellCmap(count,:))
 					plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',placeCmap(count,:),'MarkerFaceColor',placeCmap(count,:))
@@ -291,7 +411,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			ylabel(cb,'Cell input place rank')
 			%xlabel('Percent of field traversed')	
 			%ylabel('Spike theta phase')
-			title(removeUnderscores(thisObj.simObj.simParamsIDStr))	
+			title(removeUnderscores(simObj.simParamsIDStr))	
 
 			figure(figCompress)
 			%cmap=speedCmap;
@@ -309,19 +429,19 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			%cbDist.Limits=[1 size(speedCmap,1)]
 		end
 
-		function plotSpikeRankVsPosRank(thisObj,figH)
-                	numPlaces=thisObj.simObj.cellsObj.numPlaces;  
-                	numCellsPerPlace=thisObj.simObj.cellsObj.numCellsPerPlace;
+		function plotSpikeRankVsPosRank(thisObj,simObj,figH)
+                	numPlaces=simObj.cellsObj.numPlaces;  
+                	numCellsPerPlace=simObj.cellsObj.numCellsPerPlace;
   
 		      	figure(figH)
-                        cellsObj=thisObj.simObj.cellsObj;
+                        cellsObj=simObj.cellsObj;
                         %loop across cells
                         count=0;
                         axHs=[];
                         %for i=1:cellsObj.numCellsPerPlace
                         %        for j=1:cellsObj.numPlaces
-					numCycles=length(thisObj.simObj.thetaPopInputObj.getTroughTimes(1,1));
-					numCellsTotal=thisObj.simObj.configuration.getNumCells();
+					numCycles=length(simObj.thetaPopInputObj.getTroughTimes(1,1));
+					numCellsTotal=simObj.configuration.getNumCells();
 
 					cellSequencePerCycle=NaN(numCycles,numCellsTotal);
 					thetaCmap=jet(numCycles);
@@ -373,7 +493,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
                     if(prctile(rankMapCount(:)/totalNumMappings,99)>0)
                         caxis([0 prctile(rankMapCount(:)/totalNumMappings,99)])
                     end
-                        		title(removeUnderscores(thisObj.simObj.simParamsIDStr))
+                        		title(removeUnderscores(simObj.simParamsIDStr))
 					grid on
 					xticks(1:cellsObj.numCellsPerPlace:numCellsTotal)
 					yticks(1:cellsObj.numCellsPerPlace:numCellsTotal)
@@ -391,15 +511,15 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
                        % end
                 end
 		
-		function plotAllSpikePhaseDistr(thisObj,figH)
+		function plotAllSpikePhaseDistr(thisObj,simObj,figH)
 
 			figure(figH)
                         %spike times per cell
-                        spikeTimes=thisObj.simObj.cellsObj.spikeTimes;
-                        spikeCellCoords=thisObj.simObj.cellsObj.spikeCellCoords;
-                        numCellsPerPlace=thisObj.simObj.configuration.simParams.numCellsPerPlace;
+                        spikeTimes=simObj.cellsObj.spikeTimes;
+                        spikeCellCoords=simObj.cellsObj.spikeCellCoords;
+                        numCellsPerPlace=simObj.configuration.simParams.numCellsPerPlace;
 
-			numPlaces=thisObj.simObj.cellsObj.numPlaces;
+			numPlaces=simObj.cellsObj.numPlaces;
 
 			%spikeTimesByPlace={};
 			
@@ -419,7 +539,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			placeCmap=copper(numPlaces);
 
 			binSize=50; %msec
-			edges=0:binSize:thisObj.simObj.configuration.simParams.simTime;
+			edges=0:binSize:simObj.configuration.simParams.simTime;
 				for p=1:numPlaces
 					[counts,edges]=histcounts(spikeTimesByPlace{p},edges);
 					plot(edgesToBins(edges),counts,'Color',placeCmap(p,:),'LineWidth',2)
@@ -429,15 +549,15 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 
 		end
 
-		function plotSpikePhaseDistrPerCycle(thisObj,figH)
+		function plotSpikePhaseDistrPerCycle(thisObj,simObj,figH)
 			figure(figH)
-                        cellsObj=thisObj.simObj.cellsObj;
+                        cellsObj=simObj.cellsObj;
                         %loop across cells
                         count=0;
                         axHs=[];
-                        cellCmap=jet(thisObj.simObj.configuration.getNumCells());
-			numCycles=length(thisObj.simObj.thetaPopInputObj.getTroughTimes(1,1));
-			numPlaces=thisObj.simObj.cellsObj.numPlaces;
+                        cellCmap=jet(simObj.configuration.getNumCells());
+			numCycles=length(simObj.thetaPopInputObj.getTroughTimes(1,1));
+			numPlaces=simObj.cellsObj.numPlaces;
 		
 			numBins=20;	
 			binEdges=linspace(0,360,numBins+1);
@@ -463,7 +583,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					%phaseAxis=[phaseAxis edgesToBins(phaseEdges)]; 
 			end
 
-			troughTimes=thisObj.simObj.thetaPopInputObj.getTroughTimes(1,1);
+			troughTimes=simObj.thetaPopInputObj.getTroughTimes(1,1);
 			firstCycleStartTime=troughTimes(1);
 			lastCycleStartTime=troughTimes(end);
 			binToTimeFact=(lastCycleStartTime-firstCycleStartTime)/((numCycles-1)*numBins);
@@ -472,7 +592,7 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 				plot((1:size(spikePhaseDistrPerCycle,2))*binToTimeFact+firstCycleStartTime,spikePhaseDistrPerCycle(j,:),'-','Color',placeCmap(j,:),'LineWidth',2)
 				hold on
 			end
-			xlim([0 thisObj.simObj.configuration.simParams.simTime])
+			xlim([0 simObj.configuration.simParams.simTime])
 			ylim([0 max(spikePhaseDistrPerCycle(:))])
 			xlabel('Time (msec)')
 			ylabel('Count')

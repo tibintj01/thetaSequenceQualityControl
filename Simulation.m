@@ -4,7 +4,8 @@ classdef Simulation < handle & matlab.mixin.Copyable
 		%SIM_NAME='just spiking conductances, no theta, large time constant output unit';
 		%SIM_NAME='timeConstantPhaseCoding';
 		%CONSTANT_TIME_MAX=3200
-		CONSTANT_TIME_MAX=3600
+		%CONSTANT_TIME_MAX=3600
+		CONSTANT_TIME_MAX=4500
 		%CONSTANT_TIME_MAX=7000
 		%OVERWRITE=1;
 		%'just spiking conductances, theta, time constant vs phase locking';
@@ -21,6 +22,8 @@ classdef Simulation < handle & matlab.mixin.Copyable
 		thetaPopInputObj
 
 		externalEnvObj
+
+		analysisObj
 		
 		simParamsIDStr
 
@@ -79,6 +82,9 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			thisObj.currentRunStatus='instantiatedAndRunning........';
 			thisObj.cellsObj.go();
 			thisObj.currentRunStatus='instantiatedAndRan';
+			
+			thisObj.analysisObj=copy(SimPhaseCodingEvaluation(thisObj,1));
+			thisObj.currentRunStatus='ranAndAnalyzed';
 		end
 		
 		function save(thisObj)
@@ -157,7 +163,8 @@ classdef Simulation < handle & matlab.mixin.Copyable
                         figSpaceCompress=figure;
 
 			%phaseCodingEvaluationObj=SimPhaseCodingEvaluation(thisObj);
-			phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
+			%phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
+			phaseCodingEvaluationObjStage1=thisObj.analysisObj;
 			%phaseCodingEvaluationObjStage2=SimPhaseCodingEvaluation(thisObj,2);
 
 			figRaster=figure;
@@ -166,7 +173,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%axRaster1=subplot(10,10,[1 30]);
 			axRaster1=subplot(10,10,[1 20]);
 			%phaseCodingEvaluationObj.runPlotRaster(figRaster);
-			phaseCodingEvaluationObjStage1.runPlotRasterSingleDelayed(figRaster);
+			phaseCodingEvaluationObjStage1.runPlotRasterSingleDelayed(thisObj,figRaster);
 			%phaseCodingEvaluationObj.runPlotRasterSingleDelayed(figRaster);
 			xticklabels({})
 			xlabel('')
@@ -179,7 +186,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%axRaster2=subplot(10,10,[31 60]);
 			axRaster2=subplot(10,10,[21 40]);
 			%phaseCodingEvaluationObj.runPlotRasterDoubleDelayed(figRaster);
-			phaseCodingEvaluationObjStage1.runPlotRasterDoubleDelayed(figRaster);
+			phaseCodingEvaluationObjStage1.runPlotRasterDoubleDelayed(thisObj,figRaster);
 			%phaseCodingEvaluationObjStage2.runPlotRasterDoubleDelayed(figRaster);
 			%title('Logarithmically precessed and delayed spikes times seen by CA1 soma')
 			title('Precessed and delayed spikes times seen by CA1 soma')
@@ -198,7 +205,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 
 				figure(figPhasePosCoding)
 				%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)
-				phaseCodingEvaluationObjStage1.runPhaseCodeAnalysis(figPhasePosCoding,figSpaceCompress);
+				phaseCodingEvaluationObjStage1.runPhaseCodeAnalysis(thisObj,figPhasePosCoding,figSpaceCompress);
 			end
 
 			%figPhaseDistr=figure;
@@ -268,8 +275,13 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			pH.Color(4)=0.2; %make transparent
 			pH2.Color(4)=0.2; %make transparent
 			
+			ax=gca;
+			ax.YAxis(1).Color='k'
+			ax.YAxis(2).Color='k'
+
 			%axRaster6=subplot(10,10,[91 100]);
 			%axRaster6=subplot(10,10,[81 100]);
+			
 			axRaster6=subplot(10,10,[61 80]);
 			outputVmTrace=squeeze(thisObj.cellsObj.vInt);
 
@@ -278,7 +290,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
                         %feedfwdIsyn=squeeze(thisObj.cellsObj.l2IsynRecord+thisObj.cellsObj.l2EsynRecord);
 
                         yyaxis left
-			plot(simTimeAxis,outputVmTrace,'k-','LineWidth',2)
+			pH0=plot(simTimeAxis,outputVmTrace,'k-','LineWidth',2)
                         %ylabel('Integrator (mV)')
                         ylabel('Control (mV)')
                         xlabel('Time (msec)')
@@ -301,6 +313,12 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			
 			pH.Color(4)=0.2; %make transparent
 			pH2.Color(4)=0.2; %make transparent
+			
+			legend([pH0 pH pH2],'V_m', '-g_{inh}','g_{exc}')
+			legend boxoff	
+			ax=gca;
+			ax.YAxis(1).Color='k'
+			ax.YAxis(2).Color='k'
 			%xlim([0 simTimeAxis(end)+150])
 			xlim([0 Simulation.CONSTANT_TIME_MAX])
 			linkaxes([axRaster1 axRaster2 axRaster3 axRaster4 axRaster5 axRaster6],'x')
