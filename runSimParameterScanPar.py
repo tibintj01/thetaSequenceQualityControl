@@ -40,10 +40,10 @@ scanParam1Values=np.linspace(1,1,1)
 #scanParam2Values=np.linspace(20,20,1)
 #scanParam2Values=np.linspace(20,40,2)
 #scanParam2Values=[10,20,40,60]
-scanParam2Values=[40]
+scanParam2Values=[30,40]
 
 #scanParam3Values=[0,1]
-scanParam3Values=[0,1]
+scanParam3Values=[0]
 
 #scanParam2Values=np.linspace(50,50,1)
 #scanParam2Values=np.linspace(10,10,1)
@@ -191,9 +191,15 @@ if REDEPLOY==1:
 #postParallelProcessing
 ###############################
 
-'''
+#construct heatmaps of model responses when varying speed vs order (stability and flexibility)
+
+
 eng=matlab.engine.start_matlab()
-exitStatus=eng.plotRastersPhaseLocking([float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values])		
+
+exitStatus=eng.runAnalysisOfSimBatch(scanParamNames[0],scanParamNames[1],scanParamNames[2],[float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values],[float(i) for i in scanParam3Values])
+
+#exitStatus=eng.plotRastersPhaseLocking([float(i) for i in scanParam1Values],[float(i) for i in scanParam2Values])		
+'''
 if 'Users/tibinjohn' in os.getcwd():
 	os.system("open %s*tif" % FIGURE_DIR)
 else:

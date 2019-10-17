@@ -12,7 +12,9 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 	properties
 		spikeThresh=-30;
 		
+
 		delayStageNum
+
 
 		allSpikePhasesPerCell
 		firstSpikePhasesPerCell
@@ -22,6 +24,8 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 	
 		allSpikePhasesPerCellPerCycle
 		allSpikeTimesPerCellPerCycle
+
+		firstSpikePhasePerCellPerCycle
 
 		cellSequencePerCycleAllSpikes
 		cellSequencePerCycleFirstSpikes
@@ -84,6 +88,8 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 			numPlaces=simObj.cellsObj.numPlaces;
 			thisObj.numCycles=NaN(numCellsPerPlace,numPlaces);
 
+			firstSpikePhasePerCellPerCycle=NaN(numCellsPerPlace,numPlaces,length(simObj.thetaPopInputObj.getTroughTimes(1,1)));
+
 			for cellIdx=1:numCellsPerPlace
 				for placeIdx=1:numPlaces
 					thisObj.numCycles(cellIdx,placeIdx)=length(simObj.thetaPopInputObj.getTroughTimes(cellIdx,placeIdx));
@@ -91,17 +97,26 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 						currCellSpikeCycles=thisObj.allSpikeCyclesPerCell.(sprintf('c%dp%d',cellIdx,placeIdx));
 						currCellSpikePhases=thisObj.allSpikePhasesPerCell.(sprintf('c%dp%d',cellIdx,placeIdx));
 						currCellSpikeTimes=thisObj.allSpikeTimesPerCell.(sprintf('c%dp%d',cellIdx,placeIdx));
-						
+					
 						currCycleCellSpikePhases=currCellSpikePhases(currCellSpikeCycles==cycleIdx);
 						currCycleCellSpikeTimes=currCellSpikeTimes(currCellSpikeCycles==cycleIdx);
 
 						allSpikePhasesPerCellPerCycle.(sprintf('c%dp%dcy%d',cellIdx,placeIdx,cycleIdx))=currCycleCellSpikePhases;
 						allSpikeTimesPerCellPerCycle.(sprintf('c%dp%dcy%d',cellIdx,placeIdx,cycleIdx))=currCycleCellSpikeTimes;
+						
+						validFirstSpikePhaseIdxes=find(currCycleCellSpikePhases>SpikingDataInterface.MIN_FIRST_PHASE);
+						if(isempty(validFirstSpikePhaseIdxes))
+                                                        continue
+                                                end
+
+						firstSpikePhasePerCellPerCycle(cellIdx,placeIdx,cycleIdx)=currCycleCellSpikePhases(validFirstSpikePhaseIdxes(1));
+					
 					end
 				end
 			end
 			thisObj.allSpikePhasesPerCellPerCycle=allSpikePhasesPerCellPerCycle;
 			thisObj.allSpikeTimesPerCellPerCycle=allSpikeTimesPerCellPerCycle;
+			thisObj.firstSpikePhasePerCellPerCycle=firstSpikePhasePerCellPerCycle;
 		end
 
 		function setFirstSpikePhasesPerCell(thisObj,simObj)
@@ -189,10 +204,12 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 			elseif(delayStageNum==1)
 				allSpikeTimes=cellsObj.delayedSpikeTimes(currCellSpikeIDs);
 				allSpikeIdxes=round(allSpikeTimes/cellsObj.dt);
+				allSpikeIdxes=allSpikeIdxes(allSpikeIdxes<=length(thetaPhaseSeries));
 				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
 			elseif(delayStageNum==2)
 				allSpikeTimes=cellsObj.doubleDelayedSpikeTimes(currCellSpikeIDs);
 				allSpikeIdxes=round(allSpikeTimes/cellsObj.dt);
+				allSpikeIdxes=allSpikeIdxes(allSpikeIdxes<=length(thetaPhaseSeries));
 				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
 			end
 
@@ -206,6 +223,11 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 					allSpikeCycles(i)=precedingTroughIdx; %1=first theta cycle (trough to trough)
 				end
 			end			
+			
+			maxLength=min([length(allSpikePhases),length(allSpikeTimes),length(allSpikeCycles)]);
+			allSpikePhases=allSpikePhases(1:maxLength);
+			allSpikeTimes=allSpikeTimes(1:maxLength);
+			allSpikeCycles=allSpikeCycles(1:maxLength);
 
 			allSpikes_IsDuringPlaceInput=zeros(size(allSpikeTimes));
 			allSpikes_IsDuringPlaceInput(allSpikeTimes>rampStartTime & allSpikeTimes<rampEndTime)=1;
@@ -280,7 +302,14 @@ classdef SpikingDataInterface < handle & matlab.mixin.Copyable
 						end
 
 						if(length(currCycleSpikePhasesThisCell)>0)
-							currCycleFirstSpikePhaseLineup=[currCycleFirstSpikePhaseLineup; currCycleSpikePhasesThisCell(1)];
+							f=1;
+							firstValidSpikePhaseThisCell=currCycleSpikePhasesThisCell(f);
+							while(f<length(currCycleSpikePhasesThisCell) && firstValidSpikePhaseThisCell<SpikingDataInterface.MIN_FIRST_PHASE)
+								f=f+1;
+								firstValidSpikePhaseThisCell=currCycleSpikePhasesThisCell(f);
+							end
+							%currCycleFirstSpikePhaseLineup=[currCycleFirstSpikePhaseLineup; currCycleSpikePhasesThisCell(1)];
+							currCycleFirstSpikePhaseLineup=[currCycleFirstSpikePhaseLineup; firstValidSpikePhaseThisCell];
 							currCycleFirstSpikeIDs=[currCycleFirstSpikeIDs; [cellIdx, placeIdx]];
 						end
 					end
