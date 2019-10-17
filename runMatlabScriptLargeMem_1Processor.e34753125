@@ -1,0 +1,385 @@
+rm: cannot remove ‘/scratch/ojahmed_fluxm/tibintj/results/stabilityVsFlexibilityHeatMap/raw_data/*mat’: No such file or directory
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
+Error using load
+Unable to read file 'DI_SORTED_7_PERMUTATIONS.mat'. No such file or directory.
+
+Error in CurrentInjectors/setInjectorMatrix (line 107)
+			data=load(sprintf('DI_SORTED_%d_PERMUTATIONS.mat',nc));
+
+Error in CurrentInjectors (line 40)
+			thisObj.setInjectorMatrix(extEnvObj);
+
+Error in Cells/setCellProps (line 1113)
+			currInjectorArray=CurrentInjectors(simSpecificInfo,extEnvObj);
+
+Error in Cells (line 226)
+					thisObj.setCellProps(simProps.extEnvObj);
+
+Error in SimConfiguration/setSimProps (line 151)
+			simCells=copy(Cells(simProps));
+
+Error in SimConfiguration (line 28)
+				thisObj.setSimProps(rngSeed);
+
+Error in runSingleSimulation (line 34)
+	newSimConfig=SimConfiguration(batchName,rngSeed);
+
