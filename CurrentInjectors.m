@@ -7,7 +7,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		%BASELINE=20;
 		%SIG_FRAC=0.05;
 		SIG_FRAC=0;
-		DI_SORTED_PERM_RANK=1.0
+		DI_SORTED_PERM_RANK=5040
 	end
 
 	properties
@@ -16,6 +16,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		%currAmp=7;
 		%currAmp=10;
 		%currAmp=8;
+		%currAmp=5040;
 		%%%%%%%%%%%%%%%%%%%%%%%
 		%current span (18-25.5)
 		%%%%%%%%%%%%%%%%%%%%%%%
