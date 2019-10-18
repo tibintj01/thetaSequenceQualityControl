@@ -45,7 +45,7 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 		%weight_mu=0.09
 		%weight_mu=0.15
 		%weight_mu=0.30
-		weight_mu=0.40
+		%weight_mu=0.40
 		%weight_mu=0.50
 		%weight_mu=0.60 %works well
 		
@@ -54,6 +54,7 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 		%weight_mu=0.75
 		%weight_mu=0.75
 		%weight_mu=0.9
+		weight_mu=1.2
 		weight_sigma=0.0025
 		esyn_E=0;
 		esyn_I=-72;
