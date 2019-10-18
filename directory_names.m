@@ -4,7 +4,8 @@
 %simName='testLayer2TimingDecoder'
 %simName='testControlledFlexibility'
 
-simName='stabilityVsFlexibilityHeatMap'
+%simName='stabilityVsFlexibilityHeatMap'
+simName='backToIntegrator'
 
 if(onLocalComputer())
 	DATA_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/raw_data/',simName);
