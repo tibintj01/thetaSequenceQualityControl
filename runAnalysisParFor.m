@@ -1,3 +1,4 @@
+parpool(19)
 parfor p=1:384
 	numValues1=12;
 	numValues2=16;
@@ -27,10 +28,15 @@ parfor p=1:384
 	scanParam2Values=linspace(15,45,16);
 	scanParam3Values=[0,1];
 
-	disp('extracting values for %d %d %d',curr_i,curr_j,curr_k)
-	tic
-	exitStatus=runAnalysisOfSimBatchPar(scanParamNames{1},scanParamNames{2},scanParamNames{3},scanParam1Values,scanParam2Values,scanParam3Values,curr_i,curr_j,curr_k);
-	
-	disp('DONE extracting values for %d %d %d',curr_i,curr_j,curr_k)
-	toc
+	try
+		disp(sprintf('extracting values for %d %d %d',curr_i,curr_j,curr_k))
+		tic
+		exitStatus=runAnalysisOfSimBatchPar(scanParamNames{1},scanParamNames{2},scanParamNames{3},scanParam1Values,scanParam2Values,scanParam3Values,curr_i,curr_j,curr_k);
+		
+		disp(sprintf('DONE extracting values for %d %d %d',curr_i,curr_j,curr_k))
+		toc
+	catch ME
+		disp(ME.message)
+		disp(sprintf('SKIPPING extracting values for %d %d %d',curr_i,curr_j,curr_k))
+	end
 end

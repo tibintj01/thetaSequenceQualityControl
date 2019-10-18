@@ -42,8 +42,8 @@ scanParam1Values=[1, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 
 scanParam2Values=np.linspace(15,45,16)
 #scanParam2Values=[10,20,40,50]
 
-scanParam3Values=[0,1]
-#scanParam3Values=[0]
+#scanParam3Values=[0,1]
+scanParam3Values=[0]
 
 #scanParam2Values=np.linspace(50,50,1)
 #scanParam2Values=np.linspace(10,10,1)
