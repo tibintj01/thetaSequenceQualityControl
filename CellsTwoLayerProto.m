@@ -5,7 +5,8 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	properties(Constant)
 		justSpikingConductances=1
-		BLOCK_OUTPUT_SPIKING=1
+		%BLOCK_OUTPUT_SPIKING=1
+		BLOCK_OUTPUT_SPIKING=0
 
 		includeKS=1;
 		NUM_CELLS_L2=1;
@@ -142,11 +143,14 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		ena=58;
 
 		%naM_Vt=-34; %normal spiking, corresponds to VNaD in Leung, 2011, pg 12285
-		naM_Vt=-35; %push thresh down a bit - 12/3/18
 		%naM_Vt_L2=-35; %push thresh down a bit - 12/3/18
 		%naM_Vt_L2=-34.5; %push thresh down a bit - 12/3/18
 		%naM_Vt_L2=-35; %push thresh down a bit - 12/3/18
-		naM_Vt_L2=-35; %push thresh down a bit - 12/3/18
+		%naM_Vt=-35; %push thresh down a bit - 12/3/18
+		%naM_Vt_L2=-35; %push thresh down a bit - 12/3/18
+		naM_Vt=-35; %push thresh down a bit - 12/3/18
+		%naM_Vt_L2=-35.5; %push thresh down a bit - 12/3/18
+		naM_Vt_L2=-35.5; %push thresh down a bit - 12/3/18
 		%naM_Vt=-32; %without spiking, corresponds to VNaD in Leung, 2011, pg 12285
 		%naM_Vt=-30; %without spiking, corresponds to VNaD in Leung, 2011, pg 12285
 		%naM_Vt=100; %without spiking, corresponds to VNaD in Leung, 2011, pg 12285
@@ -966,7 +970,7 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 					%itonic_L2=3;
 					%itonic_L2=1*FeedForwardConnectivity.INTEGRATOR_GSYN_FACT*0.2;
 					%itonic_L2=1*0.15;
-					itonic_L2=1*0.225;
+					itonic_L2=1*0.25;
 					isynIntE_Int=gsynInt(cellNumInt,step)*(vSpecific-esyn_E);
 					isynIntI_Int=gsynInt_I(cellNumInt,step)*(vSpecific-esyn_I);
 

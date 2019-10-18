@@ -256,9 +256,9 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			ylabel('Seq. decoder (mV)')
 			xlabel('Time (msec)')
 			%ylim([-Inf Inf])
-			%ylim([-60 10])
+			ylim([-60 10])
 			%ylim([-60 -40])
-			ylim([-60 -35])
+			%ylim([-60 -35])
 
 			yyaxis right
 			pH=plot(simTimeAxis,feedfwdGsyn_I,'-','Color','b','LineWidth',2)
@@ -295,9 +295,9 @@ classdef Simulation < handle & matlab.mixin.Copyable
                         ylabel('Control (mV)')
                         xlabel('Time (msec)')
                         %ylim([-Inf Inf])
-			%ylim([-60 10])
+			ylim([-60 10])
 			%ylim([-60 -40])
-			ylim([-60 -35])
+			%ylim([-60 -35])
 			%ylim([-60 0])
 
 			yyaxis right
