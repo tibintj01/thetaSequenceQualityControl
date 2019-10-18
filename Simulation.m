@@ -298,6 +298,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%ylim([-60 10])
 			%ylim([-60 -40])
 			ylim([-60 -35])
+			%ylim([-60 0])
 
 			yyaxis right
                         pH=plot(simTimeAxis,feedfwdGsyn_I,'-','Color','b','LineWidth',2)

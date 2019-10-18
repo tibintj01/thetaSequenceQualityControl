@@ -8,10 +8,12 @@ function [] = heatMapIt(heatMapInput)
 		titleStr=heatMapInput.titleStr;
 
 		%plot heat map
-		omarPcolor(diRanks,speedValues,heatMatrix)
+		%omarPcolor(diRanks,speedValues,heatMatrix)
+		omarPcolor(diRanks,speedValues,heatMatrix')
                 title(titleStr)
                 xlabel('Directionality Index Rank')
                 ylabel('Running speed (cm/s)')
                 cb=colorbar
+		colormap(copper)
                 ylabel(cb,modelResponseVarName)
                 caxis(climVals)

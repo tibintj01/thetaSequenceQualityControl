@@ -32,17 +32,17 @@ import matlab.engine
 #scanParam2Values=np.linspace(20,20,1)
 #scanParam2Values=np.linspace(30,30,1)
 
-scanParam1Values=np.linspace(1,5040,2)
-#scanParam1Values=np.linspace(1,1,1)
+#scanParam1Values=np.linspace(1,5040,2)
+scanParam1Values=np.linspace(1,1,1)
 #scanParam1Values=np.linspace(5040,5040,1)
 
 #scanParam1Values=list(range(5,40,5))
 #scanParam2Values=np.linspace(20,20,1)
 #scanParam2Values=np.linspace(20,40,2)
 #scanParam2Values=[10,20,40,60]
-scanParam2Values=[30,40]
+scanParam2Values=[40]
 
-scanParam3Values=[0,1]
+scanParam3Values=[0]
 #scanParam3Values=[0]
 
 #scanParam2Values=np.linspace(50,50,1)

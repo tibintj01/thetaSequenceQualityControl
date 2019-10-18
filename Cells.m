@@ -10,7 +10,8 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		includeKS=1;
 		NUM_CELLS_L2=1;
 		%INTEGRATOR_gL=0.005;
-		INTEGRATOR_gL=0.1;
+		%INTEGRATOR_gL=0.1;
+		INTEGRATOR_gL=0.01;
 		SEQ_DET_gL=0.1; %CA1 10msec time constant
 	end
 	properties
@@ -491,7 +492,7 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                                                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                                 %Integrator post-synaptic conductance changes (spikes without temporal template delays, just integrate over window)
 								%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-								weight=max(feedfwdGmatrix(placeIdx,:,1)); % uses synaptic weight from most prominent L2 dendritic compartment
+								weight=max(feedfwdGmatrix(placeIdx,:,1))*FeedForwardConnectivity.INTEGRATOR_GSYN_FACT; % uses synaptic weight from most prominent L2 dendritic compartment
 								
 								phasePrecessionDelayIntegrator=phasePrecessionDelay;
 
@@ -963,12 +964,14 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 					end
 
 					%itonic_L2=3;
-					itonic_L2=1;
+					%itonic_L2=1*FeedForwardConnectivity.INTEGRATOR_GSYN_FACT*0.2;
+					%itonic_L2=1*0.15;
+					itonic_L2=1*0.25;
 					isynIntE_Int=gsynInt(cellNumInt,step)*(vSpecific-esyn_E);
 					isynIntI_Int=gsynInt_I(cellNumInt,step)*(vSpecific-esyn_I);
 
 
-					isynExt_L2=ThetaPopInput.L2_MULT_FACTOR*gInhThetaMatrix(1,1,step)*(vSpecific-esyn_I); %same theta everywehre
+					isynExt_Int=0.6*FeedForwardConnectivity.INTEGRATOR_GSYN_FACT*ThetaPopInput.L2_MULT_FACTOR*gInhThetaMatrix(1,1,step)*(vSpecific-esyn_I); %same theta everywehre
 
 					%l2IsynRecord(cellNumL2,step)=isynL2I_L2;
 					%l2EsynRecord(cellNumL2,step)=isynL2E_L2;	
@@ -976,9 +979,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 					intEsynRecord(cellNumInt,step)=isynIntE_Int;	
                                         
                                         if(~Cells.BLOCK_OUTPUT_SPIKING)
-						vInc=double(dt*(-il-ina-ik-isynExt_L2-isynIntE_Int-isynIntI_Int+itonic_L2)/cm);
+						vInc=double(dt*(-il-ina-ik-isynExt_Int-isynIntE_Int-isynIntI_Int+itonic_L2)/cm);
 					else
-						vInc=double(dt*(-il-isynExt_L2-isynIntE_Int-isynIntI_Int+itonic_L2)/cm);
+						vInc=double(dt*(-il-isynExt_Int-isynIntE_Int-isynIntI_Int+itonic_L2)/cm);
 					end
 						
 					%if(abs(isynIntE_Int) > 0 && FeedForwardConnectivity.USE_LINEAR_DELAYS)
