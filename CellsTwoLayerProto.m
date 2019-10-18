@@ -970,7 +970,7 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 					%itonic_L2=3;
 					%itonic_L2=1*FeedForwardConnectivity.INTEGRATOR_GSYN_FACT*0.2;
 					%itonic_L2=1*0.15;
-					itonic_L2=1*0.25;
+					itonic_L2=1*0.3;
 					isynIntE_Int=gsynInt(cellNumInt,step)*(vSpecific-esyn_E);
 					isynIntI_Int=gsynInt_I(cellNumInt,step)*(vSpecific-esyn_I);
 
