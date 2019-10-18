@@ -7,7 +7,7 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		%BASELINE=20;
 		%SIG_FRAC=0.05;
 		SIG_FRAC=0;
-		DI_SORTED_PERM_RANK=5040
+		DI_SORTED_PERM_RANK=1.0
 	end
 
 	properties

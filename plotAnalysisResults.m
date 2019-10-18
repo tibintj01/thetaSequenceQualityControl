@@ -20,7 +20,7 @@ function [exitStatus] = plotAnalysisResults(processedDataPath)
 	for linearTimeCoding2=1:numEncodingStrategies
 		currHeatMatrix=processedData.modelPeakResponseHeatMaps(:,:,linearTimeCoding2)-approximateRestValue;
 		modelResponseVarName='Peak response (mV)';
-		climVals=[5 15];
+		climVals=[8 15];
 
 		plotCurrHeatMap
 

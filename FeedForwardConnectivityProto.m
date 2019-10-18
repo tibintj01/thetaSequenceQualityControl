@@ -13,6 +13,10 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
                 %SYN_DEP_FACT=0.3
                 %SYN_DEP_FACT=0 %%%%%%%only first spike in 30 msec window???
 		tausyn_I=6;
+
+		%INTEGRATOR_GSYN_FACT=0.5
+		INTEGRATOR_GSYN_FACT=0.6
+		%INTEGRATOR_GSYN_FACT=0.7
 		
 		USE_LINEAR_DELAYS=SCAN_PARAM3
 	end

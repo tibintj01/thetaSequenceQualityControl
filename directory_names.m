@@ -11,6 +11,7 @@ if(onLocalComputer())
 	PROCESSED_DATA_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/processed_data',simName);
 	FIGURE_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/figures/',simName);
 	BASE_RUN_DIR=sprintf('/Users/tibinjohn/thetaSeq/tempRunDir');
+	PAR_PROCESSED_DATA_DIR='/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/fluxData/';
 else
 	DATA_DIR=sprintf('/scratch/ojahmed_fluxm/tibintj/results/%s/raw_data/',simName);
 	PROCESSED_DATA_DIR=sprintf('/scratch/ojahmed_fluxm/tibintj/results/%s/processed_data',simName);
