@@ -37,6 +37,6 @@ cd /nfs/turbo/lsa-ojahmed/tibin/thetaSequenceQualityControl
 #. openMatlabWithCmd.sh checkSzSort_00a_CheckAllCluster1NamedUnsorted
 #. openMatlabWithCmd.sh checkSzSort_kb_createFigure3_AllUnits
 #. openMatlabWithCmd.sh remakeFigure2_AndSupp
-. openMatlabWithCmd.sh plotRastersPhaseLocking
+. openMatlabWithCmd.sh runAnalysisParFor
 
 

@@ -6,7 +6,9 @@ scanParamNames=['DI_SORTED_PERM_RANK','CONSTANT_RUN_SPEED','USE_LINEAR_DELAYS']
 
 #scanDescr='timeConstantAndPhaseCodingWithNoiseWeakerTheta'
 #scanDescr='testControlledFlexibility'
-scanDescr='stabilityVsFlexibilityHeatMap'
+#scanDescr='stabilityVsFlexibilityHeatMap'
+#scanDescr='backToIntegrator'
+scanDescr='speedPositionJointSpikeDistr'
 simName=scanDescr
 
 #basePath='/Users/tibinjohn/thetaSeq/thetaSequenceQualityControl/'

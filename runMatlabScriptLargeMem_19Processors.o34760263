@@ -1,0 +1,3316 @@
+dbstop if error; addpath(genpath('/nfs/turbo/lsa-ojahmed/tibin/ANALYSIS_CODE')); addpath('/nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin/'); runAnalysisParFor
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016a (9.0.0.341360) 64-bit (glnxa64)
+                             February 11, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Name is nonexistent or not a directory:
+/Users/tibinjohn/humanarraychannelmap] 
+[> In path (line 109)
+  In addpath (line 88)
+  In startup (line 5)
+  In matlabrc (line 209)] 
+[Warning: Executing startup failed in matlabrc.
+This indicates a potentially serious problem in your MATLAB setup, which should
+be resolved as soon as possible.  Error detected was:
+MATLAB:UndefinedFunction
+Undefined function 'setFigurePosition' for input arguments of type 'double'.] 
+[> In matlabrc (line 212)] 
+
+	Academic License
+
+[Warning: Function isrow has the same name as a MATLAB builtin. We suggest you
+rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+[Warning: Function isequaln has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+[Warning: Function isstring has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+Starting parallel pool (parpool) using the 'local' profile ... connected to 19 workers.
+
+ans = 
+
+ Pool with properties: 
+
+            Connected: true
+           NumWorkers: 19
+              Cluster: local
+        AttachedFiles: {}
+          IdleTimeout: 30 minute(s) (30 minutes remaining)
+          SpmdEnabled: true
+
+extracting values for 3 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.741395 seconds.
+extracting values for 2 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 38.121715 seconds.
+saving analysis results.....
+saving analysis results.....
+Elapsed time is 0.047982 seconds.
+DONE extracting values for 2 12 1
+extracting values for 6 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 40.346315 seconds.
+saving analysis results.....
+Elapsed time is 0.042426 seconds.
+DONE extracting values for 6 16 1
+extracting values for 5 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.047140 seconds.
+extracting values for 7 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.080773 seconds.
+extracting values for 8 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.016198 seconds.
+extracting values for 5 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.792592 seconds.
+saving analysis results.....
+Elapsed time is 0.042826 seconds.
+DONE extracting values for 5 13 1
+saving analysis results.....
+Elapsed time is 0.377093 seconds.
+DONE extracting values for 7 16 1
+saving analysis results.....
+Elapsed time is 0.023628 seconds.
+DONE extracting values for 8 9 1
+extracting values for 6 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.691406 seconds.
+extracting values for 4 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.239204 seconds.
+saving analysis results.....
+Elapsed time is 0.056084 seconds.
+DONE extracting values for 6 10 1
+saving analysis results.....
+Elapsed time is 0.025323 seconds.
+DONE extracting values for 4 8 1
+extracting values for 1 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.217680 seconds.
+extracting values for 7 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.495601 seconds.
+saving analysis results.....
+Elapsed time is 0.059109 seconds.
+DONE extracting values for 1 14 1
+extracting values for 8 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 57.337648 seconds.
+extracting values for 4 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.325223 seconds.
+saving analysis results.....
+Elapsed time is 0.032401 seconds.
+DONE extracting values for 7 6 1
+extracting values for 1 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.696885 seconds.
+extracting values for 7 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 59.457953 seconds.
+saving analysis results.....
+Elapsed time is 0.111854 seconds.
+DONE extracting values for 1 7 1
+saving analysis results.....
+Elapsed time is 0.024292 seconds.
+DONE extracting values for 4 15 1
+saving analysis results.....
+Elapsed time is 0.024958 seconds.
+DONE extracting values for 8 5 1
+extracting values for 6 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 61.698669 seconds.
+saving analysis results.....
+Elapsed time is 0.024087 seconds.
+DONE extracting values for 6 4 1
+extracting values for 4 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 69.283742 seconds.
+extracting values for 2 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 70.059593 seconds.
+saving analysis results.....
+Elapsed time is 0.056025 seconds.
+DONE extracting values for 2 5 1
+Elapsed time is 0.393502 seconds.
+extracting values for 2 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 0.303694 seconds.
+extracting values for 2 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.661386 seconds.
+Elapsed time is 0.073064 seconds.
+DONE extracting values for 3 10 1
+Elapsed time is 0.294923 seconds.
+extracting values for 3 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 37.621249 seconds.
+Elapsed time is 0.869930 seconds.
+extracting values for 6 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.308085 seconds.
+extracting values for 3 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 85.843066 seconds.
+saving analysis results.....
+Elapsed time is 0.044353 seconds.
+Elapsed time is 2.255573 seconds.
+extracting values for 5 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.940932 seconds.
+Elapsed time is 2.499188 seconds.
+extracting values for 7 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.084252 seconds.
+Elapsed time is 0.982171 seconds.
+extracting values for 6 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 39.608016 seconds.
+saving analysis results.....
+Elapsed time is 0.070756 seconds.
+DONE extracting values for 7 15 1
+saving analysis results.....
+Elapsed time is 0.031892 seconds.
+DONE extracting values for 5 12 1
+Elapsed time is 2.248524 seconds.
+extracting values for 8 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.576942 seconds.
+saving analysis results.....
+Elapsed time is 0.035180 seconds.
+DONE extracting values for 8 8 1
+saving analysis results.....
+Elapsed time is 0.023933 seconds.
+DONE extracting values for 5 6 1
+Elapsed time is 0.148400 seconds.
+extracting values for 5 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.906295 seconds.
+saving analysis results.....
+Elapsed time is 1.656445 seconds.
+Elapsed time is 2.269037 seconds.
+extracting values for 4 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.124893 seconds.
+saving analysis results.....
+Elapsed time is 0.341478 seconds.
+DONE extracting values for 4 7 1
+saving analysis results.....
+Elapsed time is 0.026086 seconds.
+DONE extracting values for 7 11 1
+Elapsed time is 0.508022 seconds.
+extracting values for 7 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.794629 seconds.
+saving analysis results.....
+Elapsed time is 0.024070 seconds.
+DONE extracting values for 7 10 1
+saving analysis results.....
+Elapsed time is 0.035532 seconds.
+DONE extracting values for 4 1 1
+Elapsed time is 0.391479 seconds.
+extracting values for 3 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.246513 seconds.
+Elapsed time is 1.508599 seconds.
+extracting values for 1 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.635255 seconds.
+saving analysis results.....
+Elapsed time is 0.023780 seconds.
+DONE extracting values for 1 13 1
+saving analysis results.....
+Elapsed time is 0.059088 seconds.
+DONE extracting values for 2 11 1
+Elapsed time is 0.132688 seconds.
+extracting values for 2 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.631290 seconds.
+Elapsed time is 2.358964 seconds.
+extracting values for 7 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.944679 seconds.
+saving analysis results.....
+Elapsed time is 0.049164 seconds.
+DONE extracting values for 6 15 1
+Elapsed time is 0.423670 seconds.
+extracting values for 6 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 37.399804 seconds.
+Elapsed time is 1.925480 seconds.
+extracting values for 4 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.489979 seconds.
+saving analysis results.....
+Elapsed time is 0.031605 seconds.
+DONE extracting values for 7 5 1
+Elapsed time is 0.514652 seconds.
+extracting values for 1 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.662327 seconds.
+saving analysis results.....
+Elapsed time is 0.020996 seconds.
+DONE extracting values for 4 14 1
+Elapsed time is 2.863969 seconds.
+extracting values for 8 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.317803 seconds.
+saving analysis results.....
+Elapsed time is 0.037552 seconds.
+DONE extracting values for 3 9 1
+Elapsed time is 0.375491 seconds.
+extracting values for 3 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.137281 seconds.
+saving analysis results.....
+Elapsed time is 0.024078 seconds.
+DONE extracting values for 8 4 1
+saving analysis results.....
+Elapsed time is 0.050177 seconds.
+DONE extracting values for 6 9 1
+Elapsed time is 0.815439 seconds.
+extracting values for 6 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 37.834757 seconds.
+Elapsed time is 59.761346 seconds.
+Elapsed time is 2.617096 seconds.
+extracting values for 6 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 67.412739 seconds.
+Elapsed time is 2.364022 seconds.
+extracting values for 7 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.374533 seconds.
+Elapsed time is 2.363698 seconds.
+extracting values for 5 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.669546 seconds.
+saving analysis results.....
+Elapsed time is 0.958445 seconds.
+saving analysis results.....
+Elapsed time is 0.102949 seconds.
+DONE extracting values for 5 11 1
+saving analysis results.....
+Elapsed time is 0.361380 seconds.
+DONE extracting values for 7 14 1
+DONE extracting values for 6 3 1
+saving analysis results.....
+Elapsed time is 0.022829 seconds.
+DONE extracting values for 3 16 1
+Elapsed time is 0.165172 seconds.
+extracting values for 3 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 35.767442 seconds.
+Elapsed time is 2.399647 seconds.
+extracting values for 8 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.969937 seconds.
+saving analysis results.....
+Elapsed time is 0.028677 seconds.
+DONE extracting values for 8 7 1
+Elapsed time is 1.332698 seconds.
+extracting values for 7 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.954675 seconds.
+saving analysis results.....
+Elapsed time is 0.033328 seconds.
+DONE extracting values for 7 9 1
+DONE extracting values for 3 3 1
+Elapsed time is 0.664080 seconds.
+extracting values for 3 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 64.191970 seconds.
+saving analysis results.....
+Elapsed time is 0.052135 seconds.
+DONE extracting values for 6 14 1
+Elapsed time is 0.174470 seconds.
+extracting values for 6 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 35.795627 seconds.
+saving analysis results.....
+Elapsed time is 0.060016 seconds.
+DONE extracting values for 2 10 1
+Elapsed time is 0.233136 seconds.
+extracting values for 2 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.961211 seconds.
+Elapsed time is 1.918562 seconds.
+extracting values for 1 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.320386 seconds.
+saving analysis results.....
+Elapsed time is 0.025873 seconds.
+DONE extracting values for 1 12 1
+saving analysis results.....
+Elapsed time is 0.168488 seconds.
+DONE extracting values for 1 6 1
+Elapsed time is 0.301719 seconds.
+extracting values for 1 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.089865 seconds.
+DONE extracting values for 5 5 1
+Elapsed time is 1.812041 seconds.
+extracting values for 5 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 71.389228 seconds.
+Elapsed time is 2.754266 seconds.
+extracting values for 4 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 67.097698 seconds.
+saving analysis results.....
+Elapsed time is 0.023084 seconds.
+DONE extracting values for 4 6 1
+saving analysis results.....
+Elapsed time is 0.066175 seconds.
+DONE extracting values for 6 8 1
+Elapsed time is 0.272039 seconds.
+extracting values for 6 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.250102 seconds.
+Elapsed time is 2.331068 seconds.
+extracting values for 4 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.719445 seconds.
+saving analysis results.....
+Elapsed time is 0.024501 seconds.
+DONE extracting values for 3 15 1
+Elapsed time is 0.175217 seconds.
+extracting values for 3 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.396287 seconds.
+saving analysis results.....
+Elapsed time is 0.179343 seconds.
+DONE extracting values for 4 13 1
+Elapsed time is 2.833670 seconds.
+extracting values for 7 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.521437 seconds.
+Elapsed time is 2.760966 seconds.
+extracting values for 7 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.564387 seconds.
+saving analysis results.....
+Elapsed time is 0.345612 seconds.
+DONE extracting values for 3 8 1
+Elapsed time is 0.478637 seconds.
+extracting values for 3 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 57.048149 seconds.
+Elapsed time is 2.164021 seconds.
+extracting values for 5 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.469706 seconds.
+saving analysis results.....
+Elapsed time is 0.240878 seconds.
+DONE extracting values for 7 13 1
+saving analysis results.....
+Elapsed time is 0.023040 seconds.
+DONE extracting values for 7 4 1
+saving analysis results.....
+Elapsed time is 0.022792 seconds.
+DONE extracting values for 5 10 1
+Elapsed time is 3.192305 seconds.
+extracting values for 8 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 65.150501 seconds.
+saving analysis results.....
+Elapsed time is 0.052410 seconds.
+DONE extracting values for 6 13 1
+Elapsed time is 0.164607 seconds.
+extracting values for 6 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.880042 seconds.
+saving analysis results.....
+Elapsed time is 0.021509 seconds.
+DONE extracting values for 8 3 1
+saving analysis results.....
+Elapsed time is 0.666481 seconds.
+DONE extracting values for 2 4 1
+Elapsed time is 0.888991 seconds.
+extracting values for 2 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 63.880721 seconds.
+Elapsed time is 1.963476 seconds.
+extracting values for 7 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.254889 seconds.
+saving analysis results.....
+Elapsed time is 0.050569 seconds.
+DONE extracting values for 7 8 1
+Elapsed time is 2.483944 seconds.
+extracting values for 8 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.824217 seconds.
+saving analysis results.....
+Elapsed time is 0.021400 seconds.
+DONE extracting values for 8 6 1
+Elapsed time is 2.433529 seconds.
+Elapsed time is 1.974427 seconds.
+extracting values for 1 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.569100 seconds.
+saving analysis results.....
+Elapsed time is 0.022937 seconds.
+DONE extracting values for 2 9 1
+Elapsed time is 0.110289 seconds.
+extracting values for 2 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.667566 seconds.
+Elapsed time is 4.549750 seconds.
+extracting values for 6 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 72.284548 seconds.
+saving analysis results.....
+Elapsed time is 0.649249 seconds.
+DONE extracting values for 1 11 1
+saving analysis results.....
+Elapsed time is 0.021147 seconds.
+DONE extracting values for 6 2 1
+saving analysis results.....
+Elapsed time is 0.020200 seconds.
+DONE extracting values for 6 7 1
+Elapsed time is 0.168774 seconds.
+extracting values for 6 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.007811 seconds.
+saving analysis results.....
+Elapsed time is 0.028067 seconds.
+DONE extracting values for 3 14 1
+Elapsed time is 0.131355 seconds.
+extracting values for 3 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 38.787624 seconds.
+Elapsed time is 2.706583 seconds.
+extracting values for 7 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.362260 seconds.
+saving analysis results.....
+Elapsed time is 0.030883 seconds.
+DONE extracting values for 3 7 1
+Elapsed time is 0.317683 seconds.
+extracting values for 3 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.171010 seconds.
+Elapsed time is 2.065022 seconds.
+extracting values for 5 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.650798 seconds.
+saving analysis results.....
+Elapsed time is 0.053341 seconds.
+DONE extracting values for 7 12 1
+Elapsed time is 2.318848 seconds.
+saving analysis results.....
+Elapsed time is 0.032449 seconds.
+DONE extracting values for 6 12 1
+Elapsed time is 0.185810 seconds.
+extracting values for 6 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 37.505671 seconds.
+saving analysis results.....
+Elapsed time is 0.211318 seconds.
+DONE extracting values for 6 11 1
+Elapsed time is 0.277215 seconds.
+Elapsed time is 2.725697 seconds.
+extracting values for 4 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.348229 seconds.
+saving analysis results.....
+Elapsed time is 0.166868 seconds.
+DONE extracting values for 5 9 1
+saving analysis results.....
+Elapsed time is 0.043630 seconds.
+DONE extracting values for 1 5 1
+Elapsed time is 0.337361 seconds.
+extracting values for 1 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 61.121460 seconds.
+saving analysis results.....
+Elapsed time is 0.051363 seconds.
+DONE extracting values for 4 5 1
+Elapsed time is 2.367280 seconds.
+extracting values for 4 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.329225 seconds.
+saving analysis results.....
+Elapsed time is 0.053201 seconds.
+DONE extracting values for 4 12 1
+saving analysis results.....
+Elapsed time is 0.031536 seconds.
+DONE extracting values for 3 2 1
+Elapsed time is 0.293441 seconds.
+extracting values for 3 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 91.928051 seconds.
+extracting values for 8 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.099457 seconds.
+saving analysis results.....
+Elapsed time is 0.024032 seconds.
+DONE extracting values for 8 13 1
+Elapsed time is 3.347959 seconds.
+extracting values for 7 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 66.090004 seconds.
+saving analysis results.....
+Elapsed time is 0.021254 seconds.
+DONE extracting values for 5 4 1
+Elapsed time is 0.196848 seconds.
+extracting values for 5 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 79.408949 seconds.
+Elapsed time is 2.120030 seconds.
+extracting values for 7 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.397464 seconds.
+saving analysis results.....
+Elapsed time is 0.027820 seconds.
+DONE extracting values for 7 7 1
+Elapsed time is 2.403324 seconds.
+saving analysis results.....
+Elapsed time is 0.022466 seconds.
+DONE extracting values for 7 3 1
+Elapsed time is 2.739816 seconds.
+extracting values for 1 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.739577 seconds.
+saving analysis results.....
+Elapsed time is 0.042794 seconds.
+DONE extracting values for 1 10 1
+saving analysis results.....
+Elapsed time is 0.584210 seconds.
+DONE extracting values for 3 13 1
+Elapsed time is 0.649554 seconds.
+extracting values for 3 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 37.159996 seconds.
+saving analysis results.....
+Elapsed time is 0.021967 seconds.
+DONE extracting values for 2 8 1
+Elapsed time is 0.104172 seconds.
+extracting values for 2 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.133914 seconds.
+saving analysis results.....
+Elapsed time is 0.026600 seconds.
+DONE extracting values for 6 6 1
+Elapsed time is 0.186495 seconds.
+extracting values for 6 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.796399 seconds.
+saving analysis results.....
+Elapsed time is 0.642600 seconds.
+DONE extracting values for 6 5 1
+Elapsed time is 1.051775 seconds.
+Elapsed time is 3.301467 seconds.
+extracting values for 8 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 72.502095 seconds.
+saving analysis results.....
+Elapsed time is 0.021825 seconds.
+DONE extracting values for 8 2 1
+Elapsed time is 2.271241 seconds.
+extracting values for 5 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.950624 seconds.
+saving analysis results.....
+Elapsed time is 0.028835 seconds.
+DONE extracting values for 5 8 1
+saving analysis results.....
+Elapsed time is 0.777142 seconds.
+DONE extracting values for 3 6 1
+Elapsed time is 0.921415 seconds.
+extracting values for 3 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.614634 seconds.
+extracting values for 9 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.154780 seconds.
+saving analysis results.....
+Elapsed time is 0.038965 seconds.
+DONE extracting values for 3 1 1
+Elapsed time is 0.252714 seconds.
+extracting values for 2 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 35.594986 seconds.
+saving analysis results.....
+Elapsed time is 0.025178 seconds.
+DONE extracting values for 2 3 1
+Elapsed time is 0.175708 seconds.
+extracting values for 2 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 89.101744 seconds.
+Elapsed time is 2.013521 seconds.
+extracting values for 8 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.116027 seconds.
+saving analysis results.....
+Elapsed time is 0.022205 seconds.
+DONE extracting values for 8 12 1
+Elapsed time is 2.992717 seconds.
+extracting values for 4 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.832095 seconds.
+Elapsed time is 3.750849 seconds.
+extracting values for 6 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 80.611065 seconds.
+saving analysis results.....
+Elapsed time is 0.080313 seconds.
+DONE extracting values for 3 12 1
+Elapsed time is 0.218341 seconds.
+extracting values for 3 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 38.740498 seconds.
+saving analysis results.....
+Elapsed time is 0.023388 seconds.
+DONE extracting values for 4 4 1
+saving analysis results.....
+Elapsed time is 0.367754 seconds.
+DONE extracting values for 3 11 1
+Elapsed time is 0.522062 seconds.
+extracting values for 9 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.262659 seconds.
+Elapsed time is 2.178239 seconds.
+extracting values for 4 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.654371 seconds.
+saving analysis results.....
+Elapsed time is 0.487232 seconds.
+DONE extracting values for 6 1 1
+saving analysis results.....
+Elapsed time is 0.362346 seconds.
+DONE extracting values for 9 9 1
+saving analysis results.....
+Elapsed time is 0.812070 seconds.
+DONE extracting values for 4 11 1
+extracting values for 9 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 35.853595 seconds.
+saving analysis results.....
+Elapsed time is 0.192474 seconds.
+DONE extracting values for 2 7 1
+Elapsed time is 0.349640 seconds.
+extracting values for 2 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.804274 seconds.
+saving analysis results.....
+Elapsed time is 0.578739 seconds.
+DONE extracting values for 2 6 1
+Elapsed time is 0.760803 seconds.
+extracting values for 9 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 81.939923 seconds.
+saving analysis results.....
+Elapsed time is 0.024251 seconds.
+DONE extracting values for 1 4 1
+Elapsed time is 0.199361 seconds.
+extracting values for 1 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 78.226735 seconds.
+saving analysis results.....
+Elapsed time is 0.036378 seconds.
+DONE extracting values for 9 1 1
+Elapsed time is 2.134110 seconds.
+extracting values for 1 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 57.130934 seconds.
+saving analysis results.....
+Elapsed time is 0.405561 seconds.
+DONE extracting values for 1 9 1
+saving analysis results.....
+Elapsed time is 0.667293 seconds.
+DONE extracting values for 2 16 1
+Elapsed time is 0.852310 seconds.
+extracting values for 2 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.362148 seconds.
+Elapsed time is 2.565527 seconds.
+extracting values for 5 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.411555 seconds.
+Elapsed time is 3.535741 seconds.
+extracting values for 7 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 72.997386 seconds.
+saving analysis results.....
+Elapsed time is 0.021595 seconds.
+DONE extracting values for 5 7 1
+Elapsed time is 2.486924 seconds.
+saving analysis results.....
+Elapsed time is 0.136735 seconds.
+DONE extracting values for 7 2 1
+saving analysis results.....
+Elapsed time is 0.060732 seconds.
+DONE extracting values for 9 5 1
+Elapsed time is 0.158725 seconds.
+extracting values for 9 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.386250 seconds.
+extracting values for 9 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.016286 seconds.
+Elapsed time is 2.041304 seconds.
+extracting values for 8 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.830938 seconds.
+saving analysis results.....
+Elapsed time is 0.997371 seconds.
+saving analysis results.....
+Elapsed time is 0.085242 seconds.
+DONE extracting values for 9 12 1
+Elapsed time is 0.321747 seconds.
+extracting values for 9 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 35.103455 seconds.
+DONE extracting values for 8 11 1
+Elapsed time is 4.510494 seconds.
+extracting values for 5 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.307011 seconds.
+saving analysis results.....
+Elapsed time is 0.046464 seconds.
+DONE extracting values for 5 3 1
+Elapsed time is 0.384342 seconds.
+extracting values for 5 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 91.551808 seconds.
+saving analysis results.....
+Elapsed time is 0.023213 seconds.
+DONE extracting values for 5 16 1
+Elapsed time is 2.393384 seconds.
+extracting values for 9 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.571096 seconds.
+saving analysis results.....
+Elapsed time is 0.210861 seconds.
+DONE extracting values for 9 8 1
+Elapsed time is 3.824729 seconds.
+extracting values for 8 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 81.294819 seconds.
+saving analysis results.....
+Elapsed time is 0.030029 seconds.
+DONE extracting values for 3 5 1
+Elapsed time is 0.163407 seconds.
+extracting values for 3 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 74.351220 seconds.
+saving analysis results.....
+Elapsed time is 0.474058 seconds.
+DONE extracting values for 3 4 1
+Elapsed time is 0.814683 seconds.
+Elapsed time is 4.348326 seconds.
+extracting values for 8 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.118171 seconds.
+saving analysis results.....
+Elapsed time is 0.212450 seconds.
+DONE extracting values for 8 1 1
+Elapsed time is 4.638824 seconds.
+saving analysis results.....
+Elapsed time is 0.023311 seconds.
+DONE extracting values for 8 16 1
+Elapsed time is 2.761467 seconds.
+extracting values for 4 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.894969 seconds.
+saving analysis results.....
+Elapsed time is 0.022020 seconds.
+DONE extracting values for 4 10 1
+saving analysis results.....
+Elapsed time is 0.023221 seconds.
+DONE extracting values for 2 15 1
+Elapsed time is 0.403333 seconds.
+extracting values for 2 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 37.006809 seconds.
+Elapsed time is 2.442993 seconds.
+extracting values for 1 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.909875 seconds.
+saving analysis results.....
+Elapsed time is 0.030468 seconds.
+DONE extracting values for 1 8 1
+Elapsed time is 2.257868 seconds.
+saving analysis results.....
+Elapsed time is 0.023355 seconds.
+DONE extracting values for 9 15 1
+Elapsed time is 0.086555 seconds.
+extracting values for 9 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.368137 seconds.
+saving analysis results.....
+Elapsed time is 0.088871 seconds.
+DONE extracting values for 2 2 1
+Elapsed time is 0.271008 seconds.
+extracting values for 2 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 82.483580 seconds.
+extracting values for 10 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 63.904294 seconds.
+saving analysis results.....
+Elapsed time is 1.004308 seconds.
+saving analysis results.....
+Elapsed time is 0.020347 seconds.
+DONE extracting values for 9 11 1
+Elapsed time is 0.114756 seconds.
+extracting values for 9 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.831707 seconds.
+saving analysis results.....
+Elapsed time is 0.021208 seconds.
+DONE extracting values for 9 10 1
+Elapsed time is 0.161609 seconds.
+extracting values for 10 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.719633 seconds.
+Elapsed time is 2.933822 seconds.
+extracting values for 8 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.845301 seconds.
+Elapsed time is 3.248953 seconds.
+extracting values for 4 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 86.564581 seconds.
+saving analysis results.....
+Elapsed time is 0.022461 seconds.
+DONE extracting values for 8 10 1
+Elapsed time is 2.119903 seconds.
+saving analysis results.....
+Elapsed time is 0.030861 seconds.
+DONE extracting values for 10 5 1
+saving analysis results.....
+Elapsed time is 0.021876 seconds.
+DONE extracting values for 9 4 1
+Elapsed time is 0.124676 seconds.
+extracting values for 9 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.761156 seconds.
+saving analysis results.....
+Elapsed time is 0.030740 seconds.
+DONE extracting values for 4 3 1
+Elapsed time is 2.191753 seconds.
+extracting values for 5 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.840833 seconds.
+saving analysis results.....
+Elapsed time is 0.126978 seconds.
+DONE extracting values for 5 15 1
+extracting values for 10 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 40.325601 seconds.
+saving analysis results.....
+Elapsed time is 0.028236 seconds.
+DONE extracting values for 1 3 1
+Elapsed time is 0.192965 seconds.
+extracting values for 1 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 84.098896 seconds.
+saving analysis results.....
+Elapsed time is 0.023194 seconds.
+DONE extracting values for 2 14 1
+Elapsed time is 0.128415 seconds.
+extracting values for 2 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.927839 seconds.
+saving analysis results.....
+Elapsed time is 0.022711 seconds.
+DONE extracting values for 2 13 1
+Elapsed time is 0.131837 seconds.
+Elapsed time is 2.494879 seconds.
+extracting values for 9 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.465233 seconds.
+Elapsed time is 2.366114 seconds.
+extracting values for 8 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.890214 seconds.
+extracting values for 10 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.777468 seconds.
+saving analysis results.....
+Elapsed time is 0.021385 seconds.
+DONE extracting values for 9 7 1
+saving analysis results.....
+Elapsed time is 0.107420 seconds.
+DONE extracting values for 8 15 1
+saving analysis results.....
+Elapsed time is 0.022881 seconds.
+DONE extracting values for 10 11 1
+Elapsed time is 2.018111 seconds.
+extracting values for 4 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.830966 seconds.
+saving analysis results.....
+Elapsed time is 0.022640 seconds.
+DONE extracting values for 9 14 1
+Elapsed time is 0.125087 seconds.
+extracting values for 9 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 35.805416 seconds.
+saving analysis results.....
+Elapsed time is 0.021851 seconds.
+DONE extracting values for 9 13 1
+Elapsed time is 0.077266 seconds.
+saving analysis results.....
+Elapsed time is 0.305571 seconds.
+DONE extracting values for 4 9 1
+Elapsed time is 3.118386 seconds.
+extracting values for 10 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.502366 seconds.
+DONE extracting values for 2 1 1
+Elapsed time is 1.277683 seconds.
+extracting values for 1 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.262798 seconds.
+saving analysis results.....
+Elapsed time is 0.029940 seconds.
+DONE extracting values for 10 13 1
+extracting values for 10 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 35.304071 seconds.
+Elapsed time is 4.062659 seconds.
+extracting values for 7 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 81.035219 seconds.
+saving analysis results.....
+Elapsed time is 0.038258 seconds.
+DONE extracting values for 7 1 1
+Elapsed time is 4.192189 seconds.
+saving analysis results.....
+Elapsed time is 0.022574 seconds.
+DONE extracting values for 10 2 1
+Elapsed time is 0.141957 seconds.
+extracting values for 10 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.514343 seconds.
+saving analysis results.....
+Elapsed time is 0.301266 seconds.
+DONE extracting values for 10 8 1
+Elapsed time is 0.485012 seconds.
+extracting values for 10 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.803350 seconds.
+Elapsed time is 2.388713 seconds.
+extracting values for 5 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.134385 seconds.
+saving analysis results.....
+Elapsed time is 0.433585 seconds.
+DONE extracting values for 5 2 1
+Elapsed time is 0.617208 seconds.
+extracting values for 5 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 101.123892 seconds.
+Elapsed time is 3.096997 seconds.
+extracting values for 10 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 59.878274 seconds.
+Elapsed time is 1.938282 seconds.
+extracting values for 10 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.870510 seconds.
+saving analysis results.....
+Elapsed time is 0.041976 seconds.
+DONE extracting values for 5 14 1
+Elapsed time is 2.134285 seconds.
+saving analysis results.....
+Elapsed time is 0.032134 seconds.
+DONE extracting values for 10 10 1
+Elapsed time is 2.420233 seconds.
+extracting values for 8 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.710736 seconds.
+saving analysis results.....
+Elapsed time is 0.021470 seconds.
+DONE extracting values for 10 15 1
+Elapsed time is 0.120169 seconds.
+extracting values for 10 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 37.889172 seconds.
+saving analysis results.....
+Elapsed time is 0.018366 seconds.
+DONE extracting values for 10 14 1
+Elapsed time is 0.078921 seconds.
+saving analysis results.....
+Elapsed time is 0.023272 seconds.
+DONE extracting values for 10 4 1
+saving analysis results.....
+Elapsed time is 0.293311 seconds.
+DONE extracting values for 1 16 1
+Elapsed time is 0.424473 seconds.
+extracting values for 1 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.269635 seconds.
+saving analysis results.....
+Elapsed time is 0.024298 seconds.
+DONE extracting values for 1 15 1
+Elapsed time is 0.144241 seconds.
+saving analysis results.....
+Elapsed time is 0.021719 seconds.
+DONE extracting values for 9 3 1
+Elapsed time is 0.128932 seconds.
+extracting values for 9 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 62.447164 seconds.
+saving analysis results.....
+Elapsed time is 0.017971 seconds.
+DONE extracting values for 9 2 1
+Elapsed time is 0.166529 seconds.
+saving analysis results.....
+Elapsed time is 0.023802 seconds.
+DONE extracting values for 8 14 1
+Elapsed time is 2.373434 seconds.
+Elapsed time is 2.166602 seconds.
+extracting values for 10 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.351073 seconds.
+Elapsed time is 1.891505 seconds.
+extracting values for 9 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.078891 seconds.
+saving analysis results.....
+Elapsed time is 0.053407 seconds.
+DONE extracting values for 10 12 1
+Elapsed time is 2.293340 seconds.
+saving analysis results.....
+Elapsed time is 0.027115 seconds.
+DONE extracting values for 9 6 1
+Elapsed time is 2.446023 seconds.
+extracting values for 11 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.954805 seconds.
+extracting values for 11 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 57.323208 seconds.
+saving analysis results.....
+Elapsed time is 0.022246 seconds.
+DONE extracting values for 11 7 1
+extracting values for 11 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.771193 seconds.
+extracting values for 11 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.100598 seconds.
+saving analysis results.....
+Elapsed time is 0.125816 seconds.
+DONE extracting values for 11 9 1
+extracting values for 11 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 83.205283 seconds.
+saving analysis results.....
+Elapsed time is 0.966420 seconds.
+DONE extracting values for 11 1 1
+saving analysis results.....
+Elapsed time is 0.603568 seconds.
+DONE extracting values for 10 1 1
+Elapsed time is 0.798072 seconds.
+extracting values for 9 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 38.540650 seconds.
+saving analysis results.....
+Elapsed time is 2.245781 seconds.
+DONE extracting values for 9 16 1
+Elapsed time is 2.360172 seconds.
+extracting values for 11 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 34.716710 seconds.
+extracting values for 11 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.281613 seconds.
+extracting values for 11 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.036702 seconds.
+saving analysis results.....
+Elapsed time is 0.022748 seconds.
+DONE extracting values for 11 11 1
+Elapsed time is 3.736035 seconds.
+extracting values for 4 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 103.389604 seconds.
+Elapsed time is 2.227339 seconds.
+extracting values for 10 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.526261 seconds.
+saving analysis results.....
+Elapsed time is 0.068050 seconds.
+DONE extracting values for 4 2 1
+Elapsed time is 3.780557 seconds.
+saving analysis results.....
+Elapsed time is 0.023345 seconds.
+DONE extracting values for 5 1 1
+Elapsed time is 0.198841 seconds.
+extracting values for 4 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.825495 seconds.
+saving analysis results.....
+Elapsed time is 0.029099 seconds.
+DONE extracting values for 4 16 1
+Elapsed time is 0.138283 seconds.
+saving analysis results.....
+Elapsed time is 0.023834 seconds.
+DONE extracting values for 10 9 1
+Elapsed time is 2.361733 seconds.
+saving analysis results.....
+Elapsed time is 0.206030 seconds.
+DONE extracting values for 1 2 1
+Elapsed time is 0.728745 seconds.
+extracting values for 1 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 101.325854 seconds.
+saving analysis results.....
+Elapsed time is 0.019980 seconds.
+DONE extracting values for 1 1 1
+Elapsed time is 0.481556 seconds.
+saving analysis results.....
+Elapsed time is 0.048467 seconds.
+DONE extracting values for 10 7 1
+Elapsed time is 0.485959 seconds.
+extracting values for 10 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.486069 seconds.
+saving analysis results.....
+Elapsed time is 0.583355 seconds.
+DONE extracting values for 10 6 1
+Elapsed time is 0.761321 seconds.
+extracting values for 12 7 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.192988 seconds.
+Elapsed time is 2.560343 seconds.
+extracting values for 11 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.696622 seconds.
+saving analysis results.....
+Elapsed time is 0.024367 seconds.
+DONE extracting values for 12 7 1
+Elapsed time is 2.478111 seconds.
+extracting values for 11 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.385988 seconds.
+extracting values for 12 5 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.869331 seconds.
+saving analysis results.....
+Elapsed time is 0.065763 seconds.
+DONE extracting values for 11 8 1
+Elapsed time is 2.399404 seconds.
+saving analysis results.....
+Elapsed time is 0.073318 seconds.
+DONE extracting values for 11 6 1
+Elapsed time is 2.788574 seconds.
+saving analysis results.....
+Elapsed time is 0.021344 seconds.
+DONE extracting values for 12 5 1
+saving analysis results.....
+Elapsed time is 0.056165 seconds.
+DONE extracting values for 11 5 1
+Elapsed time is 0.141406 seconds.
+extracting values for 11 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.313931 seconds.
+saving analysis results.....
+Elapsed time is 0.038352 seconds.
+DONE extracting values for 11 4 1
+Elapsed time is 0.112220 seconds.
+extracting values for 12 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 65.132539 seconds.
+saving analysis results.....
+Elapsed time is 0.294103 seconds.
+DONE extracting values for 11 13 1
+Elapsed time is 0.349862 seconds.
+extracting values for 11 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 32.943182 seconds.
+saving analysis results.....
+Elapsed time is 0.053289 seconds.
+DONE extracting values for 11 12 1
+Elapsed time is 0.118016 seconds.
+extracting values for 12 9 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.608069 seconds.
+saving analysis results.....
+Elapsed time is 0.044917 seconds.
+DONE extracting values for 12 3 1
+Elapsed time is 3.310385 seconds.
+extracting values for 10 3 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 70.157341 seconds.
+saving analysis results.....
+Elapsed time is 0.023438 seconds.
+DONE extracting values for 11 3 1
+Elapsed time is 0.151934 seconds.
+extracting values for 11 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 62.769908 seconds.
+saving analysis results.....
+Elapsed time is 0.035563 seconds.
+DONE extracting values for 11 2 1
+Elapsed time is 0.192376 seconds.
+Elapsed time is 4.459536 seconds.
+extracting values for 10 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.907238 seconds.
+extracting values for 12 1 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 71.389271 seconds.
+saving analysis results.....
+Elapsed time is 0.022414 seconds.
+DONE extracting values for 11 15 1
+Elapsed time is 0.140203 seconds.
+extracting values for 11 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 35.999037 seconds.
+saving analysis results.....
+Elapsed time is 0.171749 seconds.
+DONE extracting values for 10 16 1
+Elapsed time is 2.279455 seconds.
+saving analysis results.....
+Elapsed time is 0.033541 seconds.
+DONE extracting values for 10 3 1
+Elapsed time is 3.468342 seconds.
+saving analysis results.....
+Elapsed time is 1.953934 seconds.
+DONE extracting values for 11 14 1
+Elapsed time is 2.049942 seconds.
+extracting values for 12 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 32.261970 seconds.
+saving analysis results.....
+Elapsed time is 0.020703 seconds.
+DONE extracting values for 12 16 1
+Elapsed time is 0.112976 seconds.
+extracting values for 12 13 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.314223 seconds.
+Elapsed time is 2.281171 seconds.
+extracting values for 11 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.300155 seconds.
+saving analysis results.....
+Elapsed time is 0.879792 seconds.
+DONE extracting values for 12 13 1
+saving analysis results.....
+Elapsed time is 0.334231 seconds.
+DONE extracting values for 11 10 1
+Elapsed time is 2.420906 seconds.
+extracting values for 12 11 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 41.604369 seconds.
+extracting values for 12 15 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 40.316181 seconds.
+saving analysis results.....
+Elapsed time is 0.020479 seconds.
+DONE extracting values for 12 15 1
+saving analysis results.....
+Elapsed time is 0.194304 seconds.
+DONE extracting values for 12 11 1
+Elapsed time is 1.565108 seconds.
+extracting values for 12 6 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.319591 seconds.
+saving analysis results.....
+Elapsed time is 0.448876 seconds.
+DONE extracting values for 12 6 1
+Elapsed time is 0.977568 seconds.
+saving analysis results.....
+Elapsed time is 0.035083 seconds.
+DONE extracting values for 12 1 1
+Elapsed time is 0.231002 seconds.
+extracting values for 11 16 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 34.355949 seconds.
+saving analysis results.....
+Elapsed time is 0.028485 seconds.
+DONE extracting values for 11 16 1
+Elapsed time is 0.114358 seconds.
+saving analysis results.....
+Elapsed time is 0.021757 seconds.
+DONE extracting values for 12 9 1
+Elapsed time is 0.098154 seconds.
+extracting values for 12 8 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 37.673567 seconds.
+saving analysis results.....
+Elapsed time is 0.191364 seconds.
+DONE extracting values for 12 8 1
+Elapsed time is 0.288203 seconds.
+Elapsed time is 1.008216 seconds.
+extracting values for 12 12 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 34.788922 seconds.
+Elapsed time is 2.990117 seconds.
+extracting values for 12 4 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.914041 seconds.
+saving analysis results.....
+Elapsed time is 0.405636 seconds.
+DONE extracting values for 12 12 1
+Elapsed time is 0.512990 seconds.
+saving analysis results.....
+Elapsed time is 0.552116 seconds.
+DONE extracting values for 12 4 1
+Elapsed time is 3.240625 seconds.
+Elapsed time is 2.758863 seconds.
+extracting values for 12 10 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 33.430586 seconds.
+saving analysis results.....
+Elapsed time is 0.175737 seconds.
+DONE extracting values for 12 10 1
+Elapsed time is 0.284306 seconds.
+Elapsed time is 2.241043 seconds.
+extracting values for 12 14 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 36.910287 seconds.
+saving analysis results.....
+Elapsed time is 0.445008 seconds.
+DONE extracting values for 12 14 1
+Elapsed time is 1.904880 seconds.
+Elapsed time is 3.114275 seconds.
+extracting values for 12 2 1
+
+simName =
+
+backToIntegrator
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 65.146715 seconds.
+saving analysis results.....
+Elapsed time is 0.067221 seconds.
+DONE extracting values for 12 2 1
+Elapsed time is 2.584791 seconds.
+>> 

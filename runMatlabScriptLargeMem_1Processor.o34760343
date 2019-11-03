@@ -1,0 +1,40 @@
+dbstop if error; addpath(genpath('/nfs/turbo/lsa-ojahmed/tibin/ANALYSIS_CODE')); addpath('/nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin/'); runAnalysisParFor
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016a (9.0.0.341360) 64-bit (glnxa64)
+                             February 11, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Name is nonexistent or not a directory:
+/Users/tibinjohn/humanarraychannelmap] 
+[> In path (line 109)
+  In addpath (line 88)
+  In startup (line 5)
+  In matlabrc (line 209)] 
+[Warning: Executing startup failed in matlabrc.
+This indicates a potentially serious problem in your MATLAB setup, which should
+be resolved as soon as possible.  Error detected was:
+MATLAB:UndefinedFunction
+Undefined function 'setFigurePosition' for input arguments of type 'double'.] 
+[> In matlabrc (line 212)] 
+
+	Academic License
+
+[Warning: Function isrow has the same name as a MATLAB builtin. We suggest you
+rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+[Warning: Function isequaln has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+[Warning: Function isstring has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+Starting parallel pool (parpool) using the 'local' profile ... 103     throw(err);
+K>> 

@@ -1,0 +1,14 @@
+Undefined function or variable 'omarPcolor'.
+
+Error in heatMapIt (line 12)
+		omarPcolor(diRanks,speedValues,heatMatrix')
+
+Error in plotCurrHeatMap (line 6)
+heatMapIt(heatMapInput)
+
+Error in plotAnalysisResults (line 25)
+		plotCurrHeatMap
+
+Error in runAnalysisOfSimBatch (line 77)
+    plotAnalysisResults(processedDataPath)
+

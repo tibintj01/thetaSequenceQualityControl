@@ -37,7 +37,8 @@ function [exitStatus] = plotAnalysisResults(processedDataPath)
 
 		plotCurrHeatMap
 	end
-	
+
+	saveAllOpenFigures	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%peak response heat map
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

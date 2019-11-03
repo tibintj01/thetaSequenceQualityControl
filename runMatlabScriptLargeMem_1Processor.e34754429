@@ -1,0 +1,6 @@
+Error using sprintf
+Function is not defined for 'cell' inputs.
+
+Error in runAnalysisOfSimBatch (line 8)
+				filePath=getRegexFilePath(DATA_DIR,sprintf('simData_%s_%.5f_%s_%.5f_%s_%.5f.mat',paramName1,param1Vals(i),paramName2,param2Vals(j),paramName3,param3Vals(k)));
+

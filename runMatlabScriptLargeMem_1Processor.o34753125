@@ -1,0 +1,2257 @@
+started
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+running simulation for....
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+val1 =
+
+     1
+
+
+val2 =
+
+    50
+
+
+val3 =
+
+     0
+
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+  In directory_names (line 21)
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+  In directory_names (line 21)
+  In runSingleSimulation (line 6)
+  In directory_names (line 22)
+  In runSingleSimulation (line 6)
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+  In directory_names (line 21)
+  In directory_names (line 21)
+  In directory_names (line 21)
+Warning: Directory already exists.
+> In touchDir (line 3)
+Warning: Directory already exists.
+> In touchDir (line 3)
+  In runSingleSimulation (line 6)
+  In directory_names (line 22)
+  In directory_names (line 21)
+  In runSingleSimulation (line 6)
+  In runSingleSimulation (line 6)
+  In runSingleSimulation (line 6)
+  In directory_names (line 22)
+  In directory_names (line 21)
+  In directory_names (line 22)
+  In directory_names (line 21)
+  In directory_names (line 23)
+running simulation for....
+  In runSingleSimulation (line 6)
+  In runSingleSimulation (line 6)
+  In directory_names (line 22)
+  In runSingleSimulation (line 6)
+  In runSingleSimulation (line 6)
+  In runSingleSimulation (line 6)
+  In runSingleSimulation (line 6)
+  In runSingleSimulation (line 6)
+running simulation for....
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+running simulation for....
+running simulation for....
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+running simulation for....
+running simulation for....
+running simulation for....
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+Warning: Directory already exists.
+> In touchDir (line 3)
+running simulation for....
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+running simulation for....
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+running simulation for....
+running simulation for....
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+running simulation for....
+  In runSingleSimulation (line 6)
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+running simulation for....
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+val1 =
+
+     1
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+  In directory_names (line 23)
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+val2 =
+
+    20
+
+
+val1 =
+
+     1
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+val1 =
+
+        5040
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+val1 =
+
+        5040
+
+
+val3 =
+
+     1
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+val1 =
+
+     1
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+val2 =
+
+    50
+
+
+val2 =
+
+    40
+
+
+val2 =
+
+    20
+
+
+val1 =
+
+        5040
+
+running simulation for....
+
+val1 =
+
+     1
+
+
+val2 =
+
+    10
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+val3 =
+
+     0
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+val3 =
+
+     0
+
+
+val2 =
+
+    10
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+val1 =
+
+     1
+
+
+val3 =
+
+     1
+
+
+val3 =
+
+     0
+
+
+val3 =
+
+     0
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+val2 =
+
+    20
+
+
+val2 =
+
+    40
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+val3 =
+
+     1
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+val3 =
+
+     0
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+  In runSingleSimulation (line 6)
+
+val1 =
+
+     1
+
+
+val1 =
+
+        5040
+
+
+val1 =
+
+        5040
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+val2 =
+
+    10
+
+
+val2 =
+
+    40
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+val2 =
+
+    10
+
+
+val1 =
+
+        5040
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+val3 =
+
+     1
+
+
+val3 =
+
+     1
+
+
+val1 =
+
+        5040
+
+
+val2 =
+
+    20
+
+
+val3 =
+
+     1
+
+running simulation for....
+
+val2 =
+
+    50
+
+
+val3 =
+
+     1
+
+
+val1 =
+
+     1
+
+
+paramName1 =
+
+    'DI_SORTED_PERM_RANK'
+
+
+val3 =
+
+     0
+
+
+val2 =
+
+    40
+
+
+paramName2 =
+
+    'CONSTANT_RUN_SPEED'
+
+
+paramName3 =
+
+    'USE_LINEAR_DELAYS'
+
+
+val1 =
+
+        5040
+
+
+val2 =
+
+    50
+
+
+val3 =
+
+     1
+
+
+val3 =
+
+     0
+
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+  In runSingleSimulation (line 29)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In runSingleSimulation (line 29)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isrow has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isequaln has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function isstring has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+Warning: Function contains has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path (line 109)
+  In addpath (line 86)
+  In addMatlabCodeBasePaths (line 4)
+  In runSingleSimulation (line 29)
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+simTime =
+
+        1000
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+dt =
+
+    0.0020
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+dt =
+
+    0.0020
+
+
+simTime =
+
+        1000
+
+
+simName =
+
+    'stabilityVsFlexibilityHeatMap'
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+BASE_RUN_DIR =
+
+    '/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin'
+
+
+dt =
+
+    0.0020
+
+
+dt =
+
+    0.0020
+
+
+simTime =
+
+        1000
+
+
+simTime =
+
+        1000
+
+
+dt =
+
+    0.0020
+
+
+dt =
+
+    0.0020
+
+
+maxPlaceEndTime =
+
+        2750
+
+
+simTime =
+
+        2750
+
+
+maxPlaceEndTime =
+
+        2600
+
+
+simTime =
+
+        2600
+
+
+maxPlaceEndTime =
+
+        2900
+
+
+simTime =
+
+        2900
+
+
+maxPlaceEndTime =
+
+        2600
+
+
+simTime =
+
+        2600
+
+
+maxPlaceEndTime =
+
+        2900
+
+
+maxPlaceEndTime =
+
+        2150
+
+
+simTime =
+
+        2900
+
+
+simTime =
+
+        2150
+
+
+maxPlaceEndTime =
+
+        2750
+
+
+simTime =
+
+        2750
+
+
+maxPlaceEndTime =
+
+        2600
+
+
+simTime =
+
+        2600
+
+
+maxPlaceEndTime =
+
+        2750
+
+
+simTime =
+
+        2750
+
+
+maxPlaceEndTime =
+
+        2150
+
+
+simTime =
+
+        2150
+
+
+maxPlaceEndTime =
+
+        2150
+
+
+simTime =
+
+        2150
+
+
+maxPlaceEndTime =
+
+        2600
+
+
+simTime =
+
+        2600
+
+
+maxPlaceEndTime =
+
+        2900
+
+
+simTime =
+
+        2900
+
+
+maxPlaceEndTime =
+
+        2900
+
+
+simTime =
+
+        2900
+
+
+maxPlaceEndTime =
+
+        2750
+
+
+simTime =
+
+        2750
+
+
+maxPlaceEndTime =
+
+        3185
+
+
+maxPlaceEndTime =
+
+        2000
+
+
+maxPlaceEndTime =
+
+        2375
+
+
+maxPlaceEndTime =
+
+        3560
+
+
+maxPlaceEndTime =
+
+        3560
+
+
+maxPlaceEndTime =
+
+        3185
+
+
+maxPlaceEndTime =
+
+        2375
+
+
+maxPlaceEndTime =
+
+        3185
+
+
+maxPlaceEndTime =
+
+        3560
+
+
+maxPlaceEndTime =
+
+        3560
+
+
+maxPlaceEndTime =
+
+        2000
+
+
+maxPlaceEndTime =
+
+        3185
+
+
+maxPlaceEndTime =
+
+        2000
+
+
+simTime =
+
+        3185
+
+
+maxPlaceEndTime =
+
+        3560
+
+
+simTime =
+
+        3560
+
+
+maxPlaceEndTime =
+
+        3185
+
+
+simTime =
+
+        3185
+
+
+maxPlaceEndTime =
+
+        3185
+
+
+simTime =
+
+        3185
+
+
+maxPlaceEndTime =
+
+        2375
+
+
+maxPlaceEndTime =
+
+        3560
+
+
+simTime =
+
+        3560
+
+
+maxPlaceEndTime =
+
+        3560
+
+
+simTime =
+
+        3560
+
+
+maxPlaceEndTime =
+
+        2000
+
+
+maxPlaceEndTime =
+
+        2150
+
+
+simTime =
+
+        2150
+
+
+maxPlaceEndTime =
+
+        3560
+
+
+simTime =
+
+        3560
+
+
+maxPlaceEndTime =
+
+   4.1165e+03
+
+
+maxPlaceEndTime =
+
+        4136
+
+
+maxPlaceEndTime =
+
+   4.1165e+03
+
+
+maxPlaceEndTime =
+
+        2375
+
+
+maxPlaceEndTime =
+
+        3185
+
+
+maxPlaceEndTime =
+
+        4136
+
+
+maxPlaceEndTime =
+
+        4136
+
+
+maxPlaceEndTime =
+
+   4.1165e+03
+
+
+maxPlaceEndTime =
+
+   4.1165e+03
+
+
+simTime =
+
+        4117
+
+
+maxPlaceEndTime =
+
+        4136
+
+
+simTime =
+
+        4136
+
+
+maxPlaceEndTime =
+
+        3185
+
+
+simTime =
+
+        3185
+
+
+maxPlaceEndTime =
+
+        4136
+
+
+maxPlaceEndTime =
+
+        4136
+
+
+simTime =
+
+        4136
+
+
+maxPlaceEndTime =
+
+   4.1165e+03
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+simTime =
+
+        4117
+
+
+maxPlaceEndTime =
+
+   4.9553e+03
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+   4.1165e+03
+
+
+maxPlaceEndTime =
+
+   4.1165e+03
+
+
+simTime =
+
+        4117
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+simTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+   4.9553e+03
+
+
+maxPlaceEndTime =
+
+        4136
+
+
+simTime =
+
+        4136
+
+
+maxPlaceEndTime =
+
+   4.9553e+03
+
+
+simTime =
+
+        4956
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+simTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+        4136
+
+
+simTime =
+
+        4136
+
+
+maxPlaceEndTime =
+
+   4.9553e+03
+
+
+maxPlaceEndTime =
+
+   4.1165e+03
+
+
+simTime =
+
+        4117
+
+
+maxPlaceEndTime =
+
+   4.9553e+03
+
+
+simTime =
+
+        4956
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+   5.7104e+03
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+   4.9553e+03
+
+
+simTime =
+
+        4956
+
+
+maxPlaceEndTime =
+
+   5.7104e+03
+
+
+maxPlaceEndTime =
+
+   4.9553e+03
+
+
+maxPlaceEndTime =
+
+   5.7104e+03
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+simTime =
+
+        5711
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+simTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+   4.9553e+03
+
+
+simTime =
+
+        4956
+
+
+maxPlaceEndTime =
+
+   5.7104e+03
+
+
+simTime =
+
+        5711
+
+
+maxPlaceEndTime =
+
+   5.7104e+03
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+   6.3899e+03
+
+
+maxPlaceEndTime =
+
+   5.7104e+03
+
+
+maxPlaceEndTime =
+
+   5.7104e+03
+
+
+simTime =
+
+        5711
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+simTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+   6.3899e+03
+
+
+simTime =
+
+        6390
+
+
+maxPlaceEndTime =
+
+   6.3899e+03
+
+
+maxPlaceEndTime =
+
+   5.7104e+03
+
+
+simTime =
+
+        5711
+
+
+maxPlaceEndTime =
+
+   6.3899e+03
+
+
+maxPlaceEndTime =
+
+        4250
+
+
+maxPlaceEndTime =
+
+   6.3899e+03
+
+
+simTime =
+
+        6390
+
+
+maxPlaceEndTime =
+
+   6.3899e+03
+
+
+simTime =
+
+        6390
+
+
+maxPlaceEndTime =
+
+        7001
+
+
+maxPlaceEndTime =
+
+   6.3899e+03
+
+
+maxPlaceEndTime =
+
+   6.3899e+03
+
+
+simTime =
+
+        6390
+
+
+maxPlaceEndTime =
+
+        7001
+
+
+maxPlaceEndTime =
+
+        7001
+
+
+maxPlaceEndTime =
+
+        7001
+
+
+simTime =
+
+        7001
+
+
+maxPlaceEndTime =
+
+        7001
+
+
+maxPlaceEndTime =
+
+        7001
+
+
+simTime =
+
+        7001
+
+
+maxPlaceEndTime =
+
+        7001
+
+
+simTime =
+
+        7001
+
+
+maxPlaceEndTime =
+
+   7.5509e+03
+
+
+maxPlaceEndTime =
+
+        7001
+
+
+simTime =
+
+        7001
+
+
+maxPlaceEndTime =
+
+   7.5509e+03
+
+
+maxPlaceEndTime =
+
+   7.5509e+03
+
+
+maxPlaceEndTime =
+
+   7.5509e+03
+
+
+simTime =
+
+        7551
+
+
+maxPlaceEndTime =
+
+   7.5509e+03
+
+
+maxPlaceEndTime =
+
+   7.5509e+03
+
+
+simTime =
+
+        7551
+
+
+maxPlaceEndTime =
+
+   7.5509e+03
+
+
+simTime =
+
+        7551
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+   7.5509e+03
+
+
+simTime =
+
+        7551
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+simTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+simTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+simTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+simTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+
+
+maxPlaceEndTime =
+
+        8000
+

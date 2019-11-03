@@ -1,0 +1,121 @@
+rm: cannot remove ‘/scratch/ojahmed_fluxm/tibintj/results/stabilityVsFlexibilityHeatMap/raw_data/*mat’: No such file or directory
+Index exceeds the number of array elements (1375000).
+
+Error in SpikingDataInterface/getCellInfo (line 192)
+				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
+
+Error in SpikingDataInterface/populateCellInfoStructs (line 56)
+					cellInfo=thisObj.getCellInfo(simObj,cellIdx,placeIdx);
+
+Error in SpikingDataInterface (line 41)
+			thisObj.populateCellInfoStructs(simObj);
+
+Error in SimPhaseCodingEvaluation (line 35)
+					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj,delayStageNum));					
+
+Error in Simulation/visualizeSpikeTimings (line 160)
+			phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
+
+Error in runSingleSimulation (line 60)
+		[fH,fpH,fsH]=newSim.visualizeSpikeTimings()
+
+Index exceeds the number of array elements (1450000).
+
+Error in SpikingDataInterface/getCellInfo (line 192)
+				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
+
+Error in SpikingDataInterface/populateCellInfoStructs (line 56)
+					cellInfo=thisObj.getCellInfo(simObj,cellIdx,placeIdx);
+
+Error in SpikingDataInterface (line 41)
+			thisObj.populateCellInfoStructs(simObj);
+
+Error in SimPhaseCodingEvaluation (line 35)
+					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj,delayStageNum));					
+
+Error in Simulation/visualizeSpikeTimings (line 160)
+			phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
+
+Error in runSingleSimulation (line 60)
+		[fH,fpH,fsH]=newSim.visualizeSpikeTimings()
+
+Index exceeds the number of array elements (2125000).
+
+Error in SpikingDataInterface/getCellInfo (line 192)
+				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
+
+Error in SpikingDataInterface/populateCellInfoStructs (line 56)
+					cellInfo=thisObj.getCellInfo(simObj,cellIdx,placeIdx);
+
+Error in SpikingDataInterface (line 41)
+			thisObj.populateCellInfoStructs(simObj);
+
+Error in SimPhaseCodingEvaluation (line 35)
+					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj,delayStageNum));					
+
+Error in Simulation/visualizeSpikeTimings (line 160)
+			phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
+
+Error in runSingleSimulation (line 60)
+		[fH,fpH,fsH]=newSim.visualizeSpikeTimings()
+
+Index exceeds the number of array elements (4000000).
+
+Error in SpikingDataInterface/getCellInfo (line 192)
+				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
+
+Error in SpikingDataInterface/populateCellInfoStructs (line 56)
+					cellInfo=thisObj.getCellInfo(simObj,cellIdx,placeIdx);
+
+Error in SpikingDataInterface (line 41)
+			thisObj.populateCellInfoStructs(simObj);
+
+Error in SimPhaseCodingEvaluation (line 35)
+					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj,delayStageNum));					
+
+Error in Simulation/visualizeSpikeTimings (line 160)
+			phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
+
+Error in runSingleSimulation (line 60)
+		[fH,fpH,fsH]=newSim.visualizeSpikeTimings()
+
+Index exceeds the number of array elements (4000000).
+
+Error in SpikingDataInterface/getCellInfo (line 192)
+				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
+
+Error in SpikingDataInterface/populateCellInfoStructs (line 56)
+					cellInfo=thisObj.getCellInfo(simObj,cellIdx,placeIdx);
+
+Error in SpikingDataInterface (line 41)
+			thisObj.populateCellInfoStructs(simObj);
+
+Error in SimPhaseCodingEvaluation (line 35)
+					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj,delayStageNum));					
+
+Error in Simulation/visualizeSpikeTimings (line 160)
+			phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
+
+Error in runSingleSimulation (line 60)
+		[fH,fpH,fsH]=newSim.visualizeSpikeTimings()
+
+Index exceeds the number of array elements (4000000).
+
+Error in SpikingDataInterface/getCellInfo (line 192)
+				allSpikePhases=thetaPhaseSeries(allSpikeIdxes);
+
+Error in SpikingDataInterface/populateCellInfoStructs (line 56)
+					cellInfo=thisObj.getCellInfo(simObj,cellIdx,placeIdx);
+
+Error in SpikingDataInterface (line 41)
+			thisObj.populateCellInfoStructs(simObj);
+
+Error in SimPhaseCodingEvaluation (line 35)
+					thisObj.spikingDataInterface=copy(SpikingDataInterface(thisObj.simObj,delayStageNum));					
+
+Error in Simulation/visualizeSpikeTimings (line 160)
+			phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
+
+Error in runSingleSimulation (line 60)
+		[fH,fpH,fsH]=newSim.visualizeSpikeTimings()
+

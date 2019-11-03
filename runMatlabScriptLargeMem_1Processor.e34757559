@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "runSimParameterScanPar.py", line 112, in <module>
+    for k,scanParam3Value in enumerate(scanParam3Values): 
+NameError: name 'scanParam3Values' is not defined

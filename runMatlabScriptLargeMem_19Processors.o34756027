@@ -1,0 +1,6580 @@
+dbstop if error; addpath(genpath('/nfs/turbo/lsa-ojahmed/tibin/ANALYSIS_CODE')); addpath('/nfs/turbo/lsa-ojahmed/tibin/spikeDynamicsAnalysisTibin/'); runAnalysisParFor
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016a (9.0.0.341360) 64-bit (glnxa64)
+                             February 11, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Name is nonexistent or not a directory:
+/Users/tibinjohn/humanarraychannelmap] 
+[> In path (line 109)
+  In addpath (line 88)
+  In startup (line 5)
+  In matlabrc (line 209)] 
+[Warning: Executing startup failed in matlabrc.
+This indicates a potentially serious problem in your MATLAB setup, which should
+be resolved as soon as possible.  Error detected was:
+MATLAB:UndefinedFunction
+Undefined function 'setFigurePosition' for input arguments of type 'double'.] 
+[> In matlabrc (line 212)] 
+
+	Academic License
+
+[Warning: Function isrow has the same name as a MATLAB builtin. We suggest you
+rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+[Warning: Function isequaln has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+[Warning: Function isstring has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 88)] 
+Starting parallel pool (parpool) using the 'local' profile ... connected to 19 workers.
+
+ans = 
+
+ Pool with properties: 
+
+            Connected: true
+           NumWorkers: 19
+              Cluster: local
+        AttachedFiles: {}
+          IdleTimeout: 30 minute(s) (30 minutes remaining)
+          SpmdEnabled: true
+
+extracting values for 1 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.445304 seconds.
+extracting values for 6 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.780976 seconds.
+extracting values for 4 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.853967 seconds.
+extracting values for 6 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.657475 seconds.
+extracting values for 3 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.336257 seconds.
+extracting values for 5 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.252503 seconds.
+extracting values for 7 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.494682 seconds.
+extracting values for 4 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.915589 seconds.
+extracting values for 7 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.435028 seconds.
+extracting values for 8 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.313732 seconds.
+extracting values for 1 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.556133 seconds.
+extracting values for 2 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 53.625456 seconds.
+extracting values for 5 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.057430 seconds.
+extracting values for 2 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.919217 seconds.
+extracting values for 7 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 62.470756 seconds.
+extracting values for 3 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.938664 seconds.
+extracting values for 8 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 69.654455 seconds.
+extracting values for 6 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.947364 seconds.
+extracting values for 4 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 84.353471 seconds.
+saving analysis results.....
+Elapsed time is 0.029591 seconds.
+DONE extracting values for 1 14 2
+Elapsed time is 0.166049 seconds.
+extracting values for 1 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.195478 seconds.
+saving analysis results.....
+Elapsed time is 0.018869 seconds.
+DONE extracting values for 5 13 1
+Elapsed time is 0.128843 seconds.
+extracting values for 5 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.942329 seconds.
+saving analysis results.....
+Elapsed time is 0.041861 seconds.
+DONE extracting values for 6 15 1
+Elapsed time is 0.158344 seconds.
+extracting values for 6 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.338475 seconds.
+saving analysis results.....
+Elapsed time is 0.029692 seconds.
+DONE extracting values for 7 14 2
+Elapsed time is 0.144097 seconds.
+extracting values for 7 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.393884 seconds.
+saving analysis results.....
+Elapsed time is 0.020053 seconds.
+DONE extracting values for 6 9 2
+Elapsed time is 0.131742 seconds.
+extracting values for 6 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.521303 seconds.
+saving analysis results.....
+Elapsed time is 0.060717 seconds.
+DONE extracting values for 4 15 2
+Elapsed time is 0.178057 seconds.
+extracting values for 4 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.996344 seconds.
+saving analysis results.....
+Elapsed time is 0.035879 seconds.
+DONE extracting values for 3 10 2
+Elapsed time is 0.148478 seconds.
+extracting values for 3 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.041922 seconds.
+saving analysis results.....
+Elapsed time is 0.081688 seconds.
+DONE extracting values for 7 9 2
+Elapsed time is 0.205582 seconds.
+extracting values for 7 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.839673 seconds.
+saving analysis results.....
+Elapsed time is 0.035243 seconds.
+DONE extracting values for 4 8 2
+Elapsed time is 0.180997 seconds.
+extracting values for 4 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.634769 seconds.
+saving analysis results.....
+Elapsed time is 0.021663 seconds.
+DONE extracting values for 2 12 2
+Elapsed time is 0.132709 seconds.
+extracting values for 2 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.535376 seconds.
+saving analysis results.....
+Elapsed time is 0.033270 seconds.
+DONE extracting values for 8 7 2
+Elapsed time is 0.275004 seconds.
+extracting values for 8 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.213312 seconds.
+saving analysis results.....
+Elapsed time is 0.023967 seconds.
+DONE extracting values for 1 7 2
+Elapsed time is 0.150416 seconds.
+extracting values for 1 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.767260 seconds.
+saving analysis results.....
+Elapsed time is 0.070538 seconds.
+DONE extracting values for 5 6 2
+Elapsed time is 0.208548 seconds.
+extracting values for 5 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 53.840196 seconds.
+saving analysis results.....
+Elapsed time is 0.040565 seconds.
+DONE extracting values for 2 5 2
+Elapsed time is 0.186762 seconds.
+extracting values for 2 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.765610 seconds.
+saving analysis results.....
+Elapsed time is 0.052480 seconds.
+DONE extracting values for 7 4 2
+Elapsed time is 0.231375 seconds.
+extracting values for 7 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 64.315060 seconds.
+saving analysis results.....
+Elapsed time is 0.021120 seconds.
+DONE extracting values for 1 14 1
+Elapsed time is 0.097289 seconds.
+extracting values for 1 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.015625 seconds.
+saving analysis results.....
+Elapsed time is 0.025402 seconds.
+DONE extracting values for 5 12 2
+Elapsed time is 0.137826 seconds.
+extracting values for 5 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.409261 seconds.
+saving analysis results.....
+Elapsed time is 0.019687 seconds.
+DONE extracting values for 7 14 1
+Elapsed time is 0.097116 seconds.
+extracting values for 7 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.561072 seconds.
+saving analysis results.....
+Elapsed time is 0.017269 seconds.
+DONE extracting values for 6 14 2
+Elapsed time is 0.125838 seconds.
+extracting values for 6 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.626296 seconds.
+saving analysis results.....
+Elapsed time is 0.078734 seconds.
+DONE extracting values for 4 15 1
+Elapsed time is 0.188802 seconds.
+extracting values for 4 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.846384 seconds.
+saving analysis results.....
+Elapsed time is 0.021025 seconds.
+DONE extracting values for 3 10 1
+Elapsed time is 0.093561 seconds.
+extracting values for 3 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.582063 seconds.
+saving analysis results.....
+Elapsed time is 0.043203 seconds.
+DONE extracting values for 3 3 2
+Elapsed time is 0.194255 seconds.
+extracting values for 3 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.939098 seconds.
+saving analysis results.....
+Elapsed time is 0.017895 seconds.
+DONE extracting values for 6 9 1
+Elapsed time is 0.086741 seconds.
+extracting values for 6 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.422033 seconds.
+saving analysis results.....
+Elapsed time is 0.071212 seconds.
+DONE extracting values for 6 3 2
+Elapsed time is 0.212807 seconds.
+extracting values for 6 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 69.969723 seconds.
+saving analysis results.....
+Elapsed time is 0.033529 seconds.
+DONE extracting values for 7 9 1
+Elapsed time is 0.115798 seconds.
+extracting values for 7 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.205586 seconds.
+saving analysis results.....
+Elapsed time is 0.031612 seconds.
+DONE extracting values for 2 12 1
+Elapsed time is 0.103007 seconds.
+extracting values for 2 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.663147 seconds.
+saving analysis results.....
+Elapsed time is 0.045982 seconds.
+DONE extracting values for 4 8 1
+Elapsed time is 0.170691 seconds.
+extracting values for 4 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.234556 seconds.
+saving analysis results.....
+Elapsed time is 0.021389 seconds.
+DONE extracting values for 8 3 1
+Elapsed time is 0.161762 seconds.
+extracting values for 8 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 78.358972 seconds.
+saving analysis results.....
+Elapsed time is 0.018662 seconds.
+DONE extracting values for 8 7 1
+Elapsed time is 0.091009 seconds.
+extracting values for 8 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 53.859271 seconds.
+saving analysis results.....
+Elapsed time is 0.018530 seconds.
+DONE extracting values for 1 7 1
+Elapsed time is 0.123790 seconds.
+extracting values for 1 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.618412 seconds.
+saving analysis results.....
+Elapsed time is 0.187425 seconds.
+DONE extracting values for 5 6 1
+Elapsed time is 0.296341 seconds.
+extracting values for 5 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 59.514376 seconds.
+saving analysis results.....
+Elapsed time is 0.024783 seconds.
+DONE extracting values for 4 1 2
+Elapsed time is 0.202054 seconds.
+extracting values for 4 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 86.096162 seconds.
+saving analysis results.....
+Elapsed time is 0.021330 seconds.
+DONE extracting values for 6 14 1
+Elapsed time is 0.084611 seconds.
+extracting values for 6 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.649654 seconds.
+saving analysis results.....
+Elapsed time is 0.077630 seconds.
+DONE extracting values for 1 13 2
+Elapsed time is 0.167503 seconds.
+extracting values for 1 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.025311 seconds.
+saving analysis results.....
+Elapsed time is 0.075641 seconds.
+DONE extracting values for 5 12 1
+Elapsed time is 0.143220 seconds.
+extracting values for 5 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.425067 seconds.
+saving analysis results.....
+Elapsed time is 0.034323 seconds.
+DONE extracting values for 4 14 2
+Elapsed time is 0.147189 seconds.
+extracting values for 4 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.125559 seconds.
+saving analysis results.....
+Elapsed time is 0.029444 seconds.
+DONE extracting values for 7 13 2
+Elapsed time is 0.140124 seconds.
+extracting values for 7 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.443240 seconds.
+saving analysis results.....
+Elapsed time is 0.020067 seconds.
+DONE extracting values for 2 5 1
+Elapsed time is 0.141345 seconds.
+extracting values for 2 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 62.296684 seconds.
+saving analysis results.....
+Elapsed time is 0.034765 seconds.
+DONE extracting values for 3 9 2
+Elapsed time is 0.115203 seconds.
+extracting values for 3 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.720179 seconds.
+saving analysis results.....
+Elapsed time is 0.037701 seconds.
+DONE extracting values for 6 8 2
+Elapsed time is 0.115854 seconds.
+extracting values for 6 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.582250 seconds.
+saving analysis results.....
+Elapsed time is 0.031591 seconds.
+DONE extracting values for 7 8 2
+Elapsed time is 0.129707 seconds.
+extracting values for 7 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.198426 seconds.
+saving analysis results.....
+Elapsed time is 0.026356 seconds.
+DONE extracting values for 2 11 2
+Elapsed time is 0.103024 seconds.
+extracting values for 2 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.106412 seconds.
+saving analysis results.....
+Elapsed time is 0.087943 seconds.
+DONE extracting values for 4 7 2
+Elapsed time is 0.317763 seconds.
+extracting values for 4 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.602496 seconds.
+saving analysis results.....
+Elapsed time is 0.061581 seconds.
+DONE extracting values for 7 4 1
+Elapsed time is 0.204454 seconds.
+extracting values for 7 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 69.736768 seconds.
+saving analysis results.....
+Elapsed time is 0.036360 seconds.
+DONE extracting values for 8 6 2
+Elapsed time is 0.238839 seconds.
+extracting values for 8 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.744949 seconds.
+saving analysis results.....
+Elapsed time is 0.031870 seconds.
+DONE extracting values for 1 6 2
+Elapsed time is 0.174083 seconds.
+extracting values for 1 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.447991 seconds.
+saving analysis results.....
+Elapsed time is 0.048215 seconds.
+DONE extracting values for 6 3 1
+Elapsed time is 0.208414 seconds.
+extracting values for 6 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 74.731715 seconds.
+saving analysis results.....
+Elapsed time is 0.022690 seconds.
+DONE extracting values for 3 3 1
+Elapsed time is 0.160645 seconds.
+extracting values for 3 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 76.024839 seconds.
+saving analysis results.....
+Elapsed time is 0.028837 seconds.
+DONE extracting values for 4 1 1
+Elapsed time is 0.185398 seconds.
+extracting values for 3 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.482309 seconds.
+saving analysis results.....
+Elapsed time is 0.019926 seconds.
+DONE extracting values for 6 13 2
+Elapsed time is 0.129048 seconds.
+extracting values for 6 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.330140 seconds.
+saving analysis results.....
+Elapsed time is 0.362189 seconds.
+DONE extracting values for 4 14 1
+Elapsed time is 0.449459 seconds.
+extracting values for 4 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.083118 seconds.
+saving analysis results.....
+Elapsed time is 0.022181 seconds.
+DONE extracting values for 1 13 1
+Elapsed time is 0.081803 seconds.
+extracting values for 1 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.701980 seconds.
+saving analysis results.....
+Elapsed time is 0.378129 seconds.
+DONE extracting values for 5 11 2
+Elapsed time is 0.458795 seconds.
+extracting values for 5 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.562505 seconds.
+saving analysis results.....
+Elapsed time is 0.042989 seconds.
+DONE extracting values for 8 2 2
+Elapsed time is 0.192076 seconds.
+extracting values for 8 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 75.821815 seconds.
+saving analysis results.....
+Elapsed time is 0.037822 seconds.
+DONE extracting values for 7 13 1
+Elapsed time is 0.106484 seconds.
+extracting values for 7 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.908140 seconds.
+saving analysis results.....
+Elapsed time is 0.056530 seconds.
+DONE extracting values for 5 5 2
+Elapsed time is 0.180220 seconds.
+extracting values for 5 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.226345 seconds.
+saving analysis results.....
+Elapsed time is 0.083709 seconds.
+DONE extracting values for 3 9 1
+Elapsed time is 0.165397 seconds.
+extracting values for 3 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.751848 seconds.
+saving analysis results.....
+Elapsed time is 0.031160 seconds.
+DONE extracting values for 2 11 1
+Elapsed time is 0.101466 seconds.
+extracting values for 2 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.529752 seconds.
+saving analysis results.....
+Elapsed time is 0.082416 seconds.
+DONE extracting values for 6 8 1
+Elapsed time is 0.166616 seconds.
+extracting values for 6 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.588055 seconds.
+saving analysis results.....
+Elapsed time is 0.041355 seconds.
+DONE extracting values for 7 8 1
+Elapsed time is 0.139525 seconds.
+extracting values for 7 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.327440 seconds.
+saving analysis results.....
+Elapsed time is 0.035552 seconds.
+DONE extracting values for 2 4 2
+Elapsed time is 0.165479 seconds.
+extracting values for 2 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 64.381845 seconds.
+saving analysis results.....
+Elapsed time is 0.018991 seconds.
+DONE extracting values for 4 7 1
+Elapsed time is 0.101157 seconds.
+extracting values for 4 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 53.332378 seconds.
+saving analysis results.....
+Elapsed time is 0.045608 seconds.
+DONE extracting values for 3 16 2
+Elapsed time is 0.141166 seconds.
+extracting values for 3 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 42.395855 seconds.
+saving analysis results.....
+Elapsed time is 0.079676 seconds.
+DONE extracting values for 6 13 1
+Elapsed time is 0.151267 seconds.
+extracting values for 6 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.725787 seconds.
+saving analysis results.....
+Elapsed time is 0.059669 seconds.
+DONE extracting values for 4 13 2
+Elapsed time is 0.154564 seconds.
+extracting values for 4 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.981797 seconds.
+saving analysis results.....
+Elapsed time is 0.027972 seconds.
+DONE extracting values for 7 3 2
+Elapsed time is 0.165016 seconds.
+extracting values for 7 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 69.408262 seconds.
+saving analysis results.....
+Elapsed time is 0.039493 seconds.
+DONE extracting values for 8 6 1
+Elapsed time is 0.112102 seconds.
+extracting values for 8 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 57.250021 seconds.
+saving analysis results.....
+Elapsed time is 0.071433 seconds.
+DONE extracting values for 5 11 1
+Elapsed time is 0.138931 seconds.
+extracting values for 5 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.541252 seconds.
+saving analysis results.....
+Elapsed time is 0.017263 seconds.
+DONE extracting values for 1 12 2
+Elapsed time is 0.092864 seconds.
+extracting values for 1 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.704627 seconds.
+saving analysis results.....
+Elapsed time is 0.079986 seconds.
+DONE extracting values for 7 12 2
+Elapsed time is 0.174739 seconds.
+extracting values for 7 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.136224 seconds.
+saving analysis results.....
+Elapsed time is 0.017159 seconds.
+DONE extracting values for 1 6 1
+Elapsed time is 0.104501 seconds.
+extracting values for 1 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.110448 seconds.
+saving analysis results.....
+Elapsed time is 0.019486 seconds.
+DONE extracting values for 2 10 2
+Elapsed time is 0.099355 seconds.
+extracting values for 2 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.940893 seconds.
+saving analysis results.....
+Elapsed time is 0.035642 seconds.
+DONE extracting values for 3 8 2
+Elapsed time is 0.124744 seconds.
+extracting values for 3 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.533748 seconds.
+saving analysis results.....
+Elapsed time is 0.031103 seconds.
+DONE extracting values for 6 7 2
+Elapsed time is 0.115927 seconds.
+extracting values for 6 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.482788 seconds.
+saving analysis results.....
+Elapsed time is 0.053368 seconds.
+DONE extracting values for 7 7 2
+Elapsed time is 0.181603 seconds.
+extracting values for 7 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.586814 seconds.
+saving analysis results.....
+Elapsed time is 0.050582 seconds.
+DONE extracting values for 5 5 1
+Elapsed time is 0.289646 seconds.
+extracting values for 5 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 63.492558 seconds.
+saving analysis results.....
+Elapsed time is 0.030018 seconds.
+DONE extracting values for 6 2 2
+Elapsed time is 0.171320 seconds.
+extracting values for 6 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 76.537108 seconds.
+saving analysis results.....
+Elapsed time is 0.032451 seconds.
+DONE extracting values for 3 2 2
+Elapsed time is 0.172641 seconds.
+extracting values for 3 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 77.961088 seconds.
+saving analysis results.....
+Elapsed time is 0.018575 seconds.
+DONE extracting values for 3 16 1
+Elapsed time is 0.115236 seconds.
+extracting values for 3 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.775687 seconds.
+saving analysis results.....
+Elapsed time is 0.041957 seconds.
+DONE extracting values for 4 6 2
+Elapsed time is 0.205911 seconds.
+extracting values for 4 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 53.442172 seconds.
+saving analysis results.....
+Elapsed time is 0.017014 seconds.
+DONE extracting values for 8 2 1
+Elapsed time is 0.118271 seconds.
+extracting values for 8 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 83.992311 seconds.
+saving analysis results.....
+Elapsed time is 0.041728 seconds.
+DONE extracting values for 5 10 2
+Elapsed time is 0.107164 seconds.
+extracting values for 5 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.260997 seconds.
+saving analysis results.....
+Elapsed time is 0.051130 seconds.
+DONE extracting values for 6 12 2
+Elapsed time is 0.122736 seconds.
+extracting values for 6 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.076781 seconds.
+saving analysis results.....
+Elapsed time is 0.029437 seconds.
+DONE extracting values for 4 13 1
+Elapsed time is 0.088732 seconds.
+extracting values for 4 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.301829 seconds.
+saving analysis results.....
+Elapsed time is 0.074961 seconds.
+DONE extracting values for 2 4 1
+Elapsed time is 0.208967 seconds.
+extracting values for 2 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.060450 seconds.
+saving analysis results.....
+Elapsed time is 0.018222 seconds.
+DONE extracting values for 1 12 1
+Elapsed time is 0.084020 seconds.
+extracting values for 1 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.272733 seconds.
+saving analysis results.....
+Elapsed time is 0.054806 seconds.
+DONE extracting values for 7 12 1
+Elapsed time is 0.138581 seconds.
+extracting values for 7 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.854434 seconds.
+saving analysis results.....
+Elapsed time is 0.054451 seconds.
+DONE extracting values for 8 5 2
+Elapsed time is 0.148295 seconds.
+extracting values for 8 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 57.331427 seconds.
+saving analysis results.....
+Elapsed time is 0.040611 seconds.
+DONE extracting values for 2 10 1
+Elapsed time is 0.115858 seconds.
+extracting values for 2 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.279839 seconds.
+saving analysis results.....
+Elapsed time is 0.044903 seconds.
+DONE extracting values for 3 8 1
+Elapsed time is 0.140209 seconds.
+extracting values for 3 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.310589 seconds.
+saving analysis results.....
+Elapsed time is 0.062129 seconds.
+DONE extracting values for 1 5 2
+Elapsed time is 0.205729 seconds.
+extracting values for 1 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.046638 seconds.
+saving analysis results.....
+Elapsed time is 0.026639 seconds.
+DONE extracting values for 6 7 1
+Elapsed time is 0.107959 seconds.
+extracting values for 6 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 53.474878 seconds.
+saving analysis results.....
+Elapsed time is 0.034782 seconds.
+DONE extracting values for 7 3 1
+Elapsed time is 0.172995 seconds.
+extracting values for 7 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 75.736704 seconds.
+saving analysis results.....
+Elapsed time is 0.028117 seconds.
+DONE extracting values for 3 15 2
+Elapsed time is 0.144205 seconds.
+extracting values for 3 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 43.441141 seconds.
+saving analysis results.....
+Elapsed time is 0.041940 seconds.
+DONE extracting values for 7 7 1
+Elapsed time is 0.154263 seconds.
+extracting values for 7 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.766536 seconds.
+saving analysis results.....
+Elapsed time is 0.018330 seconds.
+DONE extracting values for 6 12 1
+Elapsed time is 0.078402 seconds.
+extracting values for 6 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.898583 seconds.
+saving analysis results.....
+Elapsed time is 0.021471 seconds.
+DONE extracting values for 4 12 2
+Elapsed time is 0.111396 seconds.
+extracting values for 4 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.364660 seconds.
+saving analysis results.....
+Elapsed time is 0.056723 seconds.
+DONE extracting values for 5 10 1
+Elapsed time is 0.132866 seconds.
+extracting values for 5 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.089656 seconds.
+saving analysis results.....
+Elapsed time is 0.051028 seconds.
+DONE extracting values for 5 4 2
+Elapsed time is 0.179970 seconds.
+extracting values for 5 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 65.955265 seconds.
+saving analysis results.....
+Elapsed time is 0.063065 seconds.
+DONE extracting values for 1 11 2
+Elapsed time is 0.124949 seconds.
+extracting values for 1 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.152746 seconds.
+saving analysis results.....
+Elapsed time is 0.040351 seconds.
+DONE extracting values for 7 11 2
+Elapsed time is 0.142418 seconds.
+extracting values for 7 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.051013 seconds.
+saving analysis results.....
+Elapsed time is 0.057710 seconds.
+DONE extracting values for 4 6 1
+Elapsed time is 0.186290 seconds.
+extracting values for 4 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 59.264242 seconds.
+saving analysis results.....
+Elapsed time is 0.075685 seconds.
+DONE extracting values for 2 9 2
+Elapsed time is 0.187261 seconds.
+extracting values for 2 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.771823 seconds.
+saving analysis results.....
+Elapsed time is 0.018467 seconds.
+DONE extracting values for 6 2 1
+Elapsed time is 0.152065 seconds.
+extracting values for 6 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 85.854545 seconds.
+saving analysis results.....
+Elapsed time is 0.036571 seconds.
+DONE extracting values for 3 2 1
+Elapsed time is 0.178711 seconds.
+extracting values for 3 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 87.011595 seconds.
+saving analysis results.....
+Elapsed time is 0.036185 seconds.
+DONE extracting values for 3 7 2
+Elapsed time is 0.138329 seconds.
+extracting values for 3 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.985457 seconds.
+saving analysis results.....
+Elapsed time is 0.034866 seconds.
+DONE extracting values for 2 3 2
+Elapsed time is 0.172446 seconds.
+extracting values for 2 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 71.706443 seconds.
+saving analysis results.....
+Elapsed time is 0.022776 seconds.
+DONE extracting values for 8 5 1
+Elapsed time is 0.094893 seconds.
+extracting values for 8 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 67.693514 seconds.
+saving analysis results.....
+Elapsed time is 0.023473 seconds.
+DONE extracting values for 3 15 1
+Elapsed time is 0.143006 seconds.
+extracting values for 3 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.184935 seconds.
+saving analysis results.....
+Elapsed time is 0.026419 seconds.
+DONE extracting values for 8 1 2
+Elapsed time is 0.180055 seconds.
+extracting values for 8 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 88.485250 seconds.
+saving analysis results.....
+Elapsed time is 0.040851 seconds.
+DONE extracting values for 6 6 2
+Elapsed time is 0.129971 seconds.
+extracting values for 6 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.360631 seconds.
+saving analysis results.....
+Elapsed time is 0.021798 seconds.
+DONE extracting values for 1 5 1
+Elapsed time is 0.099920 seconds.
+extracting values for 1 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.232665 seconds.
+saving analysis results.....
+Elapsed time is 0.030573 seconds.
+DONE extracting values for 6 11 2
+Elapsed time is 0.214023 seconds.
+extracting values for 6 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.940778 seconds.
+saving analysis results.....
+Elapsed time is 0.039907 seconds.
+DONE extracting values for 4 12 1
+Elapsed time is 0.238597 seconds.
+extracting values for 4 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.392236 seconds.
+saving analysis results.....
+Elapsed time is 0.018934 seconds.
+DONE extracting values for 5 9 2
+Elapsed time is 0.200636 seconds.
+extracting values for 5 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.585868 seconds.
+saving analysis results.....
+Elapsed time is 0.019474 seconds.
+DONE extracting values for 7 6 2
+Elapsed time is 0.132228 seconds.
+extracting values for 7 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.214250 seconds.
+saving analysis results.....
+Elapsed time is 0.061810 seconds.
+DONE extracting values for 1 11 1
+Elapsed time is 0.245714 seconds.
+extracting values for 1 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.102206 seconds.
+saving analysis results.....
+Elapsed time is 0.037644 seconds.
+DONE extracting values for 7 11 1
+Elapsed time is 0.289357 seconds.
+extracting values for 7 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.705503 seconds.
+saving analysis results.....
+Elapsed time is 0.064582 seconds.
+DONE extracting values for 4 5 2
+Elapsed time is 0.296601 seconds.
+extracting values for 4 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 61.038144 seconds.
+saving analysis results.....
+Elapsed time is 0.042328 seconds.
+DONE extracting values for 2 9 1
+Elapsed time is 0.438382 seconds.
+extracting values for 2 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.858209 seconds.
+saving analysis results.....
+Elapsed time is 0.060544 seconds.
+DONE extracting values for 7 2 2
+Elapsed time is 0.211274 seconds.
+extracting values for 7 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 84.751309 seconds.
+saving analysis results.....
+Elapsed time is 0.039064 seconds.
+DONE extracting values for 7 2 1
+saving analysis results.....
+Elapsed time is 0.097011 seconds.
+DONE extracting values for 5 4 1
+Elapsed time is 0.355047 seconds.
+extracting values for 5 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 72.505254 seconds.
+saving analysis results.....
+Elapsed time is 0.025420 seconds.
+DONE extracting values for 3 14 2
+Elapsed time is 0.607839 seconds.
+extracting values for 3 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.471233 seconds.
+saving analysis results.....
+Elapsed time is 0.019122 seconds.
+DONE extracting values for 8 1 1
+Elapsed time is 0.530956 seconds.
+extracting values for 7 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.182359 seconds.
+saving analysis results.....
+Elapsed time is 0.121195 seconds.
+DONE extracting values for 3 7 1
+Elapsed time is 0.527076 seconds.
+extracting values for 3 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 63.563848 seconds.
+saving analysis results.....
+Elapsed time is 0.033348 seconds.
+DONE extracting values for 3 6 2
+saving analysis results.....
+Elapsed time is 0.018634 seconds.
+DONE extracting values for 6 11 1
+Elapsed time is 0.117233 seconds.
+extracting values for 6 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.537650 seconds.
+saving analysis results.....
+Elapsed time is 0.026468 seconds.
+DONE extracting values for 4 11 2
+Elapsed time is 0.205463 seconds.
+extracting values for 4 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.215770 seconds.
+saving analysis results.....
+Elapsed time is 0.019329 seconds.
+DONE extracting values for 5 9 1
+Elapsed time is 0.201383 seconds.
+extracting values for 5 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.056281 seconds.
+saving analysis results.....
+Elapsed time is 0.040600 seconds.
+DONE extracting values for 1 10 2
+Elapsed time is 0.587320 seconds.
+extracting values for 1 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.133545 seconds.
+saving analysis results.....
+Elapsed time is 0.019367 seconds.
+DONE extracting values for 7 10 2
+Elapsed time is 0.559014 seconds.
+extracting values for 7 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.938852 seconds.
+saving analysis results.....
+Elapsed time is 0.060089 seconds.
+DONE extracting values for 7 10 1
+Elapsed time is 0.650098 seconds.
+saving analysis results.....
+Elapsed time is 0.094351 seconds.
+DONE extracting values for 6 6 1
+Elapsed time is 0.509301 seconds.
+extracting values for 6 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 61.739795 seconds.
+saving analysis results.....
+Elapsed time is 0.053293 seconds.
+DONE extracting values for 8 4 2
+Elapsed time is 0.546838 seconds.
+extracting values for 8 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 67.337299 seconds.
+saving analysis results.....
+Elapsed time is 0.114619 seconds.
+DONE extracting values for 6 1 2
+Elapsed time is 0.505294 seconds.
+extracting values for 6 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 88.495615 seconds.
+saving analysis results.....
+Elapsed time is 0.127613 seconds.
+DONE extracting values for 2 3 1
+Elapsed time is 0.660434 seconds.
+extracting values for 2 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 81.927056 seconds.
+saving analysis results.....
+Elapsed time is 0.024929 seconds.
+DONE extracting values for 1 4 2
+Elapsed time is 0.446152 seconds.
+extracting values for 1 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 67.096706 seconds.
+saving analysis results.....
+Elapsed time is 0.065038 seconds.
+DONE extracting values for 7 6 1
+Elapsed time is 0.574299 seconds.
+extracting values for 7 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 62.159379 seconds.
+saving analysis results.....
+Elapsed time is 0.024799 seconds.
+DONE extracting values for 3 1 2
+Elapsed time is 0.343543 seconds.
+extracting values for 3 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 92.500894 seconds.
+saving analysis results.....
+Elapsed time is 0.046959 seconds.
+DONE extracting values for 2 8 2
+Elapsed time is 0.395738 seconds.
+extracting values for 2 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.359030 seconds.
+saving analysis results.....
+Elapsed time is 0.049125 seconds.
+DONE extracting values for 4 5 1
+Elapsed time is 0.591849 seconds.
+extracting values for 4 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 64.098021 seconds.
+saving analysis results.....
+Elapsed time is 0.019484 seconds.
+DONE extracting values for 3 14 1
+Elapsed time is 0.688529 seconds.
+extracting values for 3 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.757215 seconds.
+saving analysis results.....
+Elapsed time is 0.022884 seconds.
+DONE extracting values for 7 16 2
+Elapsed time is 0.649365 seconds.
+extracting values for 7 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.933948 seconds.
+saving analysis results.....
+Elapsed time is 0.046667 seconds.
+DONE extracting values for 6 10 2
+Elapsed time is 0.460599 seconds.
+extracting values for 6 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.305982 seconds.
+saving analysis results.....
+Elapsed time is 0.050552 seconds.
+DONE extracting values for 6 10 1
+Elapsed time is 0.139733 seconds.
+saving analysis results.....
+Elapsed time is 0.029317 seconds.
+DONE extracting values for 4 11 1
+Elapsed time is 0.440660 seconds.
+extracting values for 4 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.187078 seconds.
+saving analysis results.....
+Elapsed time is 0.262938 seconds.
+DONE extracting values for 4 10 2
+Elapsed time is 1.074219 seconds.
+extracting values for 3 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.381974 seconds.
+saving analysis results.....
+Elapsed time is 0.066118 seconds.
+DONE extracting values for 1 10 1
+Elapsed time is 0.626683 seconds.
+extracting values for 1 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.758688 seconds.
+extracting values for 8 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.884021 seconds.
+saving analysis results.....
+Elapsed time is 0.027322 seconds.
+DONE extracting values for 5 3 2
+Elapsed time is 0.563080 seconds.
+extracting values for 5 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 76.861499 seconds.
+saving analysis results.....
+Elapsed time is 0.019239 seconds.
+DONE extracting values for 5 3 1
+saving analysis results.....
+Elapsed time is 0.035067 seconds.
+DONE extracting values for 5 8 2
+Elapsed time is 0.548064 seconds.
+extracting values for 5 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.911024 seconds.
+saving analysis results.....
+Elapsed time is 0.055662 seconds.
+DONE extracting values for 6 1 1
+Elapsed time is 0.624419 seconds.
+extracting values for 5 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.853158 seconds.
+saving analysis results.....
+Elapsed time is 0.047536 seconds.
+DONE extracting values for 3 1 1
+Elapsed time is 0.946151 seconds.
+extracting values for 2 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.501219 seconds.
+saving analysis results.....
+Elapsed time is 0.033802 seconds.
+DONE extracting values for 6 5 2
+Elapsed time is 0.596838 seconds.
+extracting values for 6 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.634388 seconds.
+Elapsed time is 1.063575 seconds.
+extracting values for 7 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 94.563362 seconds.
+saving analysis results.....
+Elapsed time is 0.046049 seconds.
+DONE extracting values for 7 1 2
+saving analysis results.....
+Elapsed time is 0.025296 seconds.
+DONE extracting values for 8 4 1
+Elapsed time is 0.584932 seconds.
+extracting values for 8 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 73.508401 seconds.
+saving analysis results.....
+Elapsed time is 0.026817 seconds.
+DONE extracting values for 8 3 2
+Elapsed time is 0.601238 seconds.
+saving analysis results.....
+Elapsed time is 0.016900 seconds.
+DONE extracting values for 7 5 2
+Elapsed time is 0.536284 seconds.
+extracting values for 7 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 66.962239 seconds.
+saving analysis results.....
+Elapsed time is 0.026214 seconds.
+DONE extracting values for 2 8 1
+Elapsed time is 0.468310 seconds.
+extracting values for 2 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.009422 seconds.
+saving analysis results.....
+Elapsed time is 0.020305 seconds.
+DONE extracting values for 7 5 1
+Elapsed time is 0.711499 seconds.
+saving analysis results.....
+Elapsed time is 0.018448 seconds.
+DONE extracting values for 2 7 2
+saving analysis results.....
+Elapsed time is 0.044367 seconds.
+DONE extracting values for 1 4 1
+Elapsed time is 0.560989 seconds.
+extracting values for 1 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 70.160267 seconds.
+saving analysis results.....
+Elapsed time is 0.062476 seconds.
+DONE extracting values for 3 13 2
+Elapsed time is 0.378769 seconds.
+extracting values for 3 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.781662 seconds.
+saving analysis results.....
+Elapsed time is 0.028817 seconds.
+DONE extracting values for 7 16 1
+Elapsed time is 0.529128 seconds.
+extracting values for 7 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.462346 seconds.
+extracting values for 8 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.173649 seconds.
+Elapsed time is 1.060800 seconds.
+extracting values for 4 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.952462 seconds.
+saving analysis results.....
+Elapsed time is 0.089067 seconds.
+DONE extracting values for 2 2 2
+Elapsed time is 0.901487 seconds.
+extracting values for 2 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 83.258758 seconds.
+saving analysis results.....
+Elapsed time is 0.018995 seconds.
+DONE extracting values for 1 9 2
+Elapsed time is 0.703023 seconds.
+extracting values for 1 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.795629 seconds.
+saving analysis results.....
+Elapsed time is 0.017881 seconds.
+DONE extracting values for 8 11 2
+Elapsed time is 0.623606 seconds.
+extracting values for 8 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.882853 seconds.
+saving analysis results.....
+Elapsed time is 0.041066 seconds.
+DONE extracting values for 5 16 2
+Elapsed time is 0.311954 seconds.
+extracting values for 5 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.626035 seconds.
+saving analysis results.....
+Elapsed time is 0.041024 seconds.
+DONE extracting values for 4 4 2
+Elapsed time is 0.405076 seconds.
+extracting values for 4 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 70.698353 seconds.
+saving analysis results.....
+Elapsed time is 0.018381 seconds.
+DONE extracting values for 5 8 1
+Elapsed time is 0.750840 seconds.
+extracting values for 5 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.078617 seconds.
+saving analysis results.....
+Elapsed time is 0.031513 seconds.
+DONE extracting values for 2 16 2
+Elapsed time is 0.591162 seconds.
+extracting values for 2 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.410820 seconds.
+saving analysis results.....
+Elapsed time is 0.027288 seconds.
+DONE extracting values for 3 6 1
+Elapsed time is 0.619312 seconds.
+extracting values for 3 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 62.125809 seconds.
+saving analysis results.....
+Elapsed time is 0.019367 seconds.
+DONE extracting values for 3 13 1
+Elapsed time is 0.398799 seconds.
+extracting values for 3 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.469421 seconds.
+Elapsed time is 1.040943 seconds.
+extracting values for 2 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.113108 seconds.
+saving analysis results.....
+Elapsed time is 0.017579 seconds.
+DONE extracting values for 6 5 1
+Elapsed time is 0.359559 seconds.
+extracting values for 6 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 70.105892 seconds.
+saving analysis results.....
+Elapsed time is 0.030817 seconds.
+DONE extracting values for 8 15 2
+Elapsed time is 0.471153 seconds.
+extracting values for 8 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.313072 seconds.
+Elapsed time is 1.217658 seconds.
+extracting values for 5 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 84.721408 seconds.
+saving analysis results.....
+Elapsed time is 0.019638 seconds.
+DONE extracting values for 7 15 2
+Elapsed time is 0.530721 seconds.
+extracting values for 7 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.875407 seconds.
+saving analysis results.....
+Elapsed time is 0.055509 seconds.
+DONE extracting values for 5 2 2
+saving analysis results.....
+Elapsed time is 0.020420 seconds.
+DONE extracting values for 7 15 1
+Elapsed time is 0.786579 seconds.
+extracting values for 9 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.893317 seconds.
+saving analysis results.....
+Elapsed time is 0.021620 seconds.
+DONE extracting values for 4 10 1
+Elapsed time is 0.651103 seconds.
+extracting values for 4 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.345677 seconds.
+saving analysis results.....
+Elapsed time is 0.042695 seconds.
+DONE extracting values for 8 11 1
+Elapsed time is 0.383630 seconds.
+extracting values for 8 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.379040 seconds.
+saving analysis results.....
+Elapsed time is 0.633295 seconds.
+DONE extracting values for 8 10 2
+saving analysis results.....
+Elapsed time is 0.033291 seconds.
+DONE extracting values for 5 16 1
+Elapsed time is 0.406377 seconds.
+extracting values for 5 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.124343 seconds.
+saving analysis results.....
+Elapsed time is 0.038853 seconds.
+DONE extracting values for 1 9 1
+Elapsed time is 0.387387 seconds.
+extracting values for 1 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.250158 seconds.
+extracting values for 9 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 75.563970 seconds.
+saving analysis results.....
+Elapsed time is 0.032870 seconds.
+DONE extracting values for 1 3 2
+Elapsed time is 0.371859 seconds.
+extracting values for 1 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 75.473654 seconds.
+saving analysis results.....
+Elapsed time is 0.020760 seconds.
+DONE extracting values for 2 16 1
+Elapsed time is 0.244115 seconds.
+extracting values for 2 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.434506 seconds.
+saving analysis results.....
+Elapsed time is 0.021184 seconds.
+DONE extracting values for 5 7 2
+Elapsed time is 0.515883 seconds.
+extracting values for 5 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 53.789699 seconds.
+saving analysis results.....
+Elapsed time is 0.153936 seconds.
+DONE extracting values for 5 7 1
+Elapsed time is 0.672453 seconds.
+Elapsed time is 1.480426 seconds.
+extracting values for 7 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 95.317833 seconds.
+saving analysis results.....
+Elapsed time is 0.339657 seconds.
+DONE extracting values for 7 1 1
+saving analysis results.....
+Elapsed time is 0.021950 seconds.
+DONE extracting values for 3 5 2
+Elapsed time is 0.612495 seconds.
+extracting values for 3 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 69.076634 seconds.
+saving analysis results.....
+Elapsed time is 0.041088 seconds.
+DONE extracting values for 4 4 1
+Elapsed time is 0.834292 seconds.
+extracting values for 4 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 77.773116 seconds.
+saving analysis results.....
+Elapsed time is 0.020491 seconds.
+DONE extracting values for 3 12 2
+Elapsed time is 0.623911 seconds.
+extracting values for 3 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.346783 seconds.
+saving analysis results.....
+Elapsed time is 0.019227 seconds.
+DONE extracting values for 3 5 1
+saving analysis results.....
+Elapsed time is 0.034381 seconds.
+DONE extracting values for 8 15 1
+Elapsed time is 0.513474 seconds.
+extracting values for 8 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.436292 seconds.
+extracting values for 9 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.062918 seconds.
+saving analysis results.....
+Elapsed time is 0.035492 seconds.
+DONE extracting values for 2 2 1
+Elapsed time is 0.699477 seconds.
+extracting values for 2 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 91.366740 seconds.
+saving analysis results.....
+Elapsed time is 0.018755 seconds.
+DONE extracting values for 2 7 1
+Elapsed time is 0.676412 seconds.
+extracting values for 2 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 57.358999 seconds.
+saving analysis results.....
+Elapsed time is 0.037077 seconds.
+DONE extracting values for 4 9 2
+Elapsed time is 0.939199 seconds.
+extracting values for 4 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.165627 seconds.
+saving analysis results.....
+Elapsed time is 0.029634 seconds.
+DONE extracting values for 4 9 1
+Elapsed time is 0.633775 seconds.
+Elapsed time is 1.464431 seconds.
+extracting values for 8 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.785900 seconds.
+saving analysis results.....
+Elapsed time is 0.017048 seconds.
+DONE extracting values for 5 15 2
+Elapsed time is 0.669399 seconds.
+extracting values for 5 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.140844 seconds.
+saving analysis results.....
+Elapsed time is 0.019173 seconds.
+DONE extracting values for 9 6 2
+Elapsed time is 0.660026 seconds.
+extracting values for 9 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 61.052478 seconds.
+saving analysis results.....
+Elapsed time is 0.019309 seconds.
+DONE extracting values for 6 4 2
+Elapsed time is 0.744363 seconds.
+extracting values for 6 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.259701 seconds.
+saving analysis results.....
+Elapsed time is 0.033476 seconds.
+DONE extracting values for 6 4 1
+Elapsed time is 0.512701 seconds.
+saving analysis results.....
+Elapsed time is 0.032542 seconds.
+DONE extracting values for 1 8 2
+Elapsed time is 0.889614 seconds.
+extracting values for 1 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.126169 seconds.
+saving analysis results.....
+Elapsed time is 0.020228 seconds.
+DONE extracting values for 1 8 1
+Elapsed time is 0.596113 seconds.
+saving analysis results.....
+Elapsed time is 0.028143 seconds.
+DONE extracting values for 2 15 2
+Elapsed time is 0.628756 seconds.
+extracting values for 2 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.717569 seconds.
+extracting values for 9 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.373855 seconds.
+Elapsed time is 1.901218 seconds.
+extracting values for 6 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.860563 seconds.
+Elapsed time is 1.187832 seconds.
+extracting values for 5 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 79.403858 seconds.
+saving analysis results.....
+Elapsed time is 0.019804 seconds.
+DONE extracting values for 3 12 1
+Elapsed time is 0.707911 seconds.
+extracting values for 3 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.561509 seconds.
+saving analysis results.....
+Elapsed time is 0.017894 seconds.
+DONE extracting values for 8 14 2
+Elapsed time is 0.252853 seconds.
+extracting values for 8 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.038491 seconds.
+saving analysis results.....
+Elapsed time is 0.031072 seconds.
+DONE extracting values for 9 10 1
+Elapsed time is 0.515824 seconds.
+extracting values for 9 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.852617 seconds.
+saving analysis results.....
+Elapsed time is 0.021587 seconds.
+DONE extracting values for 9 3 1
+Elapsed time is 0.742239 seconds.
+extracting values for 9 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 80.412166 seconds.
+saving analysis results.....
+Elapsed time is 0.019427 seconds.
+DONE extracting values for 1 3 1
+Elapsed time is 0.790533 seconds.
+extracting values for 1 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 80.929387 seconds.
+extracting values for 9 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.590012 seconds.
+saving analysis results.....
+Elapsed time is 0.017046 seconds.
+DONE extracting values for 5 15 1
+Elapsed time is 0.461608 seconds.
+extracting values for 5 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.067614 seconds.
+saving analysis results.....
+Elapsed time is 0.017884 seconds.
+DONE extracting values for 8 10 1
+Elapsed time is 0.646117 seconds.
+extracting values for 8 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.921055 seconds.
+Elapsed time is 1.334818 seconds.
+extracting values for 3 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 67.365665 seconds.
+saving analysis results.....
+Elapsed time is 0.019134 seconds.
+DONE extracting values for 2 6 2
+Elapsed time is 0.697479 seconds.
+extracting values for 2 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 58.941072 seconds.
+saving analysis results.....
+Elapsed time is 0.016886 seconds.
+DONE extracting values for 2 6 1
+Elapsed time is 0.802517 seconds.
+saving analysis results.....
+Elapsed time is 0.054358 seconds.
+DONE extracting values for 2 15 1
+Elapsed time is 0.302781 seconds.
+extracting values for 2 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.127364 seconds.
+saving analysis results.....
+Elapsed time is 0.030437 seconds.
+DONE extracting values for 9 13 1
+Elapsed time is 0.533947 seconds.
+extracting values for 9 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.552069 seconds.
+saving analysis results.....
+Elapsed time is 0.065757 seconds.
+DONE extracting values for 4 3 2
+Elapsed time is 0.768817 seconds.
+extracting values for 4 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 76.474737 seconds.
+saving analysis results.....
+Elapsed time is 0.020895 seconds.
+DONE extracting values for 6 16 2
+Elapsed time is 0.599298 seconds.
+extracting values for 6 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.364661 seconds.
+saving analysis results.....
+Elapsed time is 0.052533 seconds.
+DONE extracting values for 9 6 1
+Elapsed time is 0.610778 seconds.
+extracting values for 9 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 63.322302 seconds.
+extracting values for 10 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 61.542005 seconds.
+saving analysis results.....
+Elapsed time is 0.020797 seconds.
+DONE extracting values for 3 11 2
+Elapsed time is 0.352302 seconds.
+extracting values for 3 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.795247 seconds.
+saving analysis results.....
+Elapsed time is 0.042044 seconds.
+DONE extracting values for 3 11 1
+Elapsed time is 0.539003 seconds.
+extracting values for 10 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 72.205517 seconds.
+saving analysis results.....
+Elapsed time is 0.057211 seconds.
+DONE extracting values for 2 1 2
+Elapsed time is 0.753404 seconds.
+extracting values for 2 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 91.443484 seconds.
+saving analysis results.....
+Elapsed time is 0.041574 seconds.
+DONE extracting values for 8 14 1
+Elapsed time is 0.232462 seconds.
+extracting values for 8 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.113801 seconds.
+saving analysis results.....
+Elapsed time is 0.019180 seconds.
+DONE extracting values for 9 9 2
+Elapsed time is 0.654686 seconds.
+extracting values for 9 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.668196 seconds.
+saving analysis results.....
+Elapsed time is 0.019302 seconds.
+DONE extracting values for 9 9 1
+saving analysis results.....
+Elapsed time is 0.019353 seconds.
+DONE extracting values for 9 16 1
+Elapsed time is 0.723621 seconds.
+extracting values for 9 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.108257 seconds.
+saving analysis results.....
+Elapsed time is 0.031688 seconds.
+DONE extracting values for 5 14 2
+Elapsed time is 0.443006 seconds.
+extracting values for 5 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.281788 seconds.
+saving analysis results.....
+Elapsed time is 0.025343 seconds.
+DONE extracting values for 8 9 2
+Elapsed time is 0.692035 seconds.
+extracting values for 8 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.773302 seconds.
+saving analysis results.....
+Elapsed time is 0.050315 seconds.
+DONE extracting values for 2 14 2
+Elapsed time is 0.272580 seconds.
+extracting values for 2 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.868275 seconds.
+saving analysis results.....
+Elapsed time is 0.019211 seconds.
+DONE extracting values for 9 12 2
+Elapsed time is 0.415684 seconds.
+extracting values for 9 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.118709 seconds.
+extracting values for 10 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.390250 seconds.
+saving analysis results.....
+Elapsed time is 0.020347 seconds.
+DONE extracting values for 6 16 1
+Elapsed time is 0.594860 seconds.
+extracting values for 6 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.343276 seconds.
+saving analysis results.....
+Elapsed time is 0.021296 seconds.
+DONE extracting values for 6 15 2
+Elapsed time is 1.058010 seconds.
+saving analysis results.....
+Elapsed time is 0.023938 seconds.
+DONE extracting values for 5 2 1
+Elapsed time is 0.531624 seconds.
+extracting values for 5 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 99.622360 seconds.
+saving analysis results.....
+Elapsed time is 0.028518 seconds.
+DONE extracting values for 9 2 2
+Elapsed time is 0.531862 seconds.
+extracting values for 9 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 82.838983 seconds.
+saving analysis results.....
+Elapsed time is 0.024740 seconds.
+DONE extracting values for 5 1 2
+saving analysis results.....
+Elapsed time is 0.020254 seconds.
+DONE extracting values for 3 4 2
+Elapsed time is 0.958613 seconds.
+extracting values for 3 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 70.706554 seconds.
+saving analysis results.....
+Elapsed time is 0.024213 seconds.
+DONE extracting values for 3 4 1
+Elapsed time is 0.796044 seconds.
+saving analysis results.....
+Elapsed time is 0.035173 seconds.
+DONE extracting values for 1 2 2
+Elapsed time is 0.598961 seconds.
+extracting values for 1 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 83.042593 seconds.
+saving analysis results.....
+Elapsed time is 0.036788 seconds.
+DONE extracting values for 2 1 1
+Elapsed time is 0.664615 seconds.
+extracting values for 1 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.554281 seconds.
+extracting values for 10 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.807817 seconds.
+saving analysis results.....
+Elapsed time is 0.028140 seconds.
+DONE extracting values for 8 13 2
+Elapsed time is 0.234513 seconds.
+extracting values for 8 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.286988 seconds.
+saving analysis results.....
+Elapsed time is 0.085475 seconds.
+DONE extracting values for 9 5 2
+Elapsed time is 0.524669 seconds.
+extracting values for 9 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.494465 seconds.
+saving analysis results.....
+Elapsed time is 0.021776 seconds.
+DONE extracting values for 10 5 2
+Elapsed time is 0.708255 seconds.
+extracting values for 10 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 65.350322 seconds.
+saving analysis results.....
+Elapsed time is 0.045134 seconds.
+DONE extracting values for 9 15 2
+Elapsed time is 0.559732 seconds.
+extracting values for 9 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.560203 seconds.
+saving analysis results.....
+Elapsed time is 0.018278 seconds.
+DONE extracting values for 5 14 1
+Elapsed time is 0.367339 seconds.
+extracting values for 5 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.370203 seconds.
+saving analysis results.....
+Elapsed time is 0.055620 seconds.
+DONE extracting values for 5 13 2
+Elapsed time is 0.200327 seconds.
+Elapsed time is 1.085399 seconds.
+extracting values for 9 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.805641 seconds.
+saving analysis results.....
+Elapsed time is 0.036165 seconds.
+DONE extracting values for 4 3 1
+Elapsed time is 0.736015 seconds.
+extracting values for 4 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 88.961335 seconds.
+saving analysis results.....
+Elapsed time is 0.042468 seconds.
+DONE extracting values for 2 14 1
+Elapsed time is 0.350093 seconds.
+extracting values for 2 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.263191 seconds.
+saving analysis results.....
+Elapsed time is 0.028586 seconds.
+DONE extracting values for 8 9 1
+Elapsed time is 0.569426 seconds.
+extracting values for 8 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 53.135608 seconds.
+saving analysis results.....
+Elapsed time is 0.031219 seconds.
+DONE extracting values for 9 12 1
+Elapsed time is 0.534670 seconds.
+extracting values for 9 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.679425 seconds.
+saving analysis results.....
+Elapsed time is 0.021448 seconds.
+DONE extracting values for 10 3 1
+Elapsed time is 0.392305 seconds.
+extracting values for 10 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 82.088827 seconds.
+extracting values for 10 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.940804 seconds.
+saving analysis results.....
+Elapsed time is 0.020690 seconds.
+DONE extracting values for 10 8 1
+Elapsed time is 0.830712 seconds.
+extracting values for 10 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 59.923976 seconds.
+extracting values for 10 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.215916 seconds.
+saving analysis results.....
+Elapsed time is 0.026129 seconds.
+DONE extracting values for 1 16 2
+Elapsed time is 0.485375 seconds.
+extracting values for 1 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.113496 seconds.
+saving analysis results.....
+Elapsed time is 0.038539 seconds.
+DONE extracting values for 8 13 1
+Elapsed time is 0.468605 seconds.
+extracting values for 8 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.190795 seconds.
+saving analysis results.....
+Elapsed time is 0.016704 seconds.
+DONE extracting values for 10 10 2
+Elapsed time is 0.752554 seconds.
+extracting values for 10 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.139043 seconds.
+saving analysis results.....
+Elapsed time is 0.025167 seconds.
+DONE extracting values for 9 15 1
+Elapsed time is 0.474136 seconds.
+extracting values for 9 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.483908 seconds.
+extracting values for 10 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.898304 seconds.
+saving analysis results.....
+Elapsed time is 0.035419 seconds.
+DONE extracting values for 9 8 2
+Elapsed time is 0.794601 seconds.
+extracting values for 9 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.249390 seconds.
+saving analysis results.....
+Elapsed time is 0.019567 seconds.
+DONE extracting values for 9 8 1
+saving analysis results.....
+Elapsed time is 0.048063 seconds.
+DONE extracting values for 2 13 2
+Elapsed time is 0.382050 seconds.
+extracting values for 2 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 69.295121 seconds.
+saving analysis results.....
+Elapsed time is 0.039392 seconds.
+DONE extracting values for 9 11 2
+Elapsed time is 0.667433 seconds.
+extracting values for 9 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 65.626141 seconds.
+saving analysis results.....
+Elapsed time is 0.019923 seconds.
+DONE extracting values for 10 5 1
+Elapsed time is 0.727843 seconds.
+extracting values for 10 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 87.280197 seconds.
+saving analysis results.....
+Elapsed time is 0.085076 seconds.
+DONE extracting values for 9 11 1
+saving analysis results.....
+Elapsed time is 0.113868 seconds.
+DONE extracting values for 2 13 1
+Elapsed time is 1.182303 seconds.
+saving analysis results.....
+Elapsed time is 0.023238 seconds.
+DONE extracting values for 10 4 2
+saving analysis results.....
+Elapsed time is 0.039927 seconds.
+DONE extracting values for 8 8 2
+Elapsed time is 0.544792 seconds.
+extracting values for 8 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 69.196534 seconds.
+saving analysis results.....
+Elapsed time is 0.018848 seconds.
+DONE extracting values for 8 8 1
+Elapsed time is 1.099506 seconds.
+saving analysis results.....
+Elapsed time is 0.019981 seconds.
+DONE extracting values for 9 2 1
+Elapsed time is 0.437959 seconds.
+extracting values for 9 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 106.292332 seconds.
+saving analysis results.....
+Elapsed time is 0.039601 seconds.
+DONE extracting values for 9 5 1
+Elapsed time is 0.834748 seconds.
+extracting values for 9 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 91.971915 seconds.
+Elapsed time is 1.918564 seconds.
+extracting values for 5 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 106.990548 seconds.
+saving analysis results.....
+Elapsed time is 0.141776 seconds.
+DONE extracting values for 9 4 2
+saving analysis results.....
+Elapsed time is 0.029509 seconds.
+DONE extracting values for 5 1 1
+saving analysis results.....
+Elapsed time is 0.042544 seconds.
+DONE extracting values for 10 12 2
+Elapsed time is 0.401886 seconds.
+extracting values for 10 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 65.908150 seconds.
+saving analysis results.....
+Elapsed time is 0.030173 seconds.
+DONE extracting values for 10 12 1
+saving analysis results.....
+Elapsed time is 0.020032 seconds.
+DONE extracting values for 1 2 1
+Elapsed time is 0.574711 seconds.
+extracting values for 1 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 108.263653 seconds.
+saving analysis results.....
+Elapsed time is 0.047997 seconds.
+DONE extracting values for 1 1 2
+saving analysis results.....
+Elapsed time is 0.025174 seconds.
+DONE extracting values for 10 14 2
+Elapsed time is 0.619503 seconds.
+extracting values for 10 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 66.983447 seconds.
+saving analysis results.....
+Elapsed time is 0.035642 seconds.
+DONE extracting values for 10 14 1
+saving analysis results.....
+Elapsed time is 0.057679 seconds.
+DONE extracting values for 1 16 1
+Elapsed time is 0.313253 seconds.
+extracting values for 1 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 66.411741 seconds.
+saving analysis results.....
+Elapsed time is 0.020907 seconds.
+DONE extracting values for 10 7 2
+Elapsed time is 0.474858 seconds.
+extracting values for 10 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 74.695315 seconds.
+saving analysis results.....
+Elapsed time is 0.019430 seconds.
+DONE extracting values for 8 12 2
+Elapsed time is 0.287287 seconds.
+extracting values for 8 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 65.220489 seconds.
+saving analysis results.....
+Elapsed time is 0.045150 seconds.
+DONE extracting values for 8 12 1
+Elapsed time is 0.794117 seconds.
+saving analysis results.....
+Elapsed time is 0.033888 seconds.
+DONE extracting values for 10 10 1
+Elapsed time is 0.508649 seconds.
+extracting values for 10 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 66.121959 seconds.
+saving analysis results.....
+Elapsed time is 0.115003 seconds.
+DONE extracting values for 4 2 2
+Elapsed time is 0.799811 seconds.
+extracting values for 4 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 105.721943 seconds.
+saving analysis results.....
+Elapsed time is 0.045918 seconds.
+DONE extracting values for 10 16 2
+Elapsed time is 0.607639 seconds.
+extracting values for 10 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 62.215372 seconds.
+saving analysis results.....
+Elapsed time is 0.204402 seconds.
+DONE extracting values for 4 2 1
+saving analysis results.....
+Elapsed time is 0.049987 seconds.
+DONE extracting values for 9 14 2
+Elapsed time is 0.841828 seconds.
+extracting values for 9 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 62.097792 seconds.
+saving analysis results.....
+Elapsed time is 0.032281 seconds.
+DONE extracting values for 10 2 2
+Elapsed time is 0.548342 seconds.
+extracting values for 10 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 96.880545 seconds.
+Elapsed time is 1.199053 seconds.
+extracting values for 11 7 2
+Elapsed time is 1.084771 seconds.
+extracting values for 9 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.595631 seconds.
+saving analysis results.....
+Elapsed time is 0.021374 seconds.
+DONE extracting values for 9 10 2
+Elapsed time is 0.780702 seconds.
+Elapsed time is 1.070161 seconds.
+extracting values for 9 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 70.942431 seconds.
+saving analysis results.....
+Elapsed time is 0.018067 seconds.
+DONE extracting values for 9 7 2
+Elapsed time is 1.250072 seconds.
+extracting values for 4 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.444119 seconds.
+Elapsed time is 1.016041 seconds.
+extracting values for 10 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.483412 seconds.
+saving analysis results.....
+Elapsed time is 0.020487 seconds.
+DONE extracting values for 1 15 2
+Elapsed time is 0.926131 seconds.
+extracting values for 1 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.499576 seconds.
+Elapsed time is 1.260377 seconds.
+extracting values for 10 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.754387 seconds.
+saving analysis results.....
+Elapsed time is 0.021622 seconds.
+DONE extracting values for 1 15 1
+Elapsed time is 0.327821 seconds.
+Elapsed time is 1.288629 seconds.
+extracting values for 10 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 71.162439 seconds.
+extracting values for 11 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 70.127264 seconds.
+saving analysis results.....
+Elapsed time is 0.020105 seconds.
+DONE extracting values for 10 4 1
+saving analysis results.....
+Elapsed time is 0.021718 seconds.
+DONE extracting values for 10 9 2
+Elapsed time is 0.856239 seconds.
+extracting values for 10 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.707516 seconds.
+saving analysis results.....
+Elapsed time is 0.023246 seconds.
+DONE extracting values for 11 4 2
+Elapsed time is 1.583405 seconds.
+extracting values for 9 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 73.039442 seconds.
+extracting values for 11 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 57.999782 seconds.
+saving analysis results.....
+Elapsed time is 0.344108 seconds.
+DONE extracting values for 9 4 1
+Elapsed time is 0.949554 seconds.
+extracting values for 9 3 2
+saving analysis results.....
+Elapsed time is 0.020730 seconds.
+DONE extracting values for 10 7 1
+Elapsed time is 0.845031 seconds.
+extracting values for 10 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 59.682867 seconds.
+extracting values for 11 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 79.462011 seconds.
+saving analysis results.....
+Elapsed time is 0.019345 seconds.
+DONE extracting values for 10 6 2
+saving analysis results.....
+Elapsed time is 0.026757 seconds.
+DONE extracting values for 10 16 1
+Elapsed time is 0.470725 seconds.
+extracting values for 10 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.981618 seconds.
+saving analysis results.....
+Elapsed time is 0.018380 seconds.
+DONE extracting values for 9 14 1
+Elapsed time is 0.663847 seconds.
+extracting values for 9 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.769758 seconds.
+saving analysis results.....
+Elapsed time is 0.043574 seconds.
+DONE extracting values for 9 13 2
+Elapsed time is 0.885930 seconds.
+saving analysis results.....
+Elapsed time is 0.057097 seconds.
+DONE extracting values for 9 1 2
+Elapsed time is 0.855105 seconds.
+extracting values for 9 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 89.819118 seconds.
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 57.377810 seconds.
+extracting values for 11 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.551464 seconds.
+saving analysis results.....
+Elapsed time is 0.020377 seconds.
+DONE extracting values for 4 16 2
+Elapsed time is 0.778204 seconds.
+extracting values for 4 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.506719 seconds.
+Elapsed time is 1.180851 seconds.
+extracting values for 1 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 90.778530 seconds.
+saving analysis results.....
+Elapsed time is 0.035652 seconds.
+DONE extracting values for 4 16 1
+Elapsed time is 0.750599 seconds.
+saving analysis results.....
+Elapsed time is 0.018540 seconds.
+DONE extracting values for 1 1 1
+Elapsed time is 0.582501 seconds.
+Elapsed time is 1.082831 seconds.
+extracting values for 9 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.056098 seconds.
+saving analysis results.....
+Elapsed time is 0.020408 seconds.
+DONE extracting values for 9 7 1
+Elapsed time is 0.585703 seconds.
+saving analysis results.....
+Elapsed time is 0.056726 seconds.
+DONE extracting values for 10 11 2
+Elapsed time is 0.743304 seconds.
+extracting values for 10 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.517066 seconds.
+saving analysis results.....
+Elapsed time is 0.023033 seconds.
+DONE extracting values for 10 11 1
+Elapsed time is 0.997331 seconds.
+saving analysis results.....
+Elapsed time is 0.042512 seconds.
+DONE extracting values for 10 13 2
+Elapsed time is 0.892778 seconds.
+extracting values for 10 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.703540 seconds.
+saving analysis results.....
+Elapsed time is 0.019040 seconds.
+DONE extracting values for 10 13 1
+Elapsed time is 0.724817 seconds.
+extracting values for 11 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.243681 seconds.
+saving analysis results.....
+Elapsed time is 0.020744 seconds.
+DONE extracting values for 10 9 1
+Elapsed time is 0.893408 seconds.
+extracting values for 10 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.139527 seconds.
+saving analysis results.....
+Elapsed time is 0.087171 seconds.
+DONE extracting values for 10 8 2
+Elapsed time is 0.657602 seconds.
+saving analysis results.....
+Elapsed time is 0.044267 seconds.
+DONE extracting values for 10 2 1
+Elapsed time is 0.861885 seconds.
+extracting values for 10 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 89.521005 seconds.
+extracting values for 12 5 1
+saving analysis results.....
+Elapsed time is 0.020676 seconds.
+DONE extracting values for 10 15 2
+Elapsed time is 0.527739 seconds.
+extracting values for 10 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.821027 seconds.
+saving analysis results.....
+Elapsed time is 0.025950 seconds.
+DONE extracting values for 10 15 1
+Elapsed time is 0.328783 seconds.
+extracting values for 11 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.357160 seconds.
+saving analysis results.....
+Elapsed time is 0.059702 seconds.
+DONE extracting values for 11 12 1
+Elapsed time is 1.050599 seconds.
+extracting values for 10 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.241378 seconds.
+saving analysis results.....
+Elapsed time is 0.026075 seconds.
+DONE extracting values for 10 6 1
+Elapsed time is 1.170058 seconds.
+saving analysis results.....
+Elapsed time is 0.028896 seconds.
+DONE extracting values for 9 1 1
+Elapsed time is 0.608453 seconds.
+extracting values for 8 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.887234 seconds.
+saving analysis results.....
+Elapsed time is 0.018206 seconds.
+DONE extracting values for 11 6 1
+Elapsed time is 0.487123 seconds.
+extracting values for 11 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 62.537806 seconds.
+Elapsed time is 1.384178 seconds.
+extracting values for 11 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.503350 seconds.
+extracting values for 11 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.731773 seconds.
+Elapsed time is 1.264010 seconds.
+extracting values for 10 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 77.315788 seconds.
+saving analysis results.....
+Elapsed time is 0.069530 seconds.
+DONE extracting values for 10 3 2
+Elapsed time is 1.280141 seconds.
+saving analysis results.....
+Elapsed time is 0.019912 seconds.
+DONE extracting values for 11 9 1
+Elapsed time is 0.638644 seconds.
+extracting values for 11 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.703728 seconds.
+extracting values for 11 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.249686 seconds.
+saving analysis results.....
+Elapsed time is 0.037037 seconds.
+DONE extracting values for 11 13 2
+extracting values for 11 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.610879 seconds.
+saving analysis results.....
+Elapsed time is 0.254998 seconds.
+DONE extracting values for 11 7 2
+Elapsed time is 0.465049 seconds.
+extracting values for 11 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 60.759207 seconds.
+saving analysis results.....
+Elapsed time is 0.278628 seconds.
+DONE extracting values for 11 7 1
+saving analysis results.....
+Elapsed time is 0.030907 seconds.
+DONE extracting values for 11 2 2
+Elapsed time is 0.378426 seconds.
+extracting values for 11 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 80.153628 seconds.
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 80.712324 seconds.
+saving analysis results.....
+Elapsed time is 0.054783 seconds.
+DONE extracting values for 9 3 2
+Elapsed time is 0.670043 seconds.
+saving analysis results.....
+Elapsed time is 0.019446 seconds.
+DONE extracting values for 11 10 2
+Elapsed time is 0.347790 seconds.
+extracting values for 11 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.899305 seconds.
+Elapsed time is 1.106614 seconds.
+extracting values for 11 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.056969 seconds.
+saving analysis results.....
+Elapsed time is 0.041316 seconds.
+DONE extracting values for 11 11 2
+extracting values for 12 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 61.241117 seconds.
+saving analysis results.....
+Elapsed time is 0.072897 seconds.
+DONE extracting values for 8 16 2
+Elapsed time is 0.725205 seconds.
+extracting values for 8 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.362037 seconds.
+saving analysis results.....
+Elapsed time is 0.023328 seconds.
+DONE extracting values for 8 16 1
+Elapsed time is 0.444050 seconds.
+extracting values for 12 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 80.006557 seconds.
+saving analysis results.....
+Elapsed time is 0.020075 seconds.
+DONE extracting values for 12 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 68.698841 seconds.
+saving analysis results.....
+Elapsed time is 0.021449 seconds.
+DONE extracting values for 12 5 1
+extracting values for 12 2 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 90.698767 seconds.
+saving analysis results.....
+Elapsed time is 0.104923 seconds.
+DONE extracting values for 11 15 1
+Elapsed time is 0.473322 seconds.
+extracting values for 11 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.633440 seconds.
+extracting values for 12 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.727172 seconds.
+saving analysis results.....
+Elapsed time is 0.042988 seconds.
+DONE extracting values for 12 2 1
+saving analysis results.....
+Elapsed time is 0.067338 seconds.
+DONE extracting values for 12 8 1
+extracting values for 12 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.814181 seconds.
+saving analysis results.....
+Elapsed time is 0.061417 seconds.
+DONE extracting values for 11 16 2
+Elapsed time is 0.929148 seconds.
+extracting values for 11 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.583251 seconds.
+saving analysis results.....
+Elapsed time is 0.073194 seconds.
+DONE extracting values for 12 9 2
+Elapsed time is 1.001989 seconds.
+extracting values for 11 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.421052 seconds.
+saving analysis results.....
+Elapsed time is 0.028164 seconds.
+DONE extracting values for 11 8 2
+Elapsed time is 0.742065 seconds.
+extracting values for 11 8 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.511536 seconds.
+saving analysis results.....
+Elapsed time is 0.142101 seconds.
+DONE extracting values for 11 13 1
+saving analysis results.....
+Elapsed time is 0.056398 seconds.
+DONE extracting values for 11 8 1
+Elapsed time is 0.891403 seconds.
+saving analysis results.....
+Elapsed time is 0.092425 seconds.
+DONE extracting values for 11 5 2
+Elapsed time is 0.644211 seconds.
+extracting values for 11 5 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 64.714044 seconds.
+saving analysis results.....
+Elapsed time is 0.039597 seconds.
+DONE extracting values for 11 5 1
+Elapsed time is 0.675476 seconds.
+saving analysis results.....
+Elapsed time is 0.066054 seconds.
+DONE extracting values for 11 10 1
+Elapsed time is 0.613410 seconds.
+extracting values for 11 9 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.412280 seconds.
+saving analysis results.....
+Elapsed time is 0.028317 seconds.
+DONE extracting values for 11 9 2
+Elapsed time is 0.297012 seconds.
+extracting values for 12 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 54.703820 seconds.
+saving analysis results.....
+Elapsed time is 0.024277 seconds.
+DONE extracting values for 11 4 1
+Elapsed time is 0.903688 seconds.
+extracting values for 11 3 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 77.585377 seconds.
+saving analysis results.....
+Elapsed time is 0.051651 seconds.
+DONE extracting values for 11 3 2
+saving analysis results.....
+Elapsed time is 0.038650 seconds.
+DONE extracting values for 10 1 2
+Elapsed time is 0.616018 seconds.
+extracting values for 10 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 97.292831 seconds.
+saving analysis results.....
+Elapsed time is 0.018352 seconds.
+DONE extracting values for 10 1 1
+Elapsed time is 1.081828 seconds.
+extracting values for 11 6 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 65.363103 seconds.
+saving analysis results.....
+Elapsed time is 0.067102 seconds.
+DONE extracting values for 11 6 2
+Elapsed time is 0.544590 seconds.
+extracting values for 12 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.672817 seconds.
+Elapsed time is 1.246453 seconds.
+extracting values for 11 11 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.700497 seconds.
+saving analysis results.....
+Elapsed time is 0.019892 seconds.
+DONE extracting values for 11 11 1
+Elapsed time is 0.943273 seconds.
+saving analysis results.....
+Elapsed time is 0.030807 seconds.
+DONE extracting values for 11 14 2
+Elapsed time is 0.539477 seconds.
+extracting values for 11 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.674772 seconds.
+saving analysis results.....
+Elapsed time is 0.017868 seconds.
+DONE extracting values for 11 14 1
+Elapsed time is 0.288672 seconds.
+saving analysis results.....
+Elapsed time is 0.056203 seconds.
+DONE extracting values for 12 6 2
+Elapsed time is 0.774619 seconds.
+extracting values for 12 6 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.129207 seconds.
+saving analysis results.....
+Elapsed time is 0.028561 seconds.
+DONE extracting values for 11 16 1
+Elapsed time is 0.876100 seconds.
+extracting values for 11 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.775702 seconds.
+extracting values for 12 15 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.126145 seconds.
+Elapsed time is 1.265477 seconds.
+extracting values for 11 12 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 50.250580 seconds.
+saving analysis results.....
+Elapsed time is 0.019889 seconds.
+DONE extracting values for 11 2 1
+Elapsed time is 0.350247 seconds.
+extracting values for 11 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 95.476061 seconds.
+saving analysis results.....
+Elapsed time is 0.017500 seconds.
+DONE extracting values for 11 15 2
+Elapsed time is 1.062614 seconds.
+Elapsed time is 1.380507 seconds.
+extracting values for 12 7 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 55.662548 seconds.
+Elapsed time is 1.096390 seconds.
+extracting values for 12 9 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 51.895526 seconds.
+extracting values for 12 14 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.750890 seconds.
+saving analysis results.....
+Elapsed time is 0.024656 seconds.
+DONE extracting values for 11 12 2
+Elapsed time is 1.436348 seconds.
+saving analysis results.....
+Elapsed time is 0.028915 seconds.
+DONE extracting values for 12 9 1
+saving analysis results.....
+Elapsed time is 0.021753 seconds.
+DONE extracting values for 12 14 1
+saving analysis results.....
+Elapsed time is 0.018656 seconds.
+DONE extracting values for 12 7 2
+extracting values for 12 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.712928 seconds.
+saving analysis results.....
+Elapsed time is 0.097646 seconds.
+DONE extracting values for 12 11 1
+Elapsed time is 0.436551 seconds.
+extracting values for 12 10 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 49.519223 seconds.
+Elapsed time is 1.882217 seconds.
+extracting values for 12 4 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 69.790254 seconds.
+saving analysis results.....
+Elapsed time is 0.020335 seconds.
+DONE extracting values for 12 4 2
+Elapsed time is 1.613690 seconds.
+extracting values for 12 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 75.504495 seconds.
+Elapsed time is 1.002935 seconds.
+extracting values for 9 16 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.241828 seconds.
+saving analysis results.....
+Elapsed time is 0.021988 seconds.
+DONE extracting values for 9 16 2
+Elapsed time is 0.326600 seconds.
+saving analysis results.....
+Elapsed time is 0.114752 seconds.
+DONE extracting values for 12 12 2
+Elapsed time is 0.345853 seconds.
+extracting values for 12 12 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.153874 seconds.
+Elapsed time is 2.204293 seconds.
+extracting values for 12 1 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 94.405855 seconds.
+saving analysis results.....
+Elapsed time is 0.058174 seconds.
+DONE extracting values for 12 1 2
+Elapsed time is 1.315022 seconds.
+extracting values for 11 3 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 78.667405 seconds.
+saving analysis results.....
+Elapsed time is 0.019328 seconds.
+DONE extracting values for 11 3 1
+Elapsed time is 1.356774 seconds.
+saving analysis results.....
+Elapsed time is 0.030681 seconds.
+DONE extracting values for 12 15 2
+Elapsed time is 0.439508 seconds.
+extracting values for 12 15 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.213497 seconds.
+Elapsed time is 1.235761 seconds.
+extracting values for 12 13 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 48.274229 seconds.
+saving analysis results.....
+Elapsed time is 0.028486 seconds.
+DONE extracting values for 12 16 2
+Elapsed time is 0.349746 seconds.
+extracting values for 12 16 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 46.762844 seconds.
+saving analysis results.....
+Elapsed time is 0.027167 seconds.
+DONE extracting values for 12 16 1
+Elapsed time is 0.219369 seconds.
+Elapsed time is 1.151995 seconds.
+extracting values for 12 8 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 52.592794 seconds.
+saving analysis results.....
+Elapsed time is 0.042805 seconds.
+DONE extracting values for 12 8 2
+Elapsed time is 0.709929 seconds.
+saving analysis results.....
+Elapsed time is 0.034004 seconds.
+DONE extracting values for 12 6 1
+Elapsed time is 0.309145 seconds.
+extracting values for 12 5 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 64.505317 seconds.
+saving analysis results.....
+Elapsed time is 0.033203 seconds.
+DONE extracting values for 12 5 2
+Elapsed time is 0.341030 seconds.
+saving analysis results.....
+Elapsed time is 0.019230 seconds.
+DONE extracting values for 12 10 2
+Elapsed time is 0.524067 seconds.
+extracting values for 12 10 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 47.748562 seconds.
+saving analysis results.....
+Elapsed time is 0.037136 seconds.
+DONE extracting values for 12 10 1
+Elapsed time is 0.269186 seconds.
+Elapsed time is 1.200200 seconds.
+extracting values for 12 7 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 56.079185 seconds.
+saving analysis results.....
+Elapsed time is 0.018305 seconds.
+DONE extracting values for 12 7 1
+Elapsed time is 0.639678 seconds.
+saving analysis results.....
+Elapsed time is 0.018577 seconds.
+DONE extracting values for 12 12 1
+Elapsed time is 0.235059 seconds.
+extracting values for 12 11 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.246521 seconds.
+saving analysis results.....
+Elapsed time is 0.025449 seconds.
+DONE extracting values for 12 11 2
+Elapsed time is 0.089312 seconds.
+Elapsed time is 1.284556 seconds.
+extracting values for 12 4 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 66.132020 seconds.
+saving analysis results.....
+Elapsed time is 0.034430 seconds.
+DONE extracting values for 12 4 1
+Elapsed time is 0.495966 seconds.
+saving analysis results.....
+Elapsed time is 0.020439 seconds.
+DONE extracting values for 11 1 2
+Elapsed time is 0.749701 seconds.
+extracting values for 11 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 91.322282 seconds.
+saving analysis results.....
+Elapsed time is 0.025834 seconds.
+DONE extracting values for 11 1 1
+Elapsed time is 0.218490 seconds.
+saving analysis results.....
+Elapsed time is 0.017302 seconds.
+DONE extracting values for 12 15 1
+Elapsed time is 0.085148 seconds.
+extracting values for 12 14 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 44.441413 seconds.
+saving analysis results.....
+Elapsed time is 0.018974 seconds.
+DONE extracting values for 12 14 2
+Elapsed time is 0.080556 seconds.
+saving analysis results.....
+Elapsed time is 0.018719 seconds.
+DONE extracting values for 12 13 2
+Elapsed time is 0.670090 seconds.
+extracting values for 12 13 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 45.329728 seconds.
+saving analysis results.....
+Elapsed time is 0.023070 seconds.
+DONE extracting values for 12 13 1
+Elapsed time is 0.096537 seconds.
+saving analysis results.....
+Elapsed time is 0.024139 seconds.
+DONE extracting values for 12 3 1
+Elapsed time is 0.953289 seconds.
+extracting values for 12 2 2
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 81.698144 seconds.
+saving analysis results.....
+Elapsed time is 0.430119 seconds.
+DONE extracting values for 12 2 2
+Elapsed time is 1.101571 seconds.
+Elapsed time is 1.515998 seconds.
+extracting values for 12 1 1
+
+simName =
+
+stabilityVsFlexibilityHeatMap
+
+
+BASE_RUN_DIR =
+
+/nfs/turbo/lsa-ojahmed-nosnap/temp_run_dir_tibin
+
+loading saved sim data....
+Elapsed time is 86.120084 seconds.
+saving analysis results.....
+Elapsed time is 0.020202 seconds.
+DONE extracting values for 12 1 1
+Elapsed time is 0.162867 seconds.
+>> 
