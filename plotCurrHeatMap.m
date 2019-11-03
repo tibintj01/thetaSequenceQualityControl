@@ -1,6 +1,14 @@
 heatMapInput.heatMatrix=currHeatMatrix;
 heatMapInput.modelResponseVarName=modelResponseVarName;
-heatMapInput.climVals=climVals;
-heatMapInput.titleStr=titleStrs{linearTimeCoding2};
+if(exist('climVals'))
+	heatMapInput.climVals=climVals;
+else
+	heatMapInput.climVals=[-Inf Inf];
+end
+try
+	heatMapInput.titleStr=titleStrs{linearTimeCoding2};
+catch
+	heatMapInput.titleStr=titleStrs{i};
 
+end
 heatMapIt(heatMapInput)

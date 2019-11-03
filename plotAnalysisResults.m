@@ -10,7 +10,7 @@ function [exitStatus] = plotAnalysisResults(processedDataPath)
 	
 	speedValues=processedData.param2Vals;
 
-	approximateRestValue=-55;
+	%approximateRestValue=-55;
 
 
 	heatMapInput.diRanks=diRanks;

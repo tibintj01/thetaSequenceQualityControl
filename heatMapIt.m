@@ -10,10 +10,15 @@ function [] = heatMapIt(heatMapInput)
 		%plot heat map
 		%omarPcolor(diRanks,speedValues,heatMatrix)
 		omarPcolor(diRanks,speedValues,heatMatrix')
-                title(titleStr)
+                title(removeUnderscores(titleStr))
                 xlabel('Directionality Index Rank')
                 ylabel('Running speed (cm/s)')
                 cb=colorbar
-		colormap(copper)
+		colormap(jet)
                 ylabel(cb,modelResponseVarName)
                 caxis(climVals)
+
+		axis square
+
+		maxFigManual2d(0.8,0.75,16)
+		saveas(gcf,[titleStr '_SpikeCountFlexAndStableHeatMap.tif'])

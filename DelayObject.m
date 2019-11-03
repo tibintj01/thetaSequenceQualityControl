@@ -113,7 +113,8 @@ classdef DelayObject < handle & matlab.mixin.Copyable %create object by referenc
 			%delay=normFactor*log(convFactor*(DelayObject.IMAX-itonic))+DelayObject.BASELINE_DELAY+(defaultPhaseSlope*(itonic-imin));
 			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+DelayObject.BASELINE_DELAY+(defaultPhaseSlope*(itonic-imin));
 			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+(defaultPhaseSlope*(itonic-imin));
-			delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+(defaultPhaseSlope*(itonic-imin));
+			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN))+(defaultPhaseSlope*(itonic-imin));
+			delay=normFactor*log(convFactor*(DelayObject.IMAX-itonic))++DelayObject.BASELINE_DELAY+(defaultPhaseSlope*(itonic-imin));
 			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN));
 			%delay=-normFactor*log(convFactor*(itonic-DelayObject.IMIN));
 
