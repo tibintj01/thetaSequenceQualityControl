@@ -5,7 +5,8 @@
 %simName='testControlledFlexibility'
 
 %simName='stabilityVsFlexibilityHeatMap'
-simName='backToIntegrator'
+%simName='backToIntegrator'
+simName='speedPositionJointSpikeDistr'
 
 if(onLocalComputer())
 	DATA_DIR=sprintf('/Users/tibinjohn/thetaSeq/results/%s/raw_data/',simName);

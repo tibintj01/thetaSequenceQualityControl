@@ -26,7 +26,7 @@ function [exitStatus] =runSpikingAnalysisOfSimBatchPar(paramName1,paramName2,par
 		
 		currSimObj=data.thisObj;
 	
-		currSimObj.analysisObj
+		%currSimObj.analysisObj
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%collect spikes that occur during place inputs
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
