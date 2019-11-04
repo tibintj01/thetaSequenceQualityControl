@@ -7,7 +7,8 @@ classdef ThetaPopInput < ExternallyControlledConductances
 		%L2_THETA_PHASE_OFFSET=90;		%degrees
 		L2_THETA_PHASE_OFFSET=0;		%degrees
 
-		frequencyDefault=8/1000;		%kHz
+		%frequencyDefault=8/1000;		%kHz
+		frequencyDefault=7/1000;		%kHz
 		%frequencyDefault=80/1000;		%kHz
 		phaseOffsetDefault=0;			%radians
 		%baselineDefault=0.1;

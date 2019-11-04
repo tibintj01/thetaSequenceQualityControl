@@ -18,7 +18,7 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 		INTEGRATOR_GSYN_FACT=0.6
 		%INTEGRATOR_GSYN_FACT=0.7
 		
-		USE_LINEAR_DELAYS=0
+		USE_LINEAR_DELAYS=1
 	end
 
 	properties
@@ -201,15 +201,21 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 				fiduciaryT=1/ThetaPopInput.frequencyDefault;
 				targetDelaySequence=fiduciaryT-normFactor*log(convFactor*(imax-tonicValueSequence)); %what to add to reach fiduciary T
 
+				minDelay=min(targetDelaySequence);			
+				%targetDelaySequence=targetDelaySequence-minDelay;
+				%minDelay=min(targetDelaySequence);			
 			if(FeedForwardConnectivity.USE_LINEAR_DELAYS==1)
 				minDelay=min(targetDelaySequence);			
 				maxDelay=max(targetDelaySequence);		
 
-				thisObj.minDelay=minDelay;
 				thisObj.maxDelay=maxDelay;
 
 				%targetDelaySequence=linspace(minDelay,maxDelay,length(tonicValueSequence));
 				targetDelaySequence=fiduciaryT-linspace(maxDelay,minDelay,length(tonicValueSequence));
+			end
+			thisObj.minDelay=minDelay;
+			if(FeedForwardConnectivity.USE_LINEAR_DELAYS==0)
+				targetDelaySequence=targetDelaySequence-minDelay;
 			end
 
 			%STOP

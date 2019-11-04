@@ -13,8 +13,8 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		%INTEGRATOR_gL=0.005;
 		%INTEGRATOR_gL=0.1;
 		INTEGRATOR_gL=0.01;
-		%SEQ_DET_gL=0.1; %CA1 10msec time constant
-		SEQ_DET_gL=0.2; %CA1 10msec time constant
+		SEQ_DET_gL=0.1; %CA1 10msec time constant
+		%SEQ_DET_gL=0.2; %CA1 10msec time constant
 	end
 	properties
 		%voltage and time dependent gating variable matrices
@@ -398,11 +398,12 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 
 			numCellsInt=1;
 
+			minPrecession=thisObj.feedforwardConnObj.minDelay;
 			if(FeedForwardConnectivity.USE_LINEAR_DELAYS)
 				maxPrecession=thisObj.feedforwardConnObj.maxDelay;	
-				minPrecession=thisObj.feedforwardConnObj.minDelay;
 				%linearPrecessionSlope=(maxPrecession-minPrecession)/(imax-imin);
-				linearPrecessionSlope=2*(maxPrecession-minPrecession)/(imax-imin); %real phase precession ends at 180 degrees-> double slope?
+				%linearPrecessionSlope=2*(maxPrecession-minPrecession)/(imax-imin); %real phase precession ends at 180 degrees-> double slope?
+				linearPrecessionSlope=3*(maxPrecession-minPrecession)/(imax-imin); %real phase precession ends at 180 degrees-> double slope?
 			end
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%step through time
@@ -482,11 +483,11 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                                                      %phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic)))+(baselineDelay+(defaultPhaseSlope*(itonic-imin))); %see DelayObject for values
                                                                      %phasePrecessionDelay=-(normFactor*log(convFactor*(itonic-imin)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
                                                                      %phasePrecessionDelay=-(normFactor*log(convFactor*(imax-itonic)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
-                                                                     phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
+                                                                     %phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
+                                                                     phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic))+minPrecession)+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
 							             if(FeedForwardConnectivity.USE_LINEAR_DELAYS)
 									%phasePrecessionDelay=-(linearPrecessionSlope*(itonic-imin)+minPrecession);	
 									%phasePrecessionDelay=-(linearPrecessionSlope*(itonic-imin)+minPrecession)+(defaultPhaseSlope*(itonic-imin));
-									
 									%cancel out model precession and add in synthetic phenomenological precession	
 									phasePrecessionDelay=(linearPrecessionSlope*(imax-itonic)+minPrecession)+(defaultPhaseSlope*(itonic-imin));	
 								     end
@@ -512,7 +513,10 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 									compartmentNumsInnervated=find(weights>0);
 									weights=weights(compartmentNumsInnervated);
 									dendriticDelays=dendriticDelayTemplateMatrix(placeIdx,compartmentNumsInnervated,postSynL2CellIdx);
-                                                                      
+                                                                    
+
+									
+									  
 									collateralTotalDelays=phasePrecessionDelay+dendriticDelays;
                                                                          %4000 ms covers integrated timecourses with delay
                                                                          synEndStep=step+1+round(max(collateralTotalDelays)/dt)+round(4000/dt);
@@ -565,8 +569,8 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                                                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                                 %Integrator post-synaptic conductance changes (spikes without temporal template delays, just integrate over window)
 								%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-								%weight=max(feedfwdGmatrix(placeIdx,:,1))*FeedForwardConnectivity.INTEGRATOR_GSYN_FACT; % uses synaptic weight from most prominent L2 dendritic compartment
-								weight=max(feedfwdGmatrix(placeIdx,:,1)); %uses same synaptic weights
+								weight=max(feedfwdGmatrix(placeIdx,:,1))*FeedForwardConnectivity.INTEGRATOR_GSYN_FACT; % uses synaptic weight from most prominent L2 dendritic compartment
+								%weight=max(feedfwdGmatrix(placeIdx,:,1)); %uses same synaptic weights
 								
 								%phasePrecessionDelayIntegrator=phasePrecessionDelay;
 								phasePrecessionDelayIntegrator=thisSpikePSPdelay;

@@ -39,10 +39,12 @@ scanParam1Values=[1]
 
 #scanParam1Values=list(range(5,40,5))
 #scanParam2Values=np.linspace(20,20,1)
-scanParam2Values=np.linspace(15,45,400)
+#scanParam2Values=np.linspace(30,60,2)
+scanParam2Values=np.linspace(40,40,1)
+#scanParam2Values=np.linspace(15,45,400)
 #scanParam2Values=[10,20,40,50]
 
-scanParam3Values=[0]
+scanParam3Values=[0,1]
 #scanParam2Values=np.linspace(50,50,1)
 #scanParam2Values=np.linspace(10,10,1)
 #scanParam2Values=np.linspace(30,30,1)
@@ -116,7 +118,9 @@ if REDEPLOY==1:
 				os.system('mkdir -p %s' % runDirPath)
 				#os.chdir(runDirPath)
 				#rngSeed=(i+1)*(j+1)*(k+1)
-				rngSeed=int(str(i+1)+str(j+1)+str(k+1))
+				#rngSeed=int(str(i+1)+str(j+1)+str(k+1))
+				rngSeed=int(str(i+1)+str(j+1))
+				simIDnum=int(str(i+1)+str(j+1)+str(k+1))
 			
 				#replace files with current parameters filled in
 				for l,filePath in enumerate(filePaths):	
@@ -146,7 +150,8 @@ if REDEPLOY==1:
 			#scipy.io.savemat('currSimParams.mat', mdict={'scanParam1Value': float(scanParam1Value), 'scanParam2Value': float(scanParam2Value), 'scanParamName1': scanParamNames[0], 'scanParamName2': scanParamNames[1], 'modifiedObjName1': modifiedObjName1, 'modifiedObjName2' : modifiedObjName2, 'scanDescr':scanDescr })
 			#arglists.append([scanParam1Value,scanParam2Value,scanParamNames[0],scanParamNames[1], modifiedObjName1, modifiedObjName2, scanDescr])
 			#arglists.append([float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr, runDirPath,CODE_BASE_DIR,int(rngSeed)])
-				arglists.append([float(scanParam1Value),float(scanParam2Value),float(scanParam3Value),scanParamNames[0],scanParamNames[1],scanParamNames[2],modifiedObjName1,modifiedObjName2,modifiedObjName3,scanDescr, runDirPath,CODE_BASE_DIR,int(rngSeed),simName])
+				#arglists.append([float(scanParam1Value),float(scanParam2Value),float(scanParam3Value),scanParamNames[0],scanParamNames[1],scanParamNames[2],modifiedObjName1,modifiedObjName2,modifiedObjName3,scanDescr, runDirPath,CODE_BASE_DIR,int(rngSeed),simName])
+				arglists.append([float(scanParam1Value),float(scanParam2Value),float(scanParam3Value),scanParamNames[0],scanParamNames[1],scanParamNames[2],modifiedObjName1,modifiedObjName2,modifiedObjName3,scanDescr, runDirPath,CODE_BASE_DIR,int(rngSeed),simName,simIDnum])
 
 			#run this version of simulation in matlab
 			#exitStatus=eng.runSingleSimulation(float(scanParam1Value),float(scanParam2Value),scanParamNames[0],scanParamNames[1],modifiedObjName1,modifiedObjName2,scanDescr)

@@ -21,6 +21,7 @@ function [done] = runSingleSimulation(arglist)
 	rngSeed=arglist{13};
 
 	batchName=arglist{14};
+	simIDnum=arglist{15};
 
 	rng(rngSeed)
 	cd(runDir)		
@@ -59,9 +60,9 @@ function [done] = runSingleSimulation(arglist)
 	if(saveResults)	
 		[fH,fpH,fsH]=newSim.visualizeSpikeTimings()
 		%maxFigManual2d(1.5,1.1,16)
-		saveSimFig(fH,'rasters',rngSeed,newSim)
-		saveSimFig(fpH,'phasePosition',rngSeed,newSim)
-		saveSimFig(fsH,'spaceCompression',rngSeed,newSim)
+		saveSimFig(fH,'rasters',simIDnum,newSim)
+		saveSimFig(fpH,'phasePosition',simIDnum,newSim)
+		saveSimFig(fsH,'spaceCompression',simIDnum,newSim)
 		
 	end
 

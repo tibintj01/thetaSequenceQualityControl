@@ -348,24 +348,29 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					currCellSpikeInputRelativePositions=currCellSpikePositions-thisCellInputCenterPos;
 					%plot(currCellSpikeInputRelativePositions,currCellSpikePhases,'o','MarkerSize',5,'Color',placeCmap(j,:),'MarkerFaceColor',placeCmap(j,:));
 					%linearEstPt=13;
+					
 					[~,linearEstPt]=min(currCellSpikePhases);
+					%linearEstPt=length(currCellSpikePhases);
 					%for s=1:length(currCellSpikePhases)
 					%for s=1:linearEstPt
 						%currSpeed=round(simObj.externalEnvObj.rodentRunningSpeed(currCellSpikeTimeIdxes(s)));
 						%plot(currCellSpikeInputRelativePositions,currCellSpikePhases,'o','MarkerSize',5,'Color',speedCmap(currSpeed,:),'MarkerFaceColor',speedCmap(currSpeed,:));
 						plot(currCellSpikeInputRelativePositions(1:linearEstPt),currCellSpikePhases(1:linearEstPt),'o','MarkerSize',7,'Color',placeCmap(j,:),'MarkerFaceColor',placeCmap(j,:));
-						%hold on
-						%plot(currCellSpikeInputRelativePositions(1:linearEstPt),currCellSpikePhases(1:linearEstPt),'-','LineWidth',2,'Color',placeCmap(j,:))
+						hold on
+						plot(currCellSpikeInputRelativePositions(1:linearEstPt),currCellSpikePhases(1:linearEstPt),'-','LineWidth',2,'Color',placeCmap(j,:))
 						%psH(s).Color(4)=(1-s/length(currCellSpikePhases));
 					%end
 					%plot(xlim,[currCellSpikePhases(1) currCellSpikePhases(end-5)],'r--') 
 					%plot([currCellSpikeInputRelativePositions(1) currCellSpikeInputRelativePositions(linearEstPt)],[currCellSpikePhases(1) currCellSpikePhases(linearEstPt)],'r--') 
+					ylim([140 360])
+					distLimHalf=ExternalEnvironment.PLACE_INPUT_WIDTH/2;
+					xlim([-distLimHalf distLimHalf*1.5])
 				
 					xlabel('Distance from place input center (cm)')
 					if(useAllSpikes)
-						ylabel('spike theta phase')
+						ylabel('spike theta phase (degrees)')
 					else
-						ylabel('First spike theta phase')
+						ylabel('Phase of first spike in cycle (degrees)')
 					end
 					hold on
 					%percent traveled within input field (not observable extracellularly)
@@ -389,6 +394,15 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 						currCellPlaceSpikeFieldWidth=NaN;
 						percPlaceFieldTraveled=NaN;
 					end
+					ylim([140 360])
+					xlim([0 100])
+					xlabel('Percent of field traveled')
+					if(useAllSpikes)
+                                                ylabel('spike theta phase')
+                                        else
+						ylabel('Phase of first spike in cycle (degrees)')
+                                                %ylabel('First spike theta phase')
+                                        end					
 					%plot(percPlaceFieldTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:),'MarkerFaceColor',cellCmap(count,:))
 					%plot(percPlaceInputTraveled,currCellSpikePhases,'o','MarkerSize',8,'Color',cellCmap(count,:))
 					%axHs=[axHs axH];
@@ -407,7 +421,8 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			cmap =placeCmap; %get current colormap
 			%cmap=cmap([1 count],:); % set your range here
 			colormap(gca,cmap); % apply new colormap
-			cb=colorbar();
+			placeIdxes=1:(cellsObj.numPlaces);
+			cb=colorbar('XTickLabel',cellstr(int2str(placeIdxes(:))),'XTick',placeIdxes/cellsObj.numPlaces-0.05);
 			ylabel(cb,'Cell input place rank')
 			%xlabel('Percent of field traversed')	
 			%ylabel('Spike theta phase')

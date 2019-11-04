@@ -6,6 +6,7 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 		USE_BOUNDARY_START=0;
 		END_BUFFER=500;
 		%END_BUFFER=240;
+		PLACE_INPUT_WIDTH=40
 	end
 	
 	properties
@@ -22,7 +23,8 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 
 		%placeInputWidth=20 %cm 
 		%placeInputWidth=30 %cm 
-		placeInputWidth=40 %cm 
+		%placeInputWidth=40 %cm 
+		placeInputWidth %cm 
 		%placeInputWidth=50 %cm 
 		%placeInputWidth=100 %cm 
 		%placeInputWidth=50 %cm 
@@ -38,6 +40,8 @@ classdef ExternalEnvironment < handle & matlab.mixin.Copyable
 	methods
 		function thisObj=ExternalEnvironment(extEnvSettings)
 			if(nargin==1)
+				thisObj.placeInputWidth=ExternalEnvironment.PLACE_INPUT_WIDTH;
+
 				if(isstr(extEnvSettings) && strcmp(extEnvSettings,'default'))
 					thisObj.setDefaultProperties();
 				

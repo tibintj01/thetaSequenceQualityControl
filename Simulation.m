@@ -334,7 +334,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%xlim([-Inf Inf])	
 			%xlim([-50 50])	
 			%xlim([-50 50])	
-			xlim([-10 20])	
+			%xlim([-10 20])	
 		end	
 	
 		function dispV_traces(thisObj,figH)
