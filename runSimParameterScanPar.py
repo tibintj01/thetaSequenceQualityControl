@@ -38,13 +38,23 @@ scanParam1Values=[1]
 #scanParam1Values=np.linspace(5040,5040,1)
 
 #scanParam1Values=list(range(5,40,5))
+#scanParam2Values=np.linspace(15,15,1)
+#scanParam2Values=np.linspace(5,5,1)
 #scanParam2Values=np.linspace(20,20,1)
+#scanParam2Values=np.linspace(10,10,1)
 #scanParam2Values=np.linspace(30,60,2)
-scanParam2Values=np.linspace(40,40,1)
+#scanParam2Values=np.linspace(100,100,1)
+#scanParam2Values=np.linspace(25,25,1)
+#scanParam2Values=np.linspace(35,50,2)
+scanParam2Values=np.linspace(15,45,4)
+#scanParam2Values=np.linspace(40,40,1)
+#scanParam2Values=np.linspace(30,30,1)
+#scanParam2Values=np.linspace(20,20,1)
 #scanParam2Values=np.linspace(15,45,400)
 #scanParam2Values=[10,20,40,50]
 
 scanParam3Values=[0,1]
+#scanParam3Values=[0]
 #scanParam2Values=np.linspace(50,50,1)
 #scanParam2Values=np.linspace(10,10,1)
 #scanParam2Values=np.linspace(30,30,1)

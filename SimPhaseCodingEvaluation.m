@@ -112,20 +112,38 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 			thisObj.cyclePositions=cyclePositions;
 		end
 
-		function setThetaSeqTimeSlopes(thisObj,simObj)
+		function [fThetaSeq]=setThetaSeqTimeSlopes(thisObj,simObj)
 			spikingData=thisObj.spikingDataInterface;
+            cycleStartTimes=simObj.thetaPopInputObj.getTroughTimes(1,1);
+            
+            thetaCycleDuration=1/(simObj.thetaPopInputObj.frequency);
 
 			cycleFirstPhasesMatrix=spikingData.firstSpikePhasePerCellPerCycle;
 			numCycles=spikingData.numCycles(1,1);
 			thetaSeqTimeSlopes=NaN(numCycles,1);		
 			thetaSeqTimeOffsets=NaN(numCycles,1);
-	
+        fThetaSeq=figure; 
+            cycleColorMap=copper(numCycles)
+            colormap(gca,cycleColorMap)
+            
 			for c=1:numCycles	
 				%currCycleFirstSpikeTimes=cycleSpikeSequences.(sprintf('cycle%d',c));
 				currCycleFirstSpikePhases=cycleFirstPhasesMatrix(:,:,c);
 				currCycleFirstSpikePhasesPerPlace=nanmean(currCycleFirstSpikePhases,1);
 				placeSequence=double(~isnan(currCycleFirstSpikePhasesPerPlace));
 				currCycleFirstSpikePhasesPerPlace=currCycleFirstSpikePhasesPerPlace(~isnan(currCycleFirstSpikePhasesPerPlace));
+	
+				dendriticTemplateMatrix=simObj.cellsObj.feedforwardConnObj.dendriticDelayTemplateMatrix;
+				dendriticTemplateISIs=diag(fliplr(dendriticTemplateMatrix));
+                %dendriticTemplateRelativeTimes=cumsum(dendriticTemplateISIs(end:-1:1));
+                %dendriticTemplateRelativeTimes=(dendriticTemplateISIs(end:-1:1));
+                %dendriticTemplateRelativeTimes=(dendriticTemplateISIs);
+                dendriticTemplateRelativeTimes=(thetaCycleDuration-dendriticTemplateISIs);
+				dendriticTemplateRelativeTimes=dendriticTemplateRelativeTimes-min(dendriticTemplateRelativeTimes);
+				%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+				%store theta sequence time slope per cycle
+				%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+                
 				 for currCol=1:size(placeSequence,2)
                                          placeSequence(:,currCol)=placeSequence(:,currCol)*currCol;
                                  end
@@ -135,19 +153,45 @@ classdef SimPhaseCodingEvaluation < handle & matlab.mixin.Copyable
 					%end
 					%currCycleFirstSpikePhases=currCycleFirstSpikePhases(~isnan(currCycleFirstSpikePhases));
 					placeSequence=placeSequence(placeSequence~=0);
+                    		placeSequence=placeSequence-min(placeSequence)+1;
 				%currCycleFirstSpikePhases=currCycleFirstSpikePhases(~isnan(currCycleFirstSpikePhases))
 				%currCycleFirstSpikePhases=sort(currCycleFirstSpikePhases);
 				%if(length(currCycleFirstSpikePhases)>3)
 				if(length(currCycleFirstSpikePhasesPerPlace)>1)
 					%[m,b,R]=getLinearFit(1:length(currCycleFirstSpikePhases),currCycleFirstSpikePhases);
 					%[m,b,R]=getLinearFit(placeSequence,currCycleFirstSpikePhases);
-					[m,b,R]=getLinearFit(placeSequence,currCycleFirstSpikePhasesPerPlace);
+					%[m,b,R]=getLinearFit(placeSequence,currCycleFirstSpikePhasesPerPlace);
+					%zeroedThetaSeqSpikes=currCycleFirstSpikePhasesPerPlace-currCycleFirstSpikePhasesPerPlace(1);
+					%zeroedThetaSeqSpikes=currCycleFirstSpikePhasesPerPlace-min(currCycleFirstSpikePhasesPerPlace);
+                    if(c>1)
+                        zeroedThetaSeqSpikes=(c-1)*thetaCycleDuration+(currCycleFirstSpikePhasesPerPlace)/360*thetaCycleDuration-cycleStartTimes(c-1);
+                    else
+                        zeroedThetaSeqSpikes=(c-1)*thetaCycleDuration+(currCycleFirstSpikePhasesPerPlace)/360*thetaCycleDuration;
+		    end
+                        zeroedThetaSeqSpikes=zeroedThetaSeqSpikes-min(zeroedThetaSeqSpikes);
+
+					[m,b,R]=getLinearFit(zeroedThetaSeqSpikes,placeSequence);
 					%figure; plot(placeSequence,currCycleFirstSpikePhases,'b*')
-					%figure; plot(placeSequence,currCycleFirstSpikePhasesPerPlace,'b*')
-					thetaSeqTimeSlopes(c)=m;%per seconds
+                    figure(fThetaSeq)
+				
+					plot(zeroedThetaSeqSpikes,placeSequence,'-','Color',cycleColorMap(c,:),'LineWidth',3)
+					%plot(currCycleFirstSpikePhasesPerPlace,placeSequence,'-','Color',cycleColorMap(c,:),'LineWidth',3)
+					hold on
+                    plot(zeroedThetaSeqSpikes,placeSequence,'o','Color',cycleColorMap(c,:))
+				
+					maxDendDelay=max(dendriticTemplateRelativeTimes);
+					plot(dendriticTemplateRelativeTimes,1:length(dendriticTemplateRelativeTimes),'b-','LineWidth',5);%per seconds
+                		       plot(dendriticTemplateRelativeTimes,1:length(dendriticTemplateRelativeTimes),'bo');
+                 
 					thetaSeqTimeOffsets(c)=b;%per seconds
 				end
-			end
+            end
+            colorbar(gca)
+	
+			xlim([0 100])
+			
+			ylabel('place rank')
+			xlabel('Time from spike to end of theta cycle')
 			%STOP
 			thisObj.cycleSeqTimeSlopes=thetaSeqTimeSlopes;
 			thisObj.cycleSeqTimeOffsets=thetaSeqTimeOffsets;

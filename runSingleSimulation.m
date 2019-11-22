@@ -58,11 +58,16 @@ function [done] = runSingleSimulation(arglist)
 	end
 
 	if(saveResults)	
-		[fH,fpH,fsH]=newSim.visualizeSpikeTimings()
+		[fH,fpH,fsH,fstmH]=newSim.visualizeSpikeTimings()
 		%maxFigManual2d(1.5,1.1,16)
-		saveSimFig(fH,'rasters',simIDnum,newSim)
-		saveSimFig(fpH,'phasePosition',simIDnum,newSim)
+		%saveSimFig(fH,'rasters',simIDnum,newSim)
+		[fCurrDiff]=newSim.externalInputObj.displayInputDiffVsPos(newSim.externalEnvObj);
+
+		saveSimFig(fH,'rasters',simIDnum,newSim,1)
+		%saveSimFig(fpH,'phasePosition',simIDnum,newSim)
+		saveSimFig(fstmH,'thetaSeqTemplateMatchingPerCycle',simIDnum,newSim)
 		saveSimFig(fsH,'spaceCompression',simIDnum,newSim)
+		saveSimFig(fCurrDiff,'inputDiffVsPos',simIDnum,newSim)
 		
 	end
 

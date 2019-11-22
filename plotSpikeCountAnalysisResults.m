@@ -11,13 +11,15 @@ function [exitStatus] = plotAnalysisResults(processedDataPath)
 
 	%approximateRestValue=-55;
 
-	timeWindowsPerSpeed=[666.66600 588.23400 526.31600 476.19200 434.78200 400.00000 370.37000 344.82800 322.58000...
+	%to convert spike count to spike rate....
+	timeWindowsPerSpeed=[666.66600 588.23400 526.31600 476.19200 434.78200 400.00000 370.37000 344.82800 322.58000 ...
     303.03000 285.71400 270.27000 256.41000 243.90200 232.55800 222.22200];
 
 	heatMapInput.diRanks=diRanks;
 	heatMapInput.speedValues=speedValues;
 	
 	titleStrs={'Logarithmic_spike_time_synchrony_decoding','Cycle_based_spike_rate_decoding'};
+	%for i=1:1
 	for i=1:2
 		if(i==1)
 			currHeatMatrix=processedData.modelSpikeCountHeatMaps(:,:,1)./timeWindowsPerSpeed;

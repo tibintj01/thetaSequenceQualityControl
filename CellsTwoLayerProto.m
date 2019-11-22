@@ -7,7 +7,15 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 		justSpikingConductances=1
 		%BLOCK_OUTPUT_SPIKING=1
 		BLOCK_OUTPUT_SPIKING=0
-
+		
+		%ADJ_LIN_DELAY_BASELINE=40+190-285.714
+		%ADJ_LIN_DELAY_BASELINE=-56+20
+		ADJ_LIN_DELAY_BASELINE=-56+20+63
+		ADJ_LIN_DELAY_SLOPE=5;
+		ADJ_LOG_DELAY_BASELINE=20 %with ADJ_LOG_DELAY_SLOPE=1
+		%ADJ_LOG_DELAY_BASELINE=20+150-72 %with ADJ_LOG_DELAY_SLOPE=2.5
+		%ADJ_LOG_DELAY_SLOPE=2.5;
+		ADJ_LOG_DELAY_SLOPE=1;
 		includeKS=1;
 		NUM_CELLS_L2=1;
 		%INTEGRATOR_gL=0.005;
@@ -403,7 +411,9 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 				maxPrecession=thisObj.feedforwardConnObj.maxDelay;	
 				%linearPrecessionSlope=(maxPrecession-minPrecession)/(imax-imin);
 				%linearPrecessionSlope=2*(maxPrecession-minPrecession)/(imax-imin); %real phase precession ends at 180 degrees-> double slope?
-				linearPrecessionSlope=3*(maxPrecession-minPrecession)/(imax-imin); %real phase precession ends at 180 degrees-> double slope?
+				%linearPrecessionSlope=3*(maxPrecession-minPrecession)/(imax-imin); %real phase precession ends at 180 degrees-> double slope?
+				%linearPrecessionSlope=5*(maxPrecession-minPrecession)/(imax-imin); %real phase precession ends at 180 degrees-> double slope?
+				linearPrecessionSlope=Cells.ADJ_LIN_DELAY_SLOPE*(maxPrecession-minPrecession)/(imax-imin); %real phase precession ends at 180 degrees-> double slope?
 			end
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%step through time
@@ -484,12 +494,13 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
                                                                      %phasePrecessionDelay=-(normFactor*log(convFactor*(itonic-imin)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
                                                                      %phasePrecessionDelay=-(normFactor*log(convFactor*(imax-itonic)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
                                                                      %phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic)))+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
-                                                                     phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic))+minPrecession)+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
+                                                                     %phasePrecessionDelay=(normFactor*log(convFactor*(imax-itonic))+minPrecession)+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
+                                                                     phasePrecessionDelay=Cells.ADJ_LOG_DELAY_SLOPE*(normFactor*log(convFactor*(imax-itonic))+minPrecession-Cells.ADJ_LOG_DELAY_BASELINE)+(defaultPhaseSlope*(itonic-imin)); %see DelayObject for values
 							             if(FeedForwardConnectivity.USE_LINEAR_DELAYS)
 									%phasePrecessionDelay=-(linearPrecessionSlope*(itonic-imin)+minPrecession);	
 									%phasePrecessionDelay=-(linearPrecessionSlope*(itonic-imin)+minPrecession)+(defaultPhaseSlope*(itonic-imin));
 									%cancel out model precession and add in synthetic phenomenological precession	
-									phasePrecessionDelay=(linearPrecessionSlope*(imax-itonic)+minPrecession)+(defaultPhaseSlope*(itonic-imin));	
+									phasePrecessionDelay=(linearPrecessionSlope*(imax-itonic)+minPrecession-Cells.ADJ_LIN_DELAY_BASELINE)+(defaultPhaseSlope*(itonic-imin));	
 								     end
 									%phasePrecessionDelay=normFactor*log(convFactor*(imax-itonic))+baselineDelay; %see DelayObject for values
 									%edge cases
@@ -1114,9 +1125,16 @@ classdef Cells < handle & matlab.mixin.Copyable %create object by reference
 			%gksBar=0.7;
 			%gksBar=0.8;
 			%gksBar=1.6;
-			gksBar=2.1;
+			%gksBar=2.1;
+			%gksSigma=0.05;
 			
-			gksSigma=0.05;
+			%Nov 9 2019 - TJ, reduce variability
+			gksBar=2;
+			%gksSigma=0.01;
+			%gksSigma=0.005;
+			%gksSigma=0.001;
+			gksSigma=0;
+			
 			%gksSigma=0.1;
 
 			if(numCellsPerPlace*numPlaces==1)

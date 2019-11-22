@@ -17,7 +17,10 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 		%INTEGRATOR_GSYN_FACT=0.5
 		INTEGRATOR_GSYN_FACT=0.6
 		%INTEGRATOR_GSYN_FACT=0.7
-		
+
+		LINEAR_DELAY_BASELINE_ADJ=44
+		TEMPLATE_DELAY_TIME_SLOPE=2.5	
+
 		USE_LINEAR_DELAYS=SCAN_PARAM3
 	end
 
@@ -54,8 +57,14 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 		%weight_mu=0.75
 		%weight_mu=0.75
 		%weight_mu=0.9
-		weight_mu=1.2
-		weight_sigma=0.0025
+		%weight_mu=1.2
+		%weight_mu=0.6 %reducing from 1.2 to produce full sequence selectivity Nov 9 2019
+		weight_mu=0.7 %reducing from 1.2 to produce full sequence selectivity Nov 9 2019
+		%weight_mu=0.55 %reducing from 1.2 to produce full sequence selectivity Nov 9 2019
+		%weight_mu=0.5 %reducing from 1.2 to produce full sequence selectivity Nov 9 2019
+		%weight_mu=0.75 %reducing from 1.2 to produce full sequence selectivity Nov 9 2019
+		%weight_sigma=0.0025
+		weight_sigma=0
 		esyn_E=0;
 		esyn_I=-72;
 
@@ -216,6 +225,17 @@ classdef FeedForwardConnectivity < handle & matlab.mixin.Copyable
 			thisObj.minDelay=minDelay;
 			if(FeedForwardConnectivity.USE_LINEAR_DELAYS==0)
 				targetDelaySequence=targetDelaySequence-minDelay;
+			else
+				targetDelaySequence=targetDelaySequence-FeedForwardConnectivity.LINEAR_DELAY_BASELINE_ADJ;
+
+			end
+
+			%current max delay is 30msec; it should be 3x higher empirically to utilize fuller range of theta times
+			%targetDelaySequence=targetDelaySequence*3; %nevermind wasn't converting phase to time!
+			%targetDelaySequence=targetDelaySequence*2; %nevermind wasn't converting phase to time!
+			%targetDelaySequence=targetDelaySequence*FeedForwardConnectivity.TEMPLATE_DELAY_TIME_SLOPE; 
+			 if(FeedForwardConnectivity.USE_LINEAR_DELAYS==1)
+				targetDelaySequence=targetDelaySequence*FeedForwardConnectivity.TEMPLATE_DELAY_TIME_SLOPE; 
 			end
 
 			%STOP

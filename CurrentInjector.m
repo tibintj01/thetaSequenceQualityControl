@@ -8,13 +8,14 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 		%NOISE_SIGMA=3.5/10; %nA
 		%NOISE_SIGMA=3.5/10/10; %nA
 		%NOISE_SIGMA=3.5/10/3; %nA
-		NOISE_SIGMA=3.5/10/2; %nA
+		%NOISE_SIGMA=3.5/10/2; %nA
 		%NOISE_SIGMA=3.5/10/1.5; %nA
 		%NOISE_SIGMA=3.5/10/1.5; %nA
-		%NOISE_SIGMA=3.5/10/10; %nA
+		NOISE_SIGMA=3.5/10/10; %nA
                 NOISE_SAMPLING_DT=0.5; %msec
 		
-		USE_EXP_RAMP=1;
+		%USE_EXP_RAMP=1;
+		USE_EXP_RAMP=0;
 		startExpX=-2.7
 	end
 	
@@ -42,7 +43,8 @@ classdef CurrentInjector < handle & matlab.mixin.Copyable
 		sensoryChannelNum
 
 		%asymPeakTimeFrac=0.75
-		asymPeakTimeFrac=0.95
+		%asymPeakTimeFrac=0.95
+		asymPeakTimeFrac=1
 		%asymPeakTimeFrac=1
 		%injCurrentTrace
 	end

@@ -42,5 +42,6 @@ function [exitStatus] =reconstructAnalysisOfSimBatch(paramName1,paramName2,param
             ,'param1Vals', 'param2Vals', 'param3Vals', 'paramName1', 'paramName2', 'paramName3', 'simName','DATA_DIR','FIGURE_DIR','PROCESSED_DATA_DIR')
 	toc
     
-    plotSpikeCountAnalysisResults(processedDataPath)
+    %plotSpikeCountAnalysisResults(processedDataPath)
+    plotSpikeCountAnalysisLinearVsLogResults(processedDataPath)
     exitStatus=1;

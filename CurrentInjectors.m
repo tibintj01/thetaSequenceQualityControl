@@ -3,11 +3,16 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 		%BASELINE=4;
 		BASELINE=18;
 		%EXTRA_BASELINE=1.5
-		EXTRA_BASELINE=2
+		%EXTRA_BASELINE=2
+		%EXTRA_BASELINE=5
+		%EXTRA_BASELINE=3
+		EXTRA_BASELINE=2.1
 		%BASELINE=20;
 		%SIG_FRAC=0.05;
 		SIG_FRAC=0;
 		DI_SORTED_PERM_RANK=1
+
+		ORIGINAL_CURR_AMP=7.5
 	end
 
 	properties
@@ -37,7 +42,10 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 			thisObj.nr=simSpecificInfo.numCellsPerPlace;
 			thisObj.nc=simSpecificInfo.numPlaces;
 			thisObj.timeAxis=simSpecificInfo.timeAxis;
+			thisObj.currAmp=CurrentInjectors.ORIGINAL_CURR_AMP;
 			thisObj.setInjectorMatrix(extEnvObj);
+			thisObj.displayInputDiffVsPos(extEnvObj);
+			%STOP
 		end
 
 
@@ -57,10 +65,55 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 					apparentBaseline=CurrentInjectors.BASELINE+ CurrentInjectors.EXTRA_BASELINE;
 					ylim([0 thisObj.currAmp]+apparentBaseline)
 					xlabel('Time (sec)')
-					ylabel('I_s (pA)')
+					ylabel('I_s (nA)')
 				end
 			end
 			maxFigManual2d(2,1,14)
+		end
+		
+		function [fH]=displayInputDiffVsPos(thisObj,extEnvObj)
+			fH=figure
+			firstCellInput=thisObj.currInjectorMatrix(1,1).getTimeTrace();
+			secondCellInput=thisObj.currInjectorMatrix(1,2).getTimeTrace();
+
+			cellInputDiff=firstCellInput-secondCellInput;
+			overallBaseline=min([firstCellInput(:); secondCellInput(:)])
+			cellInputRatio=(firstCellInput-overallBaseline)./(secondCellInput-overallBaseline);
+			positions=extEnvObj.rodentPositionVsTime;	
+
+			subplot(1,2,1)
+			yyaxis left
+			plot(positions,cellInputDiff,'k','LineWidth',5)
+			title('Place input 2nd difference across cells')
+			xlabel('Position (cm)')
+			ylabel('Input difference (nA)')
+			ylim([0 thisObj.currAmp])
+			xlim([0 300])
+			
+			yyaxis right
+			plot(positions,cellInputRatio,'b','LineWidth',5)
+			title('Place input difference ratio across cells')
+			xlabel('Position (cm)')
+			ylabel('Input difference ratio')
+			ylim([0 2])
+			xlim([0 300])
+			
+			subplot(1,2,2)
+			yyaxis left
+			plot(thisObj.timeAxis,cellInputDiff,'k','LineWidth',5)
+			title('Place input difference across cells')
+			xlabel('Time (msec)')
+			ylabel('Input difference (nA)')
+			ylim([0 thisObj.currAmp])
+			xlim([0 Simulation.CONSTANT_TIME_MAX])
+			
+			yyaxis right
+			plot(thisObj.timeAxis,cellInputRatio,'b','LineWidth',5)
+			title('Place input ratio across cells')
+			xlabel('Time (msec)')
+			ylabel('Input ratio')
+			ylim([0 2])
+			xlim([0 Simulation.CONSTANT_TIME_MAX])
 		end
 		
 		function displayContentSubplot(thisObj,figH)
@@ -72,12 +125,12 @@ classdef CurrentInjectors < handle & matlab.mixin.Copyable
 					hold on	
 				end
 			end
-					xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
-					%ylim([0 thisObj.currAmp] + CurrentInjectors.BASELINE)
-					apparentBaseline=CurrentInjectors.BASELINE+ CurrentInjectors.EXTRA_BASELINE;
-					ylim([0 thisObj.currAmp]+apparentBaseline)
-					xlabel('Time (sec)')
-					ylabel('I_s (pA)')
+			xlim([thisObj.timeAxis(1) thisObj.timeAxis(end)])
+			%ylim([0 thisObj.currAmp] + CurrentInjectors.BASELINE)
+			apparentBaseline=CurrentInjectors.BASELINE+ CurrentInjectors.EXTRA_BASELINE;
+			ylim([0 thisObj.currAmp]+apparentBaseline)
+			xlabel('Time (sec)')
+			ylabel('I_s (nA)')
 		end
 
 		function floatMatrix=getFloatMatrix(thisObj)

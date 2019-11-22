@@ -5,8 +5,13 @@ classdef Simulation < handle & matlab.mixin.Copyable
 		%SIM_NAME='timeConstantPhaseCoding';
 		%CONSTANT_TIME_MAX=3200
 		%CONSTANT_TIME_MAX=3600
-		CONSTANT_TIME_MAX=4500
+		%CONSTANT_TIME_MAX=4500
+		%CONSTANT_TIME_MAX=7500
+		CONSTANT_TIME_MAX=10000
+		MAX_SIM_TIME=10000
+		%CONSTANT_TIME_MAX=5000
 		%CONSTANT_TIME_MAX=7000
+		%CONSTANT_TIME_MAX=10000
 		%OVERWRITE=1;
 		%'just spiking conductances, theta, time constant vs phase locking';
 	end
@@ -154,7 +159,7 @@ classdef Simulation < handle & matlab.mixin.Copyable
                 end
 
 
-		function [figRaster,figPhasePosCoding,figSpaceCompress]=visualizeSpikeTimings(thisObj)
+		function [figRaster,figPhasePosCoding,figSpaceCompress,figSeqTempMatch]=visualizeSpikeTimings(thisObj)
 
 			%figRankTransform=figure(1112);
                         %figPhasePosCoding=figure(1113);
@@ -166,6 +171,9 @@ classdef Simulation < handle & matlab.mixin.Copyable
 			%phaseCodingEvaluationObjStage1=SimPhaseCodingEvaluation(thisObj,1);
 			phaseCodingEvaluationObjStage1=thisObj.analysisObj;
 			%phaseCodingEvaluationObjStage2=SimPhaseCodingEvaluation(thisObj,2);
+
+			figSeqTempMatch=figure;
+			[figSeqTempMatch]=phaseCodingEvaluationObjStage1.setThetaSeqTimeSlopes(thisObj);
 
 			figRaster=figure;
 			%subplot(thisObj.numSimsPerVar,thisObj.numSimsPerVar,count)

@@ -1,5 +1,6 @@
 classdef SimConfiguration < handle & matlab.mixin.Copyable
 
+	
 	properties
 		simParams
 		%simsCategory='single_cell_precession_tuning';
@@ -94,7 +95,8 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 			%numPlaces=5;
 			numPlaces=7;
 			%numCellsPerPlace=3;
-			numCellsPerPlace=5;
+			%numCellsPerPlace=5;
+			numCellsPerPlace=1;
 			%numCellsPerPlace=2;
 			%numCellsPerPlace=20;
 			%numCellsPerPlace=5;
@@ -112,7 +114,6 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 						timeAxis=(dt:dt:simTime).';
 						simProps.simTime=simTime;
 						numSteps=round(simTime/dt);
-						
 						simProps.numSteps=numSteps;
 						simProps.dt=dt;
 						simProps.timeAxis=timeAxis;
@@ -144,6 +145,28 @@ classdef SimConfiguration < handle & matlab.mixin.Copyable
 					end	
 				end
 		%fds
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%max out sim Time and reset
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			simTime=min(simTime,Simulation.MAX_SIM_TIME)
+			timeAxis=(dt:dt:simTime).';
+			numSteps=round(simTime/dt);
+			simProps.simTime=simTime;
+			simProps.numSteps=numSteps;
+			simProps.dt=dt;
+			simProps.timeAxis=timeAxis;
+			extEnvSettings.timeAxis=timeAxis;
+			%extEnvSettings.rodentRunningSpeed=linspace(20,20,length(timeAxis));  %cm/s
+			runSpeed=ExternalEnvironment.CONSTANT_RUN_SPEED;
+			extEnvSettings.rodentRunningSpeed=linspace(runSpeed,runSpeed,length(timeAxis));  %cm/s
+
+			%extEnvSettings.rodentRunningSpeed=[linspace(10,40,floor(length(timeAxis)/2)), linspace(40,10,floor(length(timeAxis)/2))];  %cm/s
+			%extEnvSettings.rodentRunningSpeed=[linspace(40,10,floor(length(timeAxis)/2)), linspace(10,40,floor(length(timeAxis)/2))];  %cm/s
+			extEnvSettings.numPlaces=numPlaces;
+			externalEnvironmentObj=ExternalEnvironment(extEnvSettings);
+
+			%simTime
+			maxPlaceEndTime=externalEnvironmentObj.maxPlaceEndTime	
 
 			externalEnvironmentObj.rngSeed=thisObj.rngSeed;
 			simProps.extEnvObj=copy(externalEnvironmentObj);
